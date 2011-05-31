@@ -1,141 +1,182 @@
-unitDef = {
-  unitname            = "chickenw1",
-  name                = "Claw",
-  description         = "Flying Spike Spitter",
-  acceleration        = 0.8,
-  amphibious          = true,
-  bankscale           = "1",
-  bmcode              = "1",
-  brakeRate           = 0.4,
-  buildCostEnergy     = 2200,
-  buildCostMetal      = 72,
-  builder             = false,
-  buildPic            = "chicken_pidgeon.png",
-  buildTime           = 1300,
-  canFly              = true,
-  canGuard            = true,
-  canLand             = true,
-  canMove             = true,
-  canPatrol           = true,
-  canstop             = true,
-  canSubmerge         = false,
-  canCrash            = false,
-  category            = "VTOL MOBILE WEAPON NOTSUB NOTSHIP ALL",
-  collide             = false,
-  cruiseAlt           = 155,
-  defaultmissiontype  = "VTOL_standby",
-  explodeAs           = "TALON_DEATH",
-  floater             = true,
-  footprintX          = 1,
-  footprintZ          = 1,
-  idleAutoHeal        = 2,
-  idleTime            = 0,
-  turninplace         = 0,
-  seismicSignature    = 0,
-  iconType            = "chickenf",
-  maneuverleashlength = "1280",
-  mass                = 90,
-  hidedamage          = 1,
-  maxDamage           = 295,
-  maxVelocity         = 7.5,
-  moverate1           = "32",
-  noAutoFire          = false,
-  noChaseCategory     = "VTOL",
-  objectName          = "chicken_pidgeon.s3o",
-  selfDestructAs      = "TALON_DEATH",
-  separation          = "0.2",
-  collisionVolumeType = "box",
-  collisionVolumeOffsets = "0 7 -6",
-  collisionVolumeScales = "48 12 22",
+-- UNITDEF -- CHICKENW1 --
+--------------------------------------------------------------------------------
 
-  sfxtypes            = {
+local unitName = "chickenw1"
 
+--------------------------------------------------------------------------------
+
+local unitDef = {
+  acceleration       = 0.80000001192093,
+  airSightDistance   = 600,
+  amphibious         = [[true]],
+  bankscale          = 1,
+  bmcode             = 1,
+  brakeRate          = 0.40000000596046,
+  buildCostEnergy    = 2200,
+  buildCostMetal     = 72,
+  builder            = false,
+  buildPic           = [[chicken_pidgeon.png]],
+  buildTime          = 1300,
+  cancrash           = [[false]],
+  canFly             = false,
+  canGuard           = false,
+  canland            = [[true]],
+  canMove            = false,
+  canPatrol          = false,
+  canstop            = [[true]],
+  canSubmerge        = false,
+  category           = [[VTOL MOBILE WEAPON NOTSUB NOTSHIP ALL]],
+  collide            = false,
+  collisionvolumeoffsets = [[0 7 -6]],
+  collisionvolumescales = [[48 12 22]],
+  collisionvolumetype = [[box]],
+  cruiseAlt          = 155,
+  defaultmissiontype = [[VTOL_standby]],
+  description        = [[Flying Spike Spitter]],
+  explodeAs          = [[TALON_DEATH]],
+  floater            = false,
+  footprintX         = 1,
+  footprintZ         = 1,
+  hideDamage         = true,
+  iconType           = [[chickenf]],
+  idleAutoHeal       = 2,
+  idleTime           = 0,
+  maneuverleashlength = 1280,
+  mass               = 90,
+  maxDamage          = 295,
+  maxVelocity        = 7.5,
+  moverate1          = 32,
+  name               = [[Claw]],
+  noAutoFire         = false,
+  noChaseCategory    = [[VTOL]],
+  objectName         = [[chicken_pidgeon.s3o]],
+  seismicSignature   = 0,
+  selfDestructAs     = [[TALON_DEATH]],
+  separation         = 0.2,
+  side               = [[THUNDERBIRDS]],
+  sightDistance      = 360,
+  smoothAnim         = false,
+  steeringmode       = 1,
+  TEDClass           = [[VTOL]],
+  turninplace        = 0,
+  turnRate           = 3200,
+  unitname           = [[chickenw1]],
+  workerTime         = 0,
+  featuredefs = {
+    dead = {
+      filename           = [[units/chickenw1.lua]],
+    },
+    heap = {
+      filename           = [[units/chickenw1.lua]],
+    },
+  },
+  sfxtypes = {
     explosiongenerators = {
-      "custom:blood_spray",
-      "custom:blood_explode",
-      "custom:dirt",
+      [[custom:blood_spray]],
+      [[custom:blood_explode]],
+      [[custom:dirt]],
     },
-
   },
-
-  side                = "THUNDERBIRDS",
-  sightDistance       = 360,
-  airSightDistance    = 600,
-  smoothAnim          = true,
-  steeringmode        = "1",
-  TEDClass            = "VTOL",
-  turnRate            = 3200,
-  workerTime          = 0,
-
-    weapons             = {
-
-    {
-      def               = "WEAPON",
-      mainDir           = "0 0 1",
-      maxAngleDif       = 120,
-      badTargetCategory = "WEAPON",
-    },
-
-  },
-
-
-  weaponDefs          = {
-
-    WEAPON = {
-      name                    = "Spike",
-      areaOfEffect            = 32,
-      avoidFriendly           = false,
-      burnblow                = true,
-      collideFriendly         = false,
-      craterBoost             = 0,
-      craterMult              = 0,
-
-      damage                  = {
-        default = 140,
-       	L1FIGHTERS = 200,
-		L2FIGHTERS = 225,
-		L1BOMBERS = 200,
-		L2BOMBERS = 275,
-		GUNSHIPS = 200,
+  weapondefs = {
+    weapon = {
+      accuracy           = 200,
+      areaofeffect       = 32,
+      avoidfriendly      = [[false]],
+      burnblow           = [[true]],
+      collidefriendly    = [[false]],
+      craterboost        = 0,
+      cratermult         = 0,
+      explosiongenerator = [[custom:dirt]],
+      impulseboost       = 0,
+      impulsefactor      = 0.40000000596046,
+      interceptedbyshieldtype = 0,
+      lineofsight        = [[true]],
+      model              = [[spike.s3o]],
+      name               = [[Spike]],
+      noselfdamage       = [[true]],
+      propeller          = 1,
+      range              = 400,
+      reloadtime         = 2.2000000476837,
+      rendertype         = 1,
+      selfprop           = [[true]],
+      soundstart         = [[talonattack]],
+      startvelocity      = 200,
+      submissile         = 1,
+      turret             = [[true]],
+      waterweapon        = [[true]],
+      weaponacceleration = 100,
+      weapontimer        = 1,
+      weapontype         = [[TorpedoLauncher]],
+      weaponvelocity     = 425,
+      damage = {
+        default            = 140,
+        gunships           = 200,
+        l1bombers          = 200,
+        l1fighters         = 200,
+        l2bombers          = 275,
+        l2fighters         = 225,
       },
-
-      explosionGenerator      = "custom:dirt",
-      impulseBoost            = 0,
-      impulseFactor           = 0.4,
-      interceptedByShieldType = 0,
-      lineOfSight             = true,
-      model                   = "spike.s3o",
-      noSelfDamage            = true,
-      propeller               = "1",
-      range                   = 400,
-      soundStart              = "talonattack",
-      reloadtime              = 2.2,
-      renderType              = 1,
-      selfprop                = true,
-      startVelocity           = 200,
-      subMissile              = 1,
-      turret                  = true,
-      waterWeapon             = true,
-      accuracy		          = 200,
-      weaponAcceleration      = 100,
-      weaponTimer             = 1,
-      weaponVelocity          = 425,
     },
-
   },
-
-
-  featureDefs         = {
-
-    DEAD = {
+  weapons = {
+    [1]  = {
+      badTargetCategory  = [[WEAPON]],
+      def                = [[chickenw1_weapon]],
+      mainDir            = [[0 0 1]],
+      maxAngleDif        = 120,
     },
-
-
-    HEAP = {
-    },
-
   },
-
 }
 
-return lowerkeys({ chickenw1 = unitDef })
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
+  chickenw1_weapon = {
+    accuracy           = 200,
+    areaOfEffect       = 32,
+    avoidFriendly      = false,
+    burnblow           = false,
+    collideFriendly    = false,
+    craterBoost        = 0,
+    craterMult         = 0,
+    explosionGenerator = [[custom:dirt]],
+    impulseBoost       = 0,
+    impulseFactor      = 0.40000000596046,
+    interceptedByShieldType = 0,
+    lineOfSight        = false,
+    model              = [[spike.s3o]],
+    name               = [[Spike]],
+    noSelfDamage       = false,
+    propeller          = 1,
+    range              = 400,
+    reloadtime         = 2.2000000476837,
+    renderType         = 1,
+    selfprop           = false,
+    soundStart         = [[talonattack]],
+    startVelocity      = 200,
+    submissile         = true,
+    turret             = false,
+    waterWeapon        = false,
+    weaponAcceleration = 100,
+    weaponTimer        = 1,
+    weaponType         = [[TorpedoLauncher]],
+    weaponVelocity     = 425,
+    damage = {
+      default            = 140,
+      gunships           = 200,
+      l1bombers          = 200,
+      l1fighters         = 200,
+      l2bombers          = 275,
+      l2fighters         = 225,
+    },
+  },
+}
+unitDef.weaponDefs = weaponDefs
+
+
+--------------------------------------------------------------------------------
+
+return lowerkeys({ [unitName] = unitDef })
+
+--------------------------------------------------------------------------------

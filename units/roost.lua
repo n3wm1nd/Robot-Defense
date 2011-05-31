@@ -1,110 +1,146 @@
-unitDef = {
-  unitname          = "roost",
-  name              = "Roost",
-  description       = "Spawns Chicken",
-  acceleration      = 0,
-  activateWhenBuilt = true,
-  bmcode            = "0",
-  brakeRate         = 0,
-  buildCostEnergy   = 25000,
-  buildCostMetal    = 400,
-  builder           = false,
-  buildTime         = 12500,
-  category          = "NOTAIR NOTSUB NOTSHIP ALL",
-  explodeAs         = "ROOST_DEATH",
-  footprintX        = 3,
-  footprintZ        = 3,
-  iconType          = "special",
-  idleAutoHeal      = 0,
-  idleTime          = 1800,
-  levelGround       = false,
-  mass              = 165.75,
-  energystorage     = 1000,
-  maxDamage         = 1800,
-  maxVelocity       = 0,
-  seismicSignature  = 4,
-  noAutoFire        = false,
-  objectName        = "roost.3do",
-  selfDestructAs    = "ROOST_DEATH",
+-- UNITDEF -- ROOST --
+--------------------------------------------------------------------------------
 
-  sfxtypes          = {
+local unitName = "roost"
 
+--------------------------------------------------------------------------------
+
+local unitDef = {
+  acceleration       = 0,
+  activateWhenBuilt  = false,
+  bmcode             = 0,
+  brakeRate          = 0,
+  buildCostEnergy    = 25000,
+  buildCostMetal     = 400,
+  builder            = false,
+  buildTime          = 12500,
+  category           = [[NOTAIR NOTSUB NOTSHIP ALL]],
+  collisionvolumeoffsets = [[0 0 0]],
+  collisionvolumescales = [[56 11 56]],
+  collisionvolumetype = [[box]],
+  description        = [[Spawns Chicken]],
+  energyStorage      = 1000,
+  explodeAs          = [[ROOST_DEATH]],
+  footprintX         = 3,
+  footprintZ         = 3,
+  iconType           = [[special]],
+  idleAutoHeal       = 0,
+  idleTime           = 1800,
+  levelGround        = false,
+  mass               = 165.75,
+  maxDamage          = 1800,
+  maxVelocity        = 0,
+  name               = [[Roost]],
+  noAutoFire         = false,
+  objectName         = [[roost.3do]],
+  radarDistance      = 900,
+  seismicSignature   = 4,
+  selfDestructAs     = [[ROOST_DEATH]],
+  side               = [[ARM]],
+  sightDistance      = 450,
+  smoothAnim         = false,
+  TEDClass           = [[ENERGY]],
+  turnRate           = 0,
+  unitname           = [[roost]],
+  upright            = false,
+  waterline          = 0,
+  workerTime         = 0,
+  yardMap            = [[ooooooooo]],
+  featuredefs = {
+  },
+  sfxtypes = {
     explosiongenerators = {
-      "custom:dirt2",
-      "custom:dirt3",
+      [[custom:dirt2]],
+      [[custom:dirt3]],
     },
-
   },
-
-  side              = "ARM",
-  sightDistance     = 450,
-  radardistance     = 900,
-  smoothAnim        = true,
-  TEDClass          = "ENERGY",
-  turnRate          = 0,
-  upright           = false,
-  waterline         = 0,
-  workerTime        = 0,
-  yardMap           = "ooooooooo",
-  collisionVolumeType = "box",
-  collisionVolumeOffsets = "0 0 0",
-  collisionVolumeScales = "56 11 56",
-  
-  weapons             = {
-
-    {
-      def                = "WEAPON",
-    },
-
-  },
-
-  weaponDefs          = {
-
-    WEAPON = {
-      name = "Asteroid",
-	  rendertype=1,
-	  lineofsight=1,
-	  turret=1,
-
-	  model = "greyrock2.s3o",
-
-	  range=29999,
-	  reloadtime=5.0,
-	  weapontimer=10,
-	  weaponvelocity=2000,
-	  startvelocity=2000,
-	  weaponacceleration=120,
-	  edgeeffectiveness=0,
-	  areaofeffect=450,
-	  metalpershot=0,
-	  wobble=0,
-      craterBoost             = 0,
-      craterMult              = 0,
-
-	  soundhit="xplonuk4",
-	  explosionGenerator      = "custom:COMM_EXPLOSION",
-
-	  firestarter=70,
-	  smokedelay=0.1,
-	  selfprop=1,
-	  smoketrail=1,
-
-	  startsmoke=1,
-	  CollideFriendly=0,
-	  AvoidFriendly=0,
-	  cegTag="ASTEROIDTRAIL_Expl",
-
-      damage                  = {
-        default = 6000,
-        CHICKEN = 10,
+  weapondefs = {
+    weapon = {
+      areaofeffect       = 450,
+      avoidfriendly      = 0,
+      cegtag             = [[ASTEROIDTRAIL_Expl]],
+      collidefriendly    = 0,
+      craterboost        = 0,
+      cratermult         = 0,
+      edgeeffectiveness  = 0,
+      explosiongenerator = [[custom:COMM_EXPLOSION]],
+      firestarter        = 70,
+      lineofsight        = 1,
+      metalpershot       = 0,
+      model              = [[greyrock2.s3o]],
+      name               = [[Asteroid]],
+      range              = 29999,
+      reloadtime         = 5,
+      rendertype         = 1,
+      selfprop           = 1,
+      smokedelay         = 0.10000000149012,
+      smoketrail         = 1,
+      soundhit           = [[xplonuk4]],
+      startsmoke         = 1,
+      startvelocity      = 2000,
+      turret             = 1,
+      weaponacceleration = 120,
+      weapontimer        = 10,
+      weapontype         = [[MissileLauncher]],
+      weaponvelocity     = 2000,
+      wobble             = 0,
+      damage = {
+        chicken            = 10,
+        default            = 6000,
       },
-
     },
   },
-
-  featureDefs       = {
+  weapons = {
+    [1]  = {
+      def                = [[roost_weapon]],
+    },
   },
-
 }
 
-return lowerkeys({ roost = unitDef })
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
+  roost_weapon = {
+    areaOfEffect       = 450,
+    avoidFriendly      = false,
+    cegTag             = [[ASTEROIDTRAIL_Expl]],
+    collideFriendly    = false,
+    craterBoost        = 0,
+    craterMult         = 0,
+    edgeEffectiveness  = 0,
+    explosionGenerator = [[custom:COMM_EXPLOSION]],
+    fireStarter        = 70,
+    lineOfSight        = true,
+    metalpershot       = 0,
+    model              = [[greyrock2.s3o]],
+    name               = [[Asteroid]],
+    range              = 29999,
+    reloadtime         = 5,
+    renderType         = 1,
+    selfprop           = true,
+    smokedelay         = 0.10000000149012,
+    smokeTrail         = true,
+    soundHit           = [[xplonuk4]],
+    startsmoke         = 1,
+    startVelocity      = 2000,
+    turret             = true,
+    weaponAcceleration = 120,
+    weaponTimer        = 10,
+    weaponType         = [[MissileLauncher]],
+    weaponVelocity     = 2000,
+    wobble             = 0,
+    damage = {
+      chicken            = 10,
+      default            = 6000,
+    },
+  },
+}
+unitDef.weaponDefs = weaponDefs
+
+
+--------------------------------------------------------------------------------
+
+return lowerkeys({ [unitName] = unitDef })
+
+--------------------------------------------------------------------------------
