@@ -6,7 +6,7 @@ local unitName = "tlllasbot"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-  acceleration       = 0.1,
+  acceleration       = 0.11,
   badTargetCategory  = [[VTOL]],
   bmcode             = 1,
   brakeRate          = 0.15,
@@ -19,7 +19,7 @@ local unitDef = {
   canMove            = true,
   canPatrol          = true,
   canstop            = 1,
-  category           = [[TLL KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W]],
+  category           = [[TLL KBOT LEVEL2 WEAPON NOTAIR NOTSUB ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   defaultmissiontype = [[Standby]],
@@ -49,7 +49,7 @@ local unitDef = {
   selfDestructAs     = [[BIG_UNIT]],
   shootme            = 1,
   side               = [[TLL]],
-  sightDistance      = 290,
+  sightDistance      = 405,
   standingfireorder  = 2,
   standingmoveorder  = 1,
   steeringmode       = 2,

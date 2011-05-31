@@ -16,7 +16,7 @@ local unitDef = {
   canAttack          = true,
   canGuard           = true,
   canstop            = 1,
-  category           = [[TLL WEAPON LEVEL2 NOTAIR NOTSUB CTRL_L]],
+  category           = [[TLL WEAPON LEVEL2 NOTAIR NOTSUB ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   defaultmissiontype = [[GUARD_NOMOVE]],
@@ -76,7 +76,7 @@ local unitDef = {
   },
   weapons = {
     [1]  = {
-      badTargetCategory  = [[CTRL_V]],
+      badTargetCategory  = [[VTOL]],
       def                = [[ARM_LASERH1]],
     },
   },

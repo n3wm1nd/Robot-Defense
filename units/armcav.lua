@@ -130,7 +130,7 @@ local weaponDefs = {
     model              = [[missile10]],
     name               = [[Missiles]],
     range              = 800,
-    reloadtime         = 6.4,
+    reloadtime         = 7,
     renderType         = 1,
     selfprop           = true,
     smokedelay         = .1,
@@ -194,7 +194,7 @@ local weaponDefs = {
     lineOfSight        = true,
     name               = [[High Energy Laser]],
     range              = 1000,
-    reloadtime         = 2.8,
+    reloadtime         = 3.3,
     renderType         = 7,
     soundHit           = [[LasHit2]],
     soundStart         = [[LghtHvy2]],
@@ -207,7 +207,7 @@ local weaponDefs = {
     weaponType         = [[LightningCannon]],
     weaponVelocity     = 667,
     damage = {
-      default            = 650,
+      default            = 600,
     },
   },
 }

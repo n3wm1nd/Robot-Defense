@@ -1,4 +1,4 @@
-return {
+eturn {
   name='TA Robot Defense V4.0',
   description='Robot Defense',
   shortname='RD',

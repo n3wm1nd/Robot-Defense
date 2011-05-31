@@ -6,8 +6,8 @@ local unitName = "tllfireraiser"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-  acceleration       = 0.1,
-  badTargetCategory  = [[vtol]],
+  acceleration       = 0.11,
+  badTargetCategory  = [[VTOL]],
   bmcode             = 1,
   brakeRate          = 0.15,
   buildCostEnergy    = 841,
@@ -19,7 +19,7 @@ local unitDef = {
   canMove            = true,
   canPatrol          = true,
   canstop            = 1,
-  category           = [[TLL LEVEL1 WEAPON NOTAIR NOTSUB NOTSTRUCTURE CTRL_G CTRL_W]],
+  category           = [[TLL LEVEL1 WEAPON NOTAIR NOTSUB NOTSTRUCTURE  ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   defaultmissiontype = [[Standby]],
@@ -48,7 +48,7 @@ local unitDef = {
   selfDestructAs     = [[BIG_UNIT]],
   shootme            = 1,
   side               = [[TLL]],
-  sightDistance      = 260,
+  sightDistance      = 329,
   spanishdescription = [[Kbot Lanzacohetes]],
   standingfireorder  = 2,
   standingmoveorder  = 1,
@@ -84,7 +84,7 @@ local unitDef = {
   },
   weapons = {
     [1]  = {
-      badTargetCategory  = [[CTRL_V]],
+      badTargetCategory  = [[VTOL]],
       def                = [[TLL_KBOT_ROCKET]],
     },
   },

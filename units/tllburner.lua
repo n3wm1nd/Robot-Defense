@@ -19,7 +19,7 @@ local unitDef = {
   canMove            = true,
   canPatrol          = true,
   canstop            = 1,
-  category           = [[TLL LEVEL2 WEAPON NOTAIR NOTSUB NOTSTRUCTURE CTRL_G CTRL_W]],
+  category           = [[TLL LEVEL2 WEAPON NOTAIR NOTSUB NOTSTRUCTURE  ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   defaultmissiontype = [[Standby]],
@@ -43,7 +43,7 @@ local unitDef = {
   movementClass      = [[KBOT2]],
   name               = [[Burner]],
   noAutoFire         = false,
-  noChaseCategory    = [[CTRL_V]],
+  noChaseCategory    = [[VTOL]],
   objectName         = [[TLLBURNER]],
   selfDestructAs     = [[MEDIUM_BUILDING]],
   shootme            = 1,
@@ -84,7 +84,7 @@ local unitDef = {
   },
   weapons = {
     [1]  = {
-      badTargetCategory  = [[CTRL_V]],
+      badTargetCategory  = [[VTOL]],
       def                = [[TLL_FLAME]],
     },
   },

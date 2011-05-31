@@ -6,8 +6,8 @@ local unitName = "tllbug"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-  acceleration       = 0.14,
-  badTargetCategory  = [[vtol]],
+  acceleration       = 0.46,
+  badTargetCategory  = [[VTOL]],
   bmcode             = 1,
   brakeRate          = 0.25,
   buildCostEnergy    = 112,
@@ -19,7 +19,7 @@ local unitDef = {
   canMove            = true,
   canPatrol          = true,
   canstop            = 1,
-  category           = [[TLL LEVEL1 WEAPON NOTAIR NOTSUB NOTSTRUCTURE CTRL_G CTRL_W]],
+  category           = [[TLL LEVEL1 WEAPON NOTAIR NOTSUB NOTSTRUCTURE  ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   defaultmissiontype = [[Standby]],
@@ -42,12 +42,12 @@ local unitDef = {
   movementClass      = [[KBOT1]],
   name               = [[Bug]],
   noAutoFire         = false,
-  noChaseCategory    = [[vtol]],
+  noChaseCategory    = [[VTOL]],
   objectName         = [[TLLBUG]],
   selfDestructAs     = [[SMALL_UNIT]],
   shootme            = 1,
   side               = [[TLL]],
-  sightDistance      = 263,
+  sightDistance      = 498,
   standingfireorder  = 2,
   standingmoveorder  = 2,
   steeringmode       = 2,
@@ -82,7 +82,7 @@ local unitDef = {
   },
   weapons = {
     [1]  = {
-      badTargetCategory  = [[CTRL_V]],
+      badTargetCategory  = [[VTOL]],
       def                = [[TLLLIGHT_PARALYZER]],
     },
   },

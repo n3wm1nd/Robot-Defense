@@ -6,8 +6,8 @@ local unitName = "tllpbot"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-  acceleration       = 0.1,
-  badTargetCategory  = [[vtol]],
+  acceleration       = 0.11,
+  badTargetCategory  = [[VTOL]],
   bmcode             = 1,
   brakeRate          = 0.13,
   buildCostEnergy    = 675,
@@ -19,7 +19,7 @@ local unitDef = {
   canMove            = true,
   canPatrol          = true,
   canstop            = 1,
-  category           = [[TLL LEVEL1 WEAPON NOTAIR NOTSUB NOTSTRUCTURE CTRL_G CTRL_W]],
+  category           = [[TLL LEVEL1 WEAPON NOTAIR NOTSUB NOTSTRUCTURE  ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   defaultmissiontype = [[Standby]],
@@ -34,18 +34,18 @@ local unitDef = {
   maneuverleashlength = 640,
   maxDamage          = 1220,
   maxSlope           = 14,
-  maxVelocity        = 1.11,
+  maxVelocity        = 1.40,
   maxWaterDepth      = 12,
   mobilestandorders  = 1,
   movementClass      = [[KBOT2]],
   name               = [[Rainman]],
   noAutoFire         = false,
-  noChaseCategory    = [[vtol]],
+  noChaseCategory    = [[VTOL]],
   objectName         = [[TLLpbot]],
   selfDestructAs     = [[BIG_UNIT]],
   shootme            = 1,
   side               = [[TLL]],
-  sightDistance      = 250,
+  sightDistance      = 350,
   standingfireorder  = 2,
   standingmoveorder  = 0,
   steeringmode       = 2,
@@ -83,7 +83,7 @@ local unitDef = {
   },
   weapons = {
     [1]  = {
-      badTargetCategory  = [[CTRL_V]],
+      badTargetCategory  = [[VTOL]],
       def                = [[TLL_PBOT]],
     },
   },
@@ -109,7 +109,7 @@ local weaponDefs = {
     minbarrelangle     = -35,
     name               = [[Light Gauss]],
     range              = 355,
-    reloadtime         = 1,
+    reloadtime         = 0.8,
     renderType         = 4,
     soundHit           = [[xplosml3]],
     soundStart         = [[canlite3]],
@@ -121,7 +121,7 @@ local weaponDefs = {
     weaponType         = [[Cannon]],
     weaponVelocity     = 250,
     damage = {
-      default            = 97,
+      default            = 80,
     },
   },
 }

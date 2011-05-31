@@ -1,4 +1,4 @@
--- UNITDEF -- TLLCONFUSER --
+         -- UNITDEF -- TLLCONFUSER --
 --------------------------------------------------------------------------------
 
 local unitName = "tllconfuser"
@@ -6,7 +6,7 @@ local unitName = "tllconfuser"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-  acceleration       = 0.1,
+  acceleration       = 0.11,
   activateWhenBuilt  = true,
   bmcode             = 1,
   brakeRate          = 0.2,
@@ -19,7 +19,7 @@ local unitDef = {
   canMove            = true,
   canPatrol          = true,
   canstop            = 1,
-  category           = [[TLL NOWEAPON LEVEL2 NOTAIR NOTSUB NOTSTRUCTURE CTRL_R]],
+  category           = [[TLL NOWEAPON LEVEL2 NOTAIR NOTSUB NOTSTRUCTURE ]],
   copyright          = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
   corpse             = [[dead]],
   damageModifier     = .75,
@@ -36,7 +36,7 @@ local unitDef = {
   maneuverleashlength = 320,
   maxDamage          = 611,
   maxSlope           = 32,
-  maxVelocity        = 0.72,
+  maxVelocity        = 1.02,
   maxWaterDepth      = 112,
   mobilestandorders  = 1,
   movementClass      = [[TANK2]],
@@ -53,7 +53,7 @@ local unitDef = {
   steeringmode       = 1,
   TEDClass           = [[KBOT]],
   threed             = 1,
-  turnRate           = 750,
+  turnRate           = 825,
   unitname           = [[tllconfuser]],
   unitnumber         = 863,
   version            = 3.1,
