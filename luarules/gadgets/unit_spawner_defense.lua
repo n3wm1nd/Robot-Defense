@@ -330,7 +330,7 @@ end
 
 local EMP_GOO = {}
 EMP_GOO[WeaponDefNames['chickenr1_goolauncher'].id] = WeaponDefNames['chickenr1_goolauncher'].damages[1]
---EMP_GOO[WeaponDefNames['weaver_death'].id] = WeaponDefNames['weaver_death'].damages[1]
+EMP_GOO[WeaponDefNames['weaver_death'].id] = WeaponDefNames['weaver_death'].damages[1]
 local LOBBER = UnitDefNames["chickenr1"].id
 local SKIRMISH = { [UnitDefNames["chickens1"].id] = 270, [UnitDefNames["chickens2"].id] = 620 }
 local COWARD = { [UnitDefNames["chickenh1"].id] = 150, [UnitDefNames["chickenr1"].id] = 300 }
@@ -444,7 +444,7 @@ end
 
 local function addChickenTarget(chickenID, targetID)
   if (not targetID) or (GetUnitTeam(targetID) == chickenTeamID) or (GetUnitTeam(chickenID) ~= chickenTeamID) then return end
-  --debug--Spring.Echo(t .. " addChickenTarget " .. chickenID .. "," .. targetID)
+  Spring.Echo(t .. " addChickenTarget " .. chickenID .. "," .. targetID)
   if chickenTargets[chickenID] and chickenTargets[chickenTargets[chickenID]] then
     chickenTargets[chickenTargets[chickenID]][chickenID] = nil
   end
@@ -461,7 +461,7 @@ end
 local function AttackNearestEnemy(unitID, unitDefID, unitTeam)
   local targetID = GetUnitNearestEnemy(unitID)
   if (targetID) and (not GetUnitIsDead(targetID)) and (not GetUnitNeutral(targetID)) then
-    --debug--Spring.Echo(t .. " AttackNearestEnemy " .. unitID .. " -> " .. targetID)
+    Spring.Echo(t .. " AttackNearestEnemy " .. unitID .. " -> " .. targetID)
     local defID = GetUnitDefID(targetID)
     if UnitDefs[defID] and (UnitDefs[defID].speed > 75) then
       return false
@@ -507,7 +507,7 @@ local function ChooseTarget()
   else
     targetCacheCount = targetCacheCount + 1
   end  
-  --debug--Spring.Echo(t .. " ChooseTarget " .. targetCache)
+  Spring.Echo(t .. " ChooseTarget " .. targetCache)
   return {GetUnitPosition(targetCache)}
   
 end
@@ -685,7 +685,7 @@ end
 
 
 local function Wave()
-  --debug--Spring.Echo(t .. "Wave()")
+  Spring.Echo(t .. "Wave()")
   
   if gameOver then return end
   
@@ -805,7 +805,7 @@ end
 function gadget:UnitIdle(unitID, unitDefID, unitTeam)
   if gameOver then return end
   if (unitTeam == chickenTeamID) and (chickenDefTypes[unitDefID] or (unitID == queenID)) then
-    --debug--Spring.Echo(t .. " unitIdle " .. unitID)
+    Spring.Echo(t .. " unitIdle " .. unitID)
     if not AttackNearestEnemy(unitID, unitDefID, unitTeam) then
       local chickenParams = ChooseTarget()
 	  if targetCache and (unitID ~= queenID) and (mRandom(1,10) == 5) then
@@ -1130,7 +1130,7 @@ function gadget:GameFrame(n)
 end
 
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
-  --debug--Spring.Echo(t .. " UnitDestroyed " .. unitID)
+  Spring.Echo(t .. " UnitDestroyed " .. unitID)
   if gameOver then return end
    
   if chickenBirths[unitID] then chickenBirths[unitID] = nil end
@@ -1140,9 +1140,9 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
 
   if chickenTargets[unitID] then
     if (unitTeam ~= chickenTeamID) then
-      --debug--Spring.Echo(t .. " chickenTargets " .. unitID)
+      Spring.Echo(t .. " chickenTargets " .. unitID)
       for chickenID in pairs(chickenTargets[unitID]) do
-        --debug--Spring.Echo(t .. " stopChicken " .. chickenID)
+        Spring.Echo(t .. " stopChicken " .. chickenID)
         if GetUnitDefID(chickenID) then 
           idleOrderQueue[chickenID] = {cmd = CMD.STOP, params = {}, opts = {}}     
         end
