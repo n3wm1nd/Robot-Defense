@@ -1,0 +1,62 @@
+-- queenspikes
+
+return {
+  ["queenspikes"] = {
+    usedefaultexplosions = true,
+    rocks = {
+      air                = true,
+      class              = [[CSimpleParticleSystem]],
+      count              = 3,
+      ground             = true,
+      water              = true,
+      properties = {
+        airdrag            = 0.95,
+        colormap           = [[0 0 0 0.01   0.9 0.9 0 0.05  0.9 0.9 0 0.1  0.9 0.9 0 0.15     0.9 0.9 0 0.2     0.9 0.9 0 0.25       0.8 0.8 0.1 0.3       0.7 0.7 0.2 0.4      0.5 0.35 0. 0.5   0.5 0.35 0. 0.5   0.5 0.35 0. 0.5    0.5 0.35 0. 0.5   0 0 0 0.01]],
+        directional        = true,
+        emitrot            = 10,
+        emitrotspread      = 10,
+        emitvector         = [[0, 1, 0]],
+        gravity            = [[0,0,0]],
+        numparticles       = 1,
+        particlelife       = 1,
+        particlelifespread = 5,
+        particlesize       = 10,
+        particlesizespread = 5,
+        particlespeed      = 5,
+        particlespeedspread = 2,
+        pos                = [[0, 0, 0]],
+        sizegrowth         = 0.05,
+        sizemod            = 1.0,
+        texture            = [[fireball]],
+      },
+    },
+    smokey = {
+      air                = true,
+      class              = [[CSimpleParticleSystem]],
+      count              = 3,
+      ground             = true,
+      water              = true,
+      properties = {
+        airdrag            = 0.95,
+        colormap           = [[0 0 0 0	0 0 0 0	  0.3 0.3 0.3 0.7	0.3 0.3 0.3 0.7	0.3 0.3 0.3 0.6	0 0 0 0.01]],
+        emitrot            = 10,
+        emitrotspread      = 10,
+        emitvector         = [[0, 1, 0]],
+        gravity            = [[0, 0, 0]],
+        numparticles       = 1,
+        particlelife       = 5,
+        particlelifespread = 15,
+        particlesize       = 15,
+        particlesizespread = 15,
+        particlespeed      = 6,
+        particlespeedspread = 1,
+        pos                = [[0, 0, 0]],
+        sizegrowth         = 0.05,
+        sizemod            = 1.0,
+        texture            = [[graysmoke]],
+      },
+    },
+  },
+
+}
+

@@ -1,0 +1,52 @@
+[KROGCRUSH2]
+{
+	name=KrogCrush;
+	rendertype=4;
+	lineofsight=0;
+	turret=1;
+	range=125;
+	reloadtime=0.1;
+	weapontimer=0.1;
+	weaponvelocity=650;
+	areaofeffect=125;
+	metalpershot=0;
+	tolerance=100;
+	collidefriendly=0;
+	noselfdamage=1;
+	rgbcolor=0 0 0;
+	explosiongenerator=custom:KROGCRUSHE;
+	intensity=0;
+	thickness=0;
+	impulsefactor=0.234;
+	impulseboost=0.234;
+	cratermult=0;
+	craterboost=0;
+	[DAMAGE]
+	{
+		default=1;
+		COMMANDERS=1;
+		KROGOTH=1;
+		ORCONE=1;
+		MECHS=1;
+		HEAVYUNITS=1;
+		AMPHIBIOUS=2000;
+		SPIES=2000;
+		CRAWLINGBOMBS=2000;
+		FLAMETHROWERS=2000;
+		MINELAYSER=2000;
+		MINES=2000;
+		PLASMAGUNS=1;
+		ANTIRAIDER=2000;
+		ANTIBOMBER=2000;
+		ANTIFIGHTER=2000;
+		ANNIDDM=1;
+		VULCBUZZ=1;
+		NANOS=2000;
+		DL=2000;
+		FLAKS=2000;
+		RADAR=2000;
+		ELSE=2000;
+		CHICKEN=1;
+		TINYCHICKEN=1;
+	}
+}
