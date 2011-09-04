@@ -75,7 +75,8 @@ local difficulties = {
     [3] = 'Normal',
     [4] = 'Hard',
     [5] = 'Very Hard',
-    [6] = 'Custom',
+    [6] = 'Insane',
+    [7] = 'Custom',
 }
 
 local rules = {

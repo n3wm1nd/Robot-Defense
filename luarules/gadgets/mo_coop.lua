@@ -117,8 +117,10 @@ function gadget:RecvLuaMsg(msg, id)
     elseif (msg:find("coop_factionchange",1,true)) then
       local playerID = string.match(msg, ",([^,]+)")
       if id == (playerID * 1) then
-        if startPoints[id].commander == "armcom" then
+       if startPoints[id].commander == "armcom" then
           startPoints[id].commander = "corcom"
+	elseif startPoints[id].commander == "corcom" then
+          startPoints[id].commander = "tllcom"
         else
           startPoints[id].commander = "armcom"
         end
@@ -338,11 +340,9 @@ function StartPoint(_,x,z,name,playerID,faction)
     startPoints[playerID].name = name
     if faction == "armcom" then
       startPoints[playerID].faction = "(ARM) "
-    end
-    if faction == "tllcom" then
+    elseif faction == "tllcom" then
       startPoints[playerID].faction = "(TLL) "
-    end
-    if faction == "armcom" then
+    elseif faction == "armcom" then
       startPoints[playerID].faction = "(CORE) "
     end
   end
@@ -351,11 +351,9 @@ end
 function FactionChange(_,playerID, faction)
   if faction == "armcom" then
     startPoints[playerID].faction = "(ARM) "
-  end
-  if faction == "tllcom" then
+  elseif faction == "tllcom" then
     startPoints[playerID].faction = "(TLL) "
-  end
-  if faction == "corcom" then
+  elseif faction == "corcom" then
     startPoints[playerID].faction = "(CORE) "
   end
 end

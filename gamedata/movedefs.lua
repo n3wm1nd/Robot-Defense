@@ -18,6 +18,7 @@ local moveDatas = {
 		maxwaterdepth = 5000,
 		maxwaterslope = 50,
 	},
+	
 	ATANK3 = {
 		crushstrength = 30,
 		depthmod = 0,
@@ -78,7 +79,13 @@ local moveDatas = {
 		footprintz = 8,
 		minwaterdepth = 15,
 	},
-	
+	HKBOT3 = {
+		crushstrength = 250,
+		footprintx = 3,
+		footprintz = 3,
+		maxslope = 36,
+		maxwaterdepth = 22,
+	},
 	HKBOT4 = {
 		crushstrength = 250,
 		footprintx = 4,
@@ -118,6 +125,13 @@ local moveDatas = {
 		maxslope = 18,
 		maxwaterdepth = 22,
 	},
+	HTANK5 = {
+		crushstrength = 250,
+		footprintx = 5,
+		footprintz = 5,
+		maxslope = 18,
+		maxwaterdepth = 22,
+	},
 	HTKBOT4 = {
 		crushstrength = 250,
 		footprintx = 4,
@@ -139,6 +153,13 @@ local moveDatas = {
 		maxslope = 80,
 		maxwaterdepth = 22,
 	},
+	HTKBOT11 = {
+		crushstrength = 12400,
+		footprintx = 11,
+		footprintz = 11,
+		maxslope = 80,
+		maxwaterdepth = 22,
+	},
 	KBOT1 = {
 		crushstrength = 5,
 		footprintx = 1,
@@ -152,6 +173,13 @@ local moveDatas = {
 		footprintz = 2,
 		maxslope = 36,
 		maxwaterdepth = 22,
+	},
+	KBOT3 = {
+		crushstrength = 15,
+		footprintx = 3,
+		footprintz = 3,
+		maxslope = 36,	
+		maxwaterdepth = 21,
 	},
 	TANK2 = {
 		crushstrength = 15,
@@ -273,40 +301,38 @@ local moveDatas = {
 		maxslope = 36,	
 		maxwaterdepth = 21,
 	},
-	KBOT3 = {
-		crushstrength = 15,
-		footprintx = 3,
-		footprintz = 3,
-		maxslope = 36,	
-		maxwaterdepth = 21,
-	},
 	DBOAT8= {
 		crushstrength = 70,
 		footprintx = 8,
 		footprintz = 8,
 		maxwaterdepth = 15,
 	},
-	CHICKQUEEN = {
-		crushstrength = 11000,
-		footprintx = 3,
-		footprintz = 3,
-		maxslope = 40,	
-		maxwaterdepth = 72,
-	},
-	CHICKENHKBOT3 = {
-		crushstrength = 1400,
-		footprintx = 3,
-		footprintz = 3,
-		maxslope = 36,	
-		maxwaterdepth = 22,
-	},
-	CHICKENHKBOT4 = {
-		crushstrength = 11000,
-		footprintx = 4,
-		footprintz = 4,
-		maxslope = 36,	
-		maxwaterdepth = 22,
-	},
+	CHICKQUEEN =
+{
+	footprintx=3;
+	footprintz=3;
+	maxwaterdepth=72;
+	maxslope=40;
+	crushstrength=11000;
+},
+
+CHICKENHKBOT3 =
+{
+	footprintx=3;
+	footprintz=3;
+	maxwaterdepth=22;
+	maxslope=36;
+	crushstrength=1400;
+},
+
+CHICKENHKBOT4 =
+{
+	footprintx=4;
+	footprintz=4;
+	maxwaterdepth=22;
+	maxslope=36;
+	crushstrength=44000;
+}
 }
 
 --------------------------------------------------------------------------------

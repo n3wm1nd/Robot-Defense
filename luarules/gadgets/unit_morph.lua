@@ -592,7 +592,7 @@ local function FinishMorph(unitID, morphData)
 
   --//copy command queue
   local cmds = Spring.GetUnitCommands(unitID)
-  for i = 2, cmds.n do  -- skip the first command (CMD_MORPH)
+  for i = 2, #cmds do  -- skip the first command (CMD_MORPH)
     local cmd = cmds[i]
     Spring.GiveOrderToUnit(newUnit, cmd.id, cmd.params, cmd.options.coded)
   end
@@ -620,8 +620,8 @@ local function FinishMorph(unitID, morphData)
     Spring.SetUnitShieldState(newUnit, enabled,oldShieldState)
   end
 
-  local lineage = Spring.GetUnitLineage(unitID)
-  Spring.SetUnitLineage(newUnit,lineage,true)
+ -- local lineage = Spring.GetUnitLineage(unitID)
+ -- Spring.SetUnitLineage(newUnit,lineage,true)
 
   --// FIXME: - re-attach to current transport?
   --// update selection
