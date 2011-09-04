@@ -65,6 +65,7 @@ local chickenTypes = {
   chickena2     =  true,
   armstump      =  true,
   armthund      =  true,
+  armblz        =  true,
   armjanus1     =  true,
   corgfbt       =  true,
   cslicer       =  true,
@@ -83,7 +84,7 @@ local chickenTypes = {
   coremech      =  true,
   corprot       =  true,
   cortotal      =  true,
-  armraven         =  true,
+  armraven      =  true,
   tllsham       =  true,
   corkrog       =  true,
   arm_furie     =  true,
@@ -157,11 +158,11 @@ addWave(4,{"1 cslicer"})
 addWave(4,{"1 cslicer"})
 addWave(4,{"5 cslicer"})
 addWave(4,{"3 cslicer"})
-addWave(4,{"2 airwolf3g", "2 armthund", "40 armthund"})
+addWave(4,{"2 airwolf3g", "2 armblz", "40 armblz"})
 addWave(4,{"1 armsnipe", "3 tllsham","1 armmerl"})
 
 
-addWave(5,{"5 armthund", "5 armthund"})
+addWave(5,{"5 armblz", "5 armblz"})
 addWave(5,{"2 airwolf3g"})
 addWave(5,{"10 armflea"})
 addWave(5,{"10 armrectr"})
@@ -180,8 +181,8 @@ addWave(5,{"5 armstump", "3 chickena2", "4 tllsham"})
 addWave(6,{"12 taipan", " 4 armsnipe"})
 addWave(6,{"3 airwolf3g"})
 addWave(6,{"3 airwolf3g"})
-addWave(6,{"30 armthund"})
-addWave(6,{"10 armthund"})
+addWave(6,{"30 armblz"})
+addWave(6,{"10 armblz"})
 addWave(6,{"35 armflea", "40 armflea", "40 armflea"})
 addWave(6,{"12 armstump", "25 armstump"})
 addWave(6,{"2 airwolf3g", "2 chickena2", "4 tllsham"})
@@ -231,7 +232,7 @@ addWave(9,{"1 armcrabe"})
 addWave(9,{"3 armcrabe"})
 addWave(9,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
 addWave(9,{"3 corprot", "3 armsnipe"})
-addWave(9,{"10 airwolf3g"})
+addWave(9,{"10 airwolf3g", "7 b52g"})
 addWave(9,{"10 airwolf3g"})
 addWave(9,{"10 armcybr"})
 addWave(9,{"2 corkrog", "2 arm_furie", "20 clb"})
