@@ -12,6 +12,7 @@ fighters = {
 	tlladvfight = 99,
 	tllfight = 99,
 	tllseaf = 99,
+	chickenw1 = 99,
 },
 bombers = {
 	armblz = 99,
@@ -34,7 +35,6 @@ bombers = {
 	tllseab = 99,
 	corseap = 99,
 	armseap = 99,
-	chickenw1 = 99,
 	chickenf1 = 99,
 },
 flak_resistant = {
