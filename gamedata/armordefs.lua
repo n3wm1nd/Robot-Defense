@@ -35,7 +35,6 @@ bombers = {
 	tllseab = 99,
 	corseap = 99,
 	armseap = 99,
-	chickenf1 = 99,
 },
 flak_resistant = {
 	apache = 99,
@@ -44,6 +43,8 @@ flak_resistant = {
 	chopper = 99,
 	smasher = 99,
 	tllcopter = 99,
+	chickenf1 = 99,
+
 },
 unclassed_air = {
 -- Builders 
