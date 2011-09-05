@@ -97,6 +97,7 @@ local chickenTypes = {
   clb           =  true,
   corpyro       =  true,
   armzeus       =  true,
+  tllbug        =  true,
 }
 
 local defenders = { 
@@ -227,7 +228,7 @@ addWave(8,{"4 clb"})
 addWave(8,{"4 clb"})
 addWave(8,{"4 clb"})
 addWave(8,{"35 chickena2", "10 tllsham"})
-addWave(8,{"35 armrectr", "50 armflea", "75 armflea"})
+addWave(8,{"35 armrectr", "50 tllbug", "75 tllbug"})
 addWave(8,{"1 arm_furie", "1 corgala"})
 
 
