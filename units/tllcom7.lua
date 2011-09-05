@@ -218,8 +218,7 @@ local weaponDefs = {
 		damage = {
 			commanders = 450,
 			default = 999999,
-+			chicken = 1200,
-
+			chicken = 1200,
 			},
 	},
 	TLLCOM_LIGHTNING5 = {
