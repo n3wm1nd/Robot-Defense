@@ -119,6 +119,7 @@ local failChickens        = {}
 local chickenTargets      = {}
 local burrows             = {}
 
+local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --
@@ -746,8 +747,11 @@ local function Wave()
       if not skipSpawn then
         local nEnd,_     = string.find(sString, " ")
         local unitNumber = string.sub(sString,1,(nEnd-1))
+        --local unitNumber = tonumber(string.sub(sString,1,(nEnd-1))) or -1
         local chickenName  = string.sub(sString,(nEnd+1))
-        for i = 1,unitNumber,1 do
+        Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :broken what=" .. unitNumber) 
+	  if unitNumber == nil then unitNumber = "1"  end        
+	for i = 1,unitNumber,1 do
           table.insert(spawnQueue, {burrow = burrowID, unitName = chickenName, team = chickenTeamID})
         end
         cCount = cCount + unitNumber
@@ -1086,10 +1090,14 @@ function gadget:GameFrame(n)
         SKIRMISH[UnitDefNames["chickenw1"].id] = 1800
         COWARD[UnitDefNames["chicken2"].id] = nil
         COWARD[UnitDefNames["chicken_dodo1"].id] = 300
-	    for i = 1,80,1 do
+	  for i = 1,80,1 do
+	   if (cenabled == 0) then 
+          table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID})
+           else
           table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
         end
       end
+    end
       updateQueenLife()
     end
         
