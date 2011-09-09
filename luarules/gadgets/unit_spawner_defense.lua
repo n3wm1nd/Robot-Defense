@@ -747,10 +747,8 @@ local function Wave()
       if not skipSpawn then
         local nEnd,_     = string.find(sString, " ")
         local unitNumber = string.sub(sString,1,(nEnd-1))
-        --local unitNumber = tonumber(string.sub(sString,1,(nEnd-1))) or -1
         local chickenName  = string.sub(sString,(nEnd+1))
-        Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :broken what=" .. unitNumber) 
-	  if unitNumber == nil then unitNumber = "1"  end        
+        --Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :unitNumber=" .. unitNumber) 
 	for i = 1,unitNumber,1 do
           table.insert(spawnQueue, {burrow = burrowID, unitName = chickenName, team = chickenTeamID})
         end
