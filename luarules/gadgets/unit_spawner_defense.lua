@@ -337,7 +337,7 @@ local EMP_GOO = {}
 EMP_GOO[WeaponDefNames['chickenr1_goolauncher'].id] = WeaponDefNames['chickenr1_goolauncher'].damages[1]
 EMP_GOO[WeaponDefNames['weaver_death'].id] = WeaponDefNames['weaver_death'].damages[1]
 local LOBBER = UnitDefNames["chickenr1"].id
-local SKIRMISH = { [UnitDefNames["chickens1"].id] = 270, [UnitDefNames["chickens2"].id] = 620 }
+local SKIRMISH = { [UnitDefNames["chickens1"].id] = 270, [UnitDefNames["chickens2"].id] = 620, [UnitDefNames["armstump"].id] = 620, [UnitDefNames["armthund"].id] = 620 } 
 local COWARD = { [UnitDefNames["chickenh1"].id] = 150, [UnitDefNames["chickenr1"].id] = 300 }
 local JUNO = { [WeaponDefNames["cjuno_juno_pulse"].id]= true, [WeaponDefNames["ajuno_juno_pulse"]] = true }
 local KROW_ID = UnitDefNames["corcrw"].id
@@ -1083,19 +1083,25 @@ function gadget:GameFrame(n)
         _,queenMaxHP = GetUnitHealth(queenID)
         SetUnitExperience(queenID, (expMod*1.5))
         timeOfLastWave = t
-        SKIRMISH[UnitDefNames["chickenc1"].id] = 150
-        SKIRMISH[UnitDefNames["chickenf1"].id] = 1200
-        SKIRMISH[UnitDefNames["chickenw1"].id] = 1800
-        COWARD[UnitDefNames["chicken2"].id] = nil
-        COWARD[UnitDefNames["chicken_dodo1"].id] = 300
-	  for i = 1,80,1 do
-	   if (cenabled == 0) then 
-          table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID})
-           else
-          table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
-        end
-      end
-    end
+           if (cenabled == 0) then 
+		SKIRMISH[UnitDefNames["armstump"].id] = 150
+        	SKIRMISH[UnitDefNames["armcybr"].id] = 1200
+	        SKIRMISH[UnitDefNames["airwolf3g"].id] = 1800
+         	COWARD[UnitDefNames["clb"].id] = nil
+ 	        COWARD[UnitDefNames["corprot"].id] = 300
+	  	for i = 1,10,1 do
+		table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID})	   			end
+          else
+                SKIRMISH[UnitDefNames["chickenc1"].id] = 150
+        	SKIRMISH[UnitDefNames["chickenf1"].id] = 1200
+	        SKIRMISH[UnitDefNames["chickenw1"].id] = 1800
+         	COWARD[UnitDefNames["chicken2"].id] = nil
+ 	        COWARD[UnitDefNames["chicken_dodo1"].id] = 300
+		for i = 1,80,1 do
+           	table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
+        	end
+          end
+	end
       updateQueenLife()
     end
         

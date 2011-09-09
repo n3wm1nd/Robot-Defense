@@ -63,7 +63,6 @@ local chickenTypes = {
   corthud       =  true,
   corthud1      =  true,
   armrectr      =  true,
-  chickena2     =  true,
   armstump      =  true,
   armthund      =  true,
   armblz        =  true,
