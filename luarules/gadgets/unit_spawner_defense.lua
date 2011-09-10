@@ -877,12 +877,13 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer,
           Spring.Echo("Queen is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
           queenResistance[weaponID].notify = 1
 	 if (cenabled == 0) then 
-          for i = 1,30,1 do
+          for i = 1,20,1 do
             table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) end
 	  else 
 	  for i = 1,30,1 do
             table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID}) end
          end
+	end
         damage = damage - (damage * resistPercent)
       end
       queenResistance[weaponID].damage = queenResistance[weaponID].damage + damage
