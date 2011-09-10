@@ -108,6 +108,8 @@ local weaponDefs = {
 		weaponVelocity = 500,
 		damage = {
 			default = 0.001,
+			experimental_land = 0.002,
+			experimental_ships = 0.002,
 		},
 	},
 	FLAMER = {
@@ -148,10 +150,13 @@ local weaponDefs = {
 		weapontimer = 1,
 		weaponvelocity = 300,
 		damage = {
-			CHICKEN = 4,
-			COMMANDERS = 20,
+			chicken = 4,
+			commanders = 20,
 			default = 25,
-			TINYCHICKEN = 2,
+			experimental_land = 50,
+			experimental_ships = 50,
+			flamethrowers = 8,
+			tinychicken = 2,
 		},
 	},
 }

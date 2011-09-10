@@ -133,6 +133,8 @@ local weaponDefs = {
 		wobble = 32000,
 		damage = {
 			default = 800,
+			experimental_land = 1600,
+			experimental_ships = 1600,
 		},
 	},
 	WEAPON = {
@@ -160,9 +162,11 @@ local weaponDefs = {
 		weaponType = [[Cannon]],
 		weaponVelocity = 700,
 		damage = {
-			CHICKEN = 0.001,
+			chicken = 0.001,
 			default = 130,
-			TINYCHICKEN = 0.001,
+			experimental_land = 260,
+			experimental_ships = 260,
+			tinychicken = 0.001,
 		},
 	},
 }

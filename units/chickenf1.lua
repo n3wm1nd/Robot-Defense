@@ -105,10 +105,12 @@ local weaponDefs = {
 		sprayAngle = 2000,
 		weaponType = [[AircraftBomb]],
 		damage = {
-			ANTIBOMBER = 155,
-			CHICKEN = 100,
+			bomb_resistant = 100,
+			chicken = 100,
 			default = 310,
-			TINYCHICKEN = 100,
+			experimental_land = 620,
+			experimental_ships = 620,
+			tinychicken = 50,
 		},
 	},
 }

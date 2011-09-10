@@ -140,11 +140,15 @@ local weaponDefs = {
 		weaponTimer = 0.2,
 		weaponVelocity = 400,
 		damage = {
-			BOMBERS = 9999,
-			CHICKEN = 400,
+			bombers = 9999,
+			chicken = 400,
 			default = 900,
-			FIGHTERS = 9999,
-			FLAK_RESISTANT = 2800,
+			experimental_land = 1800,
+			experimental_ships = 1800,
+			fighters = 9999,
+			flak_resistant = 3333,
+			tinychicken = 200,
+			unclassed_air = 9999,
 		},
 	},
 	MELEE = {
@@ -173,12 +177,15 @@ local weaponDefs = {
 		weaponType = [[Cannon]],
 		weaponVelocity = 2500,
 		damage = {
-			BOMBERS = 9999,
-			CHICKEN = 0.001,
+			bombers = 9999,
+			chicken = 0.001,
 			default = 1750,
-			FIGHTERS = 9999,
-			FLAK_RESISTANT = 2250,
-			TINYCHICKEN = 0.001,
+			experimental_land = 3500,
+			experimental_ships = 3500,
+			fighters = 9999,
+			flak_resistant = 3333,
+			tinychicken = 0.001,
+			unclassed_air = 9999,
 		},
 	},
 	SPORES1 = {
@@ -228,7 +235,11 @@ local weaponDefs = {
 		weaponVelocity = 1000,
 		wobble = 64000,
 		damage = {
+			bombers = 165,
 			default = 145,
+			fighters = 165,
+			flak_resistant = 55,
+			unclassed_air = 165,
 		},
 	},
 	SPORES2 = {
@@ -278,7 +289,11 @@ local weaponDefs = {
 		weaponVelocity = 1000,
 		wobble = 64000,
 		damage = {
+			bombers = 165,
 			default = 145,
+			fighters = 165,
+			flak_resistant = 55,
+			unclassed_air = 165,
 		},
 	},
 	SPORES3 = {
@@ -328,7 +343,11 @@ local weaponDefs = {
 		weaponVelocity = 1000,
 		wobble = 64000,
 		damage = {
+			bombers = 165,
 			default = 145,
+			fighters = 165,
+			flak_resistant = 55,
+			unclassed_air = 165,
 		},
 	},
 }

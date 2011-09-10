@@ -120,6 +120,8 @@ local weaponDefs = {
 		weaponvelocity = 220,
 		damage = {
 			default = 775,
+			experimental_land = 1550,
+			experimental_ships = 1550,
 		},
 	},
 	WEAPON = {
@@ -156,11 +158,13 @@ local weaponDefs = {
 		weaponType = [[Cannon]],
 		weaponVelocity = 325,
 		damage = {
+			bombers = 600,
 			default = 466,
-			L1BOMBERS = 600,
-			L1FIGHTERS = 600,
-			L2BOMBERS = 600,
-			L2FIGHTERS = 600,
+			experimental_land = 932,
+			experimental_ships = 932,
+			fighters = 600,
+			flak_resistant = 200,
+			unclassed_air = 600,
 		},
 	},
 }

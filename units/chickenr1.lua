@@ -121,12 +121,10 @@ local weaponDefs = {
 		weaponTimer = 0.2,
 		weaponVelocity = 600,
 		damage = {
-			BLACKHYDRA = 300,
-			COMMANDERS = 300,
+			commanders = 300,
 			default = 600,
-			KROGOTH = 300,
-			ORCONE = 300,
-			SEADRAGON = 300,
+			experimental_land = 1200,
+			experimental_ships = 1200,
 		},
 	},
 }

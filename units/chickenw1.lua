@@ -114,12 +114,13 @@ local weaponDefs = {
 		weaponTimer = 1,
 		weaponVelocity = 425,
 		damage = {
+			bombers = 300,
 			default = 140,
-			GUNSHIPS = 200,
-			L1BOMBERS = 200,
-			L1FIGHTERS = 200,
-			L2BOMBERS = 275,
-			L2FIGHTERS = 225,
+			experimental_land = 280,
+			experimental_ships = 280,
+			fighters = 300,
+			flak_resistant = 100,
+			unclassed_air = 300,
 		},
 	},
 }

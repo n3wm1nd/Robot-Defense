@@ -108,9 +108,11 @@ local weaponDefs = {
 		weaponType = [[Cannon]],
 		weaponVelocity = 500,
 		damage = {
-			CHICKEN = 0.001,
+			chicken = 0.001,
 			default = 100,
-			TINYCHICKEN = 0.001,
+			experimental_land = 200,
+			experimental_ships = 200,
+			tinychicken = 0.001,
 		},
 	},
 }
