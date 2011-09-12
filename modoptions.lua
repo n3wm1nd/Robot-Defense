@@ -175,7 +175,7 @@ local options={
 		name="Burrow Placement",
 		desc="Control where burrows spawn",
 		type="list",
-		def="avoid",
+		def="alwaysbox",
 		section="chicken",
 		items={
 			{key="anywhere", name="Anywhere", desc="Burrows can spawn anywhere"},
@@ -189,7 +189,7 @@ local options={
 		name="Queen Difficulty",
 		desc="How hard doth the Chicken Queen",
 		type="list",
-		def="n_chickenq",
+		def="h_chickenq",
 		section="chicken",
 		items={
 			{key="ve_chickenq", name="Very Easy", desc="Cakewalk"},

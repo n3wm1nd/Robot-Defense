@@ -67,7 +67,7 @@ local options = {
     name   = 'Max units',
     desc   = 'Maximum number of units (including buildings) for each team allowed at the same time',
     type   = 'number',
-    def    = 500,
+    def    = 1000,
     min    = 1,
     max    = 10000, --- engine caps at lower limit if more than 3 team are ingame
     step   = 1,  -- quantization is aligned to the def value
@@ -141,7 +141,7 @@ local options = {
     name   = 'Undeformable map',
     desc   = 'Prevents the map shape from being changed by weapons',
     type   = 'bool',
-    def    = false,
+    def    = true,
     section= "ta_others",
   },
 --[[
