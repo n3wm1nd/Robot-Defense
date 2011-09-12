@@ -47,6 +47,8 @@ local function addWave(wave, unitList)
  table.insert(waves[wave], unitList)
 end
 
+
+
 --------------------------------------------------------------------------------
 --Robot Defense Config
 --------------------------------------------------------------------------------
@@ -54,7 +56,9 @@ end
 local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
 
 if (cenabled == 0) then 
-   
+
+  queenName = queenName .."r" 
+
 local chickenTypes = {
   armflea       =  true,
   armpw         =  true,
