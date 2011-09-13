@@ -61,7 +61,8 @@ if (cenabled == 0) then
 
 local chickenTypes = {
   armflea       =  true,
-  armpw         =  true,
+  armflash      =  true,
+  armflash1     =  true,
   armsam        =  true,
   cormist1      =  true,
   armrock       =  true,
@@ -123,40 +124,40 @@ addWave(1,{"1 armrectr"})
 addWave(1,{"4 armflea"})
 addWave(1,{"4 armflea", "1 armsam","1 tllsham", "1 armbull"})
 addWave(1,{"4 armflea", "12 armflea"})
-addWave(1,{"8 armpw", "2 armrectr"})
-addWave(1,{"2 armpw"})
-addWave(1,{"2 armpw"})
-addWave(1,{"2 armpw"})
+addWave(1,{"8 armflash", "2 armrectr"})
+addWave(1,{"2 armflash1"})
+addWave(1,{"2 armflash1"})
+addWave(1,{"2 armflash1"})
 addWave(1,{"2 armrock"})
 addWave(1,{"2 armrock", "1 armthund", "1 cormist1"})
 addWave(1,{"2 armrock", "1 cormist1"})
 
 
-addWave(2,{"2 armpw", "1 cormist1"})
-addWave(2,{"2 armpw"})
-addWave(2,{"3 armpw"})
+addWave(2,{"2 armflash1", "1 cormist1"})
+addWave(2,{"2 armflash1"})
+addWave(2,{"3 armflash1"})
 addWave(2,{"1 armthund"})
 addWave(2,{"1 cormist1"})
 addWave(2,{"5 armrock", "6 armsam", "7 corthud"})
-addWave(2,{"15 armpw", "20 armpw"})
+addWave(2,{"15 armflash1", "20 armflash1"})
 addWave(2,{"1 armbull","2 tllsham", "1 armstump"})
 addWave(2,{"1 armstump"})
 addWave(2,{"1 corgfbt"})
-addWave(2,{"1 armpw"})
+addWave(2,{"1 armflash1"})
 addWave(2,{"1 airwolf3g"})
 addWave(2,{"1 armthund", "1 airwolf3g", "1 armthund"})
-addWave(2,{"10 armpw", "1 armjanus1"})
+addWave(2,{"10 armflash1", "1 armjanus1"})
 
 
 addWave(3,{"3 armrectr", "2 armjanus1"})
-addWave(3,{"6 armpw"})
-addWave(3,{"7 armpw"})
-addWave(3,{"8 armpw"})
-addWave(3,{"9 armpw"})
+addWave(3,{"6 armflash1"})
+addWave(3,{"7 armflash1"})
+addWave(3,{"8 armflash1"})
+addWave(3,{"9 armflash1"})
 addWave(3,{"2 armstump", "2 armstump","2 tllsham", "1 armbull"})
-addWave(3,{"5 armpw", "5 armpw"})
-addWave(3,{"5 armpw", "5 armpw"})
-addWave(3,{"5 armpw"})
+addWave(3,{"5 armflash1", "5 armflash1"})
+addWave(3,{"5 armflash1", "5 armflash1"})
+addWave(3,{"5 armflash1"})
 addWave(3,{"7 armbull"})
 addWave(3,{"2 armstump"})
 addWave(3,{"5 corthud"})
