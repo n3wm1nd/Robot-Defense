@@ -101,7 +101,6 @@ local chickenTypes = {
   corgala       =  true,
   armcrabe      =  true,
   clb           =  true,
-  corpyro       =  true,
   armzeus       =  true,
   tllbug        =  true,
   armhdpw       =  true,
