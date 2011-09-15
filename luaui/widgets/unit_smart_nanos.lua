@@ -76,7 +76,7 @@ local nanoTurrets = {}
 local allyUnits = {}
 local orderQueue = {}
 
-if (Game.modShortName == "BA") then local BA = true end 
+if (Game.modShortName == "RD") then local BA = true end 
 
 local myTeamID
 
