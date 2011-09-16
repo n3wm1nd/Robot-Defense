@@ -1,7 +1,7 @@
--- UNITDEF -- FH_CHICKENQR --
+-- UNITDEF -- H_CHICKENQR --
 --------------------------------------------------------------------------------
 
-local unitName = "fh_chickenqr"
+local unitName = "h_chickenqr"
 
 --------------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ local unitDef = {
   steeringmode       = 2,
   TEDClass           = [[KBOT]],
   turnRate           = 366.6,
-  unitname           = [[fh_chickenqr]],
+  unitname           = [[h_chickenqr]],
   unitRestricted     = 1,
   upright            = true,
   weapon1_badtargetcategory = [[VTOL]],
