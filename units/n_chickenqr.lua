@@ -192,10 +192,10 @@ local weaponDefs = {
     weaponVelocity     = 2450,
     damage = {
 		default = 5,
-		bombers = 750,
-		fighters = 750,
+		bombers = 700,
+		fighters = 700,
 		flak_resistant = 250,
-		unclassed_air = 750,
+		unclassed_air = 700,
     },
   },
   BeamATADR = {
@@ -227,13 +227,13 @@ local weaponDefs = {
     weaponType         = [[BeamLaser]],
     weaponVelocity     = 2000,
     damage = {
-		chicken = 380,
+		chicken = 0,
 		commanders  = 80,
-		default = 280,
+		default = 260,
 		experimental_land = 500,
 		experimental_ships = 500,
 		subs = 5,
-		tinychicken = 380,
+		tinychicken = 0,
 
     },
   },
@@ -277,10 +277,10 @@ local weaponDefs = {
     weaponVelocity     = 1800,
     damage = {
 		default = 5,
-		bombers = 1750,
-		fighters = 1750,
-		flak_resistant = 1750,
-		unclassed_air = 1750,
+		bombers = 1550,
+		fighters = 1550,
+		flak_resistant = 1550,
+		unclassed_air = 1550,
     },
   },
   RKFLAME = {
@@ -364,13 +364,13 @@ local weaponDefs = {
     weaponType         = [[LaserCannon]],
     weaponVelocity     = 2666,
     damage = {
-		chicken = 4666,
+		chicken = 0,
 		commanders  = 666,
-		default = 3200,
-		experimental_land = 6666,
-		experimental_ships = 6666,
+		default = 3000,
+		experimental_land = 6000,
+		experimental_ships = 6000,
 		subs = 5,
-		tinychicken = 4666,
+		tinychicken = 0,
     },
   },
   RKEyeCannon = {
@@ -418,13 +418,13 @@ local weaponDefs = {
     weaponType         = [[BeamLaser]],
     weaponVelocity     = 1666,
     damage = {
-		chicken = 3666,
+		chicken = 0,
 		commanders  = 1666,
-		default = 2666,
-		experimental_land = 4666,
-		experimental_ships = 4666,
+		default = 2200,
+		experimental_land = 4000,
+		experimental_ships = 4000,
 		subs = 5,
-		tinychicken = 3666,
+		tinychicken = 0,
     },
   },
   KROGCRUSH1 = {
@@ -451,7 +451,7 @@ local weaponDefs = {
     weaponType         = [[Cannon]],
     weaponVelocity     = 650,
     damage = {
-     	default = 1000,
+     	default = 900,
     },
   },
 }
