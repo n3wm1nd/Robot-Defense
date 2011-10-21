@@ -316,6 +316,15 @@ local moveDatas = {
 	crushstrength=11000;
 },
 
+	ROBOTKING  =
+{
+	footprintx=5;
+	footprintz=5;
+	maxwaterdepth=72;
+	maxslope=40;
+	crushstrength=17500;
+},
+
 CHICKENHKBOT3 =
 {
 	footprintx=3;
