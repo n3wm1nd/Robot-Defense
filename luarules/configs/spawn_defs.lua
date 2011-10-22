@@ -245,19 +245,19 @@ addWave(8,{"4 clb"})
 addWave(8,{"18 cordem", "10 tllsham"})
 addWave(8,{"40 armaak", "55 tllbug","35 corprot"})
 addWave(8,{"1 arm_furie", "1 corgala"})
+addWave(8,{"1 corkarg1", "1 corgala"})
+addWave(8,{"10 cordem"})
 
 
 addWave(9,{"1 corkrog", "1 armcrabe"})
-addWave(9,{"10 cordem", "16 tllsham"})
 addWave(9,{"1 armcrabe"})
-addWave(9,{"3 armcrabe"})
+addWave(9,{"1 armcrabe"})
 addWave(9,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
 addWave(9,{"3 corprot", "3 armsnipe"})
-addWave(9,{"30 corawac", "10 airwolf3g", "7 b52g"})
+addWave(9,{"30 corawac", "20 airwolf3g", "7 b52g"})
 addWave(9,{"10 airwolf3g"})
 addWave(9,{"10 armcybr"})
-addWave(9,{"2 corkrog", "2 arm_furie", "20 clb"})
-addWave(9,{"3 corkarg1", "3 corgala"})
+addWave(9,{"2 corkrog", "2 arm_furie", "25 clb"})
 
 
 
