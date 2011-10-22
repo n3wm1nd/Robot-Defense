@@ -45,7 +45,6 @@ local unitDef = {
   idleAutoHeal       = 6666.66,
   idleTime           = 900,
   immunetoparalyzer  = 1,
-  isTargetingUpgrade = true,
   maneuverleashlength = 666,
   mass               = 6666666666,
   maxDamage          = 382500,
