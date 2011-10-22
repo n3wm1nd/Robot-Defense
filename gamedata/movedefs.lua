@@ -309,38 +309,38 @@ local moveDatas = {
 	},
 	CHICKQUEEN =
 {
-	footprintx=3;
-	footprintz=3;
-	maxwaterdepth=72;
-	maxslope=40;
-	crushstrength=11000;
+	footprintx=3,
+	footprintz=3,
+	maxwaterdepth=72,
+	maxslope=40,
+	crushstrength=11000,
 },
 
 	ROBOTKING  =
 {
-	footprintx=5;
-	footprintz=5;
-	maxwaterdepth=72;
-	maxslope=40;
-	crushstrength=17500;
+	footprintx=3,
+	footprintz=3,
+	maxwaterdepth=72,
+	maxslope=40,
+	crushstrength=27500,
 },
 
 CHICKENHKBOT3 =
 {
-	footprintx=3;
-	footprintz=3;
-	maxwaterdepth=22;
-	maxslope=36;
-	crushstrength=1400;
+	footprintx=3,
+	footprintz=3,
+	maxwaterdepth=22,
+	maxslope=36,
+	crushstrength=1400,
 },
 
 CHICKENHKBOT4 =
 {
-	footprintx=4;
-	footprintz=4;
-	maxwaterdepth=22;
-	maxslope=36;
-	crushstrength=44000;
+	footprintx=4,
+	footprintz=4,
+	maxwaterdepth=22,
+	maxslope=36,
+	crushstrength=44000,
 }
 }
 
