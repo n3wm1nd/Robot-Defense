@@ -877,7 +877,7 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer,
           Spring.Echo("Queen is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
           queenResistance[weaponID].notify = 1
 	 if (cenabled == 0) then 
-          for i = 1,20,1 do
+          for i = 1,10,1 do
             table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) end
 	  else 
 	  for i = 1,30,1 do
@@ -1092,8 +1092,8 @@ function gadget:GameFrame(n)
 	SKIRMISH[UnitDefNames["chickenw1"].id] = 1800
         COWARD[UnitDefNames["chicken2"].id] = nil
  	COWARD[UnitDefNames["chicken_dodo1"].id] = 300
-           if (cenabled == 0) then 
-		for i = 1,30,1 do
+--            if (cenabled == 0) then 
+		for i = 1,10,1 do
 		table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) end
            else
  		for i = 1,80,1 do
