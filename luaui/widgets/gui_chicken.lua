@@ -66,6 +66,13 @@ local queenAnger     = 0
 local guiPanel --// a displayList
 local updatePanel
 
+
+local side
+local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
+    if (cenabled == 1) then side = "Queen" else side = "King" end
+
+
+
 local red             = "\255\255\001\001"
 local white           = "\255\255\255\255"
 
@@ -207,14 +214,16 @@ local function CreatePanelDisplayList()
   local currentTime = GetGameSeconds()
   local techLevel = ""
   if (currentTime > gameInfo.gracePeriod) then
+    
     if queenAnger < 100 then
-      techLevel = "Queen Anger: " .. queenAnger .. "%"
+      techLevel = side.." Anger: " .. queenAnger .. "%"
     else
-      techLevel = "Queen Health: " .. gameInfo.queenLife .. "%"
+      techLevel = side.." Health: " .. gameInfo.queenLife .. "%"
     end
   else
     techLevel = "Grace Period: " .. math.ceil(((currentTime - gameInfo.gracePeriod) * -1) -0.5)
   end
+    
   fontHandler.DrawStatic(white..techLevel, PanelRow(1))
   fontHandler.DrawStatic(white..gameInfo.unitCounts, PanelRow(2))
   fontHandler.DrawStatic(white..gameInfo.unitKills, PanelRow(3))
@@ -307,7 +316,7 @@ function ChickenEvent(chickenEventArgs)
     UpdateRules()
   elseif (chickenEventArgs.type == "queen") then
     waveMessage    = {}
-    waveMessage[1] = "The Queen is angered!"
+    waveMessage[1] = "The "..side.." is angered!"
     waveTime = Spring.GetTimer()
   elseif (chickenEventArgs.type == "scores") then
     for i,v in pairs(chickenEventArgs) do
