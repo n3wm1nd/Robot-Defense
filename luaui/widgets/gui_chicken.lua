@@ -68,9 +68,10 @@ local updatePanel
 
 
 local side
+local aifaction
 local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
     if (cenabled == 1) then side = "Queen" else side = "King" end
-
+    if (cenabled == 1) then aifaction = "Chicken's" else aifaction = "Robot's" end
 
 
 local red             = "\255\255\001\001"
@@ -184,12 +185,12 @@ local function MakeCountString(type, showbreakdown)
   if showbreakdown then
     local breakDown =  table.concat(t, white..",")..white
     if showbrackets then
-      return string.format("Chickens: %d (%s)", total, breakDown)
+      return string.format(aifaction..": %d (%s)", total, breakDown)
     else
-      return string.format("Chickens: %d", total)
+      return string.format(aifaction..": %d", total)
     end
   else
-    return ("Chicken Kills: " .. white .. total)
+    return (aifaction.." Kills: " .. white .. total)
   end
 end
 
@@ -308,7 +309,7 @@ function ChickenEvent(chickenEventArgs)
     waveMessage    = {}
     waveCount      = waveCount + 1
     waveMessage[1] = "Wave "..waveCount
-    waveMessage[2] = waveColors[chickenEventArgs.tech]..chickenEventArgs.number.." chickens!"
+    waveMessage[2] = waveColors[chickenEventArgs.tech]..chickenEventArgs.number.." "..aifaction
     
     waveTime = Spring.GetTimer()
 
