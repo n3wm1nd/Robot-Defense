@@ -322,7 +322,7 @@ local moveDatas = {
 	footprintz=3,
 	maxwaterdepth=72,
 	maxslope=80,
-	crushstrength=100000,
+	crushstrength=600000,
 },
 
 CHICKENHKBOT3 =
