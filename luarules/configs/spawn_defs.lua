@@ -116,13 +116,17 @@ local chickenTypes = {
   cormort       =  true,
   corcrw        =  true,
   b52g          =  true,
+  armfast       =  true,
+  gorg          =  true,
+  armtigre2     =  true,
+  armlaspd      =  true,
 }
 
 local defenders = { 
   chickend1 = true,
 }
 
-addWave(1,{"1 armrectr", "1 armsam1"})
+if (math.random(0,1) == 1) then addWave(1,{"1 armrectr", "1 armsam1"}) else addWave(1,{"2 armflash", "2 armsam1"}) end
 addWave(1,{"2 armflea"})
 addWave(1,{"2 armflea"})
 addWave(1,{"1 armrectr"})
@@ -157,7 +161,7 @@ addWave(2,{"10 armflash1", "1 armjanus1"})
 addWave(3,{"3 armrectr", "2 armjanus1"})
 addWave(3,{"6 armflash1"})
 addWave(3,{"7 armflash1"})
-addWave(3,{"8 armflash1"})
+if (math.random(0,1) == 1) then addWave(3,{"8 armflash1"}) else addWave(3,{"8 armlaspd"}) end
 addWave(3,{"4 cormort", "4 armfboy"})
 addWave(3,{"2 armstump1", "2 tankanotor","2 tllsham", "5 armbull"})
 addWave(3,{"5 armflash1", "5 armflash1"})
@@ -190,7 +194,7 @@ addWave(5,{"10 tllprob", "5 armblz", "5 armblz"})
 addWave(5,{"2 airwolf3g"})
 addWave(5,{"10 corpyro"})
 addWave(5,{"10 armrectr"})
-addWave(5,{"20 corpyro"})
+if (math.random(0,1) == 1) then addWave(5,{"20 corpyro"}) else addWave(5,{"25 armfast"}) end
 addWave(5,{"10 corpyro", "10 cslicer", "10 corgfbt"})
 addWave(5,{"5 corgfbt", "10 armzeus"})
 addWave(5,{"2 armraven1", "10 armzeus"})
@@ -212,7 +216,7 @@ addWave(6,{"15 corpyro", "30 corpyro"})
 addWave(6,{"2 airwolf3g", "2 cordem", "4 tllsham"})
 addWave(6,{"1 cordem"})
 addWave(6,{"1 cordem"})
-addWave(6,{"3 tllgrim"})
+if (math.random(0,1) == 1) addWave(6,{"3 tllgrim"}) else addWave(6,{"6 armtigre2"}) end
 addWave(6,{"6 tllgrim"})
 addWave(6,{"15 armaak", "30 corpyro", "10 corsumo"})
 addWave(6,{"5 tankanotor", "20 armhdpw"})
@@ -241,10 +245,10 @@ addWave(8,{"35 airwolf3g"})
 addWave(8,{"25 corawac", "5 armcybr", "10 armcybr", "8 cordem"})
 addWave(8,{"3 cordem", "1 corkrog"})
 addWave(8,{"1 corkarg1", "1 corkarg1"})
-addWave(8,{"4 clb"})
-addWave(8,{"4 clb"})
-addWave(8,{"4 clb"})
-addWave(8,{"18 cordem", "10 tllsham"})
+addWave(8,{"7 cortotal"})
+addWave(8,{"7 cortotal"})
+addWave(8,{"7 cortotal"})
+if (math.random(0,1) == 1) then addWave(8,{"18 cordem", "10 corpyro"}) else addWave(8,{"3 gorg", "10 armfast"}) end
 addWave(8,{"40 armaak", "35 corprot"})
 addWave(8,{"1 arm_furie", "1 corgala"})
 addWave(8,{"1 corkarg1", "1 corgala"})
