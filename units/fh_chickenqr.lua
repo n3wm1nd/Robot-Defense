@@ -352,7 +352,7 @@ local weaponDefs = {
     lineOfSight        = true,
     name               = [[Mega Particle Cannon]],
     noSelfDamage       = true,
-    range              = 1900,
+    range              = 450,
     reloadtime         = 0.666,
     renderType         = 0,
     rgbColor           = [[0 0 0.666]],
@@ -431,7 +431,7 @@ local weaponDefs = {
   },
   KROGCRUSH1 = {
     areaOfEffect       = 150,
-    collideFriendly    = false,
+    collideFriendly    = true,
     craterBoost        = 0,
     craterMult         = 0,
     explosionGenerator = [[custom:KROGCRUSHE]],

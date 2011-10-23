@@ -430,7 +430,7 @@ local weaponDefs = {
   },
   KROGCRUSH1 = {
     areaOfEffect       = 150,
-    collideFriendly    = false,
+    collideFriendly    = true,
     craterBoost        = 0,
     craterMult         = 0,
     explosionGenerator = [[custom:KROGCRUSHE]],
