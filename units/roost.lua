@@ -38,6 +38,7 @@ local unitDef = {
 	reclaimable        = false,
 	seismicSignature = 4,
 	selfDestructAs = [[ROOST_DEATH]],
+	selfDestructCountdown = 7200,
 	side = [[ARM]],
 	sightDistance = 450,
 	smoothAnim = true,
