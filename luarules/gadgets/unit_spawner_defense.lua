@@ -5,7 +5,7 @@ function gadget:GetInfo()
   return {
     name      = "BA Chicken Spawner",
     desc      = "Spawns burrows and chickens",
-    author    = "TheFatController/quantum",
+    author    = "TheFatController/quantum/modifyed by nixtux for robotdefense",
     date      = "16 November, 2008",
     license   = "GNU GPL, v2 or later",
     layer     = 0,
