@@ -748,7 +748,7 @@ local function Wave()
         local nEnd,_     = string.find(sString, " ")
         local unitNumber = string.sub(sString,1,(nEnd-1))
         local chickenName  = string.sub(sString,(nEnd+1))
-        --Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :unitNumber=" .. unitNumber) 
+        Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :unitNumber=" .. unitNumber) 
 	for i = 1,unitNumber,1 do
           table.insert(spawnQueue, {burrow = burrowID, unitName = chickenName, team = chickenTeamID})
         end
@@ -1231,6 +1231,9 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
     end
       
     for burrowID in pairs(burrows) do
+        if currentWave >=7 then
+	 if (math.random(0,1) == 1) then bonusTurret="corpre" else bonusTurret="armbrtha1" end
+	end
         SpawnTurret(burrowID, bonusTurret)
     end
         
