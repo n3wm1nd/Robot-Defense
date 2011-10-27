@@ -58,7 +58,9 @@ local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
 if (cenabled == 0) then 
 
   queenName = queenName .."r" 
+  bonusTurret          = "armcir"
 
+  
 local chickenTypes = {
   armflea       =  true,
   armflash      =  true,
@@ -216,7 +218,7 @@ addWave(6,{"15 corpyro", "30 corpyro"})
 addWave(6,{"2 airwolf3g", "2 cordem", "4 tllsham"})
 addWave(6,{"1 cordem"})
 addWave(6,{"1 cordem"})
-if (math.random(0,1) == 1) addWave(6,{"3 tllgrim"}) else addWave(6,{"6 armtigre2"}) end
+if (math.random(0,1) == 1) then addWave(6,{"3 tllgrim"}) else addWave(6,{"6 armtigre2"}) end
 addWave(6,{"6 tllgrim"})
 addWave(6,{"15 armaak", "30 corpyro", "10 corsumo"})
 addWave(6,{"5 tankanotor", "20 armhdpw"})
