@@ -274,7 +274,11 @@ local unitCounts = {}
 local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
-  unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
+   if (cenabled == 0) then 
+    unitCounts[(unitName)] = {count = 0, lastCount = 0}
+   else
+   unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
+   end
 end
 
 local defendersDefs = {}
@@ -315,7 +319,13 @@ local function UpdateUnitCount()
   
   for unitDefID, number in pairs(teamUnitCounts) do
     if UnitDefs[unitDefID] then
-      local shortName = string.match(UnitDefs[unitDefID].name,"%D*")
+      local shortName
+       if (cenabled == 0) then 
+       shortName = (UnitDefs[unitDefID].name)
+       else
+       shortName = string.match(UnitDefs[unitDefID].name,"%D*")
+       end
+           -- Spring.Echo("unitDefID :=".. UnitDefs[unitDefID].name .."       shortname:="..shortName)
       if unitCounts[shortName] then
         unitCounts[shortName].count = unitCounts[shortName].count + number
       end
@@ -748,7 +758,7 @@ local function Wave()
         local nEnd,_     = string.find(sString, " ")
         local unitNumber = string.sub(sString,1,(nEnd-1))
         local chickenName  = string.sub(sString,(nEnd+1))
-        Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :unitNumber=" .. unitNumber) 
+       -- Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :unitNumber=" .. unitNumber) 
 	for i = 1,unitNumber,1 do
           table.insert(spawnQueue, {burrow = burrowID, unitName = chickenName, team = chickenTeamID})
         end
@@ -1007,8 +1017,9 @@ function gadget:GameFrame(n)
   if n == 15 then
     DisableComputerUnits()
   end
-  
-  if (chickenCount < maxChicken) then
+              --  Spring.Echo("chickencount :=" .. chickenCount .. "  -----chickenDebtCount:=" .. chickenDebtCount .."  ----maxChicken :=" ..maxChicken) 
+
+  if (chickenCount <= maxChicken) then
     local i,defs = next(spawnQueue)
     if i and defs then
       local x, y, z = getChickenSpawnLoc(defs.burrow, SMALL_UNIT)
