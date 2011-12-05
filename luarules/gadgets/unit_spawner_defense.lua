@@ -514,6 +514,7 @@ local function ChooseTarget()
       end
       local slowunit = true
       if tries < 5 then
+	Spring.Echo(t .. " ChooseTarget " .. targetCache)
         local defID = GetUnitDefID(targetCache)
         if UnitDefs[defID] and (UnitDefs[defID].speed > 75) then
           slowunit = false
@@ -690,15 +691,15 @@ local function SpawnQueen()
     local humanUnitsInVicinity = false
     local humanUnitsInProximity = false
     
-    for i=1,#vicinity,1 do
-      if (GetUnitTeam(vicinity[i]) ~= chickenTeamID) then
+     for index,value in ipairs(vicinity) do
+        if (GetUnitTeam(vicinity[index]) ~= chickenTeamID) then
         humanUnitsInVicinity = true
         break
       end
     end
 
-    for i=1,#proximity,1 do
-      if (GetUnitTeam(proximity[i]) ~= chickenTeamID) then
+     for index,value in ipairs(proximity) do
+        if (GetUnitTeam(proximity[index]) ~= chickenTeamID) then
         humanUnitsInProximity = true
         break
       end
