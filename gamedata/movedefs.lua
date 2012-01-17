@@ -159,17 +159,10 @@ local moveDatas = {
 		maxslope = 80,
 		maxwaterdepth = 22,
 	},
-<<<<<<< HEAD
-	HTKBOT11 = {
-		crushstrength = 12400,
-		footprintx = 11,
-		footprintz = 11,
-=======
 	HTKBOT8 = {
 		crushstrength = 12400,
 		footprintx = 8,
 		footprintz = 8,
->>>>>>> testmerge
 		maxslope = 80,
 		maxwaterdepth = 22,
 	},

@@ -12,10 +12,7 @@ fighters = {
 	tlladvfight = 99,
 	tllfight = 99,
 	tllseaf = 99,
-<<<<<<< HEAD
 	chickenw1 = 99,
-=======
->>>>>>> testmerge
 },
 bombers = {
 	armblz = 99,
@@ -25,11 +22,7 @@ bombers = {
 	armpnix = 99,
 	armsb = 99,
 	armthund = 99,
-<<<<<<< HEAD
-	b52g = 99,
-=======
 	armcyclone = 99,
->>>>>>> testmerge
 	corgripn = 99,
 	corhurc = 99,
 	corsb = 99,
@@ -38,11 +31,7 @@ bombers = {
 	tllabomber = 99,
 	tllbomber = 99,
 	tlltorpp = 99,
-<<<<<<< HEAD
-	["tu95-a"] = 99,
-=======
 	coreclipse = 99,
->>>>>>> testmerge
 	tllseab = 99,
 	corseap = 99,
 	armseap = 99,
@@ -54,11 +43,7 @@ flak_resistant = {
 	chopper = 99,
 	smasher = 99,
 	tllcopter = 99,
-<<<<<<< HEAD
 	chickenf1 = 99,
-
-=======
->>>>>>> testmerge
 },
 unclassed_air = {
 -- Builders 
@@ -192,9 +177,6 @@ experimental_ships = {
 },
 --### LAND ###
 experimental_land = {
-<<<<<<< HEAD
-	-- tll t3 bots
-=======
         -- tll t3 vechiles
         tlltelsatnk = 99,
 	tlldemon = 99,
@@ -204,7 +186,6 @@ experimental_land = {
         helepolis = 99,
 	hyperion = 99,
 	heavyimpact = 99,
->>>>>>> testmerge
 	tllhtcb = 99,
 	tllhtml = 99,
 	tllblind = 99,
@@ -273,7 +254,6 @@ sniper_resistant = {
 	tllbind = 99,
 	armzeus = 99,
 	corcan = 99,
-<<<<<<< HEAD
 },
 raider_resistant = {
 	tllthumper = 99,
@@ -288,23 +268,6 @@ raider_resistant = {
 	corexp = 99,
 	corlevlr = 99,
 },
-=======
-},
-raider_resistant = {
-	tllthumper = 99,
-	corsumo = 99,
-	corgol = 99,
-	armfboy = 99,
-	cormexp = 99,
-	corgfbt = 99,
-	aexxec = 99,
-	gladiator = 99,
-	armwar = 99,
-	corexp = 99,
-	corlevlr = 99,
-},
->>>>>>> testmerge
--- TODO bombresistant
 bomb_resistant = {
 	armcir = 99,
 	corerad = 99,
@@ -321,12 +284,6 @@ crawlingbombs = {
 },
 nanos = {
 	armnanotc = 99,
-<<<<<<< HEAD
-	cornanotc = 99,
-	armhevsenan = 99,
-	corhevsenan = 99,
-	tllnanotc = 99,
-=======
 	armnanotc1 = 99,
 	armnanotc2 = 99,
 	armnanotc3 = 99,
@@ -339,7 +296,6 @@ nanos = {
 	tllnanotc = 99,
 	tllnanotc1 = 99,
 	tllnanotc2 = 99,
->>>>>>> testmerge
 },
 mines = {
 	armmine1 = 99,
@@ -358,7 +314,6 @@ mines = {
 minelayers = {
 	armmlv = 99,
 	cormlv = 99,
-<<<<<<< HEAD
 },
 commanders = {
 	armcom = 99,
@@ -387,7 +342,6 @@ tinychicken =
    chicken_dodo1=99,
    chickenh1=99,
   },
-
   chicken =
  {
 	ve_chickenq=99,
@@ -416,30 +370,5 @@ tinychicken =
 	chickens2=99,
 	chickenp1=99,
  	roost=99,
-	tllcom=99,
-=======
-},
-commanders = {
-	armcom = 99,
-	armcom1 = 99,
-	armcom4 = 99,
-	armcom5 = 99,
-	armcom6 = 99,
-	armcom7 = 99,
-	armdecom = 99,
-	corcom = 99,
-	corcom1 = 99,
-	corcom3 = 99,
-	corcom5 = 99,
-	corcom6 = 99,
-	corcom7 = 99,
-	cordecom = 99,
-	tllcom = 99,
-	tllcom3 = 99,
-	tllcom5 = 99,
-	tllcom6 = 99,
-	tllcom7 = 99,
-	tlldecom = 99,
->>>>>>> testmerge
 },
 }
