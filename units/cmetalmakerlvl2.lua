@@ -55,6 +55,14 @@ local unitDef = {
 			[1] = [[metlon2]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[cmetalmakerlvl2_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

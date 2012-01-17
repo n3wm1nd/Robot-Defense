@@ -78,6 +78,14 @@ local unitDef = {
 			[1] = [[pairactv]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=9,
+	buildingGroundDecalSizeY=9,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armcp_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

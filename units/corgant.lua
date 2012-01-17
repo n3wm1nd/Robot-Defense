@@ -15,13 +15,21 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 0.01,
 	buildingGroundDecalSizeX = 10,
 	buildingGroundDecalSizeY = 10,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512c.dds]],
+=======
+	buildingGroundDecalType=[[corgant_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[CORGANT.png]],
 	buildTime = 67321,
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[LEVEL2 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+>>>>>>> testmerge
 	corpse = [[DEAD]],
 	description = [[Produces Heavy Level 3 Units]],
 	energyStorage = 1400,
@@ -54,8 +62,14 @@ local unitDef = {
 	turnRate = 0,
 	unitname = [[corgant]],
 	useBuildingGroundDecal = true,
+<<<<<<< HEAD
 	workerTime = 600,
 	yardMap = [[oooooooooooooooooooocccccoooocccccoooocccccoooocccccoooocccccoooocccccoooocccccoo]],
+=======
+	usePieceCollisionVolumes = 1,
+	workerTime = 600,
+	yardMap = [[oooooooooooooooooo occccccco occccccco occccccco occccccco occccccco occccccco occccccco]],
+>>>>>>> testmerge
 	buildoptions = {
 		[1] = [[corkrog]],
 		[2] = [[armgor]],

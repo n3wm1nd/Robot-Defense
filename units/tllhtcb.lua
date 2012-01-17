@@ -64,6 +64,11 @@ local unitDef = {
 	buildoptions = {
 		[1] = [[tllmegacoldfus]],
 		[2] = [[tllgate1]],
+<<<<<<< HEAD
+=======
+		[3] = [[tlldb]],
+
+>>>>>>> testmerge
 	},
 	featureDefs = nil,
 	sounds = {

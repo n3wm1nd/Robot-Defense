@@ -18,6 +18,12 @@ local unitDef = {
 	canAttack = true,
 	canstop = 1,
 	category = [[ALL NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL WEAPON]],
+<<<<<<< HEAD
+=======
+	collisionvolumeoffsets = [[0 0 0]],
+	collisionvolumescales = [[28 92 28]],
+	collisionvolumetype = [[box]],
+>>>>>>> testmerge
 	corpse = [[CORHLT_DEAD]],
 	defaultmissiontype = [[GUARD_NOMOVE]],
 	description = [[Heavy Laser Tower]],
@@ -81,6 +87,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=4,
+	buildingGroundDecalSizeY=4,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corhlt1_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

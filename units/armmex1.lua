@@ -15,6 +15,7 @@ local unitDef = {
 	buildCostMetal = 325,
 	builder = false,
 	buildPic = [[ARMMEX.png]],
+<<<<<<< HEAD
 	buildTime = 1800,
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	corpse = [[ARMMEX_DEAD]],
@@ -22,6 +23,15 @@ local unitDef = {
 	energyStorage = 0,
 	energyUse = 40,
 	explodeAs = [[TINY_BUILDINGEX]],
+=======
+	buildTime = 6200,
+	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
+	corpse = [[ARMMEX_DEAD]],
+	description = [[Overcharged Metal Extractor amphibious]],
+	energyStorage = 0,
+	energyUse = 50,
+	explodeAs = [[SMALL_BUILDING]],
+>>>>>>> testmerge
 	extractsMetal = 0.003,
 	footprintX = 3,
 	footprintZ = 3,
@@ -36,10 +46,18 @@ local unitDef = {
 	name = [[Metal Extractor]],
 	noAutoFire = false,
 	noChaseCategory = [[ALL]],
+<<<<<<< HEAD
 	objectName = [[ARMMEX]],
 	onoffable = true,
 	seismicSignature = 0,
 	selfDestructAs = [[TINY_BUILDINGEX]],
+=======
+	objectName = [[ARMMEX1]],
+	onoffable = true,
+	script = [[armmex.cob]],
+	seismicSignature = 0,
+	selfDestructAs = [[SMALL_BUILDING]],
+>>>>>>> testmerge
 	selfDestructCountdown = 1,
 	side = [[ARM]],
 	sightDistance = 273,
@@ -70,6 +88,14 @@ local unitDef = {
 			[1] = [[mexon1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=5,
+	buildingGroundDecalSizeY=5,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armmex1_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

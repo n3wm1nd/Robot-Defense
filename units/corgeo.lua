@@ -62,6 +62,14 @@ local unitDef = {
 			[1] = [[geothrm2]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corgeo_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

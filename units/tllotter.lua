@@ -31,8 +31,13 @@ local unitDef = {
 	explodeAs = [[SMALL_UNITEX]],
 	firestandorders = 1,
 	floater = true,
+<<<<<<< HEAD
 	footprintX = 4,
 	footprintZ = 4,
+=======
+	footprintX = 3,
+	footprintZ = 3,
+>>>>>>> testmerge
 	frenchdescription = [[Vedette de reconnaissance]],
 	germandescription = [[Aufklärer]],
 	italiandescription = [[Nave di ricognizione]],
@@ -41,7 +46,11 @@ local unitDef = {
 	maxVelocity = 3.7,
 	minWaterDepth = 6,
 	mobilestandorders = 1,
+<<<<<<< HEAD
 	movementClass = [[BOAT4]],
+=======
+	movementClass = [[BOAT3]],
+>>>>>>> testmerge
 	name = [[Otter]],
 	noAutoFire = false,
 	noChaseCategory = [[VTOL]],
@@ -89,7 +98,11 @@ local unitDef = {
 			def = [[ARMPT_LASER]],
 			onlyTargetCategory = [[NOTVTOL]],
 		},
+<<<<<<< HEAD
 		[3] = {
+=======
+		[2] = {
+>>>>>>> testmerge
 			def = [[ARMKBOT_MISSILE]],
 			onlyTargetCategory = [[VTOL]],
 		},

@@ -100,7 +100,15 @@ local options={
 		def    = true,
 		section= "ta_options",
     },
-	{
+    {
+		key    = 'mo_allowfactionchange',
+		name   = 'Allow Faction Change',
+		desc   = 'Allows faction to be changed ingame',
+		type   = 'bool',
+		def    = true,
+		section= 'ta_options',
+    },
+    {
 		key    = "mo_nowrecks",
 		name   = "No Unit Wrecks",
 		desc   = "Removes all unit wrecks from the game",
@@ -169,7 +177,6 @@ local options={
        step   = 1,  -- quantization is aligned to the def value
                     -- (step <= 0) means that there is no quantization
 	},
-	
 	{
 		key="mo_chickenstart",
 		name="Burrow Placement",
@@ -350,7 +357,6 @@ local options={
 		step   = 1,
 		section= "cust",
 	},		
-
 	{
 	key    = "wall_enabled",
 	name   = "Enable peace time wall",

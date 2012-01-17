@@ -31,8 +31,13 @@ local unitDef = {
 	energyUse = 24,
 	explodeAs = [[COMMANDER_BLAST]],
 	firestandorders = 1,
+<<<<<<< HEAD
 	footprintX = 11,
 	footprintZ = 11,
+=======
+	footprintX = 8,
+	footprintZ = 8,
+>>>>>>> testmerge
 	immunetoparalyzer = 1,
 	maneuverleashlength = 640,
 	manuverleashlength = 2560,
@@ -42,7 +47,11 @@ local unitDef = {
 	maxWaterDepth = 500,
 	metalStorage = 0,
 	mobilestandorders = 1,
+<<<<<<< HEAD
 	movementClass = [[HTKBOT11]],
+=======
+	movementClass = [[HTKBOT8]],
+>>>>>>> testmerge
 	name = [[Monolith IV]],
 	noAutoFire = false,
 	noChaseCategory = [[SUB VTOL]],

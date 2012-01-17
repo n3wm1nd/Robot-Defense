@@ -16,6 +16,10 @@ local unitDef = {
 	buildTime = 195000,
 	canAttack = true,
 	canGuard = true,
+<<<<<<< HEAD
+=======
+	canManualfire = true,
+>>>>>>> testmerge
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,

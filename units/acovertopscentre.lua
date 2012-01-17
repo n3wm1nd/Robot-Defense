@@ -14,7 +14,11 @@ local unitDef = {
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[LEVEL3 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+>>>>>>> testmerge
 	corpse = [[dead]],
 	description = [[Build T4 con]],
 	designation = [[COC-2]],
@@ -44,6 +48,14 @@ local unitDef = {
 		[1] = [[abuilderlvl3]],
 	},
 	featureDefs = nil,
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=15,
+	buildingGroundDecalSizeY=15,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[acovertopscentre_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

@@ -15,13 +15,21 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 0.01,
 	buildingGroundDecalSizeX = 10,
 	buildingGroundDecalSizeY = 10,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512.dds]],
+=======
+	buildingGroundDecalType=[[armshltx_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[ARMSHLTX.png]],
 	buildTime = 61380,
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[LEVEL2 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+>>>>>>> testmerge
 	corpse = [[ARMSHLT_DEAD]],
 	description = [[Produces Heavy Level 3 Units]],
 	energyStorage = 1400,

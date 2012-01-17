@@ -43,7 +43,10 @@ local unitDef = {
 	maxVelocity = 1.75,
 	maxWaterDepth = 35,
 	metalStorage = 0,
+<<<<<<< HEAD
 	minCloakDistance = 37,
+=======
+>>>>>>> testmerge
 	mobilestandorders = 1,
 	movementClass = [[KBOT2]],
 	name = [[Hell DIVER]],
@@ -57,7 +60,10 @@ local unitDef = {
 	shootme = 1,
 	side = [[ARM]],
 	sightDistance = 250,
+<<<<<<< HEAD
 	sonarDistance = 300,
+=======
+>>>>>>> testmerge
 	spanishdescription = [[Adv. All Terrain P.W.]],
 	spanishname = [[Hell DIVER]],
 	standingfireorder = 2,

@@ -278,16 +278,26 @@ local weaponDefs = {
 		beamlaser = 1,
 		beamTime = 1.5,
 		burnblow = true,
+<<<<<<< HEAD
 		coreThickness = 0.5,
 		craterBoost = 0,
 		craterMult = 0,
 		endsmoke = 1,
 		energypershot = 0,
 		explosionGenerator = [[custom:DIESMALL]],
+=======
+		coreThickness = 0.4,
+		craterBoost = 0,
+		craterMult = 0,
+		endsmoke = 0,
+		energypershot = 0,
+		explosionGenerator = [[custom:RAVAGER]],
+>>>>>>> testmerge
 		fireStarter = 20,
 		id = 168,
 		impulseBoost = 0,
 		largeBeamLaser = true,
+<<<<<<< HEAD
 		laserFlareSize = 8,
 		lineOfSight = true,
 		name = [[Mounted antimatter accelerator]],
@@ -296,10 +306,20 @@ local weaponDefs = {
 		range = 1800,
 		reloadtime = 4,
 		renderType = 4,
+=======
+		laserFlareSize = 10,
+		lineOfSight = true,
+		name = [[Mounted antimatter accelerator]],
+		noExplode = true,
+		range = 1800,
+		reloadtime = 4,
+		renderType = 0,
+>>>>>>> testmerge
 		rgbColor = [[1 0 0]],
 		soundHit = [[thunder_clap]],
 		soundStart = [[arrfire]],
 		soundTrigger = true,
+<<<<<<< HEAD
 		startsmoke = 1,
 		targetMoveError = 0.4,
 		texture1 = [[Type6Beam]],
@@ -307,6 +327,15 @@ local weaponDefs = {
 		texture3 = [[NULL]],
 		texture4 = [[EMG4]],
 		thickness = 25,
+=======
+		startsmoke = 0,
+		targetmoveerrorr = 0.4,
+		texture1 = [[Type4Beam]],
+		texture2 = [[NULL]],
+		texture3 = [[NULL]],
+		texture4 = [[EMG]],
+		thickness = 13,
+>>>>>>> testmerge
 		tolerance = 100,
 		turret = true,
 		weaponType = [[BeamLaser]],

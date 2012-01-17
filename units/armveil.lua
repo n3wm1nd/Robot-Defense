@@ -48,6 +48,10 @@ local unitDef = {
 	smoothAnim = true,
 	turnRate = 0,
 	unitname = [[armveil]],
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	workerTime = 0,
 	yardMap = [[oooo]],
 	featureDefs = nil,
@@ -72,6 +76,14 @@ local unitDef = {
 			[1] = [[radjam1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=4,
+	buildingGroundDecalSizeY=4,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armveil_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

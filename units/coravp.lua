@@ -16,13 +16,21 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 3000,
 	buildingGroundDecalSizeX = 10,
 	buildingGroundDecalSizeY = 8,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512c.dds]],
+=======
+	buildingGroundDecalType=[[coravp_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[CORAVP.png]],
 	buildTime = 36492,
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[LEVEL1 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+>>>>>>> testmerge
 	corpse = [[DEAD1]],
 	description = [[Produces T2 Vehicles]],
 	energyStorage = 200,

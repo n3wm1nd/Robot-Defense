@@ -66,6 +66,14 @@ local unitDef = {
 			[1] = [[metlon1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=5,
+	buildingGroundDecalSizeY=5,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armmakr_aoplane.dds]],
+>>>>>>> testmerge
 }
 --------------------------------------------------------------------------------
 

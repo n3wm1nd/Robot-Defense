@@ -47,6 +47,14 @@ local unitDef = {
 	yardMap = [[ff ff]],
 	zbuffer = 1,
 	featureDefs = nil,
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=4,
+	buildingGroundDecalSizeY=4,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tlldt_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

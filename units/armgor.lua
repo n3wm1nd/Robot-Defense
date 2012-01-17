@@ -41,7 +41,11 @@ local unitDef = {
 	italianname = [[Gorilla]],
 	maneuverleashlength = 640,
 	mass = 200000,
+<<<<<<< HEAD
 	maxDamage = 72600,
+=======
+	maxDamage = 65340,
+>>>>>>> testmerge
 	maxSlope = 17,
 	maxVelocity = 1.6,
 	maxWaterDepth = 12,

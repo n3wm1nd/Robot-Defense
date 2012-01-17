@@ -62,6 +62,14 @@ local unitDef = {
 			[1] = [[fusion2]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=12,
+	buildingGroundDecalSizeY=12,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[cfusionplant_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

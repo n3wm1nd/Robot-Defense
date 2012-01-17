@@ -16,13 +16,21 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 3000,
 	buildingGroundDecalSizeX = 8,
 	buildingGroundDecalSizeY = 7,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512c.dds]],
+=======
+	buildingGroundDecalType=[[coralab_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[CORALAB.png]],
 	buildTime = 45519,
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[LEVEL1 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+>>>>>>> testmerge
 	corpse = [[DEAD1]],
 	description = [[Produces T2 Kbots]],
 	energyStorage = 200,

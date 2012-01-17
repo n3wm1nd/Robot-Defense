@@ -34,8 +34,13 @@ local unitDef = {
 	energyUse = 0.1,
 	explodeAs = [[SMALL_UNITEX]],
 	floater = true,
+<<<<<<< HEAD
 	footprintX = 4,
 	footprintZ = 4,
+=======
+	footprintX = 3,
+	footprintZ = 3,
+>>>>>>> testmerge
 	frenchdescription = [[Niveau Tech 1]],
 	frenchname = [[Navire de construction]],
 	germandescription = [[Tech Level 1]],
@@ -49,7 +54,11 @@ local unitDef = {
 	metalStorage = 50,
 	minWaterDepth = 20,
 	mobilestandorders = 1,
+<<<<<<< HEAD
 	movementClass = [[BOAT4]],
+=======
+	movementClass = [[BOAT3]],
+>>>>>>> testmerge
 	name = [[Construction Ship]],
 	noAutoFire = false,
 	noChaseCategory = [[VTOL]],

@@ -92,6 +92,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[arm_guardian_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -135,6 +143,7 @@ unitDef.weaponDefs = weaponDefs
 --------------------------------------------------------------------------------
 
 local featureDefs = {
+<<<<<<< HEAD
 	core_immolator_heap = {
 		blocking = false,
 		category = [[heaps]],
@@ -168,6 +177,41 @@ local featureDefs = {
 		seqnamereclamate = [[tree1reclamate]],
 		world = [[All Worlds]],
 	},
+=======
+  arm_guardian_heap = {
+    blocking           = false,
+    category           = [[heaps]],
+    damage             = unitDef.maxDamage*0.6,
+    description        = [[Arm Guardian Heap]],
+    featurereclamate   = [[smudge01]],
+    footprintX         = 3,
+    footprintZ         = 3,
+    height             = 4,
+    hitdensity         = 100,
+    metal              = unitDef.buildCostMetal*0.8,
+    object             = [[3x3d]],
+    reclaimable        = true,
+    seqnamereclamate   = [[tree1reclamate]],
+    world              = [[All Worlds]],
+  },
+  dead = {
+    blocking           = true,
+    category           = [[arm_corpses]],
+    damage             = unitDef.maxDamage*0.36,
+    description        = [[Arm Guardian Wreckage]],
+    featureDead        = [[arm_guardian_heap]],
+    featurereclamate   = [[smudge01]],
+    footprintX         = 3,
+    footprintZ         = 3,
+    height             = 20,
+    hitdensity         = 100,
+    metal              = unitDef.buildCostMetal*0.64,
+    object             = [[arm_guardian_dead]],
+    reclaimable        = true,
+    seqnamereclamate   = [[tree1reclamate]],
+    world              = [[All Worlds]],
+  },
+>>>>>>> testmerge
 }
 unitDef.featureDefs = featureDefs
 

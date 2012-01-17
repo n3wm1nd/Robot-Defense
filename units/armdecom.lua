@@ -18,7 +18,11 @@ local unitDef = {
 	buildPic = [[ARMDECOM.png]],
 	buildTime = 24048,
 	canAttack = true,
+<<<<<<< HEAD
 	canDGun = true,
+=======
+	canManualFire = true,
+>>>>>>> testmerge
 	canGuard = true,
 	canMove = true,
 	canPatrol = true,
@@ -31,6 +35,12 @@ local unitDef = {
 	collisionvolumescales = [[36 44 26]],
 	collisionvolumetest = 1,
 	collisionvolumetype = [[Ell]],
+<<<<<<< HEAD
+=======
+	customParams           = {
+		iscommander = true,
+	},
+>>>>>>> testmerge
 	decoyFor = [[armcom]],
 	defaultmissiontype = [[Standby]],
 	description = [[Decoy Commander]],
@@ -59,7 +69,11 @@ local unitDef = {
 	name = [[Commander]],
 	noChaseCategory = [[ALL SUB]],
 	norestrict = 1,
+<<<<<<< HEAD
 	objectName = [[ARMCOM]],
+=======
+	objectName = [[ARMDECOM]],
+>>>>>>> testmerge
 	radarDistance = 50,
 	reclaimable = false,
 	seismicSignature = 0,

@@ -96,6 +96,10 @@ local weaponDefs = {
 		ballistic = true,
 		burnblow = true,
 		canattackground = false,
+<<<<<<< HEAD
+=======
+		cegTag = [[tllflak-fx]],
+>>>>>>> testmerge
 		color = 1,
 		craterBoost = 0,
 		craterMult = 0,

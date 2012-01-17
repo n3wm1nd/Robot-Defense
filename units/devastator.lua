@@ -153,7 +153,11 @@ local featureDefs = {
 		height = 20,
 		hitdensity = 100,
 		metal = 0.8000 * unitDef.buildCostMetal,
+<<<<<<< HEAD
 		object = [[armanac_dead]],
+=======
+		object = [[devastator_dead]],
+>>>>>>> testmerge
 		reclaimable = true,
 		seqnamereclamate = [[tree1reclamate]],
 		world = [[All Worlds]],

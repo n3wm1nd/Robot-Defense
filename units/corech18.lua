@@ -13,12 +13,22 @@ local unitDef = {
 	builder = false,
 	buildPic = [[armrech.png]],
 	buildTime = 50000,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
+=======
+	category = [[LEVEL1 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
+>>>>>>> testmerge
 	collisionvolumeoffsets = [[-1 -9 -5]],
 	collisionvolumescales = [[64 70 102]],
 	collisionvolumetest = 1,
 	collisionvolumetype = [[Box]],
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
+<<<<<<< HEAD
+=======
+	customParams           = {
+		ismorphingrc = true,
+	},
+>>>>>>> testmerge
 	description = [[Enable Offensive Defense]],
 	designation = [[LAB-01]],
 	energyMake = 0,
@@ -70,6 +80,14 @@ local unitDef = {
 			[1] = [[radar1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=10,
+	buildingGroundDecalSizeY=10,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corech18_aoplane.dds]],
+>>>>>>> testmerge
 }
 --------------------------------------------------------------------------------
 

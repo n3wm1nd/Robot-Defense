@@ -8,12 +8,21 @@ local unitName = "tllnanotc"
 local unitDef = {
 	acceleration = 0,
 	brakeRate = 1.5,
+<<<<<<< HEAD
 	buildCostEnergy = 2000,
 	buildCostMetal = 400,
 	buildDistance = 580,
 	builder = true,
 	buildPic = [[CORNANOTC.png]],
 	buildTime = 5312,
+=======
+	buildCostEnergy = 7000,
+	buildCostMetal = 450,
+	buildDistance = 450,
+	builder = true,
+	buildPic = [[CORNANOTC.png]],
+	buildTime = 6000,
+>>>>>>> testmerge
 	canGuard = true,
 	canMove = false,
 	canPatrol = true,
@@ -33,15 +42,26 @@ local unitDef = {
 	idleTime = 1800,
 	maneuverleashlength = 380,
 	mass = 1000000000000,
+<<<<<<< HEAD
 	maxDamage = 500,
+=======
+	maxDamage = 550,
+>>>>>>> testmerge
 	maxSlope = 10,
 	maxVelocity = 0,
 	maxWaterDepth = 0,
 	metalStorage = 0,
+<<<<<<< HEAD
 	name = [[Nano Turret]],
 	noAutoFire = false,
 	noChaseCategory = [[ALL]],
 	objectName = [[CORNANOTC]],
+=======
+	name = [[Nano Turret Level 1]],
+	noAutoFire = false,
+	noChaseCategory = [[ALL]],
+	objectName = [[TLLNANOTC]],
+>>>>>>> testmerge
 	script = [[cornanotc.cob]],
 	seismicSignature = 0,
 	selfDestructAs = [[TINY_BUILDINGEX]],
@@ -78,6 +98,14 @@ local unitDef = {
 			[1] = [[vcorsel]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=5,
+	buildingGroundDecalSizeY=5,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllnanotc_aoplane.dds]],
+>>>>>>> testmerge
 }
 --------------------------------------------------------------------------------
 

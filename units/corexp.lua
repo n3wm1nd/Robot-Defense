@@ -15,7 +15,11 @@ local unitDef = {
 	buildCostMetal = 220,
 	builder = false,
 	buildPic = [[COREXP.png]],
+<<<<<<< HEAD
 	buildTime = 2724,
+=======
+	buildTime = 4500,
+>>>>>>> testmerge
 	canAttack = true,
 	canstop = 1,
 	category = [[ALL NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL WEAPON]],
@@ -85,6 +89,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=5,
+	buildingGroundDecalSizeY=5,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corexp_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

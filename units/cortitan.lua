@@ -97,6 +97,10 @@ local weaponDefs = {
 		avoidFriendly = false,
 		burnblow = true,
 		collideFriendly = false,
+<<<<<<< HEAD
+=======
+		commandfire = false,
+>>>>>>> testmerge
 		craterBoost = 0,
 		craterMult = 0,
 		explosionGenerator = [[custom:FLASH2]],

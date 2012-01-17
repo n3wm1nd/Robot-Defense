@@ -77,6 +77,10 @@ local resources = {
 			heatcloud='explo.tga',
 			flame='flame.tga',
 			graysmoke='graysmoke.tga',
+<<<<<<< HEAD
+=======
+			smokeorange='gpl/smoke_orange.png',
+>>>>>>> testmerge
 			fireball='fireball.tga',
         		laserendpink='laserendpink.tga',
 			flare='flare.tga',
@@ -128,15 +132,22 @@ local resources = {
 			yellowlight='lighty.bmp',
 			redlight='lightr.png',
 			sporetrail='GPL/sporetrail.tga',
+<<<<<<< HEAD
 			blooddrop='PD/blooddrop.tga',
 			bloodblast='PD/bloodblast.tga',
 			bloodsplat='PD/bloodsplat.tga',
 			blooddropwhite='PD/blooddropwhite.tga',
 			bloodblastwhite='PD/bloodblastwhite.tga',
+=======
+>>>>>>> testmerge
 			null='PD/null.tga',
 			bluenovaexplo='bluenovaexplo.tga',
 			randdots='randdots.tga',
 			blueexploredexplo='blueexploredexplo.tga',
+<<<<<<< HEAD
+=======
+			bombsmoke='bombsmoke.tga',
+>>>>>>> testmerge
 		},
 	},
 }
@@ -145,4 +156,8 @@ local resources = {
 
 return resources
 
+<<<<<<< HEAD
 --------------------------------------------------------------------------------
+=======
+--------------------------------------------------------------------------------
+>>>>>>> testmerge

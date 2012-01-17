@@ -18,7 +18,11 @@ local unitDef = {
 	buildPic = [[tllcom.png]],
 	buildTime = 26941,
 	canAttack = true,
+<<<<<<< HEAD
 	canDGun = true,
+=======
+	canManualFire = true,
+>>>>>>> testmerge
 	canGuard = true,
 	canMove = true,
 	canPatrol = true,
@@ -31,6 +35,12 @@ local unitDef = {
 	collisionvolumescales = [[40 48 30]],
 	collisionvolumetest = 1,
 	collisionvolumetype = [[Ell]],
+<<<<<<< HEAD
+=======
+	customParams           = {
+		iscommander = true,
+	},
+>>>>>>> testmerge
 	decoyFor = [[tllcom]],
 	defaultmissiontype = [[Standby]],
 	description = [[Decoy Commander]],
@@ -59,7 +69,11 @@ local unitDef = {
 	name = [[Commander]],
 	noChaseCategory = [[ALL SUB]],
 	norestrict = 1,
+<<<<<<< HEAD
 	objectName = [[TLLCOM]],
+=======
+	objectName = [[TLLDECOM]],
+>>>>>>> testmerge
 	radarDistance = 50,
 	reclaimable = false,
 	seismicSignature = 0,

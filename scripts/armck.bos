@@ -3,11 +3,21 @@
 #include "sfxtype.h"
 #include "exptype.h"
 
+<<<<<<< HEAD
 piece  nanospray, turret, rfoot, lfoot, pelvis, lflap, rflap, guncover,
        nozzle, arms, nanobody2, ground;
 
 static-var  Static_Var_1, bMoving, Static_Var_3, Static_Var_4, statechg_DesiredState,
             statechg_StateChanging, moveSpeed, currentSpeed;
+=======
+#define SIG_BUILD		4	
+
+piece  nanospray, turret, rfoot, lfoot, pelvis, lflap, rflap, guncover,
+       nozzle, arms, nanobody2, ground;
+
+static-var  bMoving, statechg_DesiredState, statechg_StateChanging,
+			notBuilding, moveSpeed, currentSpeed;
+>>>>>>> testmerge
 
 
 walk()
@@ -358,6 +368,7 @@ walklegs()
 	sleep 4700 / currentSpeed;
 }
 
+<<<<<<< HEAD
 stand()
 {
 	move rfoot to y-axis [0.000000] now;
@@ -365,16 +376,23 @@ stand()
 	sleep 200;
 }
 
+=======
+>>>>>>> testmerge
 MotionControl(Func_Var_1, Func_Var_2)
 {
 	while( TRUE )
 	{
 		Func_Var_1 = bMoving;
+<<<<<<< HEAD
 		Func_Var_2 = Static_Var_3;
+=======
+		Func_Var_2 = notBuilding;
+>>>>>>> testmerge
 		if( Func_Var_1 )
 		{
 			if( Func_Var_2 )
 			{
+<<<<<<< HEAD
 				Static_Var_4 = 1;
 				call-script walklegs();
 			}
@@ -382,19 +400,35 @@ MotionControl(Func_Var_1, Func_Var_2)
 			{
 				Static_Var_4 = 0;
 				call-script walk();
+=======
+				call-script walk();
+			}
+			else
+			{
+				call-script walklegs();
+>>>>>>> testmerge
 			}
 		}
 		else
 		{
+<<<<<<< HEAD
 			Static_Var_4 = 1;
 			call-script stand();
+=======
+			move rfoot to y-axis [0.000000] now;
+			move lfoot to y-axis [0.000000] now;
+			sleep 200;
+>>>>>>> testmerge
 		}
 	}
 }
 
 Go()
 {
+<<<<<<< HEAD
 	Static_Var_3 = 1;
+=======
+>>>>>>> testmerge
 	turn lflap to z-axis <0.000000> now;
 	turn lflap to z-axis <97.016484> speed <350.000000>;
 	turn rflap to z-axis <0.000000> now;
@@ -419,10 +453,13 @@ Go()
 	turn arms to x-axis <90.016484> speed <0.000000>;
 	turn nanobody2 to x-axis <-90.016484> speed <0.000000>;
 	sleep 100;
+<<<<<<< HEAD
 
 	turn turret to y-axis Static_Var_1 speed <300.000000>;
 	wait-for-turn turret around y-axis;
 	set INBUILDSTANCE to 1;
+=======
+>>>>>>> testmerge
 }
 
 Stop()
@@ -462,8 +499,11 @@ Stop()
 	turn lflap to z-axis <0.000000> speed <350.000000>;
 	turn rflap to z-axis <0.000000> speed <350.000000>;
 	sleep 50;
+<<<<<<< HEAD
 
 	Static_Var_3 = 0;
+=======
+>>>>>>> testmerge
 }
 
 RequestState(requestedstate, currentstate)
@@ -481,11 +521,19 @@ RequestState(requestedstate, currentstate)
 		if( statechg_DesiredState )
 		{
 			call-script Stop();
+<<<<<<< HEAD
+=======
+			notBuilding = 1;
+>>>>>>> testmerge
 			currentstate = 1;
 		}
 		else
 		{
 			call-script Go();
+<<<<<<< HEAD
+=======
+			notBuilding = 0;
+>>>>>>> testmerge
 			currentstate = 0;
 		}
 	}
@@ -534,9 +582,13 @@ SmokeUnit(healthpercent, sleeptime, smoketype)
 Create()
 {
 	bMoving = FALSE;
+<<<<<<< HEAD
 	Static_Var_3 = 0;
 	Static_Var_4 = 1;
 	Static_Var_1 = 0;
+=======
+	notBuilding = 1;
+>>>>>>> testmerge
 	statechg_DesiredState = TRUE;
 	statechg_StateChanging = FALSE;
 	moveSpeed = get MAX_SPEED;
@@ -554,14 +606,33 @@ Deactivate()
 	start-script RequestState(1);
 }
 
+<<<<<<< HEAD
 StartBuilding(Func_Var_1)
 {
 	Static_Var_1 = Func_Var_1;
 	start-script RequestState(0);
+=======
+StartBuilding(heading, pitch)
+{
+	start-script RequestState(0);
+	while( notBuilding ) sleep 100;
+	signal SIG_BUILD;
+	turn turret to y-axis heading speed <300.000000>;
+	wait-for-turn turret around y-axis;
+	set INBUILDSTANCE to 1;
+>>>>>>> testmerge
 }
 
 StopBuilding()
 {
+<<<<<<< HEAD
+=======
+	signal SIG_BUILD;	
+	set-signal-mask SIG_BUILD;
+	sleep 6000;
+	set-signal-mask 0;
+	signal SIG_BUILD;	
+>>>>>>> testmerge
 	start-script RequestState(1);
 }
 
@@ -580,10 +651,18 @@ QueryNanoPiece(piecenum)
 	piecenum = nanospray;
 }
 
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> testmerge
 TargetHeading(Func_Var_1)
 {
 	Static_Var_1 = 0 - Func_Var_1;
 }
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> testmerge
 
 SweetSpot(piecenum)
 {

@@ -10,26 +10,45 @@ local unitDef = {
 	bmcode = 0,
 	buildAngle = 8192,
 	buildCostEnergy = 21230,
+<<<<<<< HEAD
 	buildCostMetal = 1514,
 	builder = false,
 	buildTime = 17710,
+=======
+	buildCostMetal = 7560,
+	builder = false,
+	buildTime = 57710,
+>>>>>>> testmerge
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	cloakCost = 680,
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
+<<<<<<< HEAD
 	description = [[Increases Energy & Metal Storage [80000/15000]],
 	designation = [[TL-EMS]],
 	energyStorage = 80000,
+=======
+	description = [[Increases Energy & Metal Storage [250000/50000]],
+	designation = [[TL-EMS]],
+	energyStorage = 250000,
+>>>>>>> testmerge
 	explodeAs = [[FUSIONX_BLAST]],
 	footprintX = 8,
 	footprintZ = 8,
 	frenchdescription = [[Augmente le stockage d'énergie et de métal]],
 	frenchname = [[Super Dépôt d'énergie & de métal]],
 	iconType = [[building]],
+<<<<<<< HEAD
 	maxDamage = 16200,
 	maxSlope = 10,
 	maxWaterDepth = 0,
 	metalStorage = 15000,
+=======
+	maxDamage = 12200,
+	maxSlope = 10,
+	maxWaterDepth = 0,
+	metalStorage = 50000,
+>>>>>>> testmerge
 	name = [[Super Storage]],
 	noAutoFire = false,
 	noChaseCategory = [[ALL]],
@@ -62,6 +81,14 @@ local unitDef = {
 			[1] = [[storngy1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=11,
+	buildingGroundDecalSizeY=11,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllemstor_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

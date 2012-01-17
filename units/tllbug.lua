@@ -111,7 +111,11 @@ local weaponDefs = {
 		name = [[Laser]],
 		noSelfDamage = true,
 		paralyzer = true,
+<<<<<<< HEAD
 		paralyzertime = 38,
+=======
+		paralyzertime = 10,
+>>>>>>> testmerge
 		range = 150,
 		reloadtime = 0.7,
 		renderType = 0,
@@ -127,8 +131,13 @@ local weaponDefs = {
 		weaponVelocity = 600,
 		damage = {
 			commanders = 20,
+<<<<<<< HEAD
 			default = 400,
 			raider_resistant = 200,
+=======
+			default = 300,
+			raider_resistant = 270,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

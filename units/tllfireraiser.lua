@@ -10,9 +10,15 @@ local unitDef = {
 	bmcode = 1,
 	brakeRate = 0.15,
 	buildCostEnergy = 841,
+<<<<<<< HEAD
 	buildCostMetal = 135,
 	builder = false,
 	buildTime = 1924,
+=======
+	buildCostMetal = 140,
+	builder = false,
+	buildTime = 2250,
+>>>>>>> testmerge
 	canAttack = true,
 	canGuard = true,
 	canMove = true,
@@ -36,7 +42,11 @@ local unitDef = {
 	maneuverleashlength = 640,
 	maxDamage = 823,
 	maxSlope = 14,
+<<<<<<< HEAD
 	maxVelocity = 1.7,
+=======
+	maxVelocity = 1.65,
+>>>>>>> testmerge
 	maxWaterDepth = 12,
 	mobilestandorders = 1,
 	movementClass = [[KBOT2]],

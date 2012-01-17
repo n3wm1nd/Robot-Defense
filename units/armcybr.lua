@@ -97,7 +97,11 @@ local weaponDefs = {
 		avoidFeature = false,
 		avoidFriendly = false,
 		collideFriendly = false,
+<<<<<<< HEAD
 		commandfire = true,
+=======
+		commandfire = false,
+>>>>>>> testmerge
 		craterBoost = 0,
 		craterMult = 0,
 		cruise = 1,

@@ -74,6 +74,14 @@ local unitDef = {
 			[1] = [[mohoon1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=11,
+	buildingGroundDecalSizeY=11,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[crnns_aoplane.dds]],
+>>>>>>> testmerge
 }
 --------------------------------------------------------------------------------
 

@@ -48,7 +48,11 @@ local unitDef = {
 	movementClass = [[kbot3]],
 	name = [[Turtle]],
 	noAutoFire = true,
+<<<<<<< HEAD
 	noChaseCategory = [[SUB VTOL]],
+=======
+	noChaseCategory = [[ALL]],
+>>>>>>> testmerge
 	objectName = [[tllturtle]],
 	ovradjust = 1,
 	radarDistance = 0,

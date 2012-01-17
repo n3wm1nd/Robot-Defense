@@ -146,7 +146,11 @@ local featureDefs = {
 		height = 8,
 		hitdensity = 621,
 		metal = 0.6400 * unitDef.buildCostMetal,
+<<<<<<< HEAD
 		object = [[TLLMRPC_DEAD]],
+=======
+		object = [[TLLMLRPC_DEAD]],
+>>>>>>> testmerge
 		reclaimable = true,
 		seqnamereclamate = [[tree1reclamate]],
 		world = [[All Worlds]],

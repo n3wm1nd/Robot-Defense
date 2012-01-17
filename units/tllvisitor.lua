@@ -106,6 +106,10 @@ local weaponDefs = {
 		energypershot = 0,
 		explosionGenerator = [[custom:FLASH2]],
 		fireStarter = 72,
+<<<<<<< HEAD
+=======
+		flighttime = 3,
+>>>>>>> testmerge
 		guidance = true,
 		impulseBoost = 0.123,
 		impulseFactor = 0.123,

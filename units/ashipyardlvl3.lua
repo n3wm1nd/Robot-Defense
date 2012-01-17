@@ -62,6 +62,14 @@ local unitDef = {
 			[1] = [[hoversl1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=33,
+	buildingGroundDecalSizeY=33,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[ashipyardlvl3_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

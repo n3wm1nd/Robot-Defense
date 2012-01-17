@@ -16,7 +16,11 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 3000,
 	buildingGroundDecalSizeX = 7,
 	buildingGroundDecalSizeY = 7,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512.dds]],
+=======
+	buildingGroundDecalType=[[armlab_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[ARMLAB.png]],
 	buildTime = 5260,
 	canMove = true,

@@ -67,7 +67,11 @@ local unitDef = {
 		[9] = [[blade]],
 		[10] = [[corgripn]],
 		[11] = [[armcybr]],
+<<<<<<< HEAD
 		[12] = [[b52g]],
+=======
+		[12] = [[armcyclone]],
+>>>>>>> testmerge
 		[13] = [[armpers]],
 		[14] = [[airwolf3g]],
 	},

@@ -48,6 +48,10 @@ local unitDef = {
 	smoothAnim = true,
 	turnRate = 0,
 	unitname = [[armrad]],
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	workerTime = 0,
 	yardMap = [[oooo]],
 	featureDefs = nil,
@@ -69,6 +73,14 @@ local unitDef = {
 			[1] = [[radar1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=4,
+	buildingGroundDecalSizeY=4,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armrad_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

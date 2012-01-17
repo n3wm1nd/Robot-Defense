@@ -87,6 +87,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=4,
+	buildingGroundDecalSizeY=4,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllweb_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -101,22 +109,41 @@ local weaponDefs = {
 		craterMult = 0,
 		duration = 1.9,
 		energypershot = 100,
+<<<<<<< HEAD
 		explosionGenerator = [[custom:LIGHTNING_FLASH]],
+=======
+		explosionGenerator = [[custom:tllweb_exp]],
+>>>>>>> testmerge
 		fireStarter = 85,
 		id = 225,
 		impulseBoost = 0.123,
 		impulseFactor = 0.123,
+<<<<<<< HEAD
 		lineOfSight = true,
+=======
+		lineOfSight = true,	
+		intensity = 12,
+>>>>>>> testmerge
 		metalpershot = 0,
 		name = [[Spray Lightning]],
 		noSelfDamage = true,
 		range = 440,
 		reloadtime = 1,
 		renderType = 7,
+<<<<<<< HEAD
 		soundHit = [[lashit2]],
 		soundStart = [[Lghthvy1]],
 		tolerance = 600,
 		turret = true,
+=======
+		rgbColor = [[0.2 0.2 1]],
+		soundHit = [[lashit2]],
+		soundStart = [[Lghthvy1]],
+		texture1 = [[lightning]],
+		tolerance = 600,
+		turret = true,
+		thickness = 7,
+>>>>>>> testmerge
 		waterexplosionart = [[h2oboom1]],
 		waterexplosiongaf = [[fx]],
 		weaponTimer = 1,

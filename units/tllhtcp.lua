@@ -15,7 +15,11 @@ local unitDef = {
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT LEVEL2]],
+>>>>>>> testmerge
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
 	damageModifier = 0.75,
@@ -47,14 +51,24 @@ local unitDef = {
 	unitnumber = 934,
 	version = 3.1,
 	workerTime = 980,
+<<<<<<< HEAD
 	yardMap = [[oooccccooo oooccccooo oooccccooo cccccccccc cccccccccc cccccccccc oooccccooo oooccccooo oooccccooo oooccccooo ]],
+=======
+	yardMap = [[ooccccccoo ooccccccoo ooccccccoo cccccccccc cccccccccc cccccccccc ooccccccoo ooccccccoo ooccccccoo ooccccccoo ]],
+>>>>>>> testmerge
 	zbuffer = 1,
 	buildoptions = {
 		[1] = [[tllhtcb]],
 		[2] = [[tllhtml]],
 		[3] = [[tllblind]],
 		[4] = [[tllgrim]],
+<<<<<<< HEAD
 		[5] = [[tllmlrpc]],
+=======
+		[5] = [[heavyimpact]],
+		[6] = [[hyperion]],
+
+>>>>>>> testmerge
 	},
 	featureDefs = nil,
 	sounds = {
@@ -78,6 +92,14 @@ local unitDef = {
 			[1] = [[gantsel1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=13,
+	buildingGroundDecalSizeY=13,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllhtcp_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -121,7 +143,10 @@ local featureDefs = {
 		category = [[heaps]],
 		damage = 0.2160 * unitDef.maxDamage,
 		description = [[Metal Shards]],
+<<<<<<< HEAD
 		featureDead = [[heap]],
+=======
+>>>>>>> testmerge
 		featurereclamate = [[smudge01]],
 		footprintX = 11,
 		footprintZ = 11,

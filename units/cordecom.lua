@@ -18,7 +18,11 @@ local unitDef = {
 	buildPic = [[CORDECOM.png]],
 	buildTime = 26941,
 	canAttack = true,
+<<<<<<< HEAD
 	canDGun = true,
+=======
+	canManualFire = true,
+>>>>>>> testmerge
 	canGuard = true,
 	canMove = true,
 	canPatrol = true,
@@ -31,6 +35,12 @@ local unitDef = {
 	collisionvolumescales = [[36 44 26]],
 	collisionvolumetest = 1,
 	collisionvolumetype = [[Ell]],
+<<<<<<< HEAD
+=======
+	customParams           = {
+		iscommander = true,
+	},
+>>>>>>> testmerge
 	decoyFor = [[corcom]],
 	defaultmissiontype = [[Standby]],
 	description = [[Decoy Commander]],

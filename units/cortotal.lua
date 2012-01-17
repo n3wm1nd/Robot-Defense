@@ -9,8 +9,13 @@ local unitDef = {
 	acceleration = 0.013,
 	bmcode = 1,
 	brakeRate = 0.02,
+<<<<<<< HEAD
 	buildCostEnergy = 32642,
 	buildCostMetal = 3678,
+=======
+	buildCostEnergy = 26642,
+	buildCostMetal = 3278,
+>>>>>>> testmerge
 	builder = false,
 	buildTime = 28402,
 	canAttack = true,
@@ -37,7 +42,11 @@ local unitDef = {
 	italiandescription = [[Salvo Fire Artillery]],
 	italianname = [[Totalitarian]],
 	maneuverleashlength = 640,
+<<<<<<< HEAD
 	maxDamage = 1843,
+=======
+	maxDamage = 2943,
+>>>>>>> testmerge
 	maxVelocity = 1.1,
 	metalStorage = 0,
 	mobilestandorders = 1,
@@ -99,12 +108,21 @@ local unitDef = {
 
 local weaponDefs = {
 	COR_TOTAL = {
+<<<<<<< HEAD
 		accuracy = 10,
 		areaOfEffect = 420,
 		ballistic = true,
 		burnblow = true,
 		burst = 3,
 		burstrate = 0.7,
+=======
+		accuracy = 200,
+		areaOfEffect = 180,
+		ballistic = true,
+		burnblow = true,
+		burst = 3,
+		burstrate = 0.2,
+>>>>>>> testmerge
 		craterBoost = 0,
 		craterMult = 0,
 		explosionart = [[explode2]],
@@ -117,8 +135,13 @@ local weaponDefs = {
 		lavaexplosiongaf = [[fx]],
 		minbarrelangle = -25,
 		name = [[Totalitarian Cannon]],
+<<<<<<< HEAD
 		range = 2340,
 		reloadtime = 6,
+=======
+		range = 1850,
+		reloadtime = 2.5,
+>>>>>>> testmerge
 		renderType = 4,
 		soundHit = [[xplomed21]],
 		soundStart = [[cannhvy1]],
@@ -127,9 +150,15 @@ local weaponDefs = {
 		waterexplosionart = [[h2o]],
 		waterexplosiongaf = [[fx]],
 		weaponType = [[Cannon]],
+<<<<<<< HEAD
 		weaponVelocity = 562.0498046875,
 		damage = {
 			default = 140,
+=======
+		weaponVelocity = 562,
+		damage = {
+			default = 180,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

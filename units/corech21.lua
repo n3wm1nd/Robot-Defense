@@ -12,12 +12,22 @@ local unitDef = {
 	buildCostMetal = 8000,
 	builder = false,
 	buildTime = 50000,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
+=======
+	category = [[LEVEL2 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
+>>>>>>> testmerge
 	collisionvolumeoffsets = [[-1 -9 -5]],
 	collisionvolumescales = [[64 70 102]],
 	collisionvolumetest = 1,
 	collisionvolumetype = [[Box]],
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
+<<<<<<< HEAD
+=======
+	customParams           = {
+		ismorphingrc = true,
+	},
+>>>>>>> testmerge
 	description = [[Enable New t2 units]],
 	designation = [[LAB-01]],
 	energyMake = 0,
@@ -69,6 +79,14 @@ local unitDef = {
 			[1] = [[radar1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=10,
+	buildingGroundDecalSizeY=10,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corech21_aoplane.dds]],
+>>>>>>> testmerge
 }
 --------------------------------------------------------------------------------
 

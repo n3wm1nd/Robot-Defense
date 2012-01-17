@@ -71,6 +71,14 @@ local unitDef = {
 			[1] = [[pshpactv]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=18,
+	buildingGroundDecalSizeY=18,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[coresy_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

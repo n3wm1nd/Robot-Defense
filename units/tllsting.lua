@@ -83,11 +83,19 @@ local unitDef = {
 	weaponDefs = nil,
 	weapons = {
 		[1] = {
+<<<<<<< HEAD
 			def = [[BOGUS_MISSILE]],
 			onlyTargetCategory = [[VTOL]],
 		},
 		[2] = {
 			def = [[GA2]],
+=======
+			def = [[GA2]],
+			onlyTargetCategory = [[VTOL]],
+		},
+		[2] = {
+			def = [[BOGUS_MISSILE]],
+>>>>>>> testmerge
 			onlyTargetCategory = [[VTOL]],
 		},
 		[3] = {
@@ -140,6 +148,10 @@ local weaponDefs = {
 		energypershot = 0,
 		explosionGenerator = [[custom:FLASH2]],
 		fireStarter = 72,
+<<<<<<< HEAD
+=======
+		flighttime = 3,
+>>>>>>> testmerge
 		guidance = true,
 		impulseBoost = 0.123,
 		impulseFactor = 0.123,
@@ -182,6 +194,10 @@ local weaponDefs = {
 		ballistic = true,
 		burnblow = true,
 		canattackground = false,
+<<<<<<< HEAD
+=======
+		cegTag = [[tllflak-fx]],
+>>>>>>> testmerge
 		color = 1,
 		craterBoost = 0,
 		craterMult = 0,

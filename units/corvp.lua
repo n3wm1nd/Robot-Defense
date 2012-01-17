@@ -16,7 +16,11 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 3000,
 	buildingGroundDecalSizeX = 8,
 	buildingGroundDecalSizeY = 8,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512c.dds]],
+=======
+	buildingGroundDecalType=[[corvp_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[CORVP.png]],
 	buildTime = 5651,
 	canMove = true,

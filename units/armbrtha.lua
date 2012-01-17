@@ -52,6 +52,10 @@ local unitDef = {
 	standingfireorder = 0,
 	turnRate = 0,
 	unitname = [[armbrtha]],
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	useBuildingGroundDecal = true,
 	workerTime = 0,
 	yardMap = [[oooooooooooooooo]],

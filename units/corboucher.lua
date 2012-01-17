@@ -18,7 +18,11 @@ local unitDef = {
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
 	defaultmissiontype = [[GUARD_NOMOVE]],
+<<<<<<< HEAD
 	description = [[Heavy Anti T3/T4 laser cannon]],
+=======
+	description = [[Anti Experimental Cannon]],
+>>>>>>> testmerge
 	designation = [[BOUCHER-GUARD]],
 	energyStorage = 0,
 	energyUse = 0,
@@ -83,6 +87,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=9,
+	buildingGroundDecalSizeY=9,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corboucher_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -94,8 +106,13 @@ local weaponDefs = {
 		collideFriendly = false,
 		craterBoost = 0,
 		craterMult = 0,
+<<<<<<< HEAD
 		duration = 0.0025,
 		energypershot = 4000,
+=======
+		duration = 0.025,
+		energypershot = 90000,
+>>>>>>> testmerge
 		explosionart = [[explode5]],
 		explosiongaf = [[fx]],
 		fireStarter = 90,
@@ -113,10 +130,17 @@ local weaponDefs = {
 		range = 2000,
 		reloadtime = 5,
 		renderType = 0,
+<<<<<<< HEAD
 		rgbColor = [[1 1 0]],
 		soundHit = [[xplolrg1]],
 		soundStart = [[Energy]],
 		thickness = 0.5,
+=======
+		rgbColor = [[0.9 0.6 1]],
+		soundHit = [[xplolrg1]],
+		soundStart = [[Energy]],
+		thickness = 5,
+>>>>>>> testmerge
 		turret = true,
 		waterexplosionart = [[h2oboom1]],
 		waterexplosiongaf = [[fx]],

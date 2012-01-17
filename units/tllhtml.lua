@@ -218,7 +218,10 @@ local featureDefs = {
 		category = [[heaps]],
 		damage = 0.2160 * unitDef.maxDamage,
 		description = [[Metal Shards]],
+<<<<<<< HEAD
 		featureDead = [[heap]],
+=======
+>>>>>>> testmerge
 		featurereclamate = [[smudge01]],
 		footprintX = 4,
 		footprintZ = 4,

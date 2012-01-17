@@ -48,6 +48,10 @@ local unitDef = {
 	threed = 1,
 	unitname = [[arm_big_bertha]],
 	unitnumber = 16,
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	version = 1.2,
 	workerTime = 0,
 	yardMap = [[oooo oooo oooo oooo]],
@@ -89,6 +93,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=8,
+	buildingGroundDecalSizeY=8,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[arm_big_bertha_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -159,7 +171,11 @@ local featureDefs = {
 		height = 40,
 		hitdensity = 100,
 		metal = 0.8000 * unitDef.buildCostMetal,
+<<<<<<< HEAD
 		object = [[ARMBRTHA_DEAD]],
+=======
+		object = [[arm_big_bertha_dead]],
+>>>>>>> testmerge
 		reclaimable = true,
 		seqnamereclamate = [[TREE1RECLAMATE]],
 		world = [[All Worlds]],

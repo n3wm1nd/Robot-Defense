@@ -16,12 +16,21 @@ local unitDef = {
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
+<<<<<<< HEAD
 	description = [[Produces Energy/ Storage]],
 	designation = [[TL-CF]],
 	downloadable = 1,
 	energyMake = 2500,
 	energyStorage = 40000,
 	energyUse = 0,
+=======
+	description = [[Produces Metal and Energy/ Storage]],
+	designation = [[TL-CF]],
+	downloadable = 1,
+	energyMake = 2500,
+	energyUse = 1500,
+	energyStorage = 40000,
+>>>>>>> testmerge
 	explodeAs = [[NUCLEAR_MISSILE]],
 	footprintX = 5,
 	footprintZ = 5,
@@ -31,7 +40,12 @@ local unitDef = {
 	maxSlope = 10,
 	maxWaterDepth = 0,
 	metalStorage = 0,
+<<<<<<< HEAD
 	name = [[Advanced Fusion Reactor]],
+=======
+	makesMetal = 21,
+	name = [[Super Heavy Elemental Reactor]],
+>>>>>>> testmerge
 	noAutoFire = false,
 	noChaseCategory = [[ALL]],
 	objectName = [[TLLCOLDFUS]],
@@ -67,6 +81,14 @@ local unitDef = {
 			[1] = [[fusion1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=8,
+	buildingGroundDecalSizeY=8,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllcoldfus_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

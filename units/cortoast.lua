@@ -51,6 +51,10 @@ local unitDef = {
 	standingfireorder = 2,
 	turnRate = 0,
 	unitname = [[cortoast]],
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	workerTime = 0,
 	yardMap = [[ooooooooo]],
 	featureDefs = nil,
@@ -92,6 +96,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=5,
+	buildingGroundDecalSizeY=5,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[cortoast_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

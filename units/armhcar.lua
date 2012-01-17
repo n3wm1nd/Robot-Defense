@@ -17,6 +17,10 @@ local unitDef = {
 	buildTime = 349755,
 	canAttack = true,
 	canGuard = true,
+<<<<<<< HEAD
+=======
+	canManualFire = true,
+>>>>>>> testmerge
 	canMove = true,
 	canPatrol = true,
 	canstop = 1,
@@ -90,6 +94,7 @@ local unitDef = {
 	weaponDefs = nil,
 	weapons = {
 		[1] = {
+<<<<<<< HEAD
 			def = [[NUKE_HCAR_ARM]],
 			onlyTargetCategory = [[NOTVTOL]],
 		},
@@ -97,6 +102,15 @@ local unitDef = {
 			badTargetCategory = [[VTOL]],
 			def = [[ROCKET_MCV]],
 		},
+=======
+			badTargetCategory = [[VTOL]],
+			def = [[ROCKET_MCV]],
+		},
+		[3] = {
+			def = [[NUKE_HCAR_ARM]],
+			onlyTargetCategory = [[NOTVTOL]],
+		},
+>>>>>>> testmerge
 	},
 }
 

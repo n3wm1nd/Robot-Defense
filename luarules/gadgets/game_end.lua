@@ -33,11 +33,6 @@ end
 
 local modOptions = Spring.GetModOptions()
 
-
-
-
-
-
 -- teamDeathMode possible values: "none", "teamzerounits" , "allyzerounits"
 local teamDeathMode = modOptions.teamdeathmode or "teamzerounits"
 
@@ -150,30 +145,22 @@ end
 
 local function KillTeamsZeroUnits()
 	-- kill all the teams that have zero units
-
 	for teamID, unitCount in pairs(teamsUnitCount) do
 		if unitCount == 0 then
 			spKillTeam( teamID )
-
 		end
 	end
-
-
 end
 
 local function KillAllyTeamsZeroUnits()
 	-- kill all the allyteams that have zero units
-
 	for allyTeamID, unitCount in pairs(allyTeamUnitCount) do
 		if unitCount == 0 then
-
 			-- kill all the teams in the allyteam
 			local teamList = spGetTeamList(allyTeamID)
 			for _,teamID in ipairs(teamList) do
 				spKillTeam( teamID )
 			end
-
-
 		end
 	end
 end
@@ -190,8 +177,6 @@ local function KillResignedTeams()
 			spKillTeam(teamID)
 		end
 	end
-
-
 end
 
 function gadget:GameFrame(frame)
@@ -227,12 +212,10 @@ end
 
 function gadget:Initialize()
 	if teamDeathMode == "none" then
-
 		gadgetHandler:RemoveGadget()
 	end
 
 	gaiaAllyTeamID = select(6, spGetTeamInfo(gaiaTeamID))
-
 
 	-- at start, fill in the table of all alive allyteams
 	for _,allyTeamID in ipairs(allyTeams) do
@@ -241,22 +224,14 @@ function gadget:Initialize()
 		for _,teamID in ipairs(teamList) do
 			teamToAllyTeam[teamID] = allyTeamID
 			if (ignoreGaia == 0) or (teamID ~= gaiaTeamID) then
-
-
 				teamCount = teamCount + 1
 			end
-
-
-
-
 		end
 		allyTeamAliveTeamsCount[allyTeamID] = teamCount
 		if teamCount > 0 then
 			 aliveAllyTeamCount = aliveAllyTeamCount + 1
-
 		end
 	end
-
 end
 
 function gadget:UnitCreated(unitID, unitDefID, unitTeamID)
@@ -271,11 +246,6 @@ end
 
 gadget.UnitGiven = gadget.UnitCreated
 gadget.UnitCaptured = gadget.UnitCreated
-
-
-
-
-
 
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeamID)
 	if unitTeamID == gaiaTeamID and ignoreGaia ~= 0 then
@@ -295,6 +265,4 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeamID)
 	end
 end
 
-
 gadget.UnitTaken = gadget.UnitDestroyed
-

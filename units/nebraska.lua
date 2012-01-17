@@ -18,14 +18,23 @@ local unitDef = {
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
 	defaultmissiontype = [[GUARD_NOMOVE]],
+<<<<<<< HEAD
 	description = [[Ion Cannon Anti T3/T4]],
+=======
+	description = [[Anti Experimental Cannon]],
+>>>>>>> testmerge
 	designation = [[NEBRASKA-HLT]],
 	energyStorage = 0,
 	energyUse = 0,
 	explodeAs = [[MEDIUM_BUILDINGEX]],
 	firestandorders = 1,
+<<<<<<< HEAD
 	footprintX = 6,
 	footprintZ = 6,
+=======
+	footprintX = 8,
+	footprintZ = 8,
+>>>>>>> testmerge
 	frenchdescription = [[Canon à ion]],
 	frenchname = [[NEBRASKA]],
 	germandescription = [[Ionenkanone]],
@@ -50,7 +59,11 @@ local unitDef = {
 	unitnumber = 567167,
 	version = 3,
 	workerTime = 0,
+<<<<<<< HEAD
 	yardMap = [[oooooo oooooo oooooo oooooo oooooo oooooo]],
+=======
+	yardMap = [[oooooooo oooooooo oooooooo oooooooo oooooooo oooooooo oooooooo oooooooo]],
+>>>>>>> testmerge
 	zbuffer = 1,
 	featureDefs = nil,
 	sounds = {
@@ -82,6 +95,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=11,
+	buildingGroundDecalSizeY=11,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[nebraska_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -93,8 +114,13 @@ local weaponDefs = {
 		collideFriendly = false,
 		craterBoost = 0,
 		craterMult = 0,
+<<<<<<< HEAD
 		duration = 0.0025,
 		energypershot = 4000,
+=======
+		duration = 0.025,
+		energypershot = 112000,
+>>>>>>> testmerge
 		explosionart = [[explode5]],
 		explosiongaf = [[fx]],
 		fireStarter = 90,
@@ -112,10 +138,17 @@ local weaponDefs = {
 		range = 1850,
 		reloadtime = 5,
 		renderType = 0,
+<<<<<<< HEAD
 		rgbColor = [[1 1 0]],
 		soundHit = [[xplolrg1]],
 		soundStart = [[Energy]],
 		thickness = 0.5,
+=======
+		rgbColor = [[0.9 0.6 1]],
+		soundHit = [[xplolrg1]],
+		soundStart = [[Energy]],
+		thickness = 5,
+>>>>>>> testmerge
 		turret = true,
 		waterexplosionart = [[h2oboom1]],
 		waterexplosiongaf = [[fx]],

@@ -9,8 +9,13 @@ local unitDef = {
 	activateWhenBuilt = true,
 	bmcode = 0,
 	buildAngle = 65536,
+<<<<<<< HEAD
 	buildCostEnergy = 132143,
 	buildCostMetal = 3874,
+=======
+	buildCostEnergy = 82143,
+	buildCostMetal = 3574,
+>>>>>>> testmerge
 	builder = false,
 	buildTime = 42190,
 	canAttack = true,
@@ -87,13 +92,25 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armarch_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
 
 local weaponDefs = {
 	ARMARCH_GUN = {
+<<<<<<< HEAD
 		accuracy = 150,
+=======
+		accuracy = 200,
+>>>>>>> testmerge
 		areaOfEffect = 126,
 		ballistic = true,
 		craterBoost = 0,
@@ -103,7 +120,11 @@ local weaponDefs = {
 		gravityaffected = [[true]],
 		minbarrelangle = -35,
 		name = [[Rapid Cannon]],
+<<<<<<< HEAD
 		range = 1750,
+=======
+		range = 1550,
+>>>>>>> testmerge
 		reloadtime = 0.17,
 		renderType = 4,
 		rgbColor = [[1 0.6 0.3]],
@@ -115,10 +136,17 @@ local weaponDefs = {
 		weaponType = [[Cannon]],
 		weaponVelocity = 900,
 		damage = {
+<<<<<<< HEAD
 			commanders = 10,
 			default = 26,
 			experimental_ships = 52,
 			ships = 39,
+=======
+			commanders = 15,
+			default = 44,
+			experimental_ships = 88,
+			ships = 66,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

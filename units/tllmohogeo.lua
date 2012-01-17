@@ -10,17 +10,29 @@ local unitDef = {
 	bmcode = 0,
 	buildAngle = 8192,
 	buildCostEnergy = 12000,
+<<<<<<< HEAD
 	buildCostMetal = 6800,
 	builder = false,
 	buildTime = 170000,
+=======
+	buildCostMetal = 5950,
+	builder = false,
+	buildTime = 160000,
+>>>>>>> testmerge
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[tllgeo_dead]],
 	description = [[Hazardous Geothermal Foundry Produces Energy/Metal]],
 	designation = [[]],
+<<<<<<< HEAD
 	energyMake = 3500,
 	energyStorage = 3500,
 	energyUse = 3000,
+=======
+	energyMake = 3000,
+	energyStorage = 3000,
+	energyUse = 2500,
+>>>>>>> testmerge
 	explodeAs = [[NUCLEAR_MISSILE]],
 	footprintX = 4,
 	footprintZ = 4,
@@ -31,7 +43,11 @@ local unitDef = {
 	iconType = [[building]],
 	italiandescription = [[Produce energia/Metal]],
 	italianname = [[Stabilimento Geotermico]],
+<<<<<<< HEAD
 	makesMetal = 42,
+=======
+	makesMetal = 35,
+>>>>>>> testmerge
 	maxDamage = 5320,
 	maxSlope = 10,
 	maxWaterDepth = 0,
@@ -75,6 +91,14 @@ local unitDef = {
 			[1] = [[tllgeosel]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllmohogeo_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -85,7 +109,11 @@ local featureDefs = {
 		category = [[tll_corpses]],
 		damage = 0.6000 * unitDef.maxDamage,
 		description = [[wreckage]],
+<<<<<<< HEAD
 		featureDead = [[tllgeo_heap]],
+=======
+		featureDead = [[tllmohogeo_dead]],
+>>>>>>> testmerge
 		featurereclamate = [[smudge01]],
 		footprintX = 4,
 		footprintZ = 4,

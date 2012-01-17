@@ -76,6 +76,14 @@ local unitDef = {
 			def = [[REPULSOR2]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=5,
+	buildingGroundDecalSizeY=5,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[armgate2_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -143,7 +151,11 @@ local featureDefs = {
 		height = 20,
 		hitdensity = 100,
 		metal = 0.6400 * unitDef.buildCostMetal,
+<<<<<<< HEAD
 		object = [[ARMGATE1_DEAD]],
+=======
+		object = [[ARMGATE2_DEAD]],
+>>>>>>> testmerge
 		reclaimable = true,
 		seqnamereclamate = [[TREE1RECLAMATE]],
 		world = [[All Worlds]],

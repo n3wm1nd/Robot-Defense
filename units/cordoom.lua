@@ -26,8 +26,13 @@ local unitDef = {
 	energyUse = 0,
 	explodeAs = [[ESTOR_BUILDING]],
 	firestandorders = 1,
+<<<<<<< HEAD
 	footprintX = 3,
 	footprintZ = 3,
+=======
+	footprintX = 4,
+	footprintZ = 4,
+>>>>>>> testmerge
 	iconType = [[building]],
 	idleAutoHeal = 5,
 	idleTime = 1800,
@@ -50,7 +55,11 @@ local unitDef = {
 	turnRate = 0,
 	unitname = [[cordoom]],
 	workerTime = 0,
+<<<<<<< HEAD
 	yardMap = [[ooooooooo]],
+=======
+	yardMap = [[yooy oooo oooo yooy]],
+>>>>>>> testmerge
 	featureDefs = nil,
 	sounds = {
 		canceldestruct = [[cancel2]],
@@ -91,6 +100,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[cordoom_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

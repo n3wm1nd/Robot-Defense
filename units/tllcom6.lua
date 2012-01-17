@@ -20,7 +20,11 @@ local unitDef = {
 	buildTime = 325000,
 	canAttack = true,
 	canCapture = true,
+<<<<<<< HEAD
 	canDGun = true,
+=======
+	canManualFire = true,
+>>>>>>> testmerge
 	canGuard = true,
 	canMove = true,
 	canPatrol = true,
@@ -35,6 +39,12 @@ local unitDef = {
 	collisionvolumetype = [[Ell]],
 	commander = true,
 	corpse = [[DEAD]],
+<<<<<<< HEAD
+=======
+	customParams           = {
+		iscommander = true,
+	},
+>>>>>>> testmerge
 	defaultmissiontype = [[Standby]],
 	description = [[Commander]],
 	energyMake = 1000,
@@ -115,6 +125,11 @@ local unitDef = {
 		[30] = [[tllfireraiser]],
 		[31] = [[corupmex]],
 		[32] = [[tllmono]],
+<<<<<<< HEAD
+=======
+		[33] = [[tllsealock]],
+
+>>>>>>> testmerge
 	},
 	featureDefs = nil,
 	sounds = {
@@ -217,7 +232,10 @@ local weaponDefs = {
 		damage = {
 			commanders = 450,
 			default = 999999,
+<<<<<<< HEAD
 			chicken = 1200,
+=======
+>>>>>>> testmerge
 		},
 	},
 	TLLCOM_LIGHTNING5 = {

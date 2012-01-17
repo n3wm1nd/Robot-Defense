@@ -120,8 +120,13 @@ local weaponDefs = {
 		rgbColor = [[0 0.3 0]],
 		rgbColor2 = [[0.3 1 0.3]],
 		soundHit = [[lashit]],
+<<<<<<< HEAD
 		soundStart = [[lghthvy1]],
 		soundTrigger = false,
+=======
+		soundStart = [[lasrfast]],
+		soundTrigger = true,
+>>>>>>> testmerge
 		thickness = 3,
 		turret = true,
 		weaponType = [[BeamLaser]],

@@ -55,7 +55,11 @@ local featureDefs = {
 		autoreclaimable = 0,
 		blocking = true,
 		category = [[dragonteeth]],
+<<<<<<< HEAD
 		damage = 30,
+=======
+		damage = 2500,
+>>>>>>> testmerge
 		description = [[Shark's Teeth]],
 		footprintX = 2,
 		footprintZ = 2,

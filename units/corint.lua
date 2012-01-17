@@ -47,6 +47,10 @@ local unitDef = {
 	standingfireorder = 2,
 	turnRate = 0,
 	unitname = [[corint]],
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	workerTime = 0,
 	yardMap = [[ooooooooooooooooooooooooo]],
 	customparams = {
@@ -86,6 +90,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=8,
+	buildingGroundDecalSizeY=8,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corint_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

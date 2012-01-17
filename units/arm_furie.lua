@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -- UNITDEF -- ARM_FURIE --
+=======
+--- UNITDEF -- ARM_FURIE --
+>>>>>>> testmerge
 --------------------------------------------------------------------------------
 
 local unitName = "arm_furie"
@@ -42,7 +46,11 @@ local unitDef = {
 	immunetoparalyzer = 1,
 	maneuverleashlength = 640,
 	mass = 200000,
+<<<<<<< HEAD
 	maxDamage = 300489,
+=======
+	maxDamage = 255412,
+>>>>>>> testmerge
 	maxSlope = 17,
 	maxVelocity = 1.1,
 	maxWaterDepth = 12,

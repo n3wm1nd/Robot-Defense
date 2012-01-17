@@ -53,6 +53,10 @@ local unitDef = {
 	turnRate = 0,
 	unitname = [[armarad]],
 	useBuildingGroundDecal = true,
+<<<<<<< HEAD
+=======
+	usePieceCollisionVolumes = 1,
+>>>>>>> testmerge
 	workerTime = 0,
 	yardMap = [[oooo]],
 	featureDefs = nil,

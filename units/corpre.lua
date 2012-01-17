@@ -89,6 +89,14 @@ local unitDef = {
 			onlyTargetCategory = [[VTOL SUPERSHIP]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=8,
+	buildingGroundDecalSizeY=8,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corpre_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -96,7 +104,11 @@ local unitDef = {
 local weaponDefs = {
 	CapitalShipMinigun = {
 		accuracy = 750,
+<<<<<<< HEAD
 		areaOfEffect = 75,
+=======
+		areaOfEffect = 85,
+>>>>>>> testmerge
 		beamWeapon = true,
 		burnblow = true,
 		burst = 2,
@@ -106,7 +118,11 @@ local weaponDefs = {
 		craterMult = 0,
 		duration = 0.04,
 		edgeEffectiveness = 0.4,
+<<<<<<< HEAD
 		energypershot = 5000,
+=======
+		energypershot = 2000,
+>>>>>>> testmerge
 		explosionart = [[Explode5]],
 		explosiongaf = [[FX]],
 		guidance = true,
@@ -125,6 +141,10 @@ local weaponDefs = {
 		soundStartVolume = 15,
 		soundTrigger = true,
 		startsmoke = 0,
+<<<<<<< HEAD
+=======
+		TargetMoveError = 0,
+>>>>>>> testmerge
 		texture1 = [[NarrowBoltNoisy]],
 		texture2 = [[NULL]],
 		texture3 = [[NULL]],
@@ -134,6 +154,7 @@ local weaponDefs = {
 		tracks = true,
 		turnRate = 15000,
 		turret = true,
+<<<<<<< HEAD
 		weaponType = [[LaserCannon]],
 		weaponVelocity = 2500,
 		damage = {
@@ -142,6 +163,17 @@ local weaponDefs = {
 			fighters = 3600,
 			flak_resistant = 1200,
 			unclassed_air = 3600,
+=======
+		PredictBoost = 1,
+		weaponType = [[LaserCannon]],
+		weaponVelocity = 3500,
+		damage = {
+			bombers = 2400,
+			default = 5,
+			fighters = 2400,
+			flak_resistant = 800,
+			unclassed_air = 2400,
+>>>>>>> testmerge
 		},
 	},
 }

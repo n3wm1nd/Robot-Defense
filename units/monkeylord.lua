@@ -31,8 +31,13 @@ local unitDef = {
 	energyUse = 0,
 	explodeAs = [[ATOMIC_BLAST]],
 	firestandorders = 1,
+<<<<<<< HEAD
 	footprintX = 11,
 	footprintZ = 11,
+=======
+	footprintX = 8,
+	footprintZ = 8,
+>>>>>>> testmerge
 	iconType = [[Krogoth]],
 	idleAutoHeal = 10,
 	idleTime = 30,
@@ -45,7 +50,11 @@ local unitDef = {
 	maxWaterDepth = 520,
 	metalStorage = 0,
 	mobilestandorders = 1,
+<<<<<<< HEAD
 	movementClass = [[HTKBOT11]],
+=======
+	movementClass = [[HTKBOT8]],
+>>>>>>> testmerge
 	name = [[Cybran Monkeylord Shielded Mech]],
 	noAutoFire = false,
 	noChaseCategory = [[SUB VTOL]],

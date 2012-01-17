@@ -6,6 +6,7 @@ local unitName = "tlllasbot"
 --------------------------------------------------------------------------------
 
 local unitDef = {
+<<<<<<< HEAD
 	acceleration = 0.1,
 	bmcode = 1,
 	brakeRate = 0.15,
@@ -13,6 +14,15 @@ local unitDef = {
 	buildCostMetal = 225,
 	builder = false,
 	buildTime = 8250,
+=======
+	acceleration = 0.25,
+	bmcode = 1,
+	brakeRate = 0.18,
+	buildCostEnergy = 1251,
+	buildCostMetal = 255,
+	builder = false,
+	buildTime = 3500,
+>>>>>>> testmerge
 	canAttack = true,
 	canGuard = true,
 	canMove = true,
@@ -22,7 +32,11 @@ local unitDef = {
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
 	defaultmissiontype = [[Standby]],
+<<<<<<< HEAD
 	description = [[Laser Kbot]],
+=======
+	description = [[Laser Raider Kbot]],
+>>>>>>> testmerge
 	designation = [[TL-LB]],
 	downloadable = 1,
 	energyMake = 0.4,
@@ -33,9 +47,15 @@ local unitDef = {
 	footprintX = 2,
 	footprintZ = 2,
 	maneuverleashlength = 640,
+<<<<<<< HEAD
 	maxDamage = 1370,
 	maxSlope = 14,
 	maxVelocity = 1.2,
+=======
+	maxDamage = 860,
+	maxSlope = 16,
+	maxVelocity = 2.2,
+>>>>>>> testmerge
 	maxWaterDepth = 0,
 	metalStorage = 0,
 	mobilestandorders = 1,
@@ -96,13 +116,21 @@ local unitDef = {
 
 local weaponDefs = {
 	TLL_LASERH1 = {
+<<<<<<< HEAD
 		areaOfEffect = 14,
+=======
+		areaOfEffect = 12,
+>>>>>>> testmerge
 		beamlaser = 1,
 		beamTime = 0.15,
 		coreThickness = 0.2,
 		craterBoost = 0,
 		craterMult = 0,
+<<<<<<< HEAD
 		energypershot = 0,
+=======
+		energypershot = 2,
+>>>>>>> testmerge
 		explosionGenerator = [[custom:LARGE_GREEN_LASER_BURN]],
 		fireStarter = 90,
 		impactonly = 1,
@@ -112,10 +140,17 @@ local weaponDefs = {
 		lineOfSight = true,
 		name = [[HighEnergyLaser]],
 		noSelfDamage = true,
+<<<<<<< HEAD
 		range = 300,
 		reloadtime = 0.3,
 		renderType = 0,
 		rgbColor = [[0 1 0]],
+=======
+		range = 280,
+		reloadtime = 0.45,
+		renderType = 0,
+		rgbColor = [[0 0.55 0]],
+>>>>>>> testmerge
 		soundHit = [[lasrhit1]],
 		soundStart = [[Lasrmas2]],
 		targetMoveError = 0.2,
@@ -125,8 +160,13 @@ local weaponDefs = {
 		weaponType = [[BeamLaser]],
 		weaponVelocity = 2250,
 		damage = {
+<<<<<<< HEAD
 			commanders = 90,
 			default = 53,
+=======
+			default = 80,
+			raider_resistant = 40,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

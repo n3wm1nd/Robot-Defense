@@ -9,10 +9,17 @@ local unitDef = {
 	acceleration = 0.11,
 	bmcode = 1,
 	brakeRate = 0.13,
+<<<<<<< HEAD
 	buildCostEnergy = 675,
 	buildCostMetal = 240,
 	builder = false,
 	buildTime = 2525,
+=======
+	buildCostEnergy = 975,
+	buildCostMetal = 240,
+	builder = false,
+	buildTime = 3525,
+>>>>>>> testmerge
 	canAttack = true,
 	canGuard = true,
 	canMove = true,
@@ -105,7 +112,11 @@ local weaponDefs = {
 		lavaexplosiongaf = [[fx]],
 		minbarrelangle = -35,
 		name = [[Light Gauss]],
+<<<<<<< HEAD
 		range = 355,
+=======
+		range = 365,
+>>>>>>> testmerge
 		reloadtime = 0.8,
 		renderType = 4,
 		soundHit = [[xplosml3]],
@@ -118,7 +129,11 @@ local weaponDefs = {
 		weaponType = [[Cannon]],
 		weaponVelocity = 250,
 		damage = {
+<<<<<<< HEAD
 			default = 80,
+=======
+			default = 75,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

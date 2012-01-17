@@ -53,7 +53,11 @@ local unitDef = {
 	buildoptions = {
 		[1] = [[cfusionplant]],
 		[2] = [[cmetalmakerlvl2]],
+<<<<<<< HEAD
 		[3] = [[cnanotower]],
+=======
+		[3] = [[cornanotc3]],
+>>>>>>> testmerge
 		[4] = [[corgate1]],
 		[5] = [[cshipyardlvl4]],
 		[6] = [[corint1]],

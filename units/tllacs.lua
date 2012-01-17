@@ -72,6 +72,12 @@ local unitDef = {
 		[7] = [[tlllmtns]],
 		[8] = [[tllnssam]],
 		[9] = [[tllatorp]],
+<<<<<<< HEAD
+=======
+		[10] = [[tlldtns]],
+		[11] = [[tllsealock]],
+
+>>>>>>> testmerge
 	},
 	featureDefs = nil,
 	sounds = {

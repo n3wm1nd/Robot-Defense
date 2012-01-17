@@ -39,6 +39,11 @@ local function SmokeUnit(healthpercent, sleeptime, smoketype)
 end
 
 local function Zaps()
+<<<<<<< HEAD
+=======
+       	while still_building_p() do Sleep(400); end
+
+>>>>>>> testmerge
 	while (true) do
 		EmitSfx( flare, ZAP)
 		Sleep(1390)

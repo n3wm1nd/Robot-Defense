@@ -53,6 +53,14 @@ local unitDef = {
 	yardMap = [[ww ww]],
 	zbuffer = 1,
 	featureDefs = nil,
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=4,
+	buildingGroundDecalSizeY=4,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tlldtns_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -62,7 +70,11 @@ local featureDefs = {
 		autoreclaimable = 0,
 		blocking = true,
 		category = [[dragonteeth]],
+<<<<<<< HEAD
 		damage = 2220,
+=======
+		damage = 2500,
+>>>>>>> testmerge
 		description = [[Dragon's Teeth - NS]],
 		featurereclamate = [[smudge01]],
 		footprintX = 2,

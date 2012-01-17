@@ -117,7 +117,11 @@ local weaponDefs = {
 		name = [[Vpulse Rocket]],
 		noautorange = 1,
 		noSelfDamage = true,
+<<<<<<< HEAD
 		range = 1450,
+=======
+		range = 1420,
+>>>>>>> testmerge
 		reloadtime = 7,
 		renderType = 1,
 		selfprop = true,

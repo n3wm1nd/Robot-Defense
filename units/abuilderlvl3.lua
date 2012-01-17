@@ -53,7 +53,11 @@ local unitDef = {
 	buildoptions = {
 		[1] = [[afusionplant]],
 		[2] = [[ametalmakerlvl2]],
+<<<<<<< HEAD
 		[3] = [[ananotower]],
+=======
+		[3] = [[armnanotc3]],
+>>>>>>> testmerge
 		[4] = [[ashipyardlvl3]],
 		[5] = [[armgate1]],
 		[6] = [[armbrtha1]],

@@ -9,8 +9,13 @@ local unitDef = {
 	acceleration = 0.2,
 	bmcode = 1,
 	brakeRate = 0.3,
+<<<<<<< HEAD
 	buildCostEnergy = 18541,
 	buildCostMetal = 1540,
+=======
+	buildCostEnergy = 23541,
+	buildCostMetal = 2540,
+>>>>>>> testmerge
 	builder = false,
 	buildTime = 16842,
 	canAttack = true,

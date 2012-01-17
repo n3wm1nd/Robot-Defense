@@ -62,6 +62,14 @@ local unitDef = {
 			[1] = [[corplant1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=33,
+	buildingGroundDecalSizeY=33,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[cshipyardlvl4_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

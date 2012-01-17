@@ -14,9 +14,15 @@ local unitDef = {
 	buildCostMetal = 743,
 	builder = true,
 	buildingGroundDecalDecaySpeed = 3000,
+<<<<<<< HEAD
 	buildingGroundDecalSizeX = 11,
 	buildingGroundDecalSizeY = 9,
 	buildingGroundDecalType = [[asphalt512.dds]],
+=======
+	buildinggrounddecalsizex = 9,
+	buildinggrounddecalsizey = 7,
+	buildingGroundDecalType=[[armvp_aoplane.dds]],
+>>>>>>> testmerge
 	buildPic = [[ARMVP.png]],
 	buildTime = 5629,
 	canMove = true,

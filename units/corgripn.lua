@@ -92,7 +92,11 @@ local weaponDefs = {
 	CORGRIPN_BOMB = {
 		areaOfEffect = 240,
 		collideFriendly = false,
+<<<<<<< HEAD
 		commandfire = true,
+=======
+		commandfire = false,
+>>>>>>> testmerge
 		craterBoost = 0,
 		craterMult = 0,
 		dropped = true,

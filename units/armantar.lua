@@ -9,8 +9,13 @@ local unitDef = {
 	acceleration = 0.01,
 	bmcode = 1,
 	brakeRate = 0.007629395,
+<<<<<<< HEAD
 	buildCostEnergy = 43547,
 	buildCostMetal = 6215,
+=======
+	buildCostEnergy = 63547,
+	buildCostMetal = 8215,
+>>>>>>> testmerge
 	builder = false,
 	buildTime = 30842,
 	canAttack = true,
@@ -126,7 +131,11 @@ local weaponDefs = {
 		name = [[High Energy Laser]],
 		noSelfDamage = true,
 		range = 800,
+<<<<<<< HEAD
 		reloadtime = 1,
+=======
+		reloadtime = 0.9,
+>>>>>>> testmerge
 		renderType = 0,
 		soundHit = [[lasrhit1]],
 		soundStart = [[lasrhit1]],
@@ -159,8 +168,13 @@ local weaponDefs = {
 		model = [[missileantarion]],
 		name = [[Missiles]],
 		noSelfDamage = true,
+<<<<<<< HEAD
 		range = 1500,
 		reloadtime = 0.9,
+=======
+		range = 900,
+		reloadtime = 0.7,
+>>>>>>> testmerge
 		renderType = 1,
 		selfprop = true,
 		smokedelay = 0.1,
@@ -180,7 +194,11 @@ local weaponDefs = {
 		weaponType = [[MissileLauncher]],
 		weaponVelocity = 660,
 		damage = {
+<<<<<<< HEAD
 			default = 200,
+=======
+			default = 150,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

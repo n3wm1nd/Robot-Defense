@@ -36,7 +36,11 @@ local unitDef = {
 	italiandescription = [[Kbot armato d'assalto]],
 	maneuverleashlength = 640,
 	mass = 1000000000000,
+<<<<<<< HEAD
 	maxDamage = 56900,
+=======
+	maxDamage = 33900,
+>>>>>>> testmerge
 	maxSlope = 14,
 	maxVelocity = 0.99,
 	maxWaterDepth = 21,
@@ -152,7 +156,11 @@ local weaponDefs = {
 		name = [[HeavyCannon]],
 		noSelfDamage = true,
 		range = 600,
+<<<<<<< HEAD
 		reloadtime = 0.93,
+=======
+		reloadtime = 1.7,
+>>>>>>> testmerge
 		renderType = 4,
 		soundHit = [[xplomed4]],
 		soundStart = [[cannhvy2]],

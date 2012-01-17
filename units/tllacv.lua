@@ -86,6 +86,10 @@ local unitDef = {
 		[22] = [[tllavp]],
 		[23] = [[tllmohogeo]],
 		[24] = [[tllrichter]],
+<<<<<<< HEAD
+=======
+	        [25] = [[tllevp]],
+>>>>>>> testmerge
 	},
 	featureDefs = nil,
 	sounds = {

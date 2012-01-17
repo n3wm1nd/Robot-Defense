@@ -3,11 +3,21 @@
 #include "sfxtype.h"
 #include "exptype.h"
 
+<<<<<<< HEAD
 piece  rnanospray, lnanospray, torso, pelvis, lleg, lfoot, rleg, rfoot,
        rthigh, lthigh, guncase, nanojoint, nanoarm, lnanogun, rnanogun, ground;
 
 static-var  Static_Var_1, bMoving, Static_Var_3, Static_Var_4, Static_Var_5,
             statechg_DesiredState, statechg_StateChanging, moveSpeed, currentSpeed;
+=======
+#define SIG_BUILD		4	
+
+piece  rnanospray, lnanospray, torso, pelvis, lleg, lfoot, rleg, rfoot,
+       rthigh, lthigh, guncase, nanojoint, nanoarm, lnanogun, rnanogun, ground;
+
+static-var  bMoving, notBuilding, nanoNozzle, statechg_DesiredState,
+			statechg_StateChanging, moveSpeed, currentSpeed;
+>>>>>>> testmerge
 
 
 walk()
@@ -381,11 +391,16 @@ MotionControl(Func_Var_1, Func_Var_2)
 	while( TRUE )
 	{
 		Func_Var_1 = bMoving;
+<<<<<<< HEAD
 		Func_Var_2 = Static_Var_3;
+=======
+		Func_Var_2 = notBuilding;
+>>>>>>> testmerge
 		if( Func_Var_1 )
 		{
 			if( Func_Var_2 )
 			{
+<<<<<<< HEAD
 				Static_Var_4 = 1;
 				call-script walklegs();
 			}
@@ -393,11 +408,21 @@ MotionControl(Func_Var_1, Func_Var_2)
 			{
 				Static_Var_4 = 0;
 				call-script walk();
+=======
+				call-script walk();
+			}
+			else
+			{
+				call-script walklegs();
+>>>>>>> testmerge
 			}
 		}
 		else
 		{
+<<<<<<< HEAD
 			Static_Var_4 = 1;
+=======
+>>>>>>> testmerge
 			sleep 100;
 		}
 	}
@@ -405,6 +430,7 @@ MotionControl(Func_Var_1, Func_Var_2)
 
 Go()
 {
+<<<<<<< HEAD
 	Static_Var_3 = 1;
 	if( Static_Var_3 )
 	{
@@ -430,6 +456,21 @@ Go()
 	turn torso to y-axis Static_Var_1 speed <160.000000>;
 	wait-for-turn torso around y-axis;
 	set INBUILDSTANCE to 1;
+=======
+	turn guncase to x-axis <0.000000> now;
+	turn guncase to x-axis <-68.016484> speed <90.000000>;
+	turn nanojoint to x-axis <0.000000> now;
+	turn nanojoint to x-axis <-4.000000> speed <5.000000>;
+	sleep 750;
+
+	turn nanoarm to x-axis <-52.010989> speed <69.000000>;
+	turn nanojoint to x-axis <43.005495> speed <63.000000>;
+	sleep 758;
+
+	turn nanoarm to x-axis <-87.016484> speed <45.000000>;
+	turn nanojoint to x-axis <157.032967> speed <149.000000>;
+	sleep 758;
+>>>>>>> testmerge
 }
 
 Stop()
@@ -437,6 +478,7 @@ Stop()
 	set INBUILDSTANCE to 0;
 	turn torso to y-axis <0.000000> speed <160.000000>;
 	wait-for-turn torso around y-axis;
+<<<<<<< HEAD
 	if( Static_Var_3 )
 	{
 		turn guncase to x-axis <-68.104396> now;
@@ -453,6 +495,18 @@ Stop()
 	}
 	sleep 40;
 	Static_Var_3 = 0;
+=======
+
+	turn guncase to x-axis <-68.104396> now;
+	turn nanoarm to x-axis <-87.549451> now;
+	turn nanoarm to x-axis <0.000000> speed <116.000000>;
+	turn nanojoint to x-axis <157.538462> now;
+	turn nanojoint to x-axis <0.000000> speed <209.000000>;
+	sleep 751;
+
+	turn guncase to x-axis <0.000000> speed <89.000000>;
+	sleep 758;
+>>>>>>> testmerge
 }
 
 RequestState(requestedstate, currentstate)
@@ -470,11 +524,19 @@ RequestState(requestedstate, currentstate)
 		if( statechg_DesiredState )
 		{
 			call-script Stop();
+<<<<<<< HEAD
+=======
+			notBuilding = 1;
+>>>>>>> testmerge
 			currentstate = 1;
 		}
 		else
 		{
 			call-script Go();
+<<<<<<< HEAD
+=======
+			notBuilding = 0;
+>>>>>>> testmerge
 			currentstate = 0;
 		}
 	}
@@ -532,10 +594,15 @@ SmokeUnit(healthpercent, sleeptime, smoketype)
 Create()
 {
 	bMoving = FALSE;
+<<<<<<< HEAD
 	Static_Var_3 = 0;
 	Static_Var_4 = 1;
 	Static_Var_5 = 0;
 	Static_Var_1 = 0;
+=======
+	notBuilding = 1;
+	nanoNozzle = 0;
+>>>>>>> testmerge
 	statechg_DesiredState = TRUE;
 	statechg_StateChanging = FALSE;
 	moveSpeed = get MAX_SPEED;
@@ -553,14 +620,33 @@ Deactivate()
 	start-script RequestState(1);
 }
 
+<<<<<<< HEAD
 StartBuilding(Func_Var_1)
 {
 	Static_Var_1 = Func_Var_1;
 	start-script RequestState(0);
+=======
+StartBuilding(heading, pitch)
+{
+	start-script RequestState(0);
+	while( notBuilding ) sleep 100;
+	signal SIG_BUILD;
+	turn torso to y-axis heading speed <160.000000>;
+	wait-for-turn torso around y-axis;
+	set INBUILDSTANCE to 1;
+>>>>>>> testmerge
 }
 
 StopBuilding()
 {
+<<<<<<< HEAD
+=======
+	signal SIG_BUILD;	
+	set-signal-mask SIG_BUILD;
+	sleep 6000;
+	set-signal-mask 0;
+	signal SIG_BUILD;	
+>>>>>>> testmerge
 	start-script RequestState(1);
 }
 
@@ -576,14 +662,26 @@ StopMoving()
 
 QueryNanoPiece(piecenum)
 {
+<<<<<<< HEAD
 	piecenum = Static_Var_5;
 	Static_Var_5 = !Static_Var_5;
 }
 
+=======
+	piecenum = nanoNozzle;
+	nanoNozzle = !nanoNozzle;
+}
+
+/*
+>>>>>>> testmerge
 TargetHeading(Func_Var_1)
 {
 	Static_Var_1 = 0 - Func_Var_1;
 }
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> testmerge
 
 SweetSpot(piecenum)
 {

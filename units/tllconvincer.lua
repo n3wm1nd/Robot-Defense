@@ -10,7 +10,11 @@ local unitDef = {
 	bmcode = 1,
 	brakeRate = 0.03,
 	buildCostEnergy = 1887,
+<<<<<<< HEAD
 	buildCostMetal = 581,
+=======
+	buildCostMetal = 950,
+>>>>>>> testmerge
 	builder = false,
 	buildTime = 9201,
 	canAttack = true,
@@ -31,7 +35,11 @@ local unitDef = {
 	germandescription = [[Mobiler Raketen-Werfer]],
 	italiandescription = [[Lanciarazzi mobile]],
 	maneuverleashlength = 320,
+<<<<<<< HEAD
 	maxDamage = 645,
+=======
+	maxDamage = 860,
+>>>>>>> testmerge
 	maxSlope = 16,
 	maxVelocity = 1.15,
 	maxWaterDepth = 12,
@@ -91,7 +99,11 @@ local unitDef = {
 
 local weaponDefs = {
 	ARMTRUCK_ROCKET = {
+<<<<<<< HEAD
 		areaOfEffect = 155,
+=======
+		areaOfEffect = 85,
+>>>>>>> testmerge
 		craterBoost = 0,
 		craterMult = 0,
 		edgeEffectiveness = 0.5,
@@ -107,8 +119,13 @@ local weaponDefs = {
 		name = [[Rocket]],
 		noautorange = 1,
 		noSelfDamage = true,
+<<<<<<< HEAD
 		range = 1800,
 		reloadtime = 16,
+=======
+		range = 1450,
+		reloadtime = 24,
+>>>>>>> testmerge
 		renderType = 1,
 		selfprop = true,
 		smokedelay = 0.1,
@@ -126,7 +143,11 @@ local weaponDefs = {
 		weaponVelocity = 380,
 		damage = {
 			commanders = 500,
+<<<<<<< HEAD
 			default = 2200,
+=======
+			default = 2500,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

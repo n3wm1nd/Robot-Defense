@@ -89,6 +89,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=13,
+	buildingGroundDecalSizeY=13,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[corflu_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

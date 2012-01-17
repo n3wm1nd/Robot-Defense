@@ -87,6 +87,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=8,
+	buildingGroundDecalSizeY=8,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllrlrpc_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -104,7 +112,11 @@ local weaponDefs = {
 		energypershot = 12000,
 		explosionart = [[bio1]],
 		explosiongaf = [[CAexp2]],
+<<<<<<< HEAD
 		explosionGenerator = [[custom:LIGHTNING_FLASH]],
+=======
+		explosionGenerator = [[custom:Explosion_Huge_Tesla]],
+>>>>>>> testmerge
 		fireStarter = 90,
 		id = 119,
 		impulseBoost = 0.123,
@@ -112,6 +124,7 @@ local weaponDefs = {
 		lavaexplosionart = [[lavasplashsm]],
 		lavaexplosiongaf = [[fx]],
 		lineOfSight = true,
+<<<<<<< HEAD
 		name = [[Ultra lightning Weapon2]],
 		noSelfDamage = true,
 		range = 4400,
@@ -121,6 +134,21 @@ local weaponDefs = {
 		soundStart = [[annigun1]],
 		tolerance = 500,
 		turret = true,
+=======
+		intensity = 25,
+		name = [[Ultra lightning Weapon2]],
+		noSelfDamage = true,
+		range = 3700,
+		reloadtime = 0.6,
+		renderType = 7,
+		rgbColor = [[0.2 0.2 1]],
+		soundHit = [[xplolrg1]],
+		soundStart = [[annigun1]],
+		texture1 = [[lightning]],
+		tolerance = 500,
+		turret = true,
+		thickness = 16,
+>>>>>>> testmerge
 		waterexplosionart = [[H2oboom3]],
 		waterexplosiongaf = [[CAexp3]],
 		weaponType = [[LightningCannon]],

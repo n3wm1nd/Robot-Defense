@@ -98,7 +98,11 @@ local unitDef = {
 
 local weaponDefs = {
 	CORTRUCK_ROCKET = {
+<<<<<<< HEAD
 		areaOfEffect = 175,
+=======
+		areaOfEffect = 100,
+>>>>>>> testmerge
 		craterBoost = 0,
 		craterMult = 0,
 		edgeEffectiveness = 0.5,
@@ -114,7 +118,11 @@ local weaponDefs = {
 		name = [[Rocket]],
 		noautorange = 1,
 		noSelfDamage = true,
+<<<<<<< HEAD
 		range = 1600,
+=======
+		range = 1400,
+>>>>>>> testmerge
 		reloadtime = 20,
 		renderType = 1,
 		selfprop = true,
@@ -133,7 +141,11 @@ local weaponDefs = {
 		weaponVelocity = 415,
 		damage = {
 			commanders = 650,
+<<<<<<< HEAD
 			default = 2350,
+=======
+			default = 1950,
+>>>>>>> testmerge
 			subs = 5,
 		},
 	},

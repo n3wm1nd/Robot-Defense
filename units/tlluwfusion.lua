@@ -16,10 +16,18 @@ local unitDef = {
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
+<<<<<<< HEAD
 	description = [[Produces Energy/ Storage]],
 	designation = [[TL-UWF]],
 	downloadable = 1,
 	energyMake = 1000,
+=======
+	description = [[Produces Metal and Energy/ Storage]],
+	designation = [[TL-UWF]],
+	downloadable = 1,
+	energyMake = 1000,
+	energyUse = 400,
+>>>>>>> testmerge
 	explodeAs = [[ATOMIC_BLAST]],
 	footprintX = 6,
 	footprintZ = 4,
@@ -33,8 +41,14 @@ local unitDef = {
 	maxDamage = 3311,
 	maxSlope = 10,
 	maxWaterDepth = 255,
+<<<<<<< HEAD
 	minWaterDepth = 34,
 	name = [[Underwater Fusion Plant]],
+=======
+	makesMetal = 6,
+	minWaterDepth = 34,
+	name = [[Underwater Heavy Elemental Reactor]],
+>>>>>>> testmerge
 	noAutoFire = false,
 	noChaseCategory = [[ALL]],
 	objectName = [[tllUWFUSion]],
@@ -66,6 +80,14 @@ local unitDef = {
 			[1] = [[tlluwfusion]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tlluwfusion_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

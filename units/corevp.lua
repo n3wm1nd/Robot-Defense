@@ -14,12 +14,20 @@ local unitDef = {
 	buildingGroundDecalDecaySpeed = 3000,
 	buildingGroundDecalSizeX = 10,
 	buildingGroundDecalSizeY = 9,
+<<<<<<< HEAD
 	buildingGroundDecalType = [[asphalt512.dds]],
+=======
+	buildingGroundDecalType=[[corevp_aoplane.dds]],
+>>>>>>> testmerge
 	buildTime = 70500,
 	canMove = false,
 	canPatrol = true,
 	canstop = 1,
+<<<<<<< HEAD
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+=======
+	category = [[LEVEL2 ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON PLANT]],
+>>>>>>> testmerge
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
 	description = [[Produces T3 Vehicles]],

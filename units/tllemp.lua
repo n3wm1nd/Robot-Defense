@@ -80,6 +80,14 @@ local unitDef = {
 			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=6,
+	buildingGroundDecalSizeY=6,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllemp_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------
@@ -107,7 +115,11 @@ local weaponDefs = {
 		paralyzer = true,
 		paralyzeTime = 35,
 		propeller = 1,
+<<<<<<< HEAD
 		range = 6000,
+=======
+		range = 4450,
+>>>>>>> testmerge
 		reloadtime = 2,
 		renderType = 1,
 		selfprop = true,
@@ -153,7 +165,11 @@ local featureDefs = {
 		height = 12,
 		hitdensity = 123,
 		metal = 0.8000 * unitDef.buildCostMetal,
+<<<<<<< HEAD
 		object = [[tllsilo_dead]],
+=======
+		object = [[tllemp_dead]],
+>>>>>>> testmerge
 		reclaimable = true,
 		seqnamereclamate = [[tree1reclamate]],
 		world = [[all]],

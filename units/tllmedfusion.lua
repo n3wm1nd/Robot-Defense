@@ -13,8 +13,14 @@ local unitDef = {
 	buildTime = 70000,
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	corpse = [[dead]],
+<<<<<<< HEAD
 	description = [[Produces Energy/ Storage]],
 	energyMake = 800,
+=======
+	description = [[Produces Metal and Energy/ Storage]],
+	energyMake = 800,
+	energyUse = 300,
+>>>>>>> testmerge
 	energyStorage = 2000,
 	explodeAs = [[FUSIONX_BLAST]],
 	floater = true,
@@ -27,7 +33,12 @@ local unitDef = {
 	maxSlope = 20,
 	maxWaterDepth = 0,
 	metalStorage = 0,
+<<<<<<< HEAD
 	name = [[Fusion Reactor]],
+=======
+	makesMetal = 4.2,
+	name = [[Heavy Elemental Reactor]],
+>>>>>>> testmerge
 	noChaseCategory = [[ALL]],
 	objectName = [[TLLMEDFUSION]],
 	radarDistance = 0,
@@ -54,6 +65,14 @@ local unitDef = {
 			[1] = [[fusion2]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=8,
+	buildingGroundDecalSizeY=8,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllmedfusion_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

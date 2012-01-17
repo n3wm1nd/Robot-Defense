@@ -10,6 +10,10 @@ static-var  restore_delay, Static_Var_2, Static_Var_3, Static_Var_4, Static_Var_
 
 // Signal definitions
 #define SIG_AIM				2
+<<<<<<< HEAD
+=======
+#define SIG_AIM_2			4
+>>>>>>> testmerge
 #define SIG_AIM_3			8
 
 
@@ -125,7 +129,11 @@ RestoreAfterDelay()
 {
 	set-signal-mask SIG_AIM;
 	sleep restore_delay;
+<<<<<<< HEAD
 	turn turret1 to y-axis <0.000000> speed <10.000000>;
+=======
+	turn turret1 to y-axis <0.000000> speed <50.000000>;
+>>>>>>> testmerge
 }
 
 RestoreAfterDelay3()
@@ -140,7 +148,11 @@ AimPrimary(heading, pitch)
 {
 	signal SIG_AIM;
 	set-signal-mask SIG_AIM;
+<<<<<<< HEAD
 	turn turret1 to y-axis heading speed <10.000000>;
+=======
+	turn turret1 to y-axis heading speed <50.000000>;
+>>>>>>> testmerge
 	wait-for-turn turret1 around y-axis;
 	start-script RestoreAfterDelay();
 	return (1);
@@ -148,7 +160,10 @@ AimPrimary(heading, pitch)
 
 FirePrimary()
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> testmerge
 }
 
 AimFromPrimary(piecenum)
@@ -165,6 +180,7 @@ AimTertiary(heading, pitch)
 {
 	signal SIG_AIM_3;
 	set-signal-mask SIG_AIM_3;
+<<<<<<< HEAD
 	if( heading >= 0 AND heading <= 32760 )
 	{
 		Static_Var_2 = 0;
@@ -177,12 +193,17 @@ AimTertiary(heading, pitch)
 		turn turret2 to y-axis heading speed <100.000000>;
 		wait-for-turn turret2 around y-axis;
 	}
+=======
+	turn turret3 to y-axis heading speed <100.000000>;
+	wait-for-turn turret3 around y-axis;
+>>>>>>> testmerge
 	start-script RestoreAfterDelay3();
 	return (1);
 }
 
 FireTertiary()
 {
+<<<<<<< HEAD
 	if( Static_Var_2 == 0 )
 	{
 	
@@ -191,10 +212,14 @@ FireTertiary()
 	{
 		
 	}
+=======
+	
+>>>>>>> testmerge
 }
 
 AimFromTertiary(piecenum)
 {
+<<<<<<< HEAD
 	if( Static_Var_2 == 0 )
 	{
 		piecenum = turret3;
@@ -203,6 +228,9 @@ AimFromTertiary(piecenum)
 	{
 		piecenum = turret2;
 	}
+=======
+	piecenum = turret3;
+>>>>>>> testmerge
 }
 
 QueryTertiary(piecenum)
@@ -210,11 +238,44 @@ QueryTertiary(piecenum)
 	piecenum = flare3;
 }
 
+<<<<<<< HEAD
+=======
+
+AimSecondary(heading, pitch)
+{
+	signal SIG_AIM_2;
+	set-signal-mask SIG_AIM_2;
+	turn turret2 to y-axis heading speed <100.000000>;
+	wait-for-turn turret2 around y-axis;
+	start-script RestoreAfterDelay3();
+	return (1);
+}
+
+FireSecondary()
+{
+	
+}
+
+AimFromSecondary(piecenum)
+{
+	piecenum = turret2;
+}
+
+QuerySecondary(piecenum)
+{
+	piecenum = flare2;
+}
+
+>>>>>>> testmerge
 SweetSpot(piecenum)
 {
 	piecenum = body;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> testmerge
 Killed(severity, corpsetype)
 {
 	hide flare1;

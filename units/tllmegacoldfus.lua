@@ -16,22 +16,38 @@ local unitDef = {
 	category = [[ALL NOTDEFENSE NOTHOVERNOTVTOL NOTMOBILE NOTSUB NOTSUBNOTSHIP NOTVTOL NOTWEAPON]],
 	copyright = [[Copyright 1997 Humongous Entertainment. All rights reserved.]],
 	corpse = [[dead]],
+<<<<<<< HEAD
 	description = [[Produces Energy/ Storage]],
+=======
+	description = [[Produces Metal and Energy/ Storage]],
+>>>>>>> testmerge
 	designation = [[TL-CF]],
 	downloadable = 1,
 	energyMake = 14500,
 	energyStorage = 29000,
+<<<<<<< HEAD
 	energyUse = 0,
+=======
+	energyUse = 11500,
+>>>>>>> testmerge
 	explodeAs = [[SUPERBLAST_BUILDING]],
 	footprintX = 7,
 	footprintZ = 7,
 	frenchdescription = [[Produit de l'énergie]],
 	iconType = [[building]],
+<<<<<<< HEAD
+=======
+	makesMetal = 180,
+>>>>>>> testmerge
 	maxDamage = 11380,
 	maxSlope = 10,
 	maxWaterDepth = 0,
 	metalStorage = 0,
+<<<<<<< HEAD
 	name = [[Mega Fusion Reactor]],
+=======
+	name = [[Dark Matter Converter]],
+>>>>>>> testmerge
 	noAutoFire = false,
 	noChaseCategory = [[ALL]],
 	objectName = [[TLLMEGACOLDFUS]],
@@ -67,6 +83,14 @@ local unitDef = {
 			[1] = [[fusion1]],
 		},
 	},
+<<<<<<< HEAD
+=======
+	buildingGroundDecalDecaySpeed=30,
+	buildingGroundDecalSizeX=10,
+	buildingGroundDecalSizeY=10,
+	useBuildingGroundDecal = true,
+	buildingGroundDecalType=[[tllmegacoldfus_aoplane.dds]],
+>>>>>>> testmerge
 }
 
 --------------------------------------------------------------------------------

@@ -108,7 +108,11 @@ local weaponDefs = {
 		name = [[HeavyRockets]],
 		noautorange = 1,
 		noSelfDamage = true,
+<<<<<<< HEAD
 		range = 1210,
+=======
+		range = 1350,
+>>>>>>> testmerge
 		reloadtime = 7,
 		renderType = 1,
 		selfprop = true,
