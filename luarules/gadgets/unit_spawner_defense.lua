@@ -514,7 +514,7 @@ local function ChooseTarget()
       end
       local slowunit = true
       if tries < 5 then
-	Spring.Echo(t .. " ChooseTarget " .. targetCache)
+	--Spring.Echo(t .. " ChooseTarget " .. targetCache)
         local defID = GetUnitDefID(targetCache)
         if UnitDefs[defID] and (UnitDefs[defID].speed > 75) then
           slowunit = false
