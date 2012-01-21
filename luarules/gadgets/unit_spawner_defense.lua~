@@ -5,7 +5,7 @@ function gadget:GetInfo()
   return {
     name      = "BA Chicken Spawner",
     desc      = "Spawns burrows and chickens",
-    author    = "TheFatController/quantum",
+    author    = "TheFatController/quantum/modifyed by nixtux for robotdefense",
     date      = "16 November, 2008",
     license   = "GNU GPL, v2 or later",
     layer     = 0,
@@ -119,6 +119,7 @@ local failChickens        = {}
 local chickenTargets      = {}
 local burrows             = {}
 
+local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 --
@@ -141,7 +142,7 @@ local modes = {
     [4] = HARD,
     [5] = VERYHARD,
     [6] = CUSTOM,
-    [7] = INSANE
+    [7] = INSANE,
     [8] = SURVIVAL,
 }
 
@@ -234,7 +235,12 @@ end
 --
 
 do -- load config file
-  local CONFIG_FILE = "LuaRules/Configs/spawn_defs.lua"
+  local CONFIG_FILE
+    if (cenabled == 0) then 
+    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_rd.lua"
+    else
+    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_cd.lua"
+    end
   local VFSMODE = VFS.RAW_FIRST
   local s = assert(VFS.LoadFile(CONFIG_FILE, VFSMODE))
   local chunk = assert(loadstring(s, file))
@@ -272,8 +278,13 @@ local unitCounts = {}
 
 local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
+    -- Spring.Echo("unitname :=".. unitName )
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
-  unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
+   if (cenabled == 0) then 
+    unitCounts[(unitName)] = {count = 0, lastCount = 0}
+   else
+   unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
+   end
 end
 
 local defendersDefs = {}
@@ -314,7 +325,13 @@ local function UpdateUnitCount()
   
   for unitDefID, number in pairs(teamUnitCounts) do
     if UnitDefs[unitDefID] then
-      local shortName = string.match(UnitDefs[unitDefID].name,"%D*")
+      local shortName
+       if (cenabled == 0) then 
+       shortName = (UnitDefs[unitDefID].name)
+       else
+       shortName = string.match(UnitDefs[unitDefID].name,"%D*")
+       end
+           -- Spring.Echo("unitDefID :=".. UnitDefs[unitDefID].name .."       shortname:="..shortName)
       if unitCounts[shortName] then
         unitCounts[shortName].count = unitCounts[shortName].count + number
       end
@@ -336,7 +353,7 @@ local EMP_GOO = {}
 EMP_GOO[WeaponDefNames['chickenr1_goolauncher'].id] = WeaponDefNames['chickenr1_goolauncher'].damages[1]
 EMP_GOO[WeaponDefNames['weaver_death'].id] = WeaponDefNames['weaver_death'].damages[1]
 local LOBBER = UnitDefNames["chickenr1"].id
-local SKIRMISH = { [UnitDefNames["chickens1"].id] = 270, [UnitDefNames["chickens2"].id] = 620 }
+local SKIRMISH = { [UnitDefNames["chickens1"].id] = 270, [UnitDefNames["chickens2"].id] = 620 } 
 local COWARD = { [UnitDefNames["chickenh1"].id] = 150, [UnitDefNames["chickenr1"].id] = 300 }
 local JUNO = { [WeaponDefNames["cjuno_juno_pulse"].id]= true, [WeaponDefNames["ajuno_juno_pulse"]] = true }
 local KROW_ID = UnitDefNames["corcrw"].id
@@ -480,7 +497,7 @@ end
 
 local function ChooseTarget()
   local humanTeamList = SetToList(humanTeams)
-  if (#humanTeamList == 0) then
+  if (#humanTeamList == 0) or gameOver then
     return {mRandom(1,MAPSIZEX-1),0,mRandom(1,MAPSIZEZ-1)}
   end
 
@@ -498,6 +515,7 @@ local function ChooseTarget()
       end
       local slowunit = true
       if tries < 5 then
+	--Spring.Echo(t .. " ChooseTarget " .. targetCache)
         local defID = GetUnitDefID(targetCache)
         if UnitDefs[defID] and (UnitDefs[defID].speed > 75) then
           slowunit = false
@@ -589,7 +607,7 @@ local function SpawnBurrow(number)
   local unitDefID = UnitDefNames[burrowName].id
     
   for i=1, (number or 1) do
-    local x, z
+    local x, z, y
     local tries = 0
   repeat
     if (burrowSpawnType == "initialbox") then 
@@ -603,7 +621,7 @@ local function SpawnBurrow(number)
       z = mRandom(spawnSquare, MAPSIZEZ - spawnSquare)
     end
     
-    local y = GetGroundHeight(x, z)
+    y = GetGroundHeight(x, z)
     tries = tries + 1
     local blocking = TestBuildOrder(MEDIUM_UNIT, x, y, z, 1)
     if (blocking == 2) and (burrowSpawnType == "avoid") then
@@ -611,14 +629,14 @@ local function SpawnBurrow(number)
       local vicinity = GetUnitsInCylinder(x, z, maxBaseDistance)
       local humanUnitsInVicinity = false
       local humanUnitsInProximity = false
-      for i=1,vicinity['n'],1 do
+      for i=1,#vicinity,1 do
         if (GetUnitTeam(vicinity[i]) ~= chickenTeamID) then
           humanUnitsInVicinity = true
           break
         end
       end
 
-      for i=1,proximity['n'],1 do
+      for i=1,#proximity,1 do
         if (GetUnitTeam(proximity[i]) ~= chickenTeamID) then
           humanUnitsInProximity = true
           break
@@ -631,8 +649,8 @@ local function SpawnBurrow(number)
     end
   until (blocking == 2 or tries > maxTries)
 
-    local unitID = CreateUnit(burrowName, x, 0, z, "n", chickenTeamID)
-    if (unitID) then
+  local unitID = CreateUnit(burrowName, x, y, z, "n", chickenTeamID)
+     if (unitID) then
       burrows[unitID] = 0
       SetUnitBlocking(unitID, false)
     end
@@ -674,15 +692,15 @@ local function SpawnQueen()
     local humanUnitsInVicinity = false
     local humanUnitsInProximity = false
     
-    for i=1,vicinity['n'],1 do
-      if (GetUnitTeam(vicinity[i]) ~= chickenTeamID) then
+     for index,value in ipairs(vicinity) do
+        if (GetUnitTeam(vicinity[index]) ~= chickenTeamID) then
         humanUnitsInVicinity = true
         break
       end
     end
 
-    for i=1,proximity['n'],1 do
-      if (GetUnitTeam(proximity[i]) ~= chickenTeamID) then
+     for index,value in ipairs(proximity) do
+        if (GetUnitTeam(proximity[index]) ~= chickenTeamID) then
         humanUnitsInProximity = true
         break
       end
@@ -747,7 +765,8 @@ local function Wave()
         local nEnd,_     = string.find(sString, " ")
         local unitNumber = string.sub(sString,1,(nEnd-1))
         local chickenName  = string.sub(sString,(nEnd+1))
-        for i = 1,unitNumber,1 do
+       -- Spring.Echo("sString is =" .. sString .. "   :nend=" .. nEnd .. "    :unitNumber=" .. unitNumber) 
+	for i = 1,unitNumber,1 do
           table.insert(spawnQueue, {burrow = burrowID, unitName = chickenName, team = chickenTeamID})
         end
         cCount = cCount + unitNumber
@@ -874,10 +893,14 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer,
           end
           Spring.Echo("Queen is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
           queenResistance[weaponID].notify = 1
-          for i = 1,30,1 do
-            table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
-          end
-        end
+	 if (cenabled == 0) then 
+          for i = 1,20,1 do
+            table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) end
+	  else 
+	  for i = 1,30,1 do
+            table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID}) end
+         end
+	end
         damage = damage - (damage * resistPercent)
       end
       queenResistance[weaponID].damage = queenResistance[weaponID].damage + damage
@@ -1001,8 +1024,9 @@ function gadget:GameFrame(n)
   if n == 15 then
     DisableComputerUnits()
   end
-  
-  if (chickenCount < maxChicken) then
+              --  Spring.Echo("chickencount :=" .. chickenCount .. "  -----chickenDebtCount:=" .. chickenDebtCount .."  ----maxChicken :=" ..maxChicken) 
+
+  if (chickenCount <= maxChicken) then
     local i,defs = next(spawnQueue)
     if i and defs then
       local x, y, z = getChickenSpawnLoc(defs.burrow, SMALL_UNIT)
@@ -1083,13 +1107,17 @@ function gadget:GameFrame(n)
         timeOfLastWave = t
         SKIRMISH[UnitDefNames["chickenc1"].id] = 150
         SKIRMISH[UnitDefNames["chickenf1"].id] = 1200
-        SKIRMISH[UnitDefNames["chickenw1"].id] = 1800
+	SKIRMISH[UnitDefNames["chickenw1"].id] = 1800
         COWARD[UnitDefNames["chicken2"].id] = nil
-        COWARD[UnitDefNames["chicken_dodo1"].id] = 300
-	    for i = 1,80,1 do
-          table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
-        end
-      end
+ 	COWARD[UnitDefNames["chicken_dodo1"].id] = 300
+           if (cenabled == 0) then 
+		for i = 1,30,1 do
+		table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) end
+           else
+ 		for i = 1,80,1 do
+           	table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID}) end
+           end
+	end
       updateQueenLife()
     end
         
@@ -1221,6 +1249,12 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
     end
       
     for burrowID in pairs(burrows) do
+      
+       if (cenabled == 0) then 
+        if (currentWave >=5 and currentWave <=6) then if (math.random(0,1) == 1) then bonusTurret="armcir1" else bonusTurret="arm_big_bertha" end
+        elseif currentWave >=7 then if (math.random(0,1) == 1) then bonusTurret="corpre" else bonusTurret="armbrtha1" end
+	end
+       end
         SpawnTurret(burrowID, bonusTurret)
     end
         
@@ -1261,6 +1295,9 @@ function gadget:AllowUnitTransfer(unitID, unitDefID, oldTeam, newTeam, capture)
   end
 end
 
+function gadget:GameOver()
+  gameOver=true
+end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 else

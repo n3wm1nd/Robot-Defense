@@ -23,10 +23,7 @@ local weaponDef = {
 	weaponvelocity = 250,
 	damage = {
 		default = 2400,
-<<<<<<< HEAD
 		chicken = 0,
-=======
->>>>>>> testmerge
 	},
 }
 --------------------------------------------------------------------------------

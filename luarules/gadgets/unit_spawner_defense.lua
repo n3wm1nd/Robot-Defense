@@ -278,6 +278,7 @@ local unitCounts = {}
 
 local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
+    -- Spring.Echo("unitname :=".. unitName )
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
    if (cenabled == 0) then 
     unitCounts[(unitName)] = {count = 0, lastCount = 0}
@@ -496,7 +497,7 @@ end
 
 local function ChooseTarget()
   local humanTeamList = SetToList(humanTeams)
-  if (#humanTeamList == 0) then
+  if (#humanTeamList == 0) or gameOver then
     return {mRandom(1,MAPSIZEX-1),0,mRandom(1,MAPSIZEZ-1)}
   end
 
@@ -606,7 +607,7 @@ local function SpawnBurrow(number)
   local unitDefID = UnitDefNames[burrowName].id
     
   for i=1, (number or 1) do
-    local x, z
+    local x, z, y
     local tries = 0
   repeat
     if (burrowSpawnType == "initialbox") then 
@@ -620,7 +621,7 @@ local function SpawnBurrow(number)
       z = mRandom(spawnSquare, MAPSIZEZ - spawnSquare)
     end
     
-    local y = GetGroundHeight(x, z)
+    y = GetGroundHeight(x, z)
     tries = tries + 1
     local blocking = TestBuildOrder(MEDIUM_UNIT, x, y, z, 1)
     if (blocking == 2) and (burrowSpawnType == "avoid") then
@@ -648,8 +649,8 @@ local function SpawnBurrow(number)
     end
   until (blocking == 2 or tries > maxTries)
 
-    local unitID = CreateUnit(burrowName, x, 0, z, "n", chickenTeamID)
-    if (unitID) then
+  local unitID = CreateUnit(burrowName, x, y, z, "n", chickenTeamID)
+     if (unitID) then
       burrows[unitID] = 0
       SetUnitBlocking(unitID, false)
     end
@@ -1248,9 +1249,12 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
     end
       
     for burrowID in pairs(burrows) do
-        if currentWave >=7 then
-	 if (math.random(0,1) == 1) then bonusTurret="corpre" else bonusTurret="armbrtha1" end
+      
+       if (cenabled == 0) then 
+        if (currentWave >=5 and currentWave <=6) then if (math.random(0,1) == 1) then bonusTurret="armcir1" else bonusTurret="arm_big_bertha" end
+        elseif currentWave >=7 then if (math.random(0,1) == 1) then bonusTurret="corpre" else bonusTurret="armbrtha1" end
 	end
+       end
         SpawnTurret(burrowID, bonusTurret)
     end
         
@@ -1291,6 +1295,9 @@ function gadget:AllowUnitTransfer(unitID, unitDefID, oldTeam, newTeam, capture)
   end
 end
 
+function gadget:GameOver()
+  gameOver=true
+end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 else

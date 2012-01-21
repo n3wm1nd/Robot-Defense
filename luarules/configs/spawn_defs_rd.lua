@@ -12,7 +12,7 @@ spawnSquare          = 90       -- size of the chicken spawn square centered on 
 spawnSquareIncrement = 2         -- square size increase for each unit spawned
 burrowName           = "roost"   -- burrow unit name
 maxAge               = 300      -- chicken die at this age, seconds
-queenName 		     = Spring.GetModOptions().mo_queendifficulty.."r"  or "n_chickenqr" 
+queenName            = Spring.GetModOptions().mo_queendifficulty.."r"  or "n_chickenqr" 
 burrowDef            = UnitDefNames[burrowName].id
 defenderChance       = 0.5       -- probability of spawning a single turret
 maxTurrets           = 3   		 -- Max Turrets per burrow
@@ -25,10 +25,10 @@ chickensPerPlayer    = 8
 spawnChance          = 0.5
 bonusTurret          = "armcir" -- Turret that gets spawned when a burrow dies
 angerBonus           = 20
-expStep 			 = 0.0625
+expStep              = 0.0625
 lobberEMPTime        = 4
-damageMod			 = 1
-waves         = {}
+damageMod            = 1
+waves                = {}
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
@@ -110,7 +110,7 @@ local chickenTypes = {
   armfboy       =  true,
   cormort       =  true,
   corcrw        =  true,
-  b52g          =  true,
+  armcyclone    =  true,
   armfast       =  true,
   gorg          =  true,
   armtigre2     =  true,
@@ -122,6 +122,8 @@ local chickenTypes = {
   cordrag1      =  true,
   corspec       =  true,
   armspid       =  true,
+  anvil         =  true,
+  hyperion      =  true,
 }
 
 local defenders = { 
@@ -227,13 +229,13 @@ addWave(6,{"5 tankanotor", "20 armhdpw"})
 addWave(7,{"20 corawac", "25 airwolf3g", "20 corhurc"})
 addWave(7,{"15 armcybr"})
 addWave(7,{"1 armcrabe"})
-addWave(7,{"1 armcrabe"})
+addWave(7,{"2 anvil"})
 addWave(7,{"1 armcrabe", "4 corspec"})
 addWave(7,{"2 gorg", "16 armaak"})
 addWave(7,{"2 cortotal", "2 clb"})
 if (math.random(0,1) == 1) then addWave(7,{"5 armsnipe"}) else addWave(6,{"10 armtigre2"}) end
 addWave(7,{"5 armsnipe", "4 tllsham"})
-addWave(7,{"2 krogtaar"})
+if (math.random(0,1) == 1) then addWave(7,{"4 krogtaar"}) else addWave(6,{"1 hyperion"}) end
 addWave(7,{"1 armpraet"})
 addWave(7,{"5 coremech", "5 coremech", "5 coremech"})
 addWave(7,{"10 corprot", "10 corprot"})
@@ -242,7 +244,7 @@ addWave(7,{"10 corprot", "10 corprot"})
 addWave(8,{"1 corkrog", "1 arm_furie"})
 addWave(8,{"15 armtigre2"})
 addWave(8,{"15 cormonsta", "4 corspec"})
-addWave(8,{"10 armaak"})
+addWave(8,{"10 cortotal"})
 addWave(8,{"35 airwolf3g"})
 addWave(8,{"25 corawac", "5 armcybr", "10 armcybr", "8 cordem"})
 addWave(8,{"3 cordem", "1 corkrog"})
@@ -251,7 +253,7 @@ addWave(8,{"2 armpraet"})
 addWave(8,{"5 armjag"})
 addWave(8,{"7 cortotal"})
 if (math.random(0,1) == 1) then addWave(8,{"18 cordem", "10 corpyro"}) else addWave(8,{"3 gorg", "10 armfast"}) end
-addWave(8,{"40 armaak", "35 corprot"})
+addWave(8,{"20 cortotal", "35 corprot"})
 addWave(8,{"1 arm_furie", "1 corgala"})
 addWave(8,{"1 corkarg1", "1 corgala"})
 addWave(8,{"10 cordem"})
@@ -264,8 +266,8 @@ addWave(9,{"5 corcrw"})
 addWave(9,{"5 corcrw"})
 addWave(9,{"5 cordrag1"})
 addWave(9,{"1 arm_furie", "1 arm_furie", "1 arm_furie"})
-addWave(9,{"3 corprot", "3 armsnipe"})
-addWave(9,{"30 corawac", "20 airwolf3g", "7 b52g"})
+if (math.random(0,1) == 1) then addWave(7,{"6 anvil"}) else addWave(6,{"2 hyperion"}) end
+addWave(9,{"30 corawac", "20 airwolf3g", "7 armcyclone"})
 addWave(9,{"10 airwolf3g"})
 addWave(9,{"10 armcybr"})
 addWave(9,{"10 corcrw", "20 corcrw"})

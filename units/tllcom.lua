@@ -6,11 +6,7 @@ local unitName = "tllcom"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-<<<<<<< HEAD
 	acceleration = 0.18,
-=======
-	acceleration = 0.12,
->>>>>>> testmerge
 	activateWhenBuilt = true,
 	amphibious = 1,
 	autoHeal = 11,
@@ -24,11 +20,7 @@ local unitDef = {
 	buildTime = 75000,
 	canAttack = true,
 	canCapture = true,
-<<<<<<< HEAD
 	canDGun = true,
-=======
-	canManualFire = true,
->>>>>>> testmerge
 	canGuard = true,
 	canMove = true,
 	canPatrol = true,
@@ -43,12 +35,6 @@ local unitDef = {
 	collisionvolumetype = [[Ell]],
 	commander = true,
 	corpse = [[DEAD]],
-<<<<<<< HEAD
-=======
-	customParams           = {
-		iscommander = true,
-	},
->>>>>>> testmerge
 	defaultmissiontype = [[Standby]],
 	description = [[Commander]],
 	energyMake = 40,
@@ -67,11 +53,7 @@ local unitDef = {
 	mass = 5000,
 	maxDamage = 4500,
 	maxSlope = 20,
-<<<<<<< HEAD
 	maxVelocity = 1.32,
-=======
-	maxVelocity = 1.1,
->>>>>>> testmerge
 	maxWaterDepth = 35,
 	metalMake = 2,
 	metalStorage = 1000,
@@ -178,11 +160,7 @@ local weaponDefs = {
 		commandfire = true,
 		craterBoost = 0,
 		craterMult = 0,
-<<<<<<< HEAD
 		energypershot = 600,
-=======
-		energypershot = 650,
->>>>>>> testmerge
 		explosionGenerator = [[custom:DGUNTRACE]],
 		fireStarter = 100,
 		impulseBoost = 0,
@@ -192,11 +170,7 @@ local weaponDefs = {
 		noExplode = true,
 		noSelfDamage = true,
 		range = 280,
-<<<<<<< HEAD
 		reloadtime = 0.9,
-=======
-		reloadtime = 1.4,
->>>>>>> testmerge
 		renderType = 3,
 		soundHit = [[xplomas2]],
 		soundStart = [[disigun1]],
@@ -210,10 +184,7 @@ local weaponDefs = {
 		damage = {
 			commanders = 450,
 			default = 999999,
-<<<<<<< HEAD
 			chicken = 1200,
-=======
->>>>>>> testmerge
 		},
 	},
 	TLLCOM_LIGHTNING = {
@@ -249,11 +220,7 @@ local weaponDefs = {
 		weaponVelocity = 860,
 		damage = {
 			bombers = 300,
-<<<<<<< HEAD
 			default = 200,
-=======
-			default = 160,
->>>>>>> testmerge
 			fighters = 300,
 			flak_resistant = 300,
 			subs = 5,
