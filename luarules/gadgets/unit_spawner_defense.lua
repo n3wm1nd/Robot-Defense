@@ -692,15 +692,15 @@ local function SpawnQueen()
     local humanUnitsInVicinity = false
     local humanUnitsInProximity = false
     
-     for index,value in ipairs(vicinity) do
-        if (GetUnitTeam(vicinity[index]) ~= chickenTeamID) then
+     for i=1, #vicinity, 1 do
+      if (GetUnitTeam(vicinity[i]) ~= chickenTeamID) then
         humanUnitsInVicinity = true
         break
       end
     end
 
-     for index,value in ipairs(proximity) do
-        if (GetUnitTeam(proximity[index]) ~= chickenTeamID) then
+    for i=1, #proximity,1 do
+      if (GetUnitTeam(proximity[i]) ~= chickenTeamID) then
         humanUnitsInProximity = true
         break
       end
