@@ -78,7 +78,6 @@ local chickenTypes = {
   commando      =  true,
   armsnipe      =  true,
   taipan        =  true,
-  snowman       =  true,
   armmerl       =  true,
   tankanotor    =  true,
   airwolf3g     =  true,
