@@ -194,6 +194,12 @@ local function MakeCountString(type, showbreakdown)
   end
 end
 
+local function updatePos(x, y)
+  x1 = math.min(viewSizeX-w/2,x)
+  y1 = math.min(viewSizeY-h/2,y)
+  updatePanel = true
+end
+
 
 local function PanelRow(n)
   return panelMarginX, h-panelMarginY-(n-1)*(panelFontSize+panelSpacingY)
@@ -342,6 +348,10 @@ function widget:Initialize()
   widgetHandler:RegisterGlobal("ChickenEvent", ChickenEvent)
 
   UpdateRules()
+   viewSizeX, viewSizeY = gl.GetViewSizes()
+  local x = math.abs(math.floor(viewSizeX - 320))
+  local y = math.abs(math.floor(viewSizeY - 300))
+  updatePos(x, y)
 end
 
 
@@ -382,21 +392,14 @@ end
 
 
 function widget:DrawScreen()
-  x1 = math.floor(x1 - viewSizeX)
-  y1 = math.floor(y1 - viewSizeY)
-  viewSizeX, viewSizeY = gl.GetViewSizes()
-  x1 = viewSizeX + x1
-  y1 = viewSizeY + y1
-
+  
   Draw()
 end
 
 
 function widget:MouseMove(x, y, dx, dy, button)
   if (enabled and moving) then
-    x1 = x1 + dx
-    y1 = y1 + dy
-    updatePanel = true
+    updatePos(x1 + dx, y1 + dy)
   end
 end
 

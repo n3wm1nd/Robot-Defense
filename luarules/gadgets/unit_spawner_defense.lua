@@ -278,7 +278,7 @@ local unitCounts = {}
 
 local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
-    -- Spring.Echo("unitname :=".. unitName )
+     Spring.Echo("unitname :=".. unitName )
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
    if (cenabled == 0) then 
     unitCounts[(unitName)] = {count = 0, lastCount = 0}
@@ -1029,7 +1029,12 @@ function gadget:GameFrame(n)
   if (chickenCount <= maxChicken) then
     local i,defs = next(spawnQueue)
     if i and defs then
-      local x, y, z = getChickenSpawnLoc(defs.burrow, SMALL_UNIT)
+      local x,y,z
+      if (queenID) then
+        x, y, z = getChickenSpawnLoc(defs.burrow, MEDIUM_UNIT)
+      else
+        x, y, z = getChickenSpawnLoc(defs.burrow, SMALL_UNIT)
+      end
       if x and y and z then
         local unitID = CreateUnit(defs.unitName, x,y,z, "n", defs.team)
         if unitID then
