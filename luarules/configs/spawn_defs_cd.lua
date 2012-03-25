@@ -58,6 +58,7 @@ local chickenTypes = {
   n_chickenq    =  true,
   h_chickenq    =  true,
   vh_chickenq   =  true,
+  fh_chickenq   =  true,
   chicken1      =  true,
   chicken1b     =  true,
   chicken1c     =  true,
