@@ -33,6 +33,10 @@ return {
     desc = 'Insane Games'
   },
   {
+    name = 'Chicken: Survival',
+    desc = 'Infinite Games'
+  },
+  {
     name = 'Chicken: Custom',
     desc = 'Settings in ModOptions'
   },

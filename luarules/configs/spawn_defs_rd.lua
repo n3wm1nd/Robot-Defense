@@ -55,10 +55,14 @@ end
 
    
 local chickenTypes = {
-  
+  ve_chickenqr  =  true,
+  e_chickenqr   =  true,
+  n_chickenqr   =  true,
+  h_chickenqr   =  true,
+  vh_chickenqr  =  true,
+  fh_chickenqr  =  true,
   armflea       =  true,
   armflash      =  true,
-  
   armflash1     =  true,
   armsam1       =  true,
   cormist1      =  true,
@@ -93,6 +97,7 @@ local chickenTypes = {
   tllsham       =  true,
   corkrog       =  true,
   arm_furie     =  true,
+  corkarg       =  true,
   corkarg1      =  true,
   corgala       =  true,
   armcrabe      =  true,
@@ -275,107 +280,131 @@ addWave(9,{"10 airwolf3g"})
 addWave(9,{"10 armcybr"})
 addWave(9,{"10 corcrw", "20 corcrw"})
 
-
+VERYEASY = "Chicken: Very Easy"
+EASY = "Chicken: Easy"
+NORMAL = "Chicken: Normal"
+HARD = "Chicken: Hard"
+VERYHARD = "Chicken: Very Hard"
+INSANE = "Chicken: Very Hard"
+CUSTOM = "Chicken: Custom"
+SURVIVAL = "Chicken: Survival"
 
 difficulties = {
-  ['Chicken: Very Easy'] = {
-    chickenSpawnRate = 100, 
-    burrowSpawnRate  = 120,
-    queenSpawnMult   = 0,
-    angerBonus       = 20,
-    expStep 		 = 0,
-    lobberEMPTime    = 0,
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
+  [VERYEASY] = {
+    chickenSpawnRate  = 100, 
+    burrowSpawnRate   = 120,
+    queenSpawnMult    = 0,
+    angerBonus        = 20,
+    expStep           = 0,
+    lobberEMPTime     = 0,
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
     chickensPerPlayer = 5,
-    spawnChance      = 0.25,
-    damageMod		 = 0.6,
+    spawnChance       = 0.25,
+    damageMod         = 0.6,
   },
-  ['Chicken: Easy'] = {
-    chickenSpawnRate = 100, 
-    burrowSpawnRate  = 120,
-    queenSpawnMult   = 0,
-    angerBonus       = 20,
-    expStep 		 = 0.09375,
-    lobberEMPTime    = 2.5,
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
+  [EASY] = {
+    chickenSpawnRate  = 100, 
+    burrowSpawnRate   = 120,
+    queenSpawnMult    = 0,
+    angerBonus        = 20,
+    expStep           = 0.09375,
+    lobberEMPTime     = 2.5,
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
     chickensPerPlayer = 7,
-    spawnChance      = 0.33,
-    damageMod		 = 0.75,
+    spawnChance       = 0.33,
+    damageMod         = 0.75,
   },
 
-  ['Chicken: Normal'] = {
-    chickenSpawnRate = 80,
-    burrowSpawnRate  = 105,
-    queenSpawnMult   = 1,
-    angerBonus       = 25,
-    expStep 		 = 0.125,
-    lobberEMPTime    = 4,
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
+  [NORMAL] = {
+    chickenSpawnRate  = 80,
+    burrowSpawnRate   = 105,
+    queenSpawnMult    = 1,
+    angerBonus        = 25,
+    expStep           = 0.125,
+    lobberEMPTime     = 4,
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
     chickensPerPlayer = 9,
-    spawnChance      = 0.4,
-    damageMod        = 1,
+    spawnChance       = 0.4,
+    damageMod         = 1,
   },
 
-  ['Chicken: Hard'] = {
-    chickenSpawnRate = 70,
-    burrowSpawnRate  = 60,
-    queenSpawnMult   = 1,
-    angerBonus       = 30,
-    expStep 		 = 0.25,
-    lobberEMPTime    = 5,
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
+  [HARD] = {
+    chickenSpawnRate  = 70,
+    burrowSpawnRate   = 60,
+    queenSpawnMult    = 1,
+    angerBonus        = 30,
+    expStep           = 0.25,
+    lobberEMPTime     = 5,
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
     chickensPerPlayer = 14,
-    spawnChance      = 0.5,
-    damageMod        = 1.1,
+    spawnChance       = 0.5,
+    damageMod         = 1.1,
   },
 
 
-  ['Chicken: Very Hard'] = {
-    chickenSpawnRate = 45,
-    burrowSpawnRate  = 40,
-    queenSpawnMult   = 3,
-    angerBonus       = 30,
-    expStep 		 = 0.4,
-    lobberEMPTime    = 7.5,
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
+  [VERYHARD] = {
+    chickenSpawnRate  = 45,
+    burrowSpawnRate   = 40,
+    queenSpawnMult    = 3,
+    angerBonus        = 30,
+    expStep           = 0.4,
+    lobberEMPTime     = 7.5,
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
     chickensPerPlayer = 18,
-    spawnChance      = 0.6,
-    damageMod        = 1.25,
-  },
-
-   ['Chicken: Insane'] = {
-    chickenSpawnRate = 30,
-    burrowSpawnRate  = 25,
-    queenSpawnMult   = 4,
-    angerBonus       = 30,
-    expStep 		 = 0.5,
-    lobberEMPTime    = 8.5,
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
-    chickensPerPlayer = 23,
-    spawnChance      = 0.8,
-    damageMod        = 1.25,
+    spawnChance       = 0.6,
+    damageMod         = 1.25,
   },
   
-  ['Chicken: Custom'] = {
-    chickenSpawnRate = tonumber(Spring.GetModOptions().mo_custom_chickenspawn),
-    burrowSpawnRate  = tonumber(Spring.GetModOptions().mo_custom_burrowspawn),
-    queenSpawnMult   = tonumber(Spring.GetModOptions().mo_custom_queenspawnmult),
-    angerBonus       = tonumber(Spring.GetModOptions().mo_custom_angerbonus),
-    expStep 		 = (tonumber(Spring.GetModOptions().mo_custom_expstep) or 0.6) * -1,
-    lobberEMPTime    = tonumber(Spring.GetModOptions().mo_custom_lobberemp),
-    chickenTypes     = Copy(chickenTypes),
-    defenders        = Copy(defenders),
+  [INSANE] = {
+    chickenSpawnRate  = 80,
+    burrowSpawnRate   = 105,
+    queenSpawnMult    = 1,
+    angerBonus        = 25,
+    expStep           = 0.125,
+    lobberEMPTime     = 4,
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
+    chickensPerPlayer = 9,
+    spawnChance       = 0.4,
+    damageMod         = 1,
+  },
+  
+  
+  [CUSTOM] = {
+    chickenSpawnRate  = tonumber(Spring.GetModOptions().mo_custom_chickenspawn),
+    burrowSpawnRate   = tonumber(Spring.GetModOptions().mo_custom_burrowspawn),
+    queenSpawnMult    = tonumber(Spring.GetModOptions().mo_custom_queenspawnmult),
+    angerBonus        = tonumber(Spring.GetModOptions().mo_custom_angerbonus),
+    expStep           = (tonumber(Spring.GetModOptions().mo_custom_expstep) or 0.6) * -1,
+    lobberEMPTime     = tonumber(Spring.GetModOptions().mo_custom_lobberemp),
+    chickenTypes      = Copy(chickenTypes),
+    defenders         = Copy(defenders),
     chickensPerPlayer = tonumber(Spring.GetModOptions().mo_custom_minchicken),
-    spawnChance      = (tonumber(Spring.GetModOptions().mo_custom_spawnchance) or 50) / 100,
-    damageMod        = (tonumber(Spring.GetModOptions().mo_custom_damagemod) or 100) / 100,
+    spawnChance       = (tonumber(Spring.GetModOptions().mo_custom_spawnchance) or 50) / 100,
+    damageMod         = (tonumber(Spring.GetModOptions().mo_custom_damagemod) or 100) / 100,
+  },
+
+  [SURVIVAL] = {
+    chickenSpawnRate    = 80,
+    burrowSpawnRate     = 105,
+    queenSpawnMult      = 1,
+    angerBonus          = 25,
+    expStep             = 0.125,
+    lobberEMPTime       = 4,
+    chickenTypes        = Copy(chickenTypes),
+    defenders           = Copy(defenders),
+    chickensPerPlayer   = 9,
+    spawnChance         = 0.4,
+    damageMod           = 1,
   },
 }
+
+
 
 defaultDifficulty = 'Chicken: Custom'
 
