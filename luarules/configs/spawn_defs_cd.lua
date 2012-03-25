@@ -204,7 +204,7 @@ EASY = "Chicken: Easy"
 NORMAL = "Chicken: Normal"
 HARD = "Chicken: Hard"
 VERYHARD = "Chicken: Very Hard"
-INSANE = "Chicken: Very Hard"
+INSANE = "Chicken: Insane"
 CUSTOM = "Chicken: Custom"
 SURVIVAL = "Chicken: Survival"
 

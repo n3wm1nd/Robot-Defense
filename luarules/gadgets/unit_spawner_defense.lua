@@ -162,7 +162,7 @@ local function dump(o)
 	end
 end
 
-Spring.Echo(VERYEASY)
+--Spring.Echo(VERYEASY)
 
 for i, v in ipairs(modes) do -- make it bi-directional
   modes[v] = i
@@ -174,6 +174,7 @@ for _, teamID in ipairs(teams) do
   local teamLuaAI = GetTeamLuaAI(teamID)
   if (teamLuaAI and teamLuaAI ~= "") then
     luaAI = teamLuaAI
+     --Spring.Echo("Ai in play is :- " .. teamLuaAI)
     if (modes[teamLuaAI] > highestLevel) then -- get chicken ai with highest level
       highestLevel = modes[teamLuaAI]
     end
