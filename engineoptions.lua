@@ -75,17 +75,6 @@ local options = {
     section= "ta_others",
 
   },
-
-  {
-    key    = 'LimitDgun',
-    name   = 'Limit D-Gun range',
-    desc   = "The commander's D-Gun weapon will be usable only close to the player's starting location",
-    type   = 'bool',
-    def    = false,
-    section= "ta_others",
-       
-  },
-
   {
     key    = 'GhostedBuildings',
     name   = 'Ghosted buildings',
