@@ -131,6 +131,7 @@ local chickenTypes = {
   anvil         =  true,
   hyperion      =  true,
   armorion      =  true,
+  corrag        =  true,
 }
 
 local defenders = { 
@@ -277,8 +278,8 @@ addWave(9,{"5 corcrw"})
 addWave(9,{"5 cordrag1"})
 addWave(9,{"1 arm_furie", "1 arm_furie", "1 arm_furie"})
 if (math.random(0,1) == 1) then addWave(7,{"6 anvil"}) else addWave(6,{"2 hyperion"}) end
-addWave(9,{"30 corawac", "4 armorion", "4 armorion","7 armcyclone"})
-addWave(9,{"10 airwolf3g"})
+addWave(9,{"5 corrag", "5 corrag", "4 armorion", "4 armorion","7 armcyclone"})
+addWave(9,{"5 corrag", "5 corrag", "5 corrag"})
 addWave(9,{"10 armcybr"})
 addWave(9,{"10 corcrw", "20 corcrw"})
 
