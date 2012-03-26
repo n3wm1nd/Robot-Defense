@@ -130,6 +130,7 @@ local chickenTypes = {
   armspid       =  true,
   anvil         =  true,
   hyperion      =  true,
+  armorion      =  true,
 }
 
 local defenders = { 
@@ -250,21 +251,22 @@ addWave(7,{"10 corprot", "10 corprot"})
 
 
 addWave(8,{"1 corkrog", "1 arm_furie"})
-addWave(8,{"15 armtigre2"})
+addWave(8,{"4 armtigre2", "4 armtigre2", "4 armtigre2", "3 armtigre2"})
 addWave(8,{"15 cormonsta", "4 corspec"})
 addWave(8,{"10 cortotal"})
 addWave(8,{"35 airwolf3g"})
-addWave(8,{"25 corawac", "5 armcybr", "10 armcybr", "6 cordem"})
+addWave(8,{"25 corawac", "4 armorion", "10 armcybr", "6 cordem"})
 addWave(8,{"3 cordem", "1 corkrog"})
 addWave(8,{"1 corkarg1", "1 corkarg1"})
 addWave(8,{"2 armpraet"})
-addWave(8,{"5 armjag"})
+addWave(8,{"1 armjag", "2 armjag", "2 armjag"})
 addWave(8,{"7 cortotal"})
 if (math.random(0,1) == 1) then addWave(8,{"8 cordem", "10 corpyro"}) else addWave(8,{"3 gorg", "10 armfast"}) end
-addWave(8,{"20 cortotal", "35 corprot"})
+addWave(8,{"6 cortotal", "6 cortotal","6 cortotal"})
+addWave(8,{"3 corproto", "3 corproto", "3 corproto", "3 corproto")
 addWave(8,{"1 arm_furie", "1 corgala"})
 addWave(8,{"1 corkarg1", "1 corgala"})
-addWave(8,{"8 cordem"})
+addWave(8,{"2 cordem", "2 cordem", "2 cordem", "2 cordem"})
 addWave(8,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
 
 
@@ -275,7 +277,7 @@ addWave(9,{"5 corcrw"})
 addWave(9,{"5 cordrag1"})
 addWave(9,{"1 arm_furie", "1 arm_furie", "1 arm_furie"})
 if (math.random(0,1) == 1) then addWave(7,{"6 anvil"}) else addWave(6,{"2 hyperion"}) end
-addWave(9,{"30 corawac", "20 airwolf3g", "7 armcyclone"})
+addWave(9,{"30 corawac", "4 armorion", "4 armorion","7 armcyclone"})
 addWave(9,{"10 airwolf3g"})
 addWave(9,{"10 armcybr"})
 addWave(9,{"10 corcrw", "20 corcrw"})
