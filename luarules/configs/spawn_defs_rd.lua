@@ -264,7 +264,7 @@ addWave(8,{"1 armjag", "2 armjag", "2 armjag"})
 addWave(8,{"7 cortotal"})
 if (math.random(0,1) == 1) then addWave(8,{"8 cordem", "10 corpyro"}) else addWave(8,{"3 gorg", "10 armfast"}) end
 addWave(8,{"6 cortotal", "6 cortotal","6 cortotal"})
-addWave(8,{"3 corproto", "3 corproto", "3 corproto", "3 corproto"})
+addWave(8,{"3 corprot", "3 corprot", "3 corprot", "3 corprot"})
 addWave(8,{"1 arm_furie", "1 corgala"})
 addWave(8,{"1 corkarg1", "1 corgala"})
 addWave(8,{"2 cordem", "2 cordem", "2 cordem", "2 cordem"})
