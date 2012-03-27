@@ -1302,7 +1302,7 @@ function gadget:GameOver()
 	end
 end
 
-if ((difficulty == 5) and (gracePeriod < 61) and (queenName=="ve_chickenq") and (burrowSpawnType=="avoid")) then queenName = "epic_chickenq" end
+--if ((difficulty == 5) and (gracePeriod < 61) and (queenName=="ve_chickenq") and (burrowSpawnType=="avoid")) then queenName = "epic_chickenq" end
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 else
