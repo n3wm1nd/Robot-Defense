@@ -1086,7 +1086,7 @@ function gadget:GameFrame(n)
 		DisableComputerUnits()
 	end
 
-	if (chickenCount < maxChicken) then
+	if (chickenCount <= maxChicken) then
 		SpawnChickens()
 	end
 
