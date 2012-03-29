@@ -12,7 +12,6 @@ fighters = {
 	tlladvfight = 99,
 	tllfight = 99,
 	tllseaf = 99,
-	chickenw1 = 99,
 },
 bombers = {
 	armblz = 99,
@@ -35,6 +34,8 @@ bombers = {
 	tllseab = 99,
 	corseap = 99,
 	armseap = 99,
+	corsbomb = 99,
+	armorion = 99,
 },
 flak_resistant = {
 	apache = 99,
@@ -43,7 +44,6 @@ flak_resistant = {
 	chopper = 99,
 	smasher = 99,
 	tllcopter = 99,
-	chickenf1 = 99,
 },
 unclassed_air = {
 -- Builders 
@@ -98,6 +98,13 @@ unclassed_air = {
 	corvalk = 99,
 	tllrobber = 99,
 	tlltplane = 99,
+	armor = 99,
+	corbtrans = 99,
+	-- gunship fighters
+	tawf015 = 99,
+	corrag = 99,
+	armmin = 99,
+	cormin = 99,
 },
 --### SEA ###
 ships = {
@@ -238,6 +245,7 @@ experimental_land = {
 	-- heroes
 	cdevastator = 99,
 	abroadside = 99,
+	tllvaliant = 99,
 	-- _experimental_
 	armpraet = 99,
 	tllmono = 99,
@@ -267,7 +275,9 @@ raider_resistant = {
 	armwar = 99,
 	corexp = 99,
 	corlevlr = 99,
+	tllriot = 99,
 },
+-- TODO bombresistant
 bomb_resistant = {
 	armcir = 99,
 	corerad = 99,
@@ -322,20 +332,17 @@ commanders = {
 	armcom5 = 99,
 	armcom6 = 99,
 	armcom7 = 99,
-	armdecom = 99,
 	corcom = 99,
 	corcom1 = 99,
 	corcom3 = 99,
 	corcom5 = 99,
 	corcom6 = 99,
 	corcom7 = 99,
-	cordecom = 99,
 	tllcom = 99,
 	tllcom3 = 99,
 	tllcom5 = 99,
 	tllcom6 = 99,
 	tllcom7 = 99,
-	tlldecom = 99,
 },
 tinychicken =
   {
