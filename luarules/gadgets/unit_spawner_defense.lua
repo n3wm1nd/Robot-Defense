@@ -301,7 +301,7 @@ end
 
 SetupUnit(burrowName)
 
-local difficulty = modes[luaAI] or 6
+local difficulty = modes[luaAI] or 7
 SetGameRulesParam("difficulty", difficulty)
 
 local function UpdateUnitCount()
