@@ -133,7 +133,7 @@ local unitDef = {
       maxAngleDif        = 120,
     },
     [7]  = {
-      def                = [[RKFLAME]],
+      def                = [[DNWFLAME]],
       mainDir            = [[-0.3 0 1]],
       maxAngleDif        = 170,
     },
@@ -286,7 +286,7 @@ local weaponDefs = {
 		unclassed_air = 1550,
     },
   },
-  RKFLAME = {
+  DNWFLAME = {
     areaOfEffect       = 75,
     avoidFeature       = false,
     burst              = 13,
