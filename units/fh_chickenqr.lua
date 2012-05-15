@@ -6,12 +6,12 @@ local unitName = "fh_chickenqr"
 --------------------------------------------------------------------------------
 
 local unitDef = {
-  acceleration       = 0.0666,
+  acceleration       = 0.666,
   activateWhenBuilt  = true,
   airSightDistance = 2400,
   autoHeal           = 32,
   bmcode             = 1,
-  brakeRate          = 0.02666,
+  brakeRate          = 0.666,
   buildCostEnergy    = 2666666,
   buildCostMetal     = 666666,
   buildTime          = 3666666,
@@ -69,7 +69,7 @@ local unitDef = {
   standingmoveorder  = 1,
   steeringmode       = 2,
   TEDClass           = [[KBOT]],
-  turnRate           = 366.6,
+  turnRate           = 800,
   turninplace        = 0,
   unitname           = [[fh_chickenqr]],
   unitRestricted     = 1,
