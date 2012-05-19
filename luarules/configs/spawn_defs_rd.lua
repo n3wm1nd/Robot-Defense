@@ -368,13 +368,13 @@ difficulties = {
     burrowSpawnRate   = 105,
     queenSpawnMult    = 1,
     angerBonus        = 25,
-    expStep           = 0.125,
+    expStep           = 0.5,
     lobberEMPTime     = 4,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 9,
-    spawnChance       = 0.4,
-    damageMod         = 1,
+    chickensPerPlayer = 24,
+    spawnChance       = 0.8,
+    damageMod         = 1.5,
   },
   
   
