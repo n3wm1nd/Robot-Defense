@@ -24,6 +24,14 @@ local options={
        desc="Tech Annihilation - Game Modes",
        type="section",
     },
+        {
+		key    = 'mo_allowfactionchange',
+		name   = 'Allow Faction Change',
+		desc   = 'Allows faction to be changed ingame',
+		type   = 'bool',
+		def    = true,
+		section= 'ta_options',
+    },
     {
        key="ta_options",
        name="Tech Annihilation - Options",
