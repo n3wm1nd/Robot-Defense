@@ -104,9 +104,9 @@ local unitDef = {
 		[18] = [[armsonar]],
 		[19] = [[armdrag]],
 		[20] = [[armfdrag]],
-		[21] = [[armllt]],
+		[21] = [[armllt1]],
 		[22] = [[armtl]],
-		[23] = [[armrl]],
+		[23] = [[armrl1]],
 		[24] = [[armfrt]],
 		[25] = [[armdl]],
 		[26] = [[armrech3]],
@@ -195,8 +195,8 @@ local weaponDefs = {
 		weaponVelocity = 300,
 		damage = {
 			commanders = 450,
-			default = 999999,
 			chicken = 1200,
+			default = 999999,
 		},
 	},
 	ARMCOMLASER5 = {
