@@ -40,7 +40,7 @@ local displayList
 local fontHandler     = loadstring(VFS.LoadFile(LUAUI_DIRNAME.."modfonts.lua", VFS.ZIP_FIRST))()
 local panelFont       = LUAUI_DIRNAME.."Fonts/FreeSansBold_14"
 local waveFont        = LUAUI_DIRNAME.."Fonts/Skrawl_40"
-local panelTexture    = ":n:"..LUAUI_DIRNAME.."Images/panel.tga"
+local panelTexture
 
 local viewSizeX, viewSizeY = 0,0
 local w               = 300
@@ -70,8 +70,15 @@ local updatePanel
 local side
 local aifaction
 local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
-    if (cenabled == 1) then side = "Queen" else side = "King" end
-    if (cenabled == 1) then aifaction = "Chicken's" else aifaction = "Robot's" end
+    if (cenabled == 1) then
+      side = "Queen"
+      aifaction = "Chicken's"
+      panelTexture    = ":n:"..LUAUI_DIRNAME.."Images/panel.tga"
+    else 
+      side = "King"
+      aifaction = "Robot's"
+      panelTexture    = ":n:"..LUAUI_DIRNAME.."Images/panel.tga" -- todo make panel for robot mode
+    end
 
 
 local red             = "\255\255\001\001"
