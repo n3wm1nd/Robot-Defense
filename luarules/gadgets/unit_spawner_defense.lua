@@ -121,9 +121,9 @@ local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
 do -- load config file
 local CONFIG_FILE
     if (cenabled == 0) then 
-    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_rd.lua"
+    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_robots.lua"
     else
-    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_cd.lua"
+    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_chickens.lua"
     end
   local VFSMODE = VFS.RAW_FIRST
   local s = assert(VFS.LoadFile(CONFIG_FILE, VFSMODE))
