@@ -1255,8 +1255,8 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
     for burrowID in pairs(burrows) do
       
        if (cenabled == 0) then 
-        if (currentWave >=5 and currentWave <=6) then if (math.random(0,1) == 1) then bonusTurret="armflak" else bonusTurret="arm_big_bertha" end
-        elseif currentWave >=7 then if (math.random(0,1) == 1) then bonusTurret="tlldb" else bonusTurret="armbrtha1" end
+        if (currentWave >=5 and currentWave <=6) then if (mRandom(0,1) == 1) then bonusTurret = bonusTurret5a else bonusTurret=bonusTurret5b end
+        elseif currentWave >=7 then if (mRandom(0,1) == 1) then bonusTurret=bonusTurret7a else bonusTurret=bonusTurret7b end
 	end
        end
         SpawnTurret(burrowID, bonusTurret)

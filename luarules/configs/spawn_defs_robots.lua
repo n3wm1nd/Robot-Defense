@@ -29,7 +29,13 @@ expStep              = 0.0625
 lobberEMPTime        = 4
 damageMod            = 1
 waves                = {}
+
 local mRandom        = math.random
+
+bonusTurret5a = "armflak"
+bonusTurret5b = "arm_big_bertha"
+bonusTurret7a = "tlldb"
+bonusTurret7b = "armbrtha1"
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
