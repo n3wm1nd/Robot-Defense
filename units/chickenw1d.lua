@@ -20,7 +20,7 @@ unitDef = {
   canstop             = true,
   canSubmerge         = false,
   canCrash            = false,
-  category            = "VTOL MOBILE WEAPON NOTSUB NOTSHIP ALL",
+  category            = [[ALL MOBILE NOTDEFENSE NOTSUB NOTSUBNOTSHIP VTOL WEAPON]],
   collide             = false,
   cruiseAlt           = 175,
   defaultmissiontype  = "VTOL_standby",
@@ -73,7 +73,7 @@ unitDef = {
       def               = "WEAPON",
       mainDir           = "0 0 1",
       maxAngleDif       = 120,
-      badTargetCategory = "WEAPON",
+      onlyTargetCategory = [[NOTVTOL]],
     },
 
   },

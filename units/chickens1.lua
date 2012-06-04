@@ -18,7 +18,7 @@ local unitDef = {
 	canMove = true,
 	canPatrol = true,
 	canstop = [[1]],
-	category = [[MOBILE WEAPON NOTVTOL NOTSUB NOTSHIP ALL]],
+	category = [[ALL MOBILE NOTDEFENSE NOTSUB NOTSUBNOTSHIP VTOL WEAPON]],
 	collisionVolumeOffsets = [[0 -3 0]],
 	collisionVolumeScales = [[21 30 46]],
 	collisionVolumeType = [[box]],
@@ -73,13 +73,14 @@ local unitDef = {
 	weaponDefs = nil,
 	weapons = {
 		[1] = {
-			badTargetCategory = [[VTOL]],
 			def = [[WEAPON]],
+			onlyTargetCategory = [[NOTVTOL]],
 			mainDir = [[0 0 1]],
 			maxAngleDif = 120,
 		},
-		[2] = {
+		[2] = {  
 			def = [[WATERWEAPON]],
+			onlyTargetCategory = [[NOTVTOL]],
 			mainDir = [[0 0 1]],
 			maxAngleDif = 160,
 		},
