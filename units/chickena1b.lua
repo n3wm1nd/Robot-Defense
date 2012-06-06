@@ -95,8 +95,8 @@ unitDef = {
 
       damage                  = {
         default = 110,
-        CHICKEN = 0.001,
-        TINYCHICKEN = 0.001,
+        chicken = 0.001,
+        tinychicken = 0.001,
       },
 
       endsmoke                = "0",
