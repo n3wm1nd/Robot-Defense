@@ -100,7 +100,8 @@ local weaponDefs = {
 		weaponvelocity = 2000,
 		wobble = 0,
 		damage = {
-			CHICKEN = 10,
+			chicken = 10,
+			tinychicken = 10,
 			default = 6000,
 		},
 	},

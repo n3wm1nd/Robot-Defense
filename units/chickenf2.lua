@@ -88,8 +88,8 @@ unitDef = {
 
       damage                  = {
          default=250,
-	    	 CHICKEN=100,
-         TINYCHICKEN=100,
+		chicken = 10,
+		tinychicken = 10,
       },
 
       dropped                 = true,
