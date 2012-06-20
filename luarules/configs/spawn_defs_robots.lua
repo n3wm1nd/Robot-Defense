@@ -140,6 +140,7 @@ local chickenTypes = {
   hyperion      =  true,
   armorion      =  true,
   corrag        =  true,
+  armmart       =  true,
 }
 
 local defenders = { 
@@ -168,14 +169,14 @@ if (mRandom(0,1) == 1) then addWave(2,{"2 armflash1"}) else addWave(2,{"2 armfla
 if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1"}) else addWave(2,{"2 armflash", "2 armjanus1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armthund"}) else addWave(2,{"2 armjanus1", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 cormist1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"2 corhrk", "2 armsam1", "2 corthud1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"2 armmart", "2 armsam1", "2 corthud1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1", "2 armflash1", "1 armflash1", "3 armflash1"}) else addWave(2,{"3 armflash1", "3 armjanus1", "3 armflash1", "3 armjanus1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armbull","2 tllsham", "1 armstump"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armbull", "1 armsonic","1 armsonic"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 corgfbt"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armfboy"}) else addWave(2,{"2 armflash", "2 armsam"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"1 armbull", "2 armsonic","2 armsonic" }) else addWave(2,{"2 corhrk", "2 armsam1", "2 corthud1"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"1 corhrk", "2 corhrk", "1 corhrk"}) else addWave(2,{"2 armflash", "2 armsam"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"1 armbull", "2 armsonic","2 armsonic" }) else addWave(2,{"2 armmart", "2 armsam1", "2 corthud1"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"1 armmart", "2 armmart", "1 armmart"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1", "3 armflash1", "3 armflash1", "3 armflash1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 
 
