@@ -324,9 +324,10 @@ local moveDatas = {
 
 	ROBOTKING  =
 {
+	depthmod = 0,
 	footprintx=3,
 	footprintz=3,
-	maxwaterdepth=72,
+	maxwaterdepth=400,
 	maxslope=80,
 	crushstrength=600000,
 },
