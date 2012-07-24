@@ -157,61 +157,61 @@ if (mRandom(0,1) == 1) then addWave(1,{"1 armflea", "2 corthud1", "2 cormist1"})
 if (mRandom(0,1) == 1) then addWave(1,{"1 armrectr", "2 armsam1", "2 corthud1"}) else addWave(1,{"2 corthud1", "2 armsam1", "1 cormist1"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"1 corspec", "2 cormist1", "2 armsam1"}) else addWave(1,{"2 armflash", "2 corcrash"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"4 armflea", "1 armsam1", "1 armbull"}) else addWave(1,{"4 armflea", "2 armsam1"}) end
-if (mRandom(0,1) == 1) then addWave(1,{"4 armflea", "4 armflea", "2 cormist1"}) else addWave(1,{"2 armsam1", "2 corthud1", "1 cormist1"}) end
+if (mRandom(0,1) == 1) then addWave(1,{"1 aexxec", "4 armflea", "2 cormist1"}) else addWave(1,{"2 armsam1", "2 aexxec", "1 cormist1"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"4 armflash", "4 armflash", "2 cormist"}) else addWave(1,{"2 armflash", "2 armsam1"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"2 armflash1", "2 armflash", "1 armflash",}) else addWave(1,{"2 armflash1", "2 corthud1"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"2 armflash1", "2 corthud1", "2 armsam1"}) else addWave(1,{"2 armflash", "2 armsam1", "1 armbull"}) end
-if (mRandom(0,1) == 1) then addWave(1,{"2 armflash1", "2 armsam1", "2 cormist1"}) else addWave(1,{"2 armsam1", "2 cormist1", "1 cormist1"}) end
+if (mRandom(0,1) == 1) then addWave(1,{"2 armflash1", "1 aexxec", "2 cormist1"}) else addWave(1,{"2 armsam1", "2 cormist1", "1 aexxec"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"2 corcrash", "2 corthud1", "2 armsam1"}) else addWave(1,{"2 corthud1", "2 armsam1"}) end
 if (mRandom(0,1) == 1) then addWave(1,{"2 corcrash", "1 armthund", "1 cormist1"}) else addWave(1,{"2 armflash", "2 armsam1"}) end
-if (mRandom(0,1) == 1) then addWave(1,{"2 corcrash", "1 cormist1", "2 armsam1"}) else addWave(1,{"2 corthud1", "2 cormist1"}) end
+if (mRandom(0,1) == 1) then addWave(1,{"2 corcrash", "1 aexxec", "2 armsam1"}) else addWave(1,{"2 corthud1", "2 aexxec"}) end
 
 
-if (mRandom(0,1) == 1) then addWave(2,{"2 armflash1", "1 cormist1"}) else addWave(2,{"2 armjanus1", "2 armjanus1"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"2 aexxec", "1 cormist1"}) else addWave(2,{"2 armjanus1", "2 armjanus1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"2 armflash1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1"}) else addWave(2,{"2 armflash", "2 armjanus1"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"1 armthund"}) else addWave(2,{"2 armjanus1", "2 corcrash"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"1 aexxec"}) else addWave(2,{"2 armjanus1", "2 corcrash"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 cormist1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armmart", "2 armsam1", "2 corthud1"}) else addWave(2,{"2 armflash", "2 corcrash"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1", "2 armflash1", "1 armflash1", "3 armflash1"}) else addWave(2,{"3 armflash1", "3 armjanus1", "3 armflash1", "3 armjanus1"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"2 aexxec", "2 armflash1", "1 armflash1", "3 armflash1"}) else addWave(2,{"3 armflash1", "3 armjanus1", "3 armflash1", "3 armjanus1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armbull","2 tllsham", "1 armstump"}) else addWave(2,{"2 armflash", "2 armsam"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"1 corgol", "1 armsonic","1 armsonic"}) else addWave(2,{"2 armflash", "2 armsam"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"1 corgol", "1 armsonic","1 armsonic"}) else addWave(2,{"2 aexxec", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 corgfbt"}) else addWave(2,{"2 armflash", "2 corcrash"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"1 armfboy"}) else addWave(2,{"2 armflash", "2 armsam"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"1 armfboy"}) else addWave(2,{"2 aexxec", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armbull", "2 armsonic","2 armsonic" }) else addWave(2,{"2 armmart", "2 armsam1", "2 corthud1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armmart", "2 armmart", "1 armmart"}) else addWave(2,{"2 armflash", "2 corcrash"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1", "3 armflash1", "3 armflash1", "3 armflash1"}) else addWave(2,{"2 armflash", "2 corcrash"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1", "3 armflash1", "2 aexxec", "3 armflash1"}) else addWave(2,{"2 aexxec", "2 corcrash"}) end
 
 
-addWave(3,{"3 armrectr", "2 armjanus1", "3 corcrash"})
+addWave(3,{"3 armrectr", "2 armjanus1", "3 corcrash", "3 aexxec"})
 addWave(3,{"3 armsonic", "3 armsonic", "3 armsonic", "3 armsonic"})
 addWave(3,{"1 armspid", "3 armspid", "1 armspid", "2 armspid"})
-if (mRandom(0,1) == 1) then addWave(3,{"8 armflash1"}) else addWave(3,{"8 armlaspd", "5 corcrash"}) end
+if (mRandom(0,1) == 1) then addWave(3,{"8 armflash1", "3 aexxec"}) else addWave(3,{"8 armlaspd", "5 corcrash"}) end
 addWave(3,{"4 cormort", "4 armfboy", "3 corcrash"})
 addWave(3,{"2 armstump1", "2 tankanotor","2 tllsham", "5 armbull"})
-addWave(3,{"5 armflash1", "5 armflash1", "5 corcrash"})
+addWave(3,{"5 armflash1", "5 armflash1", "5 corcrash", "3 aexxec"})
 addWave(3,{"5 armspid", "5 armflash1", "3 corcrash"})
-if (mRandom(0,1) == 1) then addWave(3,{"5 armflash1"}) else addWave(3,{"4 armsonic"}) end
+if (mRandom(0,1) == 1) then addWave(3,{"5 armflash1", "3 aexxec"}) else addWave(3,{"4 armsonic"}) end
 addWave(3,{"5 armbull", "3 corcrash", "2 corgol"})
 addWave(3,{"2 corhrk", "2 corhrk", "2 corhrk", "2 corhrk"})
 addWave(3,{"5 corthud1", "3 corcrash" , "1 corgol"})
 addWave(3,{"6 armblz", "6 armblz", "7 armrectr"})
-addWave(3,{"4 armstump", "1 armjanus1"})
+addWave(3,{"4 armstump", "1 armjanus1", "3 aexxec"})
 
 
 
 addWave(4,{"1 armjanus1", "1 armjanus1", "1 armaak"})
-addWave(4,{"1 armrectr"})
-addWave(4,{"15 armlaspd"})
+addWave(4,{"1 armrectr", "3 aexxec"})
+addWave(4,{"15 armlaspd", "3 aexxec"})
 addWave(4,{"1 corsumo", "4 armaak"})
 addWave(4,{"12 aexxec", "2 corgol"})
 addWave(4,{"10 corhrk", "5 corhrk"})
 addWave(4,{"12 armspid", "20 tllbug", "5 corspec", "8 armlaspd"})
 addWave(4,{"1 armshock1", "1 armraven1"})
-addWave(4,{"4 armlaspd", "4 armaak"})
+addWave(4,{"4 armlaspd", "4 armaak", "3 aexxec"})
 addWave(4,{"6 armlaspd", "1 trem", "2 corgol"})
 addWave(4,{"5 corhrk", "2 corgol"})
-addWave(4,{"6 cormonsta", "4 armaak"})
+addWave(4,{"6 cormonsta", "4 armaak", "3 aexxec"})
 addWave(4,{"10 tllprob", "2 airwolf3g", "2 armblz", "25 armblz"})
 addWave(4,{"3 armsnipe", "3 tllsham","2 armmerl"})
 
