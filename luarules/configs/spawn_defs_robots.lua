@@ -110,6 +110,7 @@ local chickenTypes = {
   corkarg1      =  true,
   corgala       =  true,
   armcrabe      =  true,
+  trem          =  true,
   clb           =  true,
   armzeus       =  true,
   tllbug        =  true,
@@ -207,7 +208,7 @@ addWave(4,{"10 corhrk", "5 corhrk"})
 addWave(4,{"12 armspid", "20 tllbug", "5 corspec", "8 armlaspd"})
 addWave(4,{"1 armshock1", "1 armraven1"})
 addWave(4,{"4 armlaspd", "4 armaak"})
-addWave(4,{"6 armlaspd"})
+addWave(4,{"6 armlaspd", "2 trem"})
 addWave(4,{"5 corhrk"})
 addWave(4,{"6 cormonsta", "4 armaak"})
 addWave(4,{"10 tllprob", "2 airwolf3g", "2 armblz", "25 armblz"})
@@ -216,16 +217,16 @@ addWave(4,{"3 armsnipe", "3 tllsham","2 armmerl"})
 
 addWave(5,{"10 tllprob", "5 armblz", "5 armblz"})
 addWave(5,{"2 airwolf3g", "4 armaak"})
-addWave(5,{"10 corpyro"})
+addWave(5,{"10 corpyro", "2 trem"})
 addWave(5,{"10 armrectr", "4 armaak"})
 if (mRandom(0,1) == 1) then addWave(5,{"20 corpyro"}) else addWave(5,{"25 armfast"}) end
 addWave(5,{"10 corpyro", "10 cslicer", "10 corgfbt"})
 addWave(5,{"5 corgfbt", "10 armzeus"})
 addWave(5,{"2 armraven1", "10 armzeus"})
-addWave(5,{"1 armshock1"})
+addWave(5,{"1 armshock1", "2 trem"})
 if (mRandom(0,1) == 1) then addWave(5,{"1 armraven1"}) else addWave(5,{"3 cormonsta"}) end
-addWave(5,{"10 armaak"})
-addWave(5,{"10 corsumo1"})
+addWave(5,{"10 armaak", "2 trem"})
+addWave(5,{"10 corsumo1", "2 trem"})
 addWave(5,{"1 armsnipe", "2 armmerl", "1 tankanotor"})
 addWave(5,{"5 armzeus", "1 cordem", "4 tllsham"})
 
@@ -233,13 +234,13 @@ addWave(5,{"5 armzeus", "1 cordem", "4 tllsham"})
 addWave(6,{"12 taipan", "4 armsnipe"})
 addWave(6,{"20 tllprob", "3 airwolf3g"})
 addWave(6,{"3 airwolf3g", "12 corhrk", "12 corhrk", "12 corhrk"})
-addWave(6,{"30 armblz"})
+addWave(6,{"30 armblz", "2 trem"})
 addWave(6,{"10 armblz"})
-addWave(6,{"15 armaak"})
+addWave(6,{"15 armaak", "2 trem"})
 addWave(6,{"15 corpyro", "30 corpyro"})
 addWave(6,{"2 airwolf3g", "2 cordem", "4 corspec"})
 addWave(6,{"1 cordem"})
-addWave(6,{"1 cordem"})
+addWave(6,{"1 cordem", "4 trem"})
 if (mRandom(0,1) == 1) then addWave(6,{"3 tllgrim"}) else addWave(6,{"6 armtigre2"}) end
 addWave(6,{"6 tllgrim"})
 addWave(6,{"15 armaak", "30 corpyro", "10 corsumo"})
@@ -249,11 +250,11 @@ addWave(6,{"5 tankanotor", "20 armhdpw"})
 addWave(7,{"20 corawac", "25 airwolf3g", "20 corhurc"})
 addWave(7,{"15 armcybr"})
 addWave(7,{"1 armcrabe"})
-addWave(7,{"2 anvil"})
+addWave(7,{"2 anvil", "4 trem"})
 addWave(7,{"1 armcrabe", "4 corspec"})
 addWave(7,{"2 gorg", "16 armaak"})
-addWave(7,{"2 cortotal", "2 clb"})
-if (mRandom(0,1) == 1) then addWave(7,{"5 armsnipe"}) else addWave(6,{"10 armtigre2"}) end
+addWave(7,{"2 cortotal", "2 clb", "4 trem"})
+if (mRandom(0,1) == 1) then addWave(7,{"5 armsnipe", "4 trem"}) else addWave(6,{"10 armtigre2", "4 trem"}) end
 addWave(7,{"5 armsnipe", "4 tllsham"})
 if (mRandom(0,1) == 1) then addWave(7,{"4 krogtaar"}) else addWave(6,{"1 hyperion"}) end
 addWave(7,{"1 armpraet"})
