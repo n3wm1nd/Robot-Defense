@@ -172,7 +172,7 @@ if (mRandom(0,1) == 1) then addWave(2,{"2 armflash1"}) else addWave(2,{"2 armfla
 if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1"}) else addWave(2,{"2 armflash", "2 armjanus1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armthund"}) else addWave(2,{"2 armjanus1", "2 corcrash"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 cormist1"}) else addWave(2,{"2 armflash", "2 armsam"}) end
-if (mRandom(0,1) == 1) then addWave(2,{"2 armmart", "2 armsam1", "2 corthud1"}) else addWave(2,{"2 armflash", "2 corcrash"}) end
+if (mRandom(0,1) == 1) then addWave(2,{"1 armmart", "2 armsam1", "2 corthud1"}) else addWave(2,{"2 armflash", "2 corcrash"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"3 armflash1", "2 armflash1", "1 armflash1", "3 armflash1"}) else addWave(2,{"3 armflash1", "3 armjanus1", "3 armflash1", "3 armjanus1"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 armbull","2 tllsham", "1 armstump"}) else addWave(2,{"2 armflash", "2 armsam"}) end
 if (mRandom(0,1) == 1) then addWave(2,{"1 corgol", "1 armsonic","1 armsonic"}) else addWave(2,{"2 armflash", "2 armsam"}) end
@@ -193,7 +193,7 @@ addWave(3,{"5 armflash1", "5 armflash1", "5 corcrash"})
 addWave(3,{"5 armspid", "5 armflash1", "3 corcrash"})
 if (mRandom(0,1) == 1) then addWave(3,{"5 armflash1"}) else addWave(3,{"4 armsonic"}) end
 addWave(3,{"5 armbull", "3 corcrash", "2 corgol"})
-addWave(3,{"3 corhrk", "3 corhrk", "3 corhrk", "3 corhrk"})
+addWave(3,{"2 corhrk", "2 corhrk", "2 corhrk", "2 corhrk"})
 addWave(3,{"5 corthud1", "3 corcrash" , "1 corgol"})
 addWave(3,{"6 armblz", "6 armblz", "7 armrectr"})
 addWave(3,{"4 armstump", "1 armjanus1"})
