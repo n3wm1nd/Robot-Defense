@@ -301,7 +301,7 @@ local moveDatas = {
 		maxwaterdepth = 180,
 	},
 	ADT = {
-		crushstrength = 400,
+		crushstrength = 4000,
 		footprintx = 2,
 		footprintz = 2,
 		maxslope = 36,	
