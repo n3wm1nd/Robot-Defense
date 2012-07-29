@@ -396,5 +396,7 @@ tinychicken =
 	ve_chickenqr=99,
 	vh_chickenq=99,
 	vh_chickenqr=99,
+	roost=99,
+
 },
 }
