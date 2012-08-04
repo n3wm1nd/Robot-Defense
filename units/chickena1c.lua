@@ -14,7 +14,7 @@ unitDef = {
   canMove             = true,
   canPatrol           = true,
   canstop             = "1",
-  category            = "MOBILE WEAPON NOTAIR NOTSUB NOTSHIP ALL",
+  category            = [[MOBILE NOTDEFENSE NOTHOVERNOTVTOL NOTSUB NOTSUBNOTSHIP NOTVTOL ALL]],
   corpse              = "DEAD",
   defaultmissiontype  = "Standby",
   explodeAs           = "BIGBUG_DEATH",
@@ -72,14 +72,14 @@ unitDef = {
       def                = "WEAPON",
       mainDir            = "0 0 1",
       maxAngleDif        = 125,
-      onlyTargetCategory = "NOTAIR",
+      onlyTargetCategory = "NOTVTOL",
       badTargetCategory  = "VTOL",
     },
     
     {
       def                = "AAWEAPON",
       onlyTargetCategory = "VTOL",
-      badTargetCategory  = "NOTAIR",
+      badTargetCategory  = "NOTVTOL",
     },
 
   },
@@ -130,7 +130,11 @@ unitDef = {
       edgeeffectiveness       = 0.33,
 
       damage                  = {
-        default = 175,
+        chicken = 0.001,
+	default = 120,
+	experimental_land = 240,
+	experimental_ships = 240,
+	tinychicken = 0.001,
       },
 
       dance                   = 20,
