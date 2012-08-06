@@ -42,7 +42,6 @@ local unitDef = {
 	noAutoFire = false,
 	noChaseCategory = [[VTOL]],
 	objectName = [[chickenab.s3o]],
-	onlytargetcategory2 = [[VTOL]],
 	seismicSignature = 0,
 	selfDestructAs = [[BIGBUG_DEATH]],
 	side = [[THUNDERBIRDS]],

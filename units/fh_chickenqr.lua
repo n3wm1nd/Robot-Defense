@@ -71,9 +71,6 @@ local unitDef = {
 	unitname = [[fh_chickenqr]],
 	unitRestricted = 1,
 	upright = true,
-	weapon1_badtargetcategory = [[VTOL]],
-	weapon2_badtargetcategory = [[VTOL]],
-	weapon9_badtargetcategory = [[NOTAIR]],
 	customparams = {
 		paralyzemultiplier = 0,
 	},
