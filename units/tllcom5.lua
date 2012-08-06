@@ -104,7 +104,7 @@ local unitDef = {
 		[18] = [[tllsonar]],
 		[19] = [[tlldt]],
 		[20] = [[tlldtns]],
-		[21] = [[tllupgweb]], 
+		[21] = [[tllupgweb]],
 		[22] = [[tlltorp]],
 		[23] = [[tlllmt1]],
 		[24] = [[tlllmtns]],
@@ -218,9 +218,9 @@ local weaponDefs = {
 		weaponType = [[DGun]],
 		weaponVelocity = 300,
 		damage = {
+			chicken = 1200,
 			commanders = 450,
 			default = 999999,
-			chicken = 1200,
 		},
 	},
 	TLLCOM_LIGHTNING5 = {

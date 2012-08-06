@@ -72,17 +72,17 @@ local unitDef = {
 	},
 	weaponDefs = nil,
 	weapons = {
-		[2] = {
-			def = [[WEAPON]],
-			onlyTargetCategory = [[NOTVTOL]],
-			mainDir = [[0 0 1]],
-			maxAngleDif = 120,
-		},
-		[1] = {  
+		[1] = {
 			def = [[WATERWEAPON]],
-			onlyTargetCategory = [[NOTVTOL]],
 			mainDir = [[0 0 1]],
 			maxAngleDif = 160,
+			onlyTargetCategory = [[NOTVTOL]],
+		},
+		[2] = {
+			def = [[WEAPON]],
+			mainDir = [[0 0 1]],
+			maxAngleDif = 120,
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
 }
