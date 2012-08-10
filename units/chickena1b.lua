@@ -129,11 +129,11 @@ local weaponDefs = {
 		weaponVelocity = 700,
 		wobble = 32000,
 		damage = {
-			chicken = 0.001,
-			default = 120,
-			experimental_land = 240,
-			experimental_ships = 240,
-			tinychicken = 0.001,
+			bombers = 40,
+			default = 5,
+			fighters = 40,
+			flak_resistant = 40,
+			unclassed_air = 40,
 		},
 	},
 	WEAPON = {

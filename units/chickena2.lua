@@ -131,9 +131,11 @@ local weaponDefs = {
 		weaponVelocity = 700,
 		wobble = 32000,
 		damage = {
-			default = 800,
-			experimental_land = 1600,
-			experimental_ships = 1600,
+			bombers = 125,
+			default = 5,
+			fighters = 125,
+			flak_resistant = 125,
+			unclassed_air = 125,
 		},
 	},
 	WEAPON = {
