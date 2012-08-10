@@ -221,8 +221,8 @@ local weaponDefs = {
 		weaponType = [[DGun]],
 		weaponVelocity = 300,
 		damage = {
-			commanders = 450,
 			chicken = 1200,
+			commanders = 450,
 			default = 999999,
 		},
 	},
