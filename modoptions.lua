@@ -1,12 +1,30 @@
 local options={
  
-	{
-	   key    = "StartingResources",
-	   name   = "Starting Resources",
-	   desc   = "Sets storage and amount of resources that players will start with",
-	   type   = "section",
-	},
-	    {
+    {
+       key    = "StartingResources",
+       name   = "Starting Resources",
+       desc   = "Sets storage and amount of resources that players will start with",
+       type   = "section",
+    },
+    {
+       key="ta_modes",
+       name="Tech Annihilation - Game Modes",
+       desc="Tech Annihilation - Game Modes",
+       type="section",
+    },
+    {
+       key="ta_exp",
+       name="Tech Annihilation - Experimental Options",
+       desc="Tech Annihilation - Experimental Options",
+       type="section",
+    },
+    {
+       key="ta_options",
+       name="Tech Annihilation - Options",
+       desc="Tech Annihilation - Options",
+       type="section",
+    },
+    {
        key="chicken",
        name="Chicken Defense Options",
        desc="Chicken Spawner Options",
@@ -19,31 +37,19 @@ local options={
        type="section",
     },
     {
-       key="ta_modes",
-       name="Tech Annihilation - Game Modes",
-       desc="Tech Annihilation - Game Modes",
-       type="section",
-    },
-        {
-		key    = 'mo_allowfactionchange',
-		name   = 'Allow Faction Change',
-		desc   = 'Allows faction to be changed ingame',
-		type   = 'bool',
-		def    = true,
-		section= 'ta_options',
-    },
-    {
-       key="ta_options",
-       name="Tech Annihilation - Options",
-       desc="Tech Annihilation - Options",
-       type="section",
-    },
-    {
        key="ta_wall",
        name="Tech Annihilation - Peace Time Settings",
        desc="Tech Annihilation - Peace Time Settings",
        type="section",
     },
+    {
+	key    = "mo_heatmap",
+	name   = "Enable Heatmap's",
+	desc   = "Enables Pathing Heatmaps",
+	type   = "bool",
+	def    = false,
+	section= "ta_exp",
+	},
 	{
 		key    = "mo_coop",
 		name   = "Cooperative Mode",
@@ -84,7 +90,19 @@ local options={
 		def    = false,
 		section= "ta_options",
     },
-	{
+    {
+		key="qtpfs",
+		name="Pathfinding system",
+		desc="Which pathfinding system to use",
+		type="list",
+		section= "ta_exp",
+		def="qtpfs",
+		items={
+			{key="0", name="Default", desc="Default Spring path finding engine"},
+			{key="1", name="QTPFS", desc="Quick/Tesellating Path Finding System"},
+		}
+    },
+    {
 		key    = "mo_noshare",
 		name   = "No Sharing To Enemies",
 		desc   = "Prevents players from giving units or resources to enemies",
@@ -108,7 +126,15 @@ local options={
 		def    = true,
 		section= "ta_options",
     },
-	{
+    {
+		key    = 'mo_allowfactionchange',
+		name   = 'Allow Faction Change',
+		desc   = 'Allows faction to be changed ingame',
+		type   = 'bool',
+		def    = true,
+		section= 'ta_options',
+    },
+    {
 		key    = "mo_nowrecks",
 		name   = "No Unit Wrecks",
 		desc   = "Removes all unit wrecks from the game",
@@ -116,6 +142,31 @@ local options={
 		def    = false,
 		section= "ta_options",
     },
+       	{
+		key="mo_storageowner",
+		name="Team Storage Owner",
+		desc="What owns the starting resource storage",
+		type="list",
+		def="team",
+		section="ta_options",
+		items={
+			{key="com", name="Commander", desc="Starting resource storage belongs to commander, is lost when commander dies"},
+			{key="team", name="Team", desc="Starting resource storage belongs to the team, cannot be lost"},
+		}
+	},
+	{ 
+		key="deathmode",
+		name="Game End Mode",
+		desc="What it takes to eliminate a team",
+		type="list",
+		def="killall",
+		section="ta_modes",
+		items={
+			{key="killall", name="Kill Everything", desc="Every last unit must be eliminated, no exceptions!"},
+			{key="com", name="Kill all enemy Commanders", desc="When a team has no Commanders left it loses"},
+			{key="comcontrol", name="No Commander, No Control", desc="A player without a Commander cannot issue orders"},
+		}
+	},
        {
 		key="teamdeathmode",
 		name="Team Game End Mode",
@@ -129,21 +180,6 @@ local options={
 		{key="allyzerounits", name="AllyTeam Death on Zero units", desc="The Team will die when every Team in his AllyTeam have 0 units."},
       }
 		},
-		{
-		key="comm",
-		name="Starting Commander Level",
-		desc="Adjusts Starting Commander Level, all higher level commanders feature all upgrades from lower levels",
-		type="list",
-		def="l0",
-		section="ta_modes",
-		items = {
-			{key = "l0", name = "Commander", desc = "Good old Commander with 5000 health"},
-			{key = "l1", name = "Battle Commander", desc = "Commander with 5000 health" },
-			{key = "l2", name = "Assault Commander", desc = "Commander with 8000 health, small shield" },
-			{key = "l3", name = "Star Commander", desc = "Commander with 12000 health, stronger small shield, jumping ability" },
-			{key = "l4", name = "Supreme Commander", desc = "Commander with 16000 health, very strong small shield, über disintegrator" }
-		},
-   },
 	{
 	key    = "shareddynamicalliancevictory",
 	name   = "Dynamic Ally Victory",
@@ -177,7 +213,7 @@ local options={
        step   = 1,  -- quantization is aligned to the def value
                     -- (step <= 0) means that there is no quantization
 	},
-	
+
 	{
 		key="mo_chickenstart",
 		name="Burrow Placement",
@@ -359,6 +395,7 @@ local options={
 		section= "cust",
 	},		
 
+	
 	{
 	key    = "wall_enabled",
 	name   = "Enable peace time wall",
