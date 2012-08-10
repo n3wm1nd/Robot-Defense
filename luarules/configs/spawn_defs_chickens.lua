@@ -280,17 +280,17 @@ difficulties = {
   },
   
   [INSANE] = {
-    chickenSpawnRate  = 80,
-    burrowSpawnRate   = 105,
-    queenSpawnMult    = 1,
-    angerBonus        = 25,
-    expStep           = 0.125,
-    lobberEMPTime     = 4,
+    chickenSpawnRate  = 30,
+    burrowSpawnRate   = 28,
+    queenSpawnMult    = 4,
+    angerBonus        = 45,
+    expStep           = 0.6,
+    lobberEMPTime     = 11,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 9,
-    spawnChance       = 0.4,
-    damageMod         = 1,
+    chickensPerPlayer = 24,
+    spawnChance       = 0.8,
+    damageMod         = 1.5,
   },
   
   
