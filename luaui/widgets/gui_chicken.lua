@@ -65,6 +65,7 @@ local queenAnger     = 0
 
 local guiPanel --// a displayList
 local updatePanel
+local hasChickenEvent = false 
 
 
 local side
@@ -333,12 +334,8 @@ function ChickenEvent(chickenEventArgs)
     waveMessage    = {}
     waveMessage[1] = "The "..side.." is angered!"
     waveTime = Spring.GetTimer()
-  elseif (chickenEventArgs.type == "scores") then
-    for i,v in pairs(chickenEventArgs) do
-      if i == Spring.GetMyTeamID() then
-        gotScore = v
-      end
-    end
+  elseif (chickenEventArgs.type == "score"..(Spring.GetMyTeamID())) then 
+    gotScore = chickenEventArgs.number 
   end
 end
 
@@ -364,6 +361,9 @@ end
 
 
 function widget:Shutdown()
+  if hasChickenEvent then
+    Spring.SendCommands({"luarules HasChickenEvent 0"})
+  end
   fontHandler.FreeFont(panelFont)
   fontHandler.FreeFont(waveFont)
 
@@ -375,14 +375,18 @@ function widget:Shutdown()
 end
 
 function widget:GameFrame(n)
+  if not(hasChickenEvent) and n > 0 then
+    Spring.SendCommands({"luarules HasChickenEvent 1"})
+    hasChickenEvent = true
+  end
   if (n%30< 1) then
     UpdateRules()
 
     if (not enabled and n > 0) then
       enabled = true
     end
-
-    queenAnger = math.ceil((((GetGameSeconds()-gameInfo.gracePeriod+gameInfo.queenAnger)/(gameInfo.queenTime-gameInfo.gracePeriod))*100) -0.5)
+--	
+--    queenAnger = math.ceil((((GetGameSeconds()-gameInfo.gracePeriod+gameInfo.queenAnger)/(gameInfo.queenTime-gameInfo.gracePeriod))*100) -0.5)
  
   end
   if gotScore then
