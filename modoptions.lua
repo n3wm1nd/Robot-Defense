@@ -173,6 +173,7 @@ local options={
 		{key="teamzerounits", name="Team Death on Zero Units", desc="The Team will die when it has 0 units."},
 		{key="allyzerounits", name="AllyTeam Death on Zero units", desc="The Team will die when every Team in his AllyTeam have 0 units."},
       }
+		},
 		{
 		key="deathmode",
 		name="Game End Mode",
@@ -186,7 +187,6 @@ local options={
 			{key="comcontrol", name="No Commander, No Control", desc="A player without a Commander cannot issue orders"},
 		}
 	},
-		},
 	{
 	key    = "shareddynamicalliancevictory",
 	name   = "Dynamic Ally Victory",
