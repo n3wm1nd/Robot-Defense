@@ -231,8 +231,8 @@ local function CreatePanelDisplayList()
   local techLevel = ""
   if (currentTime > gameInfo.gracePeriod) then
     
-    if queenAnger < 100 then
-      techLevel = side.." Anger: " .. queenAnger .. "%"
+    if gameInfo.queenAnger < 100 then
+      techLevel = side.." Anger: " .. gameInfo.queenAnger .. "%"
     else
       techLevel = side.." Health: " .. gameInfo.queenLife .. "%"
     end
