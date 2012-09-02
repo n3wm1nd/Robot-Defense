@@ -254,8 +254,8 @@ addWave(6,{"15 corpyro", "20 corpyro", "3 tlllongshot"})
 addWave(6,{"2 airwolf3g", "2 heavyimpact", "4 corspec"})
 addWave(6,{"1 heavyimpact", "4 tllblind"})
 addWave(6,{"1 heavyimpact", "4 trem", "4 tllblind"})
-if (mRandom(0,1) == 1) then addWave(6,{"3 tllgrim"}) else addWave(6,{"6 armtigre2"}) end
-addWave(6,{"6 tllgrim"})
+if (mRandom(0,1) == 1) then addWave(6,{"2 tllgrim"}) else addWave(6,{"6 armtigre2"}) end
+addWave(6,{"2 tllgrim"})
 addWave(6,{"15 armaak", "20 corpyro", "2 corsumo1"})
 addWave(6,{"5 tankanotor", "10 armhdpw", "4 tllblind"})
 
@@ -272,7 +272,7 @@ addWave(7,{"5 armsnipe", "4 tllsham"})
 if (mRandom(0,1) == 1) then addWave(7,{"4 krogtaar"}) else addWave(6,{"1 hyperion"}) end
 addWave(7,{"1 armpraet"})
 addWave(7,{"4 tlllongshot", "4 tlllongshot", "4 tlllongshot"})
-addWave(7,{"10 corprot", "10 corprot"})
+addWave(7,{"2 tllblind", "4 heavyimpact", "2 tllblind", "4 heavyimpact",})
 
 
 addWave(8,{"1 corkrog", "1 arm_furie"})
@@ -288,7 +288,7 @@ addWave(8,{"1 armpraet", "2 armpraet", "2 armpraet"})
 addWave(8,{"7 cortotal"})
 if (mRandom(0,1) == 1) then addWave(8,{"8 heavyimpact", "10 corpyro"}) else addWave(8,{"3 gorg", "10 armfast"}) end
 addWave(8,{"6 cortotal", "6 cortotal","6 cortotal"})
-addWave(8,{"3 corprot", "3 corprot", "3 corprot", "3 corprot"})
+addWave(8,{"1 corprot", "1 corprot", "2 tllblind", "4 heavyimpact"})
 addWave(8,{"1 arm_furie", "1 arm_furie"})
 addWave(8,{"1 corkarg1", "1 arm_furie"})
 addWave(8,{"1 cordem", "1 cordem", "1 cordem"})
