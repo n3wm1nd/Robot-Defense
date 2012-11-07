@@ -1,18 +1,18 @@
 local options={
  
-    {
-       key    = "StartingResources",
-       name   = "Starting Resources",
-       desc   = "Sets storage and amount of resources that players will start with",
-       type   = "section",
-    },
+	{
+	   key    = "StartingResources",
+	   name   = "Starting Resources",
+	   desc   = "Sets storage and amount of resources that players will start with",
+	   type   = "section",
+	},
     {
        key="ta_modes",
        name="Tech Annihilation - Game Modes",
        desc="Tech Annihilation - Game Modes",
        type="section",
     },
-    {
+        {
        key="ta_exp",
        name="Tech Annihilation - Experimental Options",
        desc="Tech Annihilation - Experimental Options",
@@ -31,12 +31,6 @@ local options={
        type="section",
     },
     {
-       key="cust",
-       name="Chicken Defense Custom Difficulty",
-       desc="Chicken Defense Custom Difficulty",
-       type="section",
-    },
-    {
 	key    = "mo_heatmap",
 	name   = "Enable Heatmap's",
 	desc   = "Enables Pathing Heatmaps",
@@ -47,7 +41,7 @@ local options={
 	{
 		key    = "mo_coop",
 		name   = "Cooperative Mode",
-		desc   = "Adds an extra commander for comsharing teams",
+		desc   = "Adds an extra commander for comsharing teams\nAutoHost Usage :- mo_coop",
 		type   = "bool",
 		def    = false,
 		section= "ta_modes",
@@ -55,7 +49,7 @@ local options={
 	{
 		key    = "mo_greenfields",
 		name   = "No Metal Extraction",
-		desc   = "No metal extraction on any map",
+		desc   = "No metal extraction on any map\nAutoHost Usage :- mo_greenfields",
 		type   = "bool",
 		def    = false,
 		section= "ta_modes",
@@ -63,7 +57,7 @@ local options={
     {
 		key    = "mo_noowner",
 		name   = "FFA Mode",
-		desc   = "Units with no player control are instantly removed/destroyed",
+		desc   = "Units with no player control are instantly removed/destroyed\nAutoHost Usage :- mo_noowner",
 		type   = "bool",
 		def    = false,
 		section= "ta_modes",
@@ -71,7 +65,7 @@ local options={
 	{
 		key    = "mo_progmines",
 		name   = "Progressive Mining",
-		desc   = "New mines take some time to become fully established, death resets progress",
+		desc   = "New mines take some time to become fully established, death resets progress\nAutoHost Usage :- mo_progmines",
 		type   = "bool",
 		def    = false,
 		section= "ta_modes",
@@ -79,7 +73,7 @@ local options={
     {
 		key    = "mo_preventdraw",
 		name   = "Commander Ends No Draw",
-		desc   = "Last Com alive is immune to comblast, D-gunning the last enemy Com with your last Com disqualifies you",
+		desc   = "Last Com alive is immune to comblast, D-gunning the last enemy Com with your last Com disqualifies you\nAutoHost Usage :- mo_preventdraw",
 		type   = "bool",
 		def    = false,
 		section= "ta_options",
@@ -87,7 +81,7 @@ local options={
     {
 		key="qtpfs",
 		name="Pathfinding system",
-		desc="Which pathfinding system to use",
+		desc="Which pathfinding system to use\nAutoHost Usage :- qtpfs",
 		type="list",
 		section= "ta_exp",
 		def="qtpfs",
@@ -99,7 +93,7 @@ local options={
     {
 		key    = "mo_noshare",
 		name   = "No Sharing To Enemies",
-		desc   = "Prevents players from giving units or resources to enemies",
+		desc   = "Prevents players from giving units or resources to enemies\nAutoHost Usage :- mo_noshare",
 		type   = "bool",
 		def    = true,
 		section= "ta_options",
@@ -107,7 +101,7 @@ local options={
 	{
 		key    = "mo_comgate",
 		name   = "Commander Gate Effect",
-		desc   = "Commanders warp in at gamestart with a shiny teleport effect",
+		desc   = "Commanders warp in at gamestart with a shiny teleport effect\nAutoHost Usage :- mo_comgate",
 		type   = "bool",
 		def    = false,
 		section= "ta_options",
@@ -115,7 +109,7 @@ local options={
     {
 		key    = "mo_enemywrecks",
 		name   = "Show Enemy Wrecks",
-		desc   = "Gives you LOS of enemy wreckage",
+		desc   = "Gives you LOS of enemy wreckage\nAutoHost Usage :- mo_enemywrecks",
 		type   = "bool",
 		def    = true,
 		section= "ta_options",
@@ -123,7 +117,7 @@ local options={
     {
 		key    = 'mo_allowfactionchange',
 		name   = 'Allow Faction Change',
-		desc   = 'Allows faction to be changed ingame',
+		desc   = 'Allows faction to be changed ingame\nAutoHost Usage :- mo_allowfactionchange',
 		type   = 'bool',
 		def    = true,
 		section= 'ta_options',
@@ -131,7 +125,7 @@ local options={
     {
 		key    = "mo_nowrecks",
 		name   = "No Unit Wrecks",
-		desc   = "Removes all unit wrecks from the game",
+		desc   = "Removes all unit wrecks from the game\nAutoHost Usage :- mo_nowrecks",
 		type   = "bool",
 		def    = false,
 		section= "ta_options",
@@ -139,7 +133,7 @@ local options={
        	{
 		key="mo_storageowner",
 		name="Team Storage Owner",
-		desc="What owns the starting resource storage",
+		desc="What owns the starting resource storage\nAutoHost Usage :- mo_storageowner",
 		type="list",
 		def="team",
 		section="ta_options",
@@ -151,7 +145,7 @@ local options={
 	{ 
 		key="deathmode",
 		name="Game End Mode",
-		desc="What it takes to eliminate a team",
+		desc="What it takes to eliminate a team\nAutoHost Usage :- deathmode",
 		type="list",
 		def="killall",
 		section="ta_modes",
@@ -164,7 +158,7 @@ local options={
        {
 		key="teamdeathmode",
 		name="Team Game End Mode",
-		desc="What it takes to eliminate a Team",
+		desc="What it takes to eliminate a Team\nAutoHost Usage :- teamdeathmode",
 		type="list",
 		def="allyzerounits",
 		section= "ta_modes",
@@ -174,10 +168,10 @@ local options={
 		{key="allyzerounits", name="AllyTeam Death on Zero units", desc="The Team will die when every Team in his AllyTeam have 0 units."},
       }
 		},
-		{
+	{
 		key="deathmode",
 		name="Game End Mode",
-		desc="What it takes to eliminate a team",
+		desc="What it takes to eliminate a team\nAutoHost Usage :- deathmode",
 		type="list",
 		def="com",
 		section= "ta_modes",
@@ -190,7 +184,7 @@ local options={
 	{
 	key    = "shareddynamicalliancevictory",
 	name   = "Dynamic Ally Victory",
-	desc   = "Ingame alliance should count for game over condition.",
+	desc   = "Ingame alliance should count for game over condition\nAutoHost Usage :- shareddynamicalliancevictory",
 	type   = "bool",
 	def    = false,
 	section= "ta_modes",
@@ -199,7 +193,7 @@ local options={
 	{
        key    = "startmetal",
        name   = "Starting metal",
-       desc   = "Determines amount of metal and metal storage that each player will start with",
+       desc   = "Determines amount of metal and metal storage that each player will start with\nAutoHost Usage :- startmetal",
        type   = "number",
        section= "StartingResources",
        def    = 1000,
@@ -211,7 +205,7 @@ local options={
 	{
        key    = "startenergy",
        name   = "Starting energy",
-       desc   = "Determines amount of energy and energy storage that each player will start with",
+       desc   = "Determines amount of energy and energy storage that each player will start with\nAutoHost Usage :- startenergy",
        type   = "number",
        section= "StartingResources",
        def    = 1000,
@@ -220,7 +214,6 @@ local options={
        step   = 1,  -- quantization is aligned to the def value
                     -- (step <= 0) means that there is no quantization
 	},
-
 	{
 		key="mo_chickenstart",
 		name="Burrow Placement",

@@ -26,35 +26,7 @@
 --
 
 local options = {
-   --Need to remove after next release  
-  {
-    key    = 'GameMode',
-    name   = 'Game end condition',
-    desc   = 'Determines what condition triggers the defeat of a player',
-    type   = 'list',
-    section= "ta_modes",
-    def    = '0',
-    items  = 
-    {
-      { 
-        key  = '0',
-        name = 'Kill everything',
-        desc = 'The player will lose when all his units have died',
-      },
-      {
-        key  = '1',
-        name = 'Commander ends',
-        desc = 'The player will lose when his commander dies',
-      },
-      {
-        key  = '2',
-        name = 'Commander lineage ends',
-        desc = 'This is a stricter form of commander ends\nevery unit will inherit the lineage from the player whom built it\neven if shared, when the commander dies the unit will still die',
-      },
-    },
-  },
-  --end
-   
+     
   
    {
        key="ta_others",
@@ -65,7 +37,7 @@ local options = {
   {
     key    = 'MaxUnits',
     name   = 'Max units',
-    desc   = 'Maximum number of units (including buildings) for each team allowed at the same time',
+    desc   = 'Maximum number of units (including buildings) for each team allowed at the same time\nAutoHost Usage :- MaxUnits',
     type   = 'number',
     def    = 1000,
     min    = 1,
@@ -75,10 +47,11 @@ local options = {
     section= "ta_others",
 
   },
+
   {
     key    = 'GhostedBuildings',
     name   = 'Ghosted buildings',
-    desc   = "Once an enemy building will be spotted\na ghost trail will be placed to memorize location even after the loss of the line of sight",
+    desc   = "Once an enemy building will be spotted\na ghost trail will be placed to memorize location even after the loss of the line of sight\nAutoHost Usage :- MaxUnits",
     type   = 'bool',
     def    = true,
     section= "ta_others",
@@ -86,7 +59,7 @@ local options = {
   {
     key    = 'FixedAllies',
     name   = 'Fixed ingame alliances',
-    desc   = 'Disables the possibility of players to dynamically change alliances ingame',
+    desc   = 'Disables the possibility of players to dynamically change alliances ingame\nAutoHost Usage :- FixedAllies',
     type   = 'bool',
     def    = false,
     section= "ta_others",
@@ -95,14 +68,14 @@ local options = {
   {
     key    = 'LimitSpeed',
     name   = 'Speed Restriction',
-    desc   = 'Limits maximum and minimum speed that the players will be allowed to change to',
+    desc   = 'Limits maximum and minimum speed that the players will be allowed to change to\nAutoHost Usage :- LimitSpeed',
     type   = 'section',
   },
 
   {
     key    = 'MaxSpeed',
     name   = 'Maximum game speed',
-    desc   = 'Sets the maximum speed that the players will be allowed to change to',
+    desc   = 'Sets the maximum speed that the players will be allowed to change to\nAutoHost Usage :- MaxSpeed',
     type   = 'number',
     section= 'LimitSpeed',
     def    = 3,
@@ -115,7 +88,7 @@ local options = {
   {
     key    = 'MinSpeed',
     name   = 'Minimum game speed',
-    desc   = 'Sets the minimum speed that the players will be allowed to change to',
+    desc   = 'Sets the minimum speed that the players will be allowed to change to\nAutoHost Usage :- MinSpeed',
     type   = 'number',
     section= 'LimitSpeed',
     def    = 0.3,
@@ -128,7 +101,7 @@ local options = {
   {
     key    = 'DisableMapDamage',
     name   = 'Undeformable map',
-    desc   = 'Prevents the map shape from being changed by weapons',
+    desc   = 'Prevents the map shape from being changed by weapons\nAutoHost Usage :- DisableMapDamage',
     type   = 'bool',
     def    = true,
     section= "ta_others",
