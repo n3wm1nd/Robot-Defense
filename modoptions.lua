@@ -31,6 +31,12 @@ local options={
        type="section",
     },
     {
+       key="cust",
+       name="Chicken Defense Custom Difficulty",
+       desc="Chicken Defense Custom Difficulty",
+       type="section",
+    },
+    {
 	key    = "mo_heatmap",
 	name   = "Enable Heatmap's",
 	desc   = "Enables Pathing Heatmaps",
