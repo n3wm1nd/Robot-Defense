@@ -57,6 +57,10 @@ local function addWave(wave, unitList)
  table.insert(waves[wave], unitList)
 end
 
+
+
+
+
    
 local chickenTypes = {
   ve_chickenqr  =  true,
@@ -151,6 +155,10 @@ local chickenTypes = {
   tllvaliant    =  true, --piece count 22
   abroadside    =  true, --piece count 25
   tlllongshot   =  true, --piece count 5
+  
+  --added only for insane king spawn
+  abroadside    =  true, 
+  cdevastator   =  true, 
 
 }
 
@@ -295,6 +303,7 @@ addWave(8,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
 addWave(9,{"1 corkrog1", "1 corgala"})
 addWave(9,{"5 corcrw"})
 addWave(9,{"5 corcrw"})
+if (queenName == "fh_chickenqr") then addWave(9,{"1 cdevastator" ,"1 abroadside"})
 addWave(9,{"2 tllvaliant"})
 addWave(9,{"1 arm_furie", "1 arm_furie", "1 arm_furie"})
 if (mRandom(0,1) == 1) then addWave(7,{"6 anvil"}) else addWave(6,{"2 hyperion"}) end
@@ -302,7 +311,6 @@ addWave(9,{"5 corrag", "5 corrag", "4 armorion", "4 armorion","7 armcyclone"})
 addWave(9,{"5 corrag", "5 corrag", "5 corrag"})
 addWave(9,{"10 armcybr"})
 addWave(9,{"10 corcrw", "20 corcrw"})
-
 
 VERYEASY = "Chicken: Very Easy"
 EASY = "Chicken: Easy"
