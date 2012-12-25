@@ -865,7 +865,11 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer,
           else
             weaponName = WeaponDefs[weaponID].description
           end
-          Spring.Echo("Queen is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
+	    if (cenabled == 1) then 
+              Spring.Echo("Queen is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
+	    else
+              Spring.Echo("King is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
+	    end
           queenResistance[weaponID].notify = 1
           if (cenabled == 0) then 
           for i = 1,20,1 do
