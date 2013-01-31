@@ -109,47 +109,62 @@ local unitDef = {
 	weaponDefs = nil,
 	weapons = {
 		[1] = {
+			badTargetCategory = [[TINY]],
 			def = [[RK_CANNON]],
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[2] = {
+			badTargetCategory = [[TINY]],
 			def = [[RK_CANNON]],
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[3] = {
 			def = [[ARMFLAK_GUN]],
+			onlyTargetCategory = [[VTOL]],
 		},
 		[4] = {
 			def = [[ARMFLAK_GUN]],
+			onlyTargetCategory = [[VTOL]],
 		},
 		[5] = {
+			badTargetCategory = [[TINY]],
 			def = [[BeamATADR]],
 			mainDir = [[-0.3 0 1]],
 			maxAngleDif = 120,
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[6] = {
+			badTargetCategory = [[TINY]],
 			def = [[BeamATADR]],
 			mainDir = [[0.3 0 1]],
 			maxAngleDif = 120,
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[7] = {
 			def = [[DNWFLAME]],
 			mainDir = [[-0.3 0 1]],
 			maxAngleDif = 170,
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[8] = {
 			def = [[DNWFLAME]],
 			mainDir = [[0.3 0 1]],
 			maxAngleDif = 170,
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[9] = {
 			def = [[CORE_ADVSAM1]],
+			onlyTargetCategory = [[VTOL]],
 		},
 		[10] = {
 			def = [[RKEyeCannon]],
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 		[11] = {
 			def = [[KROGCRUSH1]],
 			mainDir = [[0 0 1]],
 			maxAngleDif = 200,
+			onlyTargetCategory = [[NOTVTOL]],
 		},
 	},
 }
