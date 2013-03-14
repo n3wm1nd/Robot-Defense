@@ -107,7 +107,6 @@ local unitDef = {
 	},
 	weaponDefs = nil,
 	weapons = {
-		weapons = {
 		[1] = {
 			badTargetCategory = [[TINY]],
 			def = [[RK_CANNON]],
