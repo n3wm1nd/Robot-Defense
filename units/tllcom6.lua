@@ -82,9 +82,6 @@ local unitDef = {
 	unitname = [[tllcom6]],
 	upright = true,
 	workerTime = 600,
-	customparams = {
-		providetech = [[Battle Commander,Assault Commander,Star Commander]],
-	},
 	buildoptions = {
 		[1] = [[tllsolar]],
 		[2] = [[tlltide]],
@@ -119,6 +116,7 @@ local unitDef = {
 		[31] = [[corupmex]],
 	},
 	customParams = {
+		providetech = [[Battle Commander,Assault Commander,Star Commander]],
 		iscommander = true,
 	},
 	featureDefs = nil,
@@ -194,6 +192,7 @@ local weaponDefs = {
 	TLL_DISINTEGRATOR2 = {
 		areaOfEffect = 36,
 		avoidFriendly = false,
+		avoidground = false,
 		beamWeapon = true,
 		commandfire = true,
 		craterBoost = 0,

@@ -82,9 +82,6 @@ local unitDef = {
 	unitname = [[corcom7]],
 	upright = true,
 	workerTime = 650,
-	customparams = {
-		providetech = [[Battle Commander,Assault Commander,Star Commander,Supreme Commander]],
-	},
 	buildoptions = {
 		[1] = [[corsolar]],
 		[2] = [[cortide]],
@@ -120,6 +117,7 @@ local unitDef = {
 		[32] = [[corgant1]],
 	},
 	customParams = {
+		providetech = [[Battle Commander,Assault Commander,Star Commander,Supreme Commander]],
 		iscommander = true,
 	},
 	featureDefs = nil,
@@ -171,6 +169,7 @@ local weaponDefs = {
 	ARM_DISINTEGRATOR2 = {
 		areaOfEffect = 36,
 		avoidFriendly = false,
+		avoidground = false,
 		beamWeapon = true,
 		commandfire = true,
 		craterBoost = 0,

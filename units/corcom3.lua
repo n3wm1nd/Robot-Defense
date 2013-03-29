@@ -81,9 +81,6 @@ local unitDef = {
 	unitname = [[corcom3]],
 	upright = true,
 	workerTime = 450,
-	customparams = {
-		providetech = [[Battle Commander]],
-	},
 	buildoptions = {
 		[1] = [[corsolar]],
 		[2] = [[cortide]],
@@ -114,6 +111,7 @@ local unitDef = {
 		[27] = [[corfhlt]],
 	},
 	customParams = {
+		providetech = [[Battle Commander]],
 		iscommander = true,
 	},
 	featureDefs = nil,
@@ -162,6 +160,7 @@ local weaponDefs = {
 	ARM_DISINTEGRATOR1 = {
 		areaOfEffect = 36,
 		avoidFriendly = false,
+		avoidground = false,
 		beamWeapon = true,
 		commandfire = true,
 		craterBoost = 0,

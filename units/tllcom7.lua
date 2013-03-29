@@ -82,9 +82,6 @@ local unitDef = {
 	unitname = [[tllcom7]],
 	upright = true,
 	workerTime = 650,
-	customparams = {
-		providetech = [[Battle Commander,Assault Commander,Star Commander,Supreme Commander]],
-	},
 	buildoptions = {
 		[1] = [[tllsolar]],
 		[2] = [[tlltide]],
@@ -121,6 +118,7 @@ local unitDef = {
 		[33] = [[tllvaliant]],
 	},
 	customParams = {
+		providetech = [[Battle Commander,Assault Commander,Star Commander,Supreme Commander]],
 		iscommander = true,
 	},
 	featureDefs = nil,
@@ -196,6 +194,7 @@ local weaponDefs = {
 	TLL_DISINTEGRATOR2 = {
 		areaOfEffect = 36,
 		avoidFriendly = false,
+		avoidground = false,
 		beamWeapon = true,
 		commandfire = true,
 		craterBoost = 0,
@@ -224,8 +223,8 @@ local weaponDefs = {
 		weaponVelocity = 300,
 		damage = {
 			commanders = 450,
-			default = 999999,
 			chicken = 1200,
+			default = 999999,
 		},
 	},
 	TLLCOM_LIGHTNING5 = {

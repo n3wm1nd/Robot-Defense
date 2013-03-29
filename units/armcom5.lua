@@ -82,9 +82,6 @@ local unitDef = {
 	unitname = [[armcom5]],
 	upright = true,
 	workerTime = 550,
-	customparams = {
-		providetech = [[Battle Commander,Assault Commander]],
-	},
 	buildoptions = {
 		[1] = [[armsolar]],
 		[2] = [[armtide]],
@@ -119,6 +116,7 @@ local unitDef = {
 		[31] = [[armgen]],
 	},
 	customParams = {
+		providetech = [[Battle Commander,Assault Commander]],
 		iscommander = true,
 	},
 	featureDefs = nil,
@@ -170,6 +168,7 @@ local weaponDefs = {
 	ARM_DISINTEGRATOR2 = {
 		areaOfEffect = 36,
 		avoidFriendly = false,
+		avoidground = false,
 		beamWeapon = true,
 		commandfire = true,
 		craterBoost = 0,
