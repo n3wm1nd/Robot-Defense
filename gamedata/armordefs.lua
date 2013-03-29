@@ -241,6 +241,7 @@ experimental_land = {
 	armraven = 99,
 	corjurgen = 99,
 	troman = 99,
+	corhowie = 99,
 	-- t4
 	corkrog1 = 99,
 	corkarg1 = 99,
