@@ -90,10 +90,10 @@ local options={
 		desc="Which pathfinding system to use\nAutoHost Usage :- qtpfs",
 		type="list",
 		section= "ta_exp",
-		def="qtpfs",
+		def="normal",
 		items={
-			{key="0", name="Default", desc="Default Spring path finding engine"},
-			{key="1", name="QTPFS", desc="Quick/Tesellating Path Finding System"},
+			{key="normal", name="Default", desc="Default Spring path finding engine"},
+			{key="qtpfs", name="QTPFS", desc="Quick/Tesellating Path Finding System"},
 		}
     },
     {
@@ -102,14 +102,6 @@ local options={
 		desc   = "Prevents players from giving units or resources to enemies\nAutoHost Usage :- mo_noshare",
 		type   = "bool",
 		def    = true,
-		section= "ta_options",
-    },
-	{
-		key    = "mo_comgate",
-		name   = "Commander Gate Effect",
-		desc   = "Commanders warp in at gamestart with a shiny teleport effect\nAutoHost Usage :- mo_comgate",
-		type   = "bool",
-		def    = false,
 		section= "ta_options",
     },
     {
@@ -219,6 +211,14 @@ local options={
        max    = 1000000,
        step   = 1,  -- quantization is aligned to the def value
                     -- (step <= 0) means that there is no quantization
+	},
+	{
+	key    = "Superunits",
+	name   = "Re-enablle Superunits",
+	desc   = "Re-enable's all game end weapons and superships\nAutoHost Usage :- mo_superunits",
+	type   = "bool",
+	def    = true,
+	section= "ta_modes",
 	},
 	{
 		key="mo_chickenstart",
