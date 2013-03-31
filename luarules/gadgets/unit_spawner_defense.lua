@@ -838,7 +838,7 @@ function gadget:UnitCreated(unitID, unitDefID, unitTeam)
 end
 
 function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, 
-                            weaponID, attackerID, attackerDefID, attackerTeam)
+                            weaponID, projectileID, attackerID, attackerDefID, attackerTeam)
 
   if (attackerTeam == chickenTeamID) then
     return (damage * damageMod)
