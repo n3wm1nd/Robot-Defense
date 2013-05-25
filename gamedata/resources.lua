@@ -168,6 +168,24 @@ local resources = {
 			odd='odd.tga',	
 			groundflash43='clouds2.tga',
 			clouds2='clouds2.tga',
+			--Tankette
+			newsmoke='Smoke/DFoom.TGA',
+			flare1='FlarenSpark/Flare1.TGA',
+			flare2='FlarenSpark/Flare2.TGA',
+			flare3='FlarenSpark/Flare3.TGA',
+			flarePills1='FlarenSpark/FlarePills1.TGA',
+			
+			lightring='lightring.tga',
+			lightb3='lightningball3.tga',
+			lightb4='lightningball4.tga',
+			
+			debris2='other/debris2.tga',
+			debris='other/debris.tga',
+			dirtplosion2='other/dirtplosion2.tga',
+			
+			nanonew='nano.tga',
+			exploo='explo.jpg',
+			ring='ring.tga',
 			--chicken cegs
 			sporetrail='GPL/sporetrail.tga',
 			blooddrop='PD/blooddrop.tga',
