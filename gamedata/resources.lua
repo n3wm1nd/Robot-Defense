@@ -25,7 +25,7 @@ local resources = {
 			'scars/scar1.bmp',
 			'scars/scar2.bmp',
 			'scars/scar3.bmp',
-			'scars/scar4.bmp',
+			'scars/scar3.bmp',
 		},
 		trees = {
 			bark='Bark.bmp',
@@ -59,6 +59,7 @@ local resources = {
 			laserendred='laserendred.tga',
 			NarrowBoltNoisy='NarrowBoltNoisy.tga',
 			EMG='EMG.tga',
+			EMG_alpha='EMG_alpha.tga',
 			Type6Beam='Type6Beam.tga',
 			PlasmaHeatB='PlasmaHeatB.tga',
 			PlasmaHeatG='PlasmaHeatG.tga',
@@ -71,7 +72,7 @@ local resources = {
 			laserfalloff='laserfalloff.tga',
 			randdots='randdots.tga',
 			smoketrail='smoketrail.tga',
-			wake='wake.tga',
+			wake='wake.png',
 			explo='explo.tga',
 			explofade='explofade.tga',
 			heatcloud='explo.tga',
@@ -113,6 +114,7 @@ local resources = {
 			coresmoketrail='coresmoketrail.tga',
 			shotgunflare='shotgunflare.tga',
 			lightb='PD/lightningball.tga',
+			lightb2='PD/lightningball2.tga',
 			lightning='PD/lightning.tga',
 			plasma='GPL/plasma.tga',
 			flashside1='flashside1.tga',
@@ -137,6 +139,7 @@ local resources = {
 			r1='r1.tga',
 			r2='r2.tga',
 			r3='r3.tga',
+			r1_aplha='r1_alpha.tga',
 			plasmaball01='plasmaball/plasmaball01.tga',
 			plasmaball02='plasmaball/plasmaball02.tga',
 			plasmaball03='plasmaball/plasmaball03.tga',
@@ -178,7 +181,8 @@ local resources = {
 			lightring='lightring.tga',
 			lightb3='lightningball3.tga',
 			lightb4='lightningball4.tga',
-			
+			lightning2='lightning2.jpg',
+
 			debris2='other/debris2.tga',
 			debris='other/debris.tga',
 			dirtplosion2='other/dirtplosion2.tga',
@@ -186,6 +190,9 @@ local resources = {
 			nanonew='nano.tga',
 			exploo='explo.jpg',
 			ring='ring.tga',
+			
+			--lightning
+			strike='strike.png',
 			--chicken cegs
 			sporetrail='GPL/sporetrail.tga',
 			blooddrop='PD/blooddrop.tga',
