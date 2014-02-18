@@ -94,6 +94,7 @@ local queenAnger          = 0
 local burrowSpawnProgress = 0
 local queenMaxHP          = 0
 local chickenDebtCount    = 0
+local burrowAnger         = 0 
 local firstSpawn          = true
 local showScoresOnce      = true
 local gameOver            = false
@@ -693,7 +694,7 @@ local function Wave()
   
   if gameOver then return end
   
-  currentWave = math.min(math.ceil((((t-gracePeriod+queenAnger) / 60) / nextWave)), 8)
+  currentWave = math.min(math.ceil((((t-gracePeriod) / 60) / nextWave)), 8) 
   
   if currentWave > #waves then currentWave = #waves end
   
@@ -755,8 +756,7 @@ end
 local function DisableUnit(unitID)
   Spring.MoveCtrl.Enable(unitID)
   Spring.MoveCtrl.SetNoBlocking(unitID, true)
-  Spring.MoveCtrl.SetPosition(unitID, Game.mapSizeX+2450, 4000, Game.mapSizeZ+2450)
-  Spring.SetUnitCloak(unitID, true)
+  Spring.MoveCtrl.SetPosition(unitID, Game.mapSizeX+500, 2000, Game.mapSizeZ+500) --don't move too far out or prevent_aicraft_hax will explode it!   Spring.SetUnitCloak(unitID, true)
   Spring.SetUnitHealth(unitID, {paralyze=99999999})
   Spring.SetUnitNoDraw(unitID, true)
   Spring.SetUnitStealth(unitID, true)
@@ -1099,7 +1099,7 @@ function gadget:GameFrame(n)
 			if t < gracePeriod then
 				queenAnger = 0
 			else
-				queenAnger = math.ceil((t - gracePeriod) / (queenTime - gracePeriod) * 100 % 100)
+                                queenAnger = math.ceil(math.min((t - gracePeriod) / (queenTime - gracePeriod) * 100 % 100) + burrowAnger, 100) 
 			end
 			SetGameRulesParam("queenAnger", queenAnger)
 		end
@@ -1132,14 +1132,10 @@ function gadget:GameFrame(n)
      
     local quicken = 0
     local burrowCount = SetCount(burrows)
-     
-    if (burrowTarget > 0) and (burrowTarget ~= burrowCount) then
-      quicken = (burrowSpawnRate * (1 - (burrowCount / burrowTarget)))
-    end
-        
-    local burrowSpawnTime = (burrowSpawnRate - quicken)
-             
-    if (burrowSpawnRate < (t - timeOfLastFakeSpawn) and burrowCount < maxBurrows) then
+    
+     if (burrowSpawnRate < (t - timeOfLastFakeSpawn) and burrowTarget < maxBurrows) then 
+     -- This block is all about setting the correct burrow target 
+
       if firstSpawn then    
         minBurrows = SetCount(humanTeams)
         local hteamID = next(humanTeams)
@@ -1147,14 +1143,25 @@ function gadget:GameFrame(n)
         for i = 1,ranCount,1 do
           mRandom()
         end
-        burrowTarget = math.min(math.ceil(minBurrows * 1.5) + gracePenalty, 40)
+        burrowTarget = math.max(math.min(math.ceil(minBurrows * 1.5) + gracePenalty, 40), 1) 
       else
         burrowTarget = burrowTarget + 1
       end
       timeOfLastFakeSpawn = t
     end
     
-	if (burrowCount < minBurrows) or (burrowSpawnTime <  (t - timeOfLastSpawn) and burrowCount < maxBurrows) then 
+        if (burrowTarget > 0) and (burrowTarget ~= burrowCount) then 
+	  quicken = (burrowSpawnRate * (1 - (burrowCount / burrowTarget))) 
+	end
+	
+	if (burrowTarget > 0) and ((burrowCount / burrowTarget) < 0.25) then 
+	  -- less than 25% of desired burrows, spawn one right away 
+          quicken = burrowSpawnRate 
+	end
+        
+	local burrowSpawnTime = (burrowSpawnRate - quicken) 
+	  
+	  if (burrowCount < minBurrows) or (burrowSpawnTime <  (t - timeOfLastSpawn) and burrowCount < maxBurrows) then 
 		if firstSpawn then
 			for i = 1,math.min(math.ceil((SetCount(humanTeams) * 1.5)) + gracePenalty, 40),1 do
 				SpawnBurrow()
@@ -1225,6 +1232,7 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
 		if modes[highestLevel] == SURVIVAL then
 			queenTime = t + (Spring.GetModOptions().mo_queentime or 40) * 60
 			queenAnger = 0  -- reenable chicken spawning
+			burrowAnger = 0 
 			SetGameRulesParam("queenAnger", queenAnger)
 			SpawnBurrow()
 			SpawnChickens() -- spawn new chickens (because queen could be the last one)
@@ -1242,9 +1250,8 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam)
     
     burrows[unitID] = nil
     if (addQueenAnger == 1) then
-      queenAnger = (queenAnger + angerBonus)
-      expMod = (expMod + (expIncrement * angerBonus))
-      SetGameRulesParam("queenAnger", queenAnger)
+      burrowAnger = (burrowAnger + angerBonus) 
+      expMod = (expMod + angerBonus) 
     end
     
     for turretID,v in pairs(turrets) do
