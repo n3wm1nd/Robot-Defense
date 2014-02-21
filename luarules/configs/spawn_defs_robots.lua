@@ -305,7 +305,7 @@ addWave(11,{"1 corkarg1", "1 arm_furie"})
 addWave(11,{"1 cordem", "1 cordem", "1 cordem"})
 addWave(11,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
 
-newWaveSquad[9] = {"3 corkrag", "6 heavyimpact"}
+newWaveSquad[9] = {"3 corkrog", "6 heavyimpact"}
 addWave(9,{"1 corkrog1", "1 corgala"})
 addWave(9,{"2 corcrw", "2 corcrw", "2 corcrw", "2 corcrw"})
 addWave(9,{"2 corcrw", "2 corcrw", "2 corcrw", "2 corcrw"})
