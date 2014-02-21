@@ -36,14 +36,6 @@ local options={
        desc="Chicken Defense Custom Difficulty",
        type="section",
     },
-    {
-	key    = "mo_heatmap",
-	name   = "Enable Heatmap's",
-	desc   = "Enables Pathing Heatmaps",
-	type   = "bool",
-	def    = false,
-	section= "ta_exp",
-	},
 	{
 		key    = "mo_coop",
 		name   = "Cooperative Mode",
@@ -350,10 +342,10 @@ local options={
 		name   = "Burrow Kill Anger (Seconds)",
 		desc   = "Seconds added per burrow kill.",
 		type   = "number",
-		def    = 20,
+		def    = 0.15,
 		min    = 0,
-		max    = 600,
-		step   = 1,
+		max    = 100,
+		step   = 0.01,
 		section= "cust",
 	},
 	{
