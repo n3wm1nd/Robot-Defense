@@ -96,7 +96,26 @@ local difficulties = {
     [8] = 'Survival',
 }
 
-local rules = {
+local rules = {}
+
+
+
+local waveColors = {}
+waveColors[1] = "\255\184\100\255"
+waveColors[2] = "\255\120\50\255"
+waveColors[3] = "\255\255\153\102"
+waveColors[4] = "\255\120\230\230"
+waveColors[5] = "\255\100\255\100"
+waveColors[6] = "\255\150\001\001"
+waveColors[7] = "\255\255\255\100"
+waveColors[8] = "\255\100\255\255"
+waveColors[9] = "\255\100\100\255"
+waveColors[10] = "\255\200\050\050"
+waveColors[11] = "\255\255\255\255"
+
+local chickenColors 
+if (cenabled == 1) then
+rules = {
   "queenTime",
   "queenAnger",
   "gracePeriod",
@@ -129,18 +148,7 @@ local rules = {
   "roostKills",
 }
 
-local waveColors = {}
-waveColors[1] = "\255\184\100\255"
-waveColors[2] = "\255\255\100\100"
-waveColors[3] = "\255\255\153\102"
-waveColors[4] = "\255\100\255\100"
-waveColors[5] = "\255\150\001\001"
-waveColors[6] = "\255\255\255\100"
-waveColors[7] = "\255\100\255\255"
-waveColors[8] = "\255\100\100\255"
-waveColors[9] = "\255\255\255\255"
-
-local chickenColors = {
+chickenColors = {
   {"chicken",      "\255\184\100\255"},
   {"chickena",     "\255\255\100\100"},
   {"chickenh",     "\255\255\150\150"},
@@ -152,6 +160,270 @@ local chickenColors = {
   {"chickenc",     "\255\100\255\255"},
   {"chickenr",     "\255\100\100\255"},
 }
+
+else
+  rules = {
+  "queenTime",
+  "queenAnger",
+  "gracePeriod",
+  "queenLife",
+  --"lagging",
+  "difficulty",
+  
+  "armrlCount",
+  "armrlKills",
+  
+  "armflakCount",
+  "armflakKills",
+  
+  "arm_big_berthaCount",
+  "arm_big_berthaKills",
+  
+  "armbrtha1lCount",
+  "armbrtha1Kills",
+  
+  "tlldbCount",
+  "tlldbKills",
+  
+  "armshock1Count",
+  "cormist1Count",
+  "cormortCount",
+  "armravenCount",
+  "armsam1Count",
+  "armthundCount",
+  "corcrwCount",
+  "armfleaCount",
+  "marauderCount",
+  "corkrogCount",
+  "corhurcCount",
+  "armflash1Count",
+  "armmerlCount",
+  "corgalaCount",
+  "hyperionCount",
+  "armlaspdCount",
+  "armorionCount",
+  "armfastCount",
+  "armspidCount",
+  "armcybrCount",
+  "tllcrawlbCount",
+  "armzeusCount",
+  "abroadsideCount",
+  "corragCount",
+  "corprotCount",
+  "corgolCount",
+  "armraven1Count",
+  "armaakCount",
+  "anvilCount",
+  "tllvaliantCount",
+  "tllshamCount",
+  "armflashCount",
+  "armblzCount",
+  "arm_furieCount",
+  "armjanus1Count",
+  "armpraetCount",
+  "corpyroCount",
+  "armsamCount",
+  "corsumoCount",
+  "krogtaarCount",
+  "armzeus1Count",
+  "heavyimpactCount",
+  "tlllongshotCount",
+  "corkargCount",
+  "clbCount",
+  "taipanCount",
+  "cormonstaCount",
+  "airwolf3gCount",
+  "armcycloneCount",
+  "tremCount",
+  "corsumo1Count",
+  "cordemCount",
+  "armbullCount",
+  "corthudCount",
+  "armcrabeCount",
+  "tllgrimCount",
+  "armtigre2Count",
+  "armrectrCount",
+  "aexxecCount",
+  "armsnipeCount",
+  "corhrkCount",
+  "corkarg1Count",
+  "armfboyCount",
+  "corcrashCount",
+  "gorgCount",
+  "tllprobCount",
+  "corthud1Count",
+  "cormistCount",
+  "cortotalCount",
+  "armsonicCount",
+  "tankanotorCount",
+  "corspecCount",
+  "armhdpwCount",
+  "armmartCount",
+  "armstumpCount",
+  "corawacCount",
+  "tllblindCount",
+  "roostCount",
+  "armshock1Kills",
+  "cormist1Kills",
+  "cormortKills",
+  "armravenKills",
+  "armsam1Kills",
+  "armthundKills",
+  "corcrwKills",
+  "armfleaKills",
+  "marauderKills",
+  "corkrogKills",
+  "corhurcKills",
+  "armflash1Kills",
+  "armmerlKills",
+  "corgalaKills",
+  "hyperionKills",
+  "armlaspdKills",
+  "armorionKills",
+  "armfastKills",
+  "armspidKills",
+  "armcybrKills",
+  "tllcrawlbKills",
+  "armzeusKills",
+  "abroadsideKills",
+  "corragKills",
+  "corprotKills",
+  "corgolKills",
+  "armraven1Kills",
+  "armaakKills",
+  "anvilKills",
+  "tllvaliantKills",
+  "tllshamKills",
+  "armflashKills",
+  "armblzKills",
+  "arm_furieKills",
+  "armjanus1Kills",
+  "armpraetKills",
+  "corpyroKills",
+  "armsamKills",
+  "corsumoKills",
+  "krogtaarKills",
+  "armzeus1Kills",
+  "heavyimpactKills",
+  "tlllongshotKills",
+  "corkargKills",
+  "clbKills",
+  "taipanKills",
+  "cormonstaKills",
+  "airwolf3gKills",
+  "armcycloneKills",
+  "tremKills",
+  "corsumo1Kills",
+  "cordemKills",
+  "armbullKills",
+  "corthudKills",
+  "armcrabeKills",
+  "tllgrimKills",
+  "armtigre2Kills",
+  "armrectrKills",
+  "aexxecKills",
+  "armsnipeKills",
+  "corhrkKills",
+  "corkarg1Kills",
+  "armfboyKills",
+  "corcrashKills",
+  "gorgKills",
+  "tllprobKills",
+  "corthud1Kills",
+  "cormistKills",
+  "cortotalKills",
+  "armsonicKills",
+  "tankanotorKills",
+  "corspecKills",
+  "armhdpwKills",
+  "armmartKills",
+  "armstumpKills",
+  "corawacKills",
+  "tllblindKills",
+  "roostKills",
+}
+
+chickenColors = {
+  {"armshock1",    "\255\255\100\100"},
+  {"cormist1",     "\255\255\100\100"},
+  {"cormort",     "\255\255\150\150"},
+  {"armraven",     "\255\184\075\200"},
+  {"armsam1",     "\255\255\100\100"},
+  {"armthund",      "\255\184\100\255"},
+  {"corcrw",     "\255\184\075\200"},
+  {"armflea",      "\255\184\100\255"},
+  {"marauder",     "\255\184\075\200"},
+  {"corkrog",     "\255\184\075\200"},
+  {"corhurc",     "\255\255\150\150"},
+  {"armflash1",     "\255\255\100\100"},
+  {"armmerl",     "\255\255\150\150"},
+  {"corgala",     "\255\184\075\200"},
+  {"hyperion",     "\255\184\075\200"},
+  {"armlaspd",     "\255\255\150\150"},
+  {"armorion",     "\255\184\075\200"},
+  {"armfast",     "\255\255\150\150"},
+  {"armspid",      "\255\184\100\255"},
+  {"armcybr",     "\255\184\075\200"},
+  {"tllcrawlb",     "\255\255\150\150"},
+  {"armzeus",     "\255\255\150\150"},
+  {"abroadside",     "\255\184\075\200"},
+  {"corrag",     "\255\255\150\150"},
+  {"corprot",     "\255\184\075\200"},
+  {"corgol",     "\255\255\150\150"},
+  {"armraven1",     "\255\255\100\100"},
+  {"armaak",     "\255\255\150\150"},
+  {"anvil",     "\255\184\075\200"},
+  {"tllvaliant",     "\255\184\075\200"},
+  {"tllsham",      "\255\184\100\255"},
+  {"armflash",      "\255\184\100\255"},
+  {"armblz",     "\255\255\100\100"},
+  {"arm_furie",     "\255\184\075\200"},
+  {"armjanus1",     "\255\255\100\100"},
+  {"armpraet",     "\255\184\075\200"},
+  {"corpyro",     "\255\255\150\150"},
+  {"armsam",      "\255\184\100\255"},
+  {"corsumo",     "\255\255\150\150"},
+  {"krogtaar",     "\255\184\075\200"},
+  {"armzeus1",     "\255\255\150\150"},
+  {"heavyimpact",     "\255\184\075\200"},
+  {"tlllongshot",     "\255\184\075\200"},
+  {"corkarg",     "\255\184\075\200"},
+  {"clb",     "\255\255\150\150"},
+  {"taipan",     "\255\255\150\150"},
+  {"cormonsta",     "\255\255\150\150"},
+  {"airwolf3g",     "\255\184\075\200"},
+  {"armcyclone",     "\255\184\075\200"},
+  {"trem",     "\255\184\075\200"},
+  {"corsumo1",     "\255\255\150\150"},
+  {"cordem",     "\255\184\075\200"},
+  {"armbull",     "\255\255\150\150"},
+  {"corthud",      "\255\184\100\255"},
+  {"armcrabe",     "\255\184\075\200"},
+  {"tllgrim",     "\255\184\075\200"},
+  {"armtigre2",     "\255\184\075\200"},
+  {"armrectr",     "\255\255\100\100"},
+  {"aexxec",     "\255\255\100\100"},
+  {"armsnipe",     "\255\255\100\100"},
+  {"corhrk",     "\255\255\100\100"},
+  {"corkarg1",     "\255\184\075\200"},
+  {"armfboy",     "\255\255\150\150"},
+  {"corcrash",     "\255\255\100\100"},
+  {"gorg",     "\255\184\075\200"},
+  {"tllprob",     "\255\255\100\100"},
+  {"corthud1",     "\255\255\100\100"},
+  {"cormist",     "\255\255\100\100"},
+  {"cortotal",     "\255\255\100\100"},
+  {"armsonic",     "\255\255\100\100"},
+  {"tankanotor",     "\255\255\100\100"},
+  {"corspec",     "\255\255\100\100"},
+  {"armhdpw",     "\255\255\150\150"},
+  {"armmart",     "\255\255\150\150"},
+  {"armstump",      "\255\184\100\255"},
+  {"corawac",     "\255\255\100\100"},
+  {"tllblind",     "\255\184\075\200"},
+  {"roost",     "\255\100\100\255"},
+}
+end
 
 local chickenColorSet = {}
 for _, t in ipairs(chickenColors) do
@@ -181,6 +453,7 @@ end
 local function MakeCountString(type, showbreakdown)
   local t = {}
   local total = 0
+  --if (cenabled == 1) then total = 0 else total = -999 end --ugly fix me (chickenend)
   local showbrackets = false
   for _, colorInfo in ipairs(chickenColors) do
     local subTotal = gameInfo[colorInfo[1]..type]
@@ -190,7 +463,12 @@ local function MakeCountString(type, showbreakdown)
       showbrackets = true
     end
   end
-  total = total + gameInfo["chickend"..type]
+  
+  total = total + gameInfo["armrl"..type]
+  total = total + gameInfo["armflak"..type]
+  total = total + gameInfo["arm_big_bertha"..type]
+  total = total + gameInfo["tlldb"..type]
+
   if showbreakdown then
     local breakDown =  table.concat(t, white..",")..white
     if showbrackets then
@@ -298,7 +576,9 @@ local function UpdateRules()
 
   for _, rule in ipairs(rules) do
     gameInfo[rule] = Spring.GetGameRulesParam(rule) or 999
+    --Spring.Echo(rule .. "   "..gameInfo[rule])
   end
+  
   gameInfo.unitCounts = MakeCountString("Count", true)
   gameInfo.unitKills  = MakeCountString("Kills", false)
 
