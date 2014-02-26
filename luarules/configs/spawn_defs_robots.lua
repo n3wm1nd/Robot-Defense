@@ -280,43 +280,43 @@ addWave(9,{"2 anvil",  "2 trem", "2 trem", "1 trem", "4 tllblind"})
 addWave(9,{"1 armcrabe", "4 corspec", "2 tlllongshot"})
 addWave(9,{"1 gorg", "1 gorg", "2 armaak", "3 armaak", "3 armaak", "3 armaak", "3 armaak"})
 addWave(9,{"2 cortotal", "2 clb", "2 trem", "2 trem", "1 trem"})
-if (mRandom(0,1) == 1) then addWave(9,{"5 armsnipe",  "2 trem", "2 trem", "1 trem"}) else addWave(6,{"2 armtigre2", "2 armtigre2", "2 armtigre2", "1 armtigre2",  "2 trem", "2 trem", "1 trem"}) end
+if (mRandom(0,1) == 1) then addWave(9,{"5 armsnipe",  "2 trem", "2 trem", "1 trem"}) else addWave(9,{"2 armtigre2", "2 armtigre2", "2 armtigre2", "1 armtigre2",  "2 trem", "2 trem", "1 trem"}) end
 addWave(9,{"2 armsnipe", "2 armsnipe", "4 tllsham"})
-if (mRandom(0,1) == 1) then addWave(9,{"4 krogtaar"}) else addWave(6,{"1 hyperion"}) end
+if (mRandom(0,1) == 1) then addWave(9,{"4 krogtaar"}) else addWave(9,{"1 hyperion"}) end
 addWave(9,{"1 armpraet"})
 addWave(9,{"4 tlllongshot", "4 tlllongshot", "4 tlllongshot"})
 addWave(9,{"2 tllblind", "4 heavyimpact", "2 tllblind", "4 heavyimpact",})
 
-newWaveSquad[11] = {"2 arm_furie", "6 heavyimpact"}
-addWave(11,{"1 corkrog", "1 arm_furie"})
-if (mRandom(0,1) == 1) then addWave(11,{"2 armtigre2", "2 armtigre2", "2 armtigre2", "1 armtigre2"})  else addWave(11,{"2 tlllongshot", "2 tlllongshot", "2 tlllongshot"}) end
-addWave(11,{"3 cormonsta", "2 armtigre2", "2 armtigre2"})
-addWave(11,{"3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g"})
-addWave(11,{"3 corawac", "3 corawac", "3 corawac", "4 armorion", "3 armcybr", "2 heavyimpact", "3 armcybr", "3 armcybr"})
-addWave(11,{"3 heavyimpact", "1 corkrog"})
-addWave(11,{"1 tllvaliant", "2 armcybr"})
-addWave(11,{"2 armpraet", "1 armcybr"})
-addWave(11,{"1 armpraet", "2 armpraet", "2 armpraet"})
-if (mRandom(0,1) == 1) then addWave(11,{"2 heavyimpact", "1 tllblind", "1 tllblind", "1 tllblind", "1 tllblind"}) else addWave(11,{"1 gorg", "1 gorg", "1 gorg"}) end
-addWave(11,{"2 cortotal", "2 cortotal","2 cortotal"})
-addWave(11,{"1 corprot", "1 corprot", "2 tllblind", "4 heavyimpact"})
-addWave(11,{"1 arm_furie", "1 arm_furie"})
-addWave(11,{"1 corkarg1", "1 arm_furie"})
-addWave(11,{"1 cordem", "1 cordem", "1 cordem"})
-addWave(11,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
+newWaveSquad[10] = {"2 arm_furie", "6 heavyimpact"}
+addWave(10,{"1 corkrog", "1 arm_furie"})
+if (mRandom(0,1) == 1) then addWave(10,{"2 armtigre2", "2 armtigre2", "2 armtigre2", "1 armtigre2"})  else addWave(10,{"2 tlllongshot", "2 tlllongshot", "2 tlllongshot"}) end
+addWave(10,{"3 cormonsta", "2 armtigre2", "2 armtigre2"})
+addWave(10,{"3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g"})
+addWave(10,{"3 corawac", "3 corawac", "3 corawac", "4 armorion", "3 armcybr", "2 heavyimpact", "3 armcybr", "3 armcybr"})
+addWave(10,{"3 heavyimpact", "1 corkrog"})
+addWave(10,{"1 tllvaliant", "2 armcybr"})
+addWave(10,{"2 armpraet", "1 armcybr"})
+addWave(10,{"1 armpraet", "2 armpraet", "2 armpraet"})
+if (mRandom(0,1) == 1) then addWave(10,{"2 heavyimpact", "1 tllblind", "1 tllblind", "1 tllblind", "1 tllblind"}) else addWave(10,{"1 gorg", "1 gorg", "1 gorg"}) end
+addWave(10,{"2 cortotal", "2 cortotal","2 cortotal"})
+addWave(10,{"1 corprot", "1 corprot", "2 tllblind", "4 heavyimpact"})
+addWave(10,{"1 arm_furie", "1 arm_furie"})
+addWave(10,{"1 corkarg1", "1 arm_furie"})
+addWave(10,{"1 cordem", "1 cordem", "1 cordem"})
+addWave(10,{"1 arm_furie", "1 arm_furie", "2 arm_furie"})
 
-newWaveSquad[9] = {"3 corkrog", "6 heavyimpact"}
-addWave(9,{"1 corkrog1", "1 corgala"})
-addWave(9,{"2 corcrw", "2 corcrw", "2 corcrw", "2 corcrw"})
-addWave(9,{"2 corcrw", "2 corcrw", "2 corcrw", "2 corcrw"})
-if (queenName == "fh_chickenqr") then addWave(9,{"1 cdevastator" ,"1 abroadside"}) end
-addWave(9,{"1 tllvaliant", "1 tllvaliant"})
-addWave(9,{"1 arm_furie", "1 arm_furie", "1 arm_furie"})
-if (mRandom(0,1) == 1) then addWave(7,{"6 anvil"}) else addWave(6,{"2 hyperion"}) end
-addWave(9,{"5 corrag", "5 corrag", "4 armorion", "4 armorion","7 armcyclone"})
-addWave(9,{"5 corrag", "5 corrag", "5 corrag"})
-addWave(9,{"3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr"})
-addWave(9,{"3 corcrw", "3 corcrw", "3 corcrw", "3 corcrw"})
+newWaveSquad[11] = {"3 corkrog", "6 heavyimpact"}
+addWave(11,{"1 corkrog1", "1 corgala"})
+addWave(11,{"2 corcrw", "2 corcrw", "2 corcrw", "2 corcrw"})
+addWave(11,{"2 corcrw", "2 corcrw", "2 corcrw", "2 corcrw"})
+if (queenName == "fh_chickenqr") then addWave(11,{"1 cdevastator" ,"1 abroadside"}) end
+addWave(11,{"1 tllvaliant", "1 tllvaliant"})
+addWave(11,{"1 arm_furie", "1 arm_furie", "1 arm_furie"})
+if (mRandom(0,1) == 1) then addWave(7,{"6 anvil"}) else addWave(11,{"2 hyperion"}) end
+addWave(11,{"5 corrag", "5 corrag", "4 armorion", "4 armorion","7 armcyclone"})
+addWave(11,{"5 corrag", "5 corrag", "5 corrag"})
+addWave(11,{"3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr"})
+addWave(11,{"3 corcrw", "3 corcrw", "3 corcrw", "3 corcrw"})
 
 VERYEASY = "Chicken: Very Easy"
 EASY = "Chicken: Easy"
