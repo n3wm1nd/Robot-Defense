@@ -1427,7 +1427,12 @@ function gadget:GameFrame(n)
 		end
 		if (burrowCount >= minBurrows) then timeOfLastSpawn = t end
 			chickenEvent("burrowSpawn")
-			SetGameRulesParam("roostCount", SetCount(burrows))
+			if (cenabled == 1) then
+				SetGameRulesParam("roostCount", SetCount(burrows))
+			else
+				SetGameRulesParam("rroostCount", SetCount(burrows))
+			end
+
 		end
     
 		if (burrowCount > 0) and (chickenSpawnRate < (t - timeOfLastWave)) then
@@ -1587,7 +1592,11 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID)
       end
     end
     
+   if (cenabled == 1) then
     SetGameRulesParam("roostCount", SetCount(burrows))
+   else
+    SetGameRulesParam("rroostCount", SetCount(burrows))
+   end
   end
   
 end

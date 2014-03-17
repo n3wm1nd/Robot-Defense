@@ -397,5 +397,6 @@ tinychicken =
 	"vh_chickenq",
 	"vh_chickenqr",
 	"roost",
+	"rroost",
 	},
 }

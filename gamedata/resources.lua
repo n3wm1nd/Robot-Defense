@@ -201,6 +201,8 @@ local resources = {
 			blooddropwhite='PD/blooddropwhite.tga',
 			bloodblastwhite='PD/bloodblastwhite.tga',
 			
+			--teleport effect
+			lightningball_new='lightningball.png',
 		},
 	},
 }
