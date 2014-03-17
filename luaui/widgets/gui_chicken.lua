@@ -262,7 +262,7 @@ else
   "armstumpCount",
   "corawacCount",
   "tllblindCount",
-  "roostCount",
+  "rroostCount",
   "armshock1Kills",
   "cormist1Kills",
   "cormortKills",
@@ -340,7 +340,7 @@ else
   "armstumpKills",
   "corawacKills",
   "tllblindKills",
-  "roostKills",
+  "rroostKills",
 }
 
 chickenColors = {
@@ -421,7 +421,7 @@ chickenColors = {
   {"armstump",      "\255\184\100\255"},
   {"corawac",     "\255\255\100\100"},
   {"tllblind",     "\255\184\075\200"},
-  {"roost",     "\255\100\100\255"},
+  {"rroost",     "\255\100\100\255"},
 }
 end
 
@@ -521,8 +521,13 @@ local function CreatePanelDisplayList()
   fontHandler.DrawStatic(white..techLevel, PanelRow(1))
   fontHandler.DrawStatic(white..gameInfo.unitCounts, PanelRow(2))
   fontHandler.DrawStatic(white..gameInfo.unitKills, PanelRow(3))
+if (cenabled == 1) then
   fontHandler.DrawStatic(white.."Burrows: "..gameInfo.roostCount, PanelRow(4))
   fontHandler.DrawStatic(white.."Burrow Kills: "..gameInfo.roostKills, PanelRow(5))
+else
+  fontHandler.DrawStatic(white.."Burrows: "..gameInfo.rroostCount, PanelRow(4))
+  fontHandler.DrawStatic(white.."Burrow Kills: "..gameInfo.rroostKills, PanelRow(5))
+end
   local s = white.."Mode: "..difficulties[gameInfo.difficulty]
   if gotScore then
     fontHandler.DrawStatic(white.."Your Score: "..comma_value(scoreCount), 88, h-170)
@@ -597,10 +602,16 @@ end
 
 function ChickenEvent(chickenEventArgs)
   if (chickenEventArgs.type == "wave") then
-    
+  
+  if (cenabled == 1) then
     if (gameInfo.roostCount < 1) then
       return
     end
+  else
+    if (gameInfo.rroostCount < 1) then
+      return
+    end
+  end
     waveMessage    = {}
     waveCount      = waveCount + 1
     waveMessage[1] = "Wave "..waveCount
