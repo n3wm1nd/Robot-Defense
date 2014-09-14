@@ -203,6 +203,7 @@ local resources = {
 			
 			--teleport effect
 			lightningball_new='lightningball.png',
+			puff='Shine_Smokey_256.png',
 		},
 	},
 }
