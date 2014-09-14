@@ -35,6 +35,7 @@ local unitDef = {
 	collisionvolumetype = [[Ell]],
 	commander = true,
 	corpse = [[DEAD]],
+	decoyFor = [[corcom]],
 	defaultmissiontype = [[Standby]],
 	description = [[Commander]],
 	energyMake = 100,
@@ -81,6 +82,11 @@ local unitDef = {
 	unitname = [[corcom1]],
 	upright = true,
 	workerTime = 350,
+	sfxtypes = {
+		explosiongenerators = {
+			[1] = [[custom:com_sea_laser_bubbles]],
+		},
+	},
 	buildoptions = {
 		[1] = [[corsolar]],
 		[2] = [[cortide]],
@@ -151,6 +157,10 @@ local unitDef = {
 		[3] = {
 			def = [[ARM_DISINTEGRATOR]],
 		},
+		[4] = {
+			def = [[CORCOMSEALASER]],
+			badtargetcategory = [[VTOL]],
+		},
 	},
 }
 
@@ -159,6 +169,7 @@ local unitDef = {
 local weaponDefs = {
 	ARM_DISINTEGRATOR = {
 		areaOfEffect = 36,
+		avoidFeature = false,
 		avoidFriendly = false,
 		avoidground = false,
 		beamWeapon = true,
@@ -187,9 +198,9 @@ local weaponDefs = {
 		weaponType = [[DGun]],
 		weaponVelocity = 300,
 		damage = {
+			chicken = 1200,
 			commanders = 450,
 			default = 999999,
-			chicken = 1200,
 		},
 	},
 	ARMCOMLASER = {
@@ -231,6 +242,43 @@ local weaponDefs = {
 			flak_resistant = 112.5,
 			subs = 5,
 			unclassed_air = 196.875,
+		},
+	},
+	CORCOMSEALASER = {
+		areaofeffect = 12,
+		avoidfeature = false,
+		beamtime = 0.3,
+		corethickness = 0.4,
+		craterboost = 0,
+		cratermult = 0,
+		cylindertargeting = 1,
+		edgeeffectiveness = 1,
+		explosiongenerator = "custom:UW_LASER_BURN",
+		firestarter = 35,
+		impactonly = 1,
+		impulseboost = 0.123,
+		impulsefactor = 0.123,
+		laserflaresize = 7,
+		name = "J7NSLaser",
+		noselfdamage = true,
+		range = 260,
+		reloadtime = 1,
+		rgbcolor = "0.2 0.2 0.6",
+		rgbColor2 = "0.2 0.2 0.2",
+		intensity = 0.3,
+		soundstart = "uwlasrfir1",
+		soundtrigger = true,
+		targetmoveerror = 0.05,
+		thickness = 5,
+		tolerance = 10000,
+		turret = true,
+		fireSubmersed=true,
+		waterWeapon=true,
+		weapontype = "BeamLaser",
+		weaponvelocity = 900,
+		damage = {
+			default = 125,
+			subs = 75,
 		},
 	},
 }

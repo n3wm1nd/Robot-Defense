@@ -76,7 +76,6 @@ local unitDef = {
 
 local weaponDefs = {
 	WEAPON = {
-		alwaysVisible = true,
 		avoidFriendly = false,
 		accuracy = 1,
 		areaOfEffect = 100,

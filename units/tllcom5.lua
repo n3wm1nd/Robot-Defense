@@ -86,6 +86,7 @@ local unitDef = {
 	sfxtypes = {
 		explosiongenerators = {
 			[1] = [[custom:tllroaster_muzzle]],
+			[2] = [[custom:com_sea_laser_bubbles]],
 		},
 	},
 	buildoptions = {
@@ -166,6 +167,10 @@ local unitDef = {
 		[3] = {
 			def = [[TLL_DISINTEGRATOR2]],
 		},
+		[4] = {
+			def = [[TLLCOMSEALASER]],
+			badtargetcategory = [[VTOL]],
+		},
 	},
 }
 
@@ -176,13 +181,13 @@ local weaponDefs = {
 		name = [[PersonalShield]],
 		rgbColor = [[1.000 0.000 0.000]],
 		shieldAlpha = 0.35,
-		shieldBadColor = [[1 0.1 0.3]],
+		shieldBadColor = [[1 0.2 0.2]],
 		shieldEnergyUse = 200,
 		shieldForce = 8,
-		shieldGoodColor = [[0.1 1 0.5]],
+		shieldGoodColor = [[0.2 1 0.2]],
 		shieldInterceptType = 1,
 		shieldMaxSpeed = 3500,
-		shieldPower = 700,
+		shieldPower = 900,
 		shieldPowerRegen = 10,
 		shieldPowerRegenEnergy = 226.6,
 		shieldRadius = 100,
@@ -198,6 +203,7 @@ local weaponDefs = {
 	},
 	TLL_DISINTEGRATOR2 = {
 		areaOfEffect = 36,
+		avoidFeature = false,
 		avoidFriendly = false,
 		avoidground = false,
 		beamWeapon = true,
@@ -227,8 +233,8 @@ local weaponDefs = {
 		weaponType = [[DGun]],
 		weaponVelocity = 300,
 		damage = {
-			commanders = 450,
 			chicken = 1200,
+			commanders = 450,
 			default = 999999,
 		},
 	},
@@ -262,6 +268,43 @@ local weaponDefs = {
 		damage = {
 			default = 300,
 			subs = 5,
+		},
+	},
+	TLLCOMSEALASER = {
+		areaofeffect = 12,
+		avoidfeature = false,
+		beamtime = 0.3,
+		corethickness = 0.4,
+		craterboost = 0,
+		cratermult = 0,
+		cylindertargeting = 1,
+		edgeeffectiveness = 1,
+		explosiongenerator = "custom:UW_LASER_BURN",
+		firestarter = 35,
+		impactonly = 1,
+		impulseboost = 0.123,
+		impulsefactor = 0.123,
+		laserflaresize = 7,
+		name = "J7NSLaser",
+		noselfdamage = true,
+		range = 300,
+		reloadtime = 0.9,
+		rgbcolor = "0.2 0.2 0.6",
+		rgbColor2 = "0.2 0.2 0.2",
+		intensity = 0.3,
+		soundstart = "uwlasrfir1",
+		soundtrigger = true,
+		targetmoveerror = 0.05,
+		thickness = 5,
+		tolerance = 10000,
+		turret = true,
+		fireSubmersed=true,
+		waterWeapon=true,
+		weapontype = "BeamLaser",
+		weaponvelocity = 900,
+		damage = {
+			default = 225,
+			subs = 135,
 		},
 	},
 }
