@@ -33,7 +33,6 @@ local SetGameRulesParam    = Spring.SetGameRulesParam
 local GetGameRulesParam    = Spring.GetGameRulesParam
 local GetTeamUnitsCounts   = Spring.GetTeamUnitsCounts
 local GetTeamUnitCount     = Spring.GetTeamUnitCount
-local GetGameSpeed         = Spring.GetGameSpeed
 local GetGameFrame         = Spring.GetGameFrame
 local GetPlayerList        = Spring.GetPlayerList
 local GetPlayerInfo        = Spring.GetPlayerInfo
@@ -1215,8 +1214,8 @@ local function SpawnChickens()
 				end
 				addChickenTarget(unitID, targetCache)
 			end
+			chickenBirths[unitID] = { deathDate = t + (maxAges[defs.unitName] or maxAge), burrowID = defs.burrow }
 			
-			chickenBirths[unitID] = { deathDate = t + (maxAge), burrowID = defs.burrow }
 			chickenCount = chickenCount + 1
 		end
 	end
