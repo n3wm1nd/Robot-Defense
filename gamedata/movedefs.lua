@@ -264,6 +264,12 @@ local moveDatas = {
 		maxwaterdepth=22,
 		maxslope=36,
 		crushstrength=44000,
+	},
+	CHICKENHOVERDODO = {
+		footprintx = 1,
+		footprintz = 1,
+		maxslope = 30,
+		maxwaterslope = 255,
 	}
 }
 

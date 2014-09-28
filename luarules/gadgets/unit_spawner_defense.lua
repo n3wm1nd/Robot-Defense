@@ -379,15 +379,33 @@ local SKIRMISH = {
   [UnitDefNames["chickens2"].id] = { distance = 620, chance = 0.5 },
   [UnitDefNames["chickenf2"].id] = { distance = 2000, chance = 0.5 },
   [UnitDefNames["chickenw1b"].id] = { distance = 900, chance = 0.33 },
---  [UnitDefNames["chickens3"].id] = { distance = 440, chance = 0.1 },
---  [UnitDefNames["chickenh5"].id] = { distance = 300, chance = 0.5 }
+  
+  --Robots
+  [UnitDefNames["corthud"].id] = { distance = 300, chance = 0.8},
+  [UnitDefNames["corcrash"].id] = { distance = 800, chance = 0.8 },
+  [UnitDefNames["armsam"].id] = { distance = 440, chance = 0.9 },
+  [UnitDefNames["cormist"].id] = { distance = 440, chance = 0.6 },
+  
+  [UnitDefNames["armjanus1"].id] = { distance = 400, chance = 0.8 },
+  [UnitDefNames["corhrk"].id] = { distance = 1200, chance = 0.7 },
+  [UnitDefNames["tankanotor"].id] = { distance = 900, chance = 0.6 },
+  [UnitDefNames["armraven1"].id] = { distance = 800, chance = 0.8 },
 }
 local COWARD = { 
   [UnitDefNames["chickenh1"].id] = { distance = 300, chance = 0.5 },
   [UnitDefNames["chickenh1b"].id] = { distance = 15, chance = 0.1 },
   [UnitDefNames["chickenr1"].id] = { distance = 300, chance = 0.33 },
   [UnitDefNames["chickenw1c"].id] = { distance = 900, chance = 0.33 },
---  [UnitDefNames["chickenh5"].id] = { distance = 600, chance = 0.5 }
+  --Robots
+  [UnitDefNames["cortotal"].id] = { distance = 1300, chance = 0.7 },
+  [UnitDefNames["heavyimpact"].id] = { distance = 1200, chance = 0.8 },
+  [UnitDefNames["tlllongshot"].id] = { distance = 5000, chance = 0.8 },
+  [UnitDefNames["armraven"].id] = { distance = 1200, chance = 0.7 },
+  [UnitDefNames["armsnipe"].id] = { distance = 800, chance = 0.6 },
+  [UnitDefNames["clb"].id] = { distance = 3000, chance = 0.9 },
+  --Robots
+--  [UnitDefNames["chickens3"].id] = { distance = 440, chance = 0.1 },
+
 }
 local EGG_DROPPER = {
 --  [UnitDefNames["chicken1"].id] = "chicken_egg",

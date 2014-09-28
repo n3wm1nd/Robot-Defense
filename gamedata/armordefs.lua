@@ -1,4 +1,4 @@
-return {
+             return {
 --### AIR ###
 fighters = {
            "airwolf3g",
@@ -37,7 +37,9 @@ bombers = {
            "corsbomb",
            "armorion",
 	   "chickenf1",
+	   "chickenf1b",
 	   "chickenf2",
+	   "chickens3",       
 },
 flak_resistant = {
            "apache",
@@ -52,6 +54,7 @@ flak_resistant = {
 	   "chickenw1b",
 	   "chickenw1c",
 	   "chickenw1d",
+	   "chickenw2",
 },
 unclassed_air = {
 -- Builders 

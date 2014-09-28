@@ -463,12 +463,16 @@ local function MakeCountString(type, showbreakdown)
       showbrackets = true
     end
   end
-  
-  total = total + gameInfo["armrl"..type]
-  total = total + gameInfo["armflak"..type]
-  total = total + gameInfo["arm_big_bertha"..type]
-  total = total + gameInfo["tlldb"..type]
+    if (cenabled == 1) then
+      total = total + gameInfo["chickend"..type]
+    else
+      total = total + gameInfo["armrl"..type]
+      total = total + gameInfo["armflak"..type]
+      total = total + gameInfo["arm_big_bertha"..type]
+      total = total + gameInfo["tlldb"..type]
+    end
 
+  
   if showbreakdown then
     local breakDown =  table.concat(t, white..",")..white
     if showbrackets then
