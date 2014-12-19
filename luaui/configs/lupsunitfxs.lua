@@ -325,59 +325,56 @@ effectUnitDefs = {
 }
 
  --// COMMANDER XMAS HATS //--------------------------
-
-local t = os.date('*t')
-if (t.yday>350) then --(t.month==12)
-  UnitEffects[UnitDefNames["armcom"].id] = {
+ effectUnitDefsXmas = {
+ armcom = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,4,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=8, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["armcom1"].id] = {
+  },
+ armcom1 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,4,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=8, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["armcom4"].id] = {
+  },
+ armcom4 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,4,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=8, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["armcom5"].id] = {
+  },
+ armcom5 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,4,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=8, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["armcom6"].id] = {
+  },
+ armcom6 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,4,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=8, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["armcom7"].id] = {
+  },
+ armcom7 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,4,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=8, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["corcom"].id] = {
+  },
+ corcom = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,0,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=16, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["corcom1"].id] = {
+  },
+ corcom1 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,0,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=16, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["corcom3"].id] = {
+  },
+ corcom3 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,0,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=16, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["corcom5"].id] = {
+  },
+ corcom5 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,0,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=16, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["corcom6"].id] = {
+  },
+ corcom6 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,0,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=16, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["corcom7"].id] = {
+  },
+ corcom7 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,0,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=16, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["tllcom"].id] = {
+  },
+ tllcom = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,8.8,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=11, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["tllcom3"].id] = {
+  },
+ tllcom3 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,8.8,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=11, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["tllcom5"].id] = {
+  },
+ tllcom5 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,8.8,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=11, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["tllcom6"].id] = {
+  },
+ tllcom6 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,8.8,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=11, piece="head"}},
-  }
-  UnitEffects[UnitDefNames["tllcom7"].id] = {
+  },
+ tllcom7 = {
     {class='SantaHat',options={color={1,0.1,0,1}, pos={0,8.8,0.35}, emitVector={0.3,1,0.2}, width=2.7, height=6, ballSize=0.7, piecenum=11, piece="head"}},
-  }
-
-end
+  },
+}
