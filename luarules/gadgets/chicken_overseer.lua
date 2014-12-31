@@ -25,6 +25,15 @@ local RAGE_BLOB = WeaponDefNames['chickenh5_controlblob'].id
 local controlled = {}
 local controllers = {}
 
+local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
+
+function gadget:Initialize()
+  if (cenabled == 0) then
+    gadgetHandler:RemoveGadget(self)
+    return
+  end
+end
+
 function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponID, projectileID, attackerID, attackerDefID, attackerTeam)
   if (weaponID == RAGE_BLOB) and (attackerID) and (not controllers[attackerID]) and (attackerTeam) and (unitTeam) and (not Spring.AreTeamsAllied(attackerTeam,unitTeam)) then
 	controllers[attackerID] = Spring.GetGameFrame() + 210

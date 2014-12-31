@@ -29,6 +29,15 @@ local BOSS_WHITE2 = UnitDefNames["chickenh3"].id
 local SMALLUNIT = UnitDefNames["cormaw"].id
 local progList = {}
 
+local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
+
+function gadget:Initialize()
+  if (cenabled == 0) then
+    gadgetHandler:RemoveGadget(self)
+    return
+  end
+end
+
 local function getChickenSpawnLoc(unitID)
   local x, z
   local bx, by, bz    = GetUnitPosition(unitID)
