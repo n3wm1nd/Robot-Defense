@@ -84,7 +84,6 @@ local chickenTypes = {
   armthund      =  true,
   armblz        =  true,
   tllprob       =  true,
-  corawac       =  true,
   corhurc       =  true,
   armjanus1     =  true,
   corgol        =  true,
@@ -149,11 +148,13 @@ local chickenTypes = {
   abroadside    =  true, --piece count 25
   tlllongshot   =  true, --piece count 5
   tllcrawlb     =  true,
+  airwolf3g     =  true,
   
   --added only for insane king spawn
-  --abroadside    =  true, 
-  --cdevastator   =  true, 
-
+  abroadside    =  true, 
+  cdevastator   =  true, 
+  monkeylord    =  true,
+  irritator     =  true,
 }
 
 local defenders = { 
@@ -273,7 +274,7 @@ addWave(8,{"2 armaak", "3 armaak", "3 armaak", "3 armaak", "3 armaak", "20 corpy
 addWave(8,{"5 tankanotor", "10 armhdpw", "4 tllblind"})
 
 newWaveSquad[9] = {"2 anvil", "6 heavyimpact"}
-addWave(9,{"3 corawac", "3 corawac", "3 corawac", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "6 corhurc", "6 corhurc", "6 corhurc"})
+addWave(9,{"3 corcrw", "3 corcrw", "3 corcrw", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "6 corhurc", "6 corhurc", "6 corhurc"})
 addWave(9,{"3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr", "3 armcybr"})
 addWave(9,{"1 armcrabe", "2 tlllongshot"})
 addWave(9,{"2 anvil",  "2 trem", "2 trem", "1 trem", "4 tllblind"})
@@ -292,7 +293,7 @@ addWave(10,{"1 corkrog", "1 arm_furie"})
 if (mRandom(0,1) == 1) then addWave(10,{"2 armtigre2", "2 armtigre2", "2 armtigre2", "1 armtigre2"})  else addWave(10,{"2 tlllongshot", "2 tlllongshot", "2 tlllongshot"}) end
 addWave(10,{"3 cormonsta", "2 armtigre2", "2 armtigre2"})
 addWave(10,{"3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g", "3 airwolf3g"})
-addWave(10,{"3 corawac", "3 corawac", "3 corawac", "4 armorion", "3 armcybr", "2 heavyimpact", "3 armcybr", "3 armcybr"})
+addWave(10,{"3 corcrw", "3 corcrw", "3 corcrw", "4 armorion", "3 armcybr", "2 heavyimpact", "3 armcybr", "3 armcybr"})
 addWave(10,{"3 heavyimpact", "1 corkrog"})
 addWave(10,{"1 tllvaliant", "2 armcybr"})
 addWave(10,{"2 armpraet", "1 armcybr"})
@@ -337,7 +338,7 @@ difficulties = {
     lobberEMPTime     = 0,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 5,
+    chickensPerPlayer = 3,
     spawnChance       = 0.25,
     damageMod         = 0.6,
   },
@@ -350,7 +351,7 @@ difficulties = {
     lobberEMPTime     = 2.5,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 7,
+    chickensPerPlayer = 5,
     spawnChance       = 0.33,
     damageMod         = 0.75,
   },
@@ -364,7 +365,7 @@ difficulties = {
     lobberEMPTime     = 4,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 9,
+    chickensPerPlayer = 7,
     spawnChance       = 0.4,
     damageMod         = 1,
   },
@@ -378,7 +379,7 @@ difficulties = {
     lobberEMPTime     = 5,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 14,
+    chickensPerPlayer = 12,
     spawnChance       = 0.5,
     damageMod         = 1.1,
   },
@@ -407,7 +408,7 @@ difficulties = {
     lobberEMPTime     = 11,
     chickenTypes      = Copy(chickenTypes),
     defenders         = Copy(defenders),
-    chickensPerPlayer = 24,
+    chickensPerPlayer = 26,
     spawnChance       = 0.8,
     damageMod         = 1.5,
   },

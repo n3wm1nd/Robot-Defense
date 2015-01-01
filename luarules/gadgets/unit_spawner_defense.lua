@@ -291,7 +291,7 @@ local unitCounts = {}
 
 local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
-   --Spring.Echo("unitname :=".. unitName )
+  Spring.Echo("unitname := ".. unitName )
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
    if (cenabled == 1) then 
          unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
@@ -809,6 +809,12 @@ local function Wave()
     COWARD[UnitDefNames["chickenc1"].id] = { distance = 700, chance = 0.1 }
   end
   
+  if (queenAnger >= 100) then
+    currentWave =  #waves
+  end
+  
+  Spring.Echo(currentWave,#waves)
+
   local cCount = 0
   
   if queenID then -- spawn units from queen
@@ -1300,21 +1306,57 @@ local function updateSpawnQueen()
 			table.insert(spawnQueue, {burrow = queenID, unitName = "chickenr3", team = chickenTeamID})
 			table.insert(spawnQueue, {burrow = queenID, unitName = "chickenr3", team = chickenTeamID})
 		end
-		for i = 1,150,1 do
-			if (mRandom() < spawnChance) then
+		
+		if (queenName == "fh_chickenq") then 
+			table.insert(spawnQueue, {burrow = queenID, unitName = "irritator", team = chickenTeamID})
+			table.insert(spawnQueue, {burrow = queenID, unitName = "irritator", team = chickenTeamID})
+			table.insert(spawnQueue, {burrow = queenID, unitName = "irritator", team = chickenTeamID})
+		end
+		
+		if (modes[highestLevel] == INSANE) and (cenabled == 0) then
+			table.insert(spawnQueue, {burrow = queenID, unitName = "abroadside", team = chickenTeamID})
+			table.insert(spawnQueue, {burrow = queenID, unitName = "cdevastator", team = chickenTeamID})
+			table.insert(spawnQueue, {burrow = queenID, unitName = "tllvaliant", team = chickenTeamID})
+			table.insert(spawnQueue, {burrow = queenID, unitName = "tllvaliant", team = chickenTeamID})
+		end
+		
+		if (cenabled == 1) then
+			for i = 1,150,1 do
 				table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
 			end
 		end
+		
+		if (cenabled == 0) then
+			for i = 1,100,1 do
+				table.insert(spawnQueue, {burrow = queenID, unitName = "airwolf3g", team = chickenTeamID})
+			end
+		end
+		
+		if (cenabled == 0) then
+			for i = 1,30,1 do
+				table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID})
+			end
+		end
+		
 		for i = 1,10,1 do
 			if (mRandom() < spawnChance) then
-				table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1", team = chickenTeamID})
-				table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1b", team = chickenTeamID})
+				if (cenabled == 1) then
+					table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1", team = chickenTeamID})
+					table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1b", team = chickenTeamID})
+				else
+					table.insert(spawnQueue, {burrow = queenID, unitName = "corcrw", team = chickenTeamID})
+					table.insert(spawnQueue, {burrow = queenID, unitName = "gorg", team = chickenTeamID})
+				end
 			end
 		end
 	else
 		if (mRandom() < (spawnChance/7.5)) then
 			for i = 1,mRandom(1,3),1 do
-				table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
+				if (cenabled == 1) then
+					table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
+				else
+					table.insert(spawnQueue, {burrow = queenID, unitName = "corcrw", team = chickenTeamID})
+				end
 			end
 		end
 	end
