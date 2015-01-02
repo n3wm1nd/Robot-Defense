@@ -813,7 +813,7 @@ local function Wave()
     currentWave =  #waves
   end
   
-  Spring.Echo(currentWave,#waves)
+  --Spring.Echo(currentWave,#waves)
 
   local cCount = 0
   

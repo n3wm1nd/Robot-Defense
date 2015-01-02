@@ -342,7 +342,7 @@ difficulties = {
     spawnChance       = 0.6,
     damageMod         = 1.25,
   },
-  [EPIC] = {
+  [INSANE] = {
     chickenSpawnRate  = 120,
     burrowSpawnRate   = 30,
     queenSpawnMult    = 3,
