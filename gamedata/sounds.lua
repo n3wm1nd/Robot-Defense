@@ -1,8 +1,9 @@
 local Sounds = {
    SoundItems = {
-      IncomingChat = {
-		file = "sounds/beep4.wav",
-		in3d = "false",
+     IncomingChat = {
+ 	--- always play on the front speaker(s)
+ 		file = "sounds/beep4.wav",
+ 		in3d = "false",
       },
       MultiSelect = {
 		file = "sounds/button9.wav",
@@ -19,10 +20,15 @@ local Sounds = {
       warning2 = {
 		file = "sounds/warning2.wav",
 		rolloff = 0.2,
-		dopperscale = 0,      
+		dopplerscale = 0,      
       },
-      lasrfir1 = {
+    lasrfir1 = {
 	   file = "sounds/lasrfir1.wav",
+	   pitch = 1,
+	   pitchmod = 0.05,
+	  },
+	  uwlasrfir1 = {
+	   file = "sounds/uwlasfir1.wav",
 	   pitch = 1,
 	   pitchmod = 0.05,
 	  },
@@ -122,7 +128,7 @@ local Sounds = {
 	   pitchmod = 0.02,
 	   maxconcurrent = 5,	   
 	  },
-      kroggie2 = {
+     kroggie2 = {
        file = "sounds/kroggie2.wav",
        maxconcurrent = 1,	  
       },
