@@ -82,8 +82,19 @@ local unitDef = {
       [[custom:dirt]],
     },
   },
-  weapondefs = {
-    chickenf1b_weapon = {
+  weapondefs = nil,
+  weapons = {
+    [1]  = {
+      def                = [[weapon]],
+    },
+  },
+}
+
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
+    weapon = {
       accuracy           = 1000,
       areaofeffect       = 150,
       avoidfeature       = [[false]],
@@ -113,60 +124,11 @@ local unitDef = {
       sprayangle         = 2000,
       weapontype         = [[AircraftBomb]],
       damage = {
-        antibomber         = 125,
         chicken            = 75,
         default            = 250,
         tinychicken        = 75,
       },
     },
-  },
-  weapons = {
-    [1]  = {
-      def                = [[chickenf1b_chickenf1b_weapon]],
-    },
-  },
-}
-
-
---------------------------------------------------------------------------------
-
-local weaponDefs = {
-  chickenf1b_chickenf1b_weapon = {
-    accuracy           = 1000,
-    areaOfEffect       = 150,
-    avoidFeature       = false,
-    avoidFriendly      = false,
-    burst              = 11,
-    burstrate          = 0.40999999642372,
-    collideFriendly    = false,
-    craterareaofeffect = 0,
-    craterBoost        = 0,
-    craterMult         = 0,
-    dropped            = false,
-    edgeEffectiveness  = 0.10000000149012,
-    explosionGenerator = [[custom:gundam_MISSILE_EXPLOSION]],
-    impulseBoost       = 1,
-    impulseFactor      = 1,
-    interceptedByShieldType = 0,
-    manualBombSettings = false,
-    model              = [[chickeneggyellow.s3o]],
-    name               = [[GooBombs]],
-    noSelfDamage       = false,
-    range              = 700,
-    reloadtime         = 9,
-    renderType         = 6,
-    soundHit           = [[junohit2edit]],
-    soundhitwet        = [[splslrg]],
-    soundhitwetvolume  = 0.60000002384186,
-    sprayAngle         = 2000,
-    weaponType         = [[AircraftBomb]],
-    damage = {
-      antibomber         = 125,
-      chicken            = 75,
-      default            = 250,
-      tinychicken        = 75,
-    },
-  },
 }
 unitDef.weaponDefs = weaponDefs
 
@@ -174,14 +136,12 @@ unitDef.weaponDefs = weaponDefs
 --------------------------------------------------------------------------------
 
 local featureDefs = {
-  dead = {
-    damage             = 1701.8547363281,
-    description        = [[Talon Wreckage]],
-    metal              = 159,
-  },
+  	DEAD = {
+	},
+	HEAP = {
+	},
 }
 unitDef.featureDefs = featureDefs
-
 
 --------------------------------------------------------------------------------
 

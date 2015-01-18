@@ -18,7 +18,7 @@ local unitDef = {
   canMove            = false,
   canPatrol          = false,
   canstop            = 1,
-  category           = [[MOBILE WEAPON NOTAIR NOTSUB NOTSHIP ALL NOTHOVER SURFACE]],
+  category           = [[MOBILE WEAPON NOTHOVERNOTVTOL NOTVTOL NOTSUB NOTSHIP ALL]],
   collisionvolumeoffsets = [[0 -3 -3]],
   collisionvolumescales = [[18 28 40]],
   collisionvolumetest = 1,
@@ -83,7 +83,21 @@ local unitDef = {
       [[custom:dirt]],
     },
   },
-  weapondefs = {
+  weapondefs = nil,
+  
+  weapons = {
+    [1]  = {
+      def                = [[weapon]],
+      mainDir            = [[0 0 1]],
+      maxAngleDif        = 110,
+    },
+  },
+}
+
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
     weapon = {
       accuracy           = 512,
       areaofeffect       = 120,
@@ -123,59 +137,6 @@ local unitDef = {
         tinychicken        = 10,
       },
     },
-  },
-  weapons = {
-    [1]  = {
-      def                = [[weapon]],
-      mainDir            = [[0 0 1]],
-      maxAngleDif        = 110,
-    },
-  },
-}
-
-
---------------------------------------------------------------------------------
-
-local weaponDefs = {
-  chickenc3_chickenc3_weapon = {
-    accuracy           = 512,
-    areaOfEffect       = 120,
-    avoidFeature       = false,
-    cameraShake        = 0,
-    craterareaofeffect = 0,
-    craterBoost        = 0,
-    craterMult         = 0,
-    edgeEffectiveness  = 0.25,
-    endsmoke           = 0,
-    explosionGenerator = [[custom:blood_explode_blue]],
-    impulseBoost       = 0.21999999880791,
-    impulseFactor      = 0.21999999880791,
-    intensity          = 0.69999998807907,
-    interceptedByShieldType = 1,
-    lineOfSight        = false,
-    name               = [[Blob]],
-    noSelfDamage       = false,
-    range              = 225,
-    reloadtime         = 3.5,
-    renderType         = 4,
-    rgbColor           = [[0.15 0.6 0.6]],
-    size               = 8,
-    sizeDecay          = -0.30000001192093,
-    soundHit           = [[junohit2edit]],
-    soundhitwet        = [[sizzle]],
-    soundhitwetvolume  = 0.5,
-    startsmoke         = 0,
-    targetMoveError    = 0.40000000596046,
-    tolerance          = 5000,
-    turret             = false,
-    weaponTimer        = 0.5,
-    weaponVelocity     = 200,
-    damage = {
-      chicken            = 10,
-      default            = 300,
-      tinychicken        = 10,
-    },
-  },
 }
 unitDef.weaponDefs = weaponDefs
 
@@ -183,11 +144,10 @@ unitDef.weaponDefs = weaponDefs
 --------------------------------------------------------------------------------
 
 local featureDefs = {
-  dead = {
-    damage             = 1105.3870849609,
-    description        = [[Weevil Wreckage]],
-    metal              = 74.25,
-  },
+	DEAD = {
+	},
+	HEAP = {
+	},
 }
 unitDef.featureDefs = featureDefs
 

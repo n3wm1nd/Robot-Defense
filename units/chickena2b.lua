@@ -85,7 +85,27 @@ local unitDef = {
       [[custom:blob_fire]],
     },
   },
-  weapondefs = {
+  weapondefs = nil,
+  weapons = {
+    [1]  = {
+      badTargetCategory  = [[VTOL]],
+      def                = [[weapon]],
+      mainDir            = [[0 0 1]],
+      maxAngleDif        = 125,
+      onlyTargetCategory = [[NOTVTOL]],
+    },
+    [2]  = {
+      badTargetCategory  = [[NOTVTOL]],
+      def                = [[aaweapon]],
+      onlyTargetCategory = [[VTOL]],
+    },
+  },
+}
+
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
     aaweapon = {
       areaofeffect       = 200,
       avoidfeature       = [[false]],
@@ -173,114 +193,6 @@ local unitDef = {
         tinychicken        = 0.0010000000474975,
       },
     },
-  },
-  weapons = {
-    [1]  = {
-      badTargetCategory  = [[VTOL]],
-      def                = [[weapon]],
-      mainDir            = [[0 0 1]],
-      maxAngleDif        = 125,
-      onlyTargetCategory = [[NOTVTOL]],
-    },
-    [2]  = {
-      badTargetCategory  = [[NOTAIR]],
-      def                = [[aaweapon]],
-      onlyTargetCategory = [[VTOL]],
-    },
-  },
-}
-
-
---------------------------------------------------------------------------------
-
-local weaponDefs = {
-  chickena2b_chickena2b_aaweapon = {
-    areaOfEffect       = 200,
-    avoidFeature       = false,
-    avoidFriendly      = false,
-    collideFriendly    = false,
-    craterareaofeffect = 200,
-    craterBoost        = 0,
-    craterMult         = 0,
-    dance              = 20,
-    edgeEffectiveness  = 0.050000000745058,
-    explosionGenerator = [[custom:blood_explode_blue]],
-    fireStarter        = 0,
-    flightTime         = 2.5,
-    guidance           = false,
-    heightMod          = 0.5,
-    impulseBoost       = 0,
-    impulseFactor      = 0.40000000596046,
-    interceptedByShieldType = 2,
-    lineOfSight        = false,
-    metalpershot       = 0,
-    model              = [[AgamAutoBurst.s3o]],
-    name               = [[BlobMissile]],
-    noSelfDamage       = false,
-    proximityPriority  = -4,
-    range              = 900,
-    reloadtime         = 8,
-    renderType         = 1,
-    selfprop           = false,
-    smokedelay         = 0.10000000149012,
-    smokeTrail         = false,
-    soundHit           = [[junohit2edit]],
-    soundhitwet        = [[splslrg]],
-    soundhitwetvolume  = 0.60000002384186,
-    startsmoke         = 1,
-    startVelocity      = 200,
-    texture1           = [[]],
-    texture2           = [[sporetrail]],
-    toAirWeapon        = false,
-    tolerance          = 10000,
-    tracks             = false,
-    trajectoryHeight   = 2,
-    turnRate           = 24000,
-    turret             = false,
-    weaponAcceleration = 75,
-    weaponType         = [[MissileLauncher]],
-    weaponVelocity     = 700,
-    wobble             = 32000,
-    damage = {
-      bombers            = 1100,
-      default            = 400,
-      fighters           = 1500,
-      vtol               = 1300,
-    },
-  },
-  chickena2b_chickena2b_weapon = {
-    areaOfEffect       = 42,
-    avoidFeature       = false,
-    avoidFriendly      = false,
-    craterareaofeffect = 0,
-    craterBoost        = 0,
-    craterMult         = 0,
-    endsmoke           = 0,
-    explosionGenerator = [[custom:NONE]],
-    impulseBoost       = 1,
-    impulseFactor      = 2.2000000476837,
-    interceptedByShieldType = 0,
-    name               = [[Claws]],
-    noSelfDamage       = false,
-    range              = 165,
-    reloadtime         = 0.80000001192093,
-    size               = 0,
-    soundhitwet        = [[splshbig]],
-    soundhitwetvolume  = 0.60000002384186,
-    soundStart         = [[smallchickenattack]],
-    startsmoke         = 0,
-    targetBorder       = 1,
-    tolerance          = 5000,
-    turret             = false,
-    waterWeapon        = false,
-    weaponType         = [[Cannon]],
-    weaponVelocity     = 700,
-    damage = {
-      chicken            = 0.0010000000474975,
-      default            = 300,
-      tinychicken        = 0.0010000000474975,
-    },
-  },
 }
 unitDef.weaponDefs = weaponDefs
 
@@ -288,11 +200,10 @@ unitDef.weaponDefs = weaponDefs
 --------------------------------------------------------------------------------
 
 local featureDefs = {
-  dead = {
-    damage             = 18669.427734375,
-    description        = [[Alpha Cockatrice Wreckage]],
-    metal              = 226.5,
-  },
+	DEAD = {
+	},
+	HEAP = {
+	},
 }
 unitDef.featureDefs = featureDefs
 

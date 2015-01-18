@@ -48,7 +48,7 @@ local unitDef = {
   moverate1          = 32,
   name               = [[Crow]],
   noAutoFire         = false,
-  noChaseCategory    = [[NOTAIR]],
+  noChaseCategory    = [[NOTVTOL]],
   objectName         = [[chicken_crow.s3o]],
   seismicSignature   = 0,
   selfDestructAs     = [[TALON_DEATH]],
@@ -82,8 +82,23 @@ local unitDef = {
       [[custom:dirt]],
     },
   },
-  weapondefs = {
-    chickenw2_weapon = {
+  weapondefs = nil,
+  weapons = {
+    [1]  = {
+      badTargetCategory  = [[NOTVTOL]],
+      def                = [[weapon]],
+      mainDir            = [[0 0 1]],
+      maxAngleDif        = 90,
+      onlyTargetCategory = [[VTOL]],
+    },
+  },
+}
+
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
+   weapon = {
       areaofeffect       = 32,
       avoidfriendly      = [[false]],
       burnblow           = [[false]],
@@ -123,62 +138,6 @@ local unitDef = {
         vtol               = 600,
       },
     },
-  },
-  weapons = {
-    [1]  = {
-      badTargetCategory  = [[NOTAIR]],
-      def                = [[chickenw2_chickenw2_weapon]],
-      mainDir            = [[0 0 1]],
-      maxAngleDif        = 90,
-      onlyTargetCategory = [[VTOL]],
-    },
-  },
-}
-
-
---------------------------------------------------------------------------------
-
-local weaponDefs = {
-  chickenw2_chickenw2_weapon = {
-    areaOfEffect       = 32,
-    avoidFriendly      = false,
-    burnblow           = false,
-    collideFriendly    = false,
-    craterareaofeffect = 0,
-    craterBoost        = 0,
-    craterMult         = 0,
-    edgeffectiveness   = 0,
-    explosionGenerator = [[custom:dirt]],
-    impulseBoost       = 1,
-    impulseFactor      = 1,
-    interceptedByShieldType = 0,
-    lineOfSight        = false,
-    model              = [[spike.s3o]],
-    name               = [[Spike]],
-    noSelfDamage       = false,
-    predictBoost       = 1,
-    propeller          = 1,
-    range              = 600,
-    reloadtime         = 1.6000000238419,
-    renderType         = 1,
-    smokeTrail         = false,
-    soundhitwet        = [[sizzle]],
-    soundhitwetvolume  = 0.5,
-    soundStart         = [[talonattack]],
-    startVelocity      = 600,
-    texture1           = [[]],
-    texture2           = [[sporetrail]],
-    turret             = false,
-    weaponAcceleration = 250,
-    weaponTimer        = 1,
-    weaponVelocity     = 1000,
-    damage = {
-      bombers            = 450,
-      default            = 200,
-      fighters           = 700,
-      vtol               = 600,
-    },
-  },
 }
 unitDef.weaponDefs = weaponDefs
 

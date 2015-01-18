@@ -22,7 +22,7 @@ local unitDef = {
   canReclaim         = false,
   canRestore         = false,
   canstop            = 1,
-  category           = [[MOBILE WEAPON NOTAIR NOTSUB NOTSHIP ALL NOTHOVER SURFACE]],
+  category           = [[MOBILE WEAPON NOTHOVERNOTVTOL NOTVTOL NOTSUB NOTSHIP ALL]],
   collisionvolumeoffsets = [[0 10 2]],
   collisionvolumescales = [[37 55 90]],
   collisionvolumetest = 1,
@@ -94,8 +94,28 @@ local unitDef = {
       [[custom:BRAIN_SPHERE_EMIT]],
     },
   },
-  weapondefs = {
-    controlblob = {
+  weapondefs = nil,
+  weapons = {
+    [1]  = {
+      def                = [[weapon]],
+      mainDir            = [[0 0 1]],
+      maxAngleDif        = 120,
+      onlyTargetCategory = [[NOTVTOL]],
+    },
+    [2]  = {
+      def                = [[controlblob]],
+      mainDir            = [[0 0 1]],
+      maxAngleDif        = 120,
+      onlyTargetCategory = [[NOTVTOL]],
+    },
+  },
+}
+
+
+--------------------------------------------------------------------------------
+
+local weaponDefs = {
+   controlblob = {
       areaofeffect       = 80,
       avoidfeature       = [[false]],
       avoidfriendly      = [[false]],
@@ -171,103 +191,6 @@ local unitDef = {
         default            = 900,
       },
     },
-  },
-  weapons = {
-    [1]  = {
-      def                = [[weapon]],
-      mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
-      onlyTargetCategory = [[NOTAIR]],
-    },
-    [2]  = {
-      def                = [[controlblob]],
-      mainDir            = [[0 0 1]],
-      maxAngleDif        = 120,
-      onlyTargetCategory = [[NOTAIR]],
-    },
-  },
-}
-
-
---------------------------------------------------------------------------------
-
-local weaponDefs = {
-  controlblob = {
-    areaOfEffect       = 80,
-    avoidFeature       = false,
-    avoidFriendly      = false,
-    cameraShake        = 0,
-    cegTag             = [[blood_trail]],
-    collideFriendly    = false,
-    craterareaofeffect = 0,
-    craterBoost        = 0,
-    craterMult         = 0,
-    edgeEffectiveness  = 0.25,
-    endsmoke           = 0,
-    explosionGenerator = [[custom:control_explode]],
-    impulseBoost       = 0,
-    impulseFactor      = 0,
-    intensity          = 0.69999998807907,
-    interceptedByShieldType = 0,
-    lineOfSight        = false,
-    name               = [[ControlBlob]],
-    noSelfDamage       = false,
-    predictBoost       = 1,
-    proximityPriority  = -2,
-    range              = 590,
-    reloadtime         = 9.5,
-    renderType         = 4,
-    rgbColor           = [[0.7 0.15 0.15]],
-    size               = 18,
-    sizeDecay          = -0.30000001192093,
-    soundHit           = [[junohit2edit]],
-    soundhitwet        = [[sizzle]],
-    soundhitwetvolume  = 0.5,
-    startsmoke         = 0,
-    tolerance          = 5000,
-    turret             = false,
-    weaponTimer        = 3,
-    weaponVelocity     = 420,
-    damage = {
-      chicken            = 10,
-      default            = 225,
-      tinychicken        = 10,
-    },
-  },
-  weapon = {
-    areaOfEffect       = 72,
-    avoidFeature       = false,
-    avoidFriendly      = false,
-    craterareaofeffect = 0,
-    craterBoost        = 0,
-    craterMult         = 0,
-    endsmoke           = 0,
-    explosionGenerator = [[custom:NONE]],
-    impulseBoost       = 2.2000000476837,
-    impulseFactor      = 1,
-    interceptedByShieldType = 0,
-    lineOfSight        = false,
-    name               = [[Claws]],
-    noSelfDamage       = false,
-    range              = 165,
-    reloadtime         = 4,
-    size               = 0,
-    soundhitwet        = [[splssml]],
-    soundhitwetvolume  = 0.60000002384186,
-    soundStart         = [[smallchickenattack]],
-    startsmoke         = 0,
-    targetBorder       = 1,
-    tolerance          = 5000,
-    turret             = false,
-    waterWeapon        = false,
-    weaponTimer        = 0.10000000149012,
-    weaponType         = [[Cannon]],
-    weaponVelocity     = 500,
-    damage = {
-      chicken            = 200,
-      default            = 900,
-    },
-  },
 }
 unitDef.weaponDefs = weaponDefs
 
@@ -275,11 +198,10 @@ unitDef.weaponDefs = weaponDefs
 --------------------------------------------------------------------------------
 
 local featureDefs = {
-  dead = {
-    damage             = 5690.4946289062,
-    description        = [[Patriarch Wreckage]],
-    metal              = 188.10000610352,
-  },
+	DEAD = {
+	},
+	HEAP = {
+	},
 }
 unitDef.featureDefs = featureDefs
 
