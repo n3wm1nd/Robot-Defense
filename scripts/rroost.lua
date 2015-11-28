@@ -38,32 +38,7 @@ function script.Create()
 end
 
 function script.AimWeapon(num, heading, pitch)
-	local _, basepos, _ = Spring.GetUnitPosition(unitID)
-	if num == 2 then
-		Signal( SIG_AIM)
-		SetSignalMask( SIG_AIM)
-		Turn( head , y_axis, heading , math.rad(200.000000) )
-		WaitForTurn(head, y_axis)
-		--Spring.Echo("Weapon one position :" .. basepos)
-		StartThread(RestoreAfterDelay)
-		if basepos > -18 then
-			return true
-		else
-			return false
-		end
-	elseif num == 1 then
-		Signal( SIG_AIM_3)
-		SetSignalMask( SIG_AIM_3)
-		Turn( head , y_axis, heading , math.rad(60.000000) )
-		WaitForTurn(head, y_axis)
-		--Spring.Echo("Weapon two position :" .. basepos)
-		if basepos < -16 then
-			return true
-		else
-			return false
-		end
-	
-	end
+		return false
 end
 
 function script.AimFromWeapon(num)
