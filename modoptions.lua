@@ -1,28 +1,34 @@
 local options={
  
 	{
-	   key    = "StartingResources",
-	   name   = "Starting Resources",
-	   desc   = "Sets storage and amount of resources that players will start with",
-	   type   = "section",
+		key    = "StartingResources",
+		name   = "Starting Resources",
+		desc   = "Sets storage and amount of resources that players will start with",
+		type   = "section",
 	},
     {
-       key="ta_modes",
-       name="Tech Annihilation - Game Modes",
-       desc="Tech Annihilation - Game Modes",
-       type="section",
+    	key="ta_modes",
+    	name="Tech Annihilation - Game Modes",
+    	desc="Tech Annihilation - Game Modes",
+    	type="section",
     },
         {
-       key="ta_exp",
-       name="Tech Annihilation - Experimental Options",
-       desc="Tech Annihilation - Experimental Options",
-       type="section",
+    	key="ta_exp",
+    	name="Tech Annihilation - Experimental Options",
+    	desc="Tech Annihilation - Experimental Options",
+    	type="section",
     },
     {
-       key="ta_options",
-       name="Tech Annihilation - Options",
-       desc="Tech Annihilation - Options",
-       type="section",
+    	key="ta_options",
+    	name="Tech Annihilation - Options",
+    	desc="Tech Annihilation - Options",
+    	type="section",
+    },
+    {
+		key="ta_wall_options",
+    	name="Tech Annihilation - Wall Options",
+    	desc="Tech Annihilation - Wall Options",
+    	type="section",
     },
     {
        key="chicken",
@@ -35,6 +41,43 @@ local options={
        name="Chicken Defense Custom Difficulty",
        desc="Chicken Defense Custom Difficulty",
        type="section",
+    },
+    {
+		key    = "mo_preventcombomb",
+		name   = "Prevent Combombs",
+		desc   = "Commanders survive DGuns and other commanders explosions\nAutoHost USage :- mo_preventcombomb",
+		type   = "list",
+		section= "ta_modes",
+		def    = "off",
+		items = {
+			{key="hp", name="Health", desc="Commander with greatest hp survives comblast"},
+			{key="1v1", name="1v1", desc="Default Setting for 1v1 games"},
+			{key="off", name="Off", desc="Default engine Control"},
+		}
+    },
+    {
+		key    = "mo_comgate",
+		name   = "Commander Teleport Effect",
+		desc   = "Commanders warp in at gamestart with a shiny teleport effect\nAutoHost USage :- mo_comgate",
+		type   = "bool",
+		def    = false,
+		section= "ta_options",
+    },
+    {
+		key    = "mo_terraforming",
+		name   = "Terrain Terraform",
+		desc   = "Enable Terraforming map surface\nAutoHost USage :- mo_terraforming",
+		type   = "bool",
+		def    = false,
+		section= "ta_options",
+    },
+    	{
+		key    = "mo_ecorace",
+		name   = "Announces eco leader",
+		desc   = "Announces player with greatest E/M income every 2 min to all players\nAutoHost USage :- mo_ecorace",
+		type   = "bool",
+		def    = false,
+		section= "ta_options",
     },
 	{
 		key    = "mo_coop",
@@ -77,6 +120,22 @@ local options={
 		section= "ta_options",
     },
     {
+		key    = "mo_startpoint_assist",
+		name   = "Startpoint Assist",
+		desc   = "Chooses sensible starting places for players/AIs who forgot to choose a startpoint for themselves\nAutoHost Usage :- mo_startpoint_assist",
+		type   = "bool",
+		def    = false,
+		section= "ta_options",
+    },
+    {
+	    key    = "mo_heatmap",
+	    name   = "HeatMap",
+		desc   = "Attemps to prevents unit paths to cross",
+		type   = "bool",
+		def    = true,
+		section= "ta_exp",
+	},
+    {
 		key="qtpfs",
 		name="Pathfinding system",
 		desc="Which pathfinding system to use\nAutoHost Usage :- qtpfs",
@@ -87,6 +146,14 @@ local options={
 			{key="normal", name="Default", desc="Default Spring path finding engine"},
 			{key="qtpfs", name="QTPFS", desc="Quick/Tesellating Path Finding System"},
 		}
+    },
+        {
+		key    = "mo_dynamic",
+		name   = "Dynamic Lighting",
+		desc   = "Toggles Dynamic lighing on or off\nAutoHost Usage :- mo_dynamic",
+		type   = "bool",
+		def    = true,
+		section= "ta_options",
     },
     {
 		key    = "mo_noshare",
@@ -113,6 +180,30 @@ local options={
 		section= 'ta_options',
     },
     {
+		key="mo_transportenemy",
+		name="Enemy Transporting",
+		desc="Toggle which enemy units you can kidnap with an air transport\nAutoHost Usage :- mo_transportenemy",
+		type="list",
+		def="none",
+		section="ta_options",
+		items={
+			{key="notcoms", name="All But Commanders", desc="Only commanders are immune to napping"},
+			{key="none", name="Disallow All", desc="No enemy units can be napped"},
+		}
+    },
+    {
+		key="mo_comtranslock",
+		name="Locktime for Commanders in Transport's",
+		desc="Sets time lock for Transport of own Commanders\nAutoHost Usage :- comtranslock",
+		section="ta_options",
+		type   = "number",
+		def    = 0,
+		min    = 0,
+		max    = 25,
+		step   = 1,  -- quantization is aligned to the def value
+                    -- (step <= 0) means that there is no quantization
+    },
+    {
 		key    = "mo_nowrecks",
 		name   = "No Unit Wrecks",
 		desc   = "Removes all unit wrecks from the game\nAutoHost Usage :- mo_nowrecks",
@@ -137,48 +228,29 @@ local options={
 		name="Game End Mode",
 		desc="What it takes to eliminate a team\nAutoHost Usage :- deathmode",
 		type="list",
-		def="killall",
+		def="com",
 		section="ta_modes",
 		items={
-			{key="killall", name="Kill Everything", desc="Every last unit must be eliminated, no exceptions!"},
-			{key="com", name="Kill all enemy Commanders", desc="When a team has no Commanders left it loses"},
-			{key="comcontrol", name="No Commander, No Control", desc="A player without a Commander cannot issue orders"},
-		}
-	},
-       {
-		key="teamdeathmode",
-		name="Team Game End Mode",
-		desc="What it takes to eliminate a Team\nAutoHost Usage :- teamdeathmode",
-		type="list",
-		def="allyzerounits",
-		section= "ta_modes",
-		items={
-		{key="none", name="Never Die", desc="All Teams will stay alive regardless of what happends, gameover will never arrive."},
-		{key="teamzerounits", name="Team Death on Zero Units", desc="The Team will die when it has 0 units."},
-		{key="allyzerounits", name="AllyTeam Death on Zero units", desc="The Team will die when every Team in his AllyTeam have 0 units."},
-      }
-		},
-	{
-		key="deathmode",
-		name="Game End Mode",
-		desc="What it takes to eliminate a team\nAutoHost Usage :- deathmode",
-		type="list",
-		def="com",
-		section= "ta_modes",
-		items={
-			{key="killall", name="Kill Everything", desc="Every last unit must be eliminated, no exceptions!"},
-			{key="com", name="Kill all enemy Commanders", desc="When a team has no Commanders left it loses"},
-			{key="comcontrol", name="No Commander, No Control", desc="A player without a Commander cannot issue orders"},
+			{key="neverend", name="None", desc="Teams are never eliminated"},
+			{key="com", name="Kill all enemy Commanders", desc="When a team has no Commanders left, it loses"},
+			{key="killall", name="Kill everything", desc="Every last unit must be eliminated, no exceptions!"},
 		}
 	},
 	{
-	key    = "shareddynamicalliancevictory",
-	name   = "Dynamic Ally Victory",
-	desc   = "Ingame alliance should count for game over condition\nAutoHost Usage :- shareddynamicalliancevictory",
-	type   = "bool",
-	def    = false,
-	section= "ta_modes",
-
+		key    = "mo_no_close_spawns",
+		name   = "No close spawns",
+		desc   = "Prevents players startpoints being placed close together (on large enough maps)\nAutoHost Usage :- mo_no_close_spawns",
+		type   = "bool",
+		def    = true,
+		section= "ta_options",
+	},
+	{
+		key    = "shareddynamicalliancevictory",
+		name   = "Dynamic Ally Victory",
+		desc   = "Ingame alliance should count for game over condition\nAutoHost Usage :- shareddynamicalliancevictory",
+		type   = "bool",
+		def    = false,
+		section= "ta_modes",
     },
 	{
        key    = "startmetal",
@@ -205,14 +277,85 @@ local options={
                     -- (step <= 0) means that there is no quantization
 	},
 	{
-	key    = "Superunits",
-	name   = "Re-enablle Superunits",
-	desc   = "Re-enable's all game end weapons and superships\nAutoHost Usage :- mo_superunits",
-	type   = "bool",
-	def    = true,
-	section= "ta_modes",
-	},
+		key    = "mo_wall",
+		name   = "The Wall",
+		desc   = "Add Dividing Wall with Countdown\nAutoHost Usage :- mo_wall",
+		type   = "bool",
+		def    = false,
+		section = 'ta_wall_options',
+    },
 	{
+		key     = 'wall_time',
+		name    = 'Wall Time',
+		desc    = 'How many minutes will the wall divide the teams?',
+		section = 'ta_wall_options',
+		type    = 'number',
+		min     = 0,
+		max     = 30,
+		step    = 1,
+		def     = 10,
+	},
+	
+	{
+		key     = 'wall_size',
+		name    = 'Wall Size',
+		desc    = 'How many percent of the map will each team get at start?',
+		section = 'ta_wall_options',
+		type    = 'number',
+		min     = 10,
+		max     = 45,
+		step    = 1,
+		def     = 45,
+	},
+	
+	{
+		key     = 'los',
+		name    = 'Line of Sight',
+		desc    = 'Can you see past the wall?',
+		section = 'ta_wall_options',	type    = 'list',
+		def     = '1',
+		items   = 
+		{
+			{
+				key  = '0',
+				name = 'normal LOS rules',
+				desc = 'everything works as expected.',
+			},
+			{
+				key  = '1',
+				name = 'Full LOS',
+				desc = 'You can see enemy units, everywhere.',
+			},
+			{
+				key  = '2',
+				name = 'Blindness',
+				desc = 'You can not see enemy units at all.',
+			},
+		},
+	},
+
+	{
+		key     = 'weapons',
+		name    = 'Cease-Fire',
+		desc    = 'Are weapons blocked as long as the wall remains?',
+		section = 'ta_wall_options',
+		type    = 'list',
+		def     = '1',
+		items   = 
+		{
+			{
+				key  = '1',
+				name = 'Yes',
+				desc = 'No unit can shoot until the timer is up.',
+			},
+			{
+				key  = '2',
+				name = 'No',
+				desc = 'Units can shot as normal.',
+			},
+		},
+	},
+		{
 		key="mo_chickenstart",
 		name="Burrow Placement",
 		desc="Control where burrows spawn",
