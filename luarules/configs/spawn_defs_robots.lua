@@ -35,7 +35,9 @@ local mRandom        = math.random
 
 bonusTurret5a = "armflak"
 bonusTurret5b = "arm_big_bertha"
-bonusTurret7a = "tlldb"
+bonusTurret7a = "corpre"
+bonusTurret7b = "armamd1"
+bonusTurret7c = "cordoom"
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -161,7 +163,9 @@ local defenders = {
   armrl = true,
   armflak = true,
   arm_big_bertha = true,
-  tlldb = true,
+  corpre = true,
+  armamd1 = true,
+  cordoom = true,
 }
 
 --t1 only

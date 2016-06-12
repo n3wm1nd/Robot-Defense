@@ -127,7 +127,7 @@ local defenseMap 		  = {}
 local maxAges = {}
 
 local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
-
+Spring.Echo("nix nix nix")
 do -- load config file
 local CONFIG_FILE
     if (cenabled == 0) then 
@@ -135,6 +135,7 @@ local CONFIG_FILE
     else
     CONFIG_FILE  = "LuaRules/Configs/spawn_defs_chickens.lua"
     end
+    Spring.Echo(CONFIG_FILE)
   local VFSMODE = VFS.RAW_FIRST
   local s = assert(VFS.LoadFile(CONFIG_FILE, VFSMODE))
   local chunk = assert(loadstring(s, file))
@@ -291,7 +292,7 @@ local unitCounts = {}
 
 local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
-  Spring.Echo("unitname := ".. unitName )
+  Spring.Echo("Adding unitname to spawner database:= ".. unitName)
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
    if (cenabled == 1) then 
          unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
@@ -1637,12 +1638,16 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID)
     for burrowID in pairs(burrows) do
       if (cenabled == 0) then 
         if (currentWave >=5 and currentWave <=6) then
-	  if (mRandom(0,1) == 1) then bonusTurret = bonusTurret5a else bonusTurret = bonusTurret5b end
-          elseif currentWave >=7 then
-	    if (mRandom(0,1) == 1) then bonusTurret = onusTurret7a else bonusTurret = bonusTurret5b end
-	end
-       end 
-        SpawnTurret(burrowID, bonusTurret)
+	      if (mRandom(0,1) == 1) then bonusTurret = bonusTurret5a else bonusTurret = bonusTurret5b end
+        elseif (currentWave >=7) then
+          local rannum = mRandom(0,3)
+	      if rannum == 0 then bonusTurret = bonusTurret7a end
+	      if rannum == 1 then bonusTurret = bonusTurret5b end
+	      if rannum == 2 then bonusTurret = bonusTurret7b end
+	      if rannum == 3 then bonusTurret = bonusTurret7c end
+		end
+      end 
+      SpawnTurret(burrowID, bonusTurret)
     end
         
     for i,defs in pairs(spawnQueue) do
