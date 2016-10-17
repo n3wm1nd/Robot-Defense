@@ -1,4 +1,3 @@
-       
 local moveDatas = {
 	AKBOT2 = {
 		crushstrength = 50,
@@ -243,6 +242,20 @@ local moveDatas = {
 		maxslope = 80,	
 		maxwaterdepth = 180,
 	},
+	AMPTBOT = {
+		crushstrength = 250,
+		depthmodparams = {
+			minheight = 1,
+			linearcoeff = 0.03,
+			maxscale = 0.75,
+           		constantcoeff = 0.015,
+	    	},
+		footprintx = 3,
+		footprintz = 3,
+		maxslope = 80,	
+		maxwaterdepth = 15000,
+		
+	},
 	CHICKQUEEN = {
 		footprintx=3,
 		footprintz=3,
@@ -279,17 +292,15 @@ local moveDatas = {
 		maxwaterslope = 255,
 	}
 }
-
+		
 --------------------------------------------------------------------------------
 -- Final processing / array format
 --------------------------------------------------------------------------------
 local defs = {}
 
 for moveName, moveData in pairs(moveDatas) do
-	
-	moveData.heatmapping = false
+	moveData.heatmapping = (Spring.GetModOptions() and tonumber(Spring.GetModOptions().mo_heatmap) and (tonumber(Spring.GetModOptions().mo_heatmap) ~= 0) or 1)
 	moveData.name = moveName
-	
 	defs[#defs + 1] = moveData
 end
 
