@@ -2,13 +2,13 @@ return {
   name='Robot Defense',
   description='The New Generation Of War',
   shortname='TA',
-  version='$VERSION',
+  version='$VERSION', 
   mutator='',
   game='',
   shortGame='TA',
   modtype=1,
   depend = {
-    'Tech Annihilation v2.42.8', 
+    'Tech Annihilation v2.43.0', 
   },
   NTAI = {
     tdfpath='TA';
