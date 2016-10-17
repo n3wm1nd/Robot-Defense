@@ -1,4 +1,4 @@
-             return {
+return {
 --### AIR ###
 fighters = {
            "airwolf3g",
@@ -12,6 +12,7 @@ fighters = {
            "tlladvfight",
            "tllfight",
            "tllseaf",
+           "tllshu",
 },
 bombers = {
            "armblz",
@@ -36,10 +37,8 @@ bombers = {
            "armseap",
            "corsbomb",
            "armorion",
-	   "chickenf1",
-	   "chickenf1b",
-	   "chickenf2",
-	   "chickens3",       
+           "tllanhur",
+           "tllaether",
 },
 flak_resistant = {
            "apache",
@@ -50,11 +49,7 @@ flak_resistant = {
            "tllcopter",
 	   "corhind",
 	   "armkamo",
-	   "chickenw1",
-	   "chickenw1b",
-	   "chickenw1c",
-	   "chickenw1d",
-	   "chickenw2",
+           "skykrogoth",
 },
 unclassed_air = {
 -- Builders 
@@ -81,6 +76,7 @@ unclassed_air = {
            "armsaber",
            "armtys",
            "blackdawn",
+           "tllnuada",
            "corape",
            "corcrw",
            "corcut",
@@ -181,6 +177,7 @@ subs = {
            "tawf009",
            "armacsub",
            "armrecl",
+	 	   "tllsr",
 },
 experimental_ships = {
            "armtrmph",
@@ -212,7 +209,6 @@ experimental_land = {
            "clb",
            "armtigre2",
            "armmcv",
-           "rockblack",
            "corbt",
            "cormachn",
            -- arm t3 vehs
@@ -264,13 +260,16 @@ experimental_land = {
 },
 flamethrowers = {
            "corpyro",
+	   "corpyrox",
+	   "corpyrox1",
+	   "cordem",
            "tllburner",
            "tlllft",
            "cormaw",
            "cormatch",
+	   "coreavalanche",
 },
 sniper_resistant = {
-           "tllbind",
            "armzeus",
            "armzeus1",
            "corcan",
@@ -278,8 +277,12 @@ sniper_resistant = {
 raider_resistant = {
            "tllthumper",
            "corsumo",
+           "corsumo1",
+           "tllbind",
            "corgol",
+           "corgol1",
            "armfboy",
+           "armfboy1",
            "cormexp",
            "corgfbt",
            "aexxec",
@@ -287,6 +290,7 @@ raider_resistant = {
            "armwar",
            "corexp",
            "corlevlr",
+           "corlevlr1",
            "tllriot",
 },
 -- TODO bombresistant
@@ -296,13 +300,15 @@ bomb_resistant = {
            "mercury",
            "screamer",
            "tllhmt",
-           "--corsfus",
+           "--corsfus", --too op
 },
 crawlingbombs = {
            "armvader",
            "corroach",
            "corsktl",
            "tllcrawlb",
+	   "coretnt",
+		
 },
 nanos = {
            "armnanotc",
@@ -341,10 +347,17 @@ mines = {
            "cormine7",
            "armfmine3",
            "corfmine3",
+	   "tllmine1",
+           "tllmine2",
+           "tllmine3",
+           "tllmine4",
+           "tllmine5",
+	   "tllmine6",
 },
 minelayers = {
            "armmlv",
            "cormlv",
+	   "tllmlv",
 },
 commanders = {
            "armcom",
@@ -365,15 +378,13 @@ commanders = {
            "tllcom6",
            "tllcom7",
 },
-tinychicken =
-  {
+tinychicken = {
 	"chicken_dodo1",
 	"chicken_dodo2",
    	"chickenh1",
 	"chickenh1b",
-  },
-  chicken =
- {
+},
+chicken = {
 	"e_chickenq",
 	"e_chickenqr",
 	"fh_chickenq",
@@ -421,3 +432,4 @@ tinychicken =
 	"rroost",
 	},
 }
+
