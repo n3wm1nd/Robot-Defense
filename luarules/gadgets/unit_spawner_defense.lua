@@ -126,14 +126,13 @@ local heroChicken         = {}
 local defenseMap 		  = {}
 local maxAges = {}
 
-local cenabled = tonumber(Spring.GetModOptions().mo_norobot) or 0
-Spring.Echo("nix nix nix")
+local cenabled = (tonumber(Spring.GetModOptions().mo_norobot)==1) or false
 do -- load config file
 local CONFIG_FILE
-    if (cenabled == 0) then 
-    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_robots.lua"
+    if cenabled then 
+    	CONFIG_FILE  = "LuaRules/Configs/spawn_defs_chickens.lua"
     else
-    CONFIG_FILE  = "LuaRules/Configs/spawn_defs_chickens.lua"
+    	CONFIG_FILE  = "LuaRules/Configs/spawn_defs_robots.lua"
     end
     Spring.Echo(CONFIG_FILE)
   local VFSMODE = VFS.RAW_FIRST
@@ -294,7 +293,7 @@ local chickenDefTypes = {}
 for unitName in pairs(chickenTypes) do
   Spring.Echo("Adding unitname to spawner database:= ".. unitName)
   chickenDefTypes[UnitDefNames[unitName].id] = unitName
-   if (cenabled == 1) then 
+   if cenabled then 
          unitCounts[string.sub(unitName,1,-2)] = {count = 0, lastCount = 0}
    else
          unitCounts[(unitName)] = {count = 0, lastCount = 0}
@@ -317,7 +316,7 @@ SetGameRulesParam("queenAnger",       queenAnger)
 SetGameRulesParam("gracePeriod",      gracePeriod)
 
 for unitName in pairs(chickenTypes) do
-   if (cenabled == 1) then 
+   if cenabled then 
   SetupUnit(string.sub(unitName,1,-2))
    else
   SetupUnit(unitName)
@@ -325,7 +324,7 @@ for unitName in pairs(chickenTypes) do
 end
 
 for unitName in pairs(defenders) do
-   if (cenabled == 1) then 
+   if cenabled then 
   SetupUnit(string.sub(unitName,1,-2))
    else
   SetupUnit(unitName)
@@ -348,12 +347,12 @@ local function UpdateUnitCount()
    for unitDefID, number in pairs(teamUnitCounts) do
     if UnitDefs[unitDefID] then
       local shortName
-       if (cenabled == 0) then 
-       shortName = (UnitDefs[unitDefID].name)
-       else
-       shortName = string.match(UnitDefs[unitDefID].name,"%D*")
-       end
-           -- Spring.Echo("unitDefID :=".. UnitDefs[unitDefID].name .."       shortname:="..shortName)
+      if cenabled then 
+        shortName = string.match(UnitDefs[unitDefID].name,"%D*")
+      else
+        shortName = (UnitDefs[unitDefID].name)
+      end
+      -- Spring.Echo("unitDefID :=".. UnitDefs[unitDefID].name .."       shortname:="..shortName)
       if unitCounts[shortName] then
         unitCounts[shortName].count = unitCounts[shortName].count + number
       end
@@ -1005,12 +1004,15 @@ function gadget:UnitIdle(unitID, unitDefID, unitTeam)
 end
 
 function gadget:UnitCreated(unitID, unitDefID, unitTeam)
-	if (unitTeam == chickenTeamID) or (chickenDefTypes[unitDefID]) then -- filter out chicken units
-		return
+  if ((unitTeam == chickenTeamID) or (chickenDefTypes[unitDefID])) and cenabled then -- filter out chicken units
+    Spring.Echo(UnitDefs[unitDefID].name," hit")
+	return
+  elseif (unitTeam == chickenTeamID) and not cenabled then
+  	return
 	end
-	if chickenTargets[unitID] then
-		chickenTargets[unitID] = nil
-	end
+  if chickenTargets[unitID] then
+    chickenTargets[unitID] = nil
+  end
 end
 
 function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, 
@@ -1054,12 +1056,13 @@ function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer,
           end
           Spring.Echo("Queen is becoming resistant to " .. UnitDefs[attackerDefID].humanName .. "'s attacks (" .. weaponName .. ")")
           queenResistance[weaponID].notify = 1
-	  if (cenabled == 0) then 
-	    for i = 1,20,1 do
-            table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) end
-	  else 
+	  if cenabled then 
 	    for i = 1,12,1 do
-	      table.insert(spawnQueue, {burrow = queenID, unitName = "chickenw2", team = chickenTeamID})
+          table.insert(spawnQueue, {burrow = queenID, unitName = "chickenw2", team = chickenTeamID}) 
+        end
+	  else 
+	    for i = 1,20,1 do
+	      table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID}) 
 	    end
 	    for i = 1,4,1 do
 	      table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1", team = chickenTeamID})
@@ -1296,7 +1299,7 @@ local function updateSpawnQueen()
 			end
 		end
 		
-		if (modes[highestLevel] == EPIC) and (cenabled == 1) then
+		if (modes[highestLevel] == EPIC) and cenabled then
 			table.insert(spawnQueue, {burrow = queenID, unitName = "ve_chickenq", team = chickenTeamID})
 			table.insert(spawnQueue, {burrow = queenID, unitName = "ve_chickenq", team = chickenTeamID})
 			table.insert(spawnQueue, {burrow = queenID, unitName = "ve_chickenq", team = chickenTeamID})
@@ -1314,26 +1317,26 @@ local function updateSpawnQueen()
 			table.insert(spawnQueue, {burrow = queenID, unitName = "irritator", team = chickenTeamID})
 		end
 		
-		if (modes[highestLevel] == INSANE) and (cenabled == 0) then
+		if (modes[highestLevel] == INSANE) and cenabled then
 			table.insert(spawnQueue, {burrow = queenID, unitName = "abroadside", team = chickenTeamID})
 			table.insert(spawnQueue, {burrow = queenID, unitName = "cdevastator", team = chickenTeamID})
 			table.insert(spawnQueue, {burrow = queenID, unitName = "tllvaliant", team = chickenTeamID})
 			table.insert(spawnQueue, {burrow = queenID, unitName = "tllvaliant", team = chickenTeamID})
 		end
 		
-		if (cenabled == 1) then
+		if cenabled then
 			for i = 1,150,1 do
 				table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
 			end
 		end
 		
-		if (cenabled == 0) then
+		if  not cenabled then
 			for i = 1,100,1 do
 				table.insert(spawnQueue, {burrow = queenID, unitName = "airwolf3g", team = chickenTeamID})
 			end
 		end
 		
-		if (cenabled == 0) then
+		if not cenabled then
 			for i = 1,30,1 do
 				table.insert(spawnQueue, {burrow = queenID, unitName = "corkarg", team = chickenTeamID})
 			end
@@ -1341,7 +1344,7 @@ local function updateSpawnQueen()
 		
 		for i = 1,10,1 do
 			if (mRandom() < spawnChance) then
-				if (cenabled == 1) then
+				if cenabled then
 					table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1", team = chickenTeamID})
 					table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh1b", team = chickenTeamID})
 				else
@@ -1353,7 +1356,7 @@ local function updateSpawnQueen()
 	else
 		if (mRandom() < (spawnChance/7.5)) then
 			for i = 1,mRandom(1,3),1 do
-				if (cenabled == 1) then
+				if cenabled then
 					table.insert(spawnQueue, {burrow = queenID, unitName = "chickenh4", team = chickenTeamID})
 				else
 					table.insert(spawnQueue, {burrow = queenID, unitName = "corcrw", team = chickenTeamID})
@@ -1487,7 +1490,7 @@ function gadget:GameFrame(n)
 		end
 		if (burrowCount >= minBurrows) then timeOfLastSpawn = t end
 			chickenEvent("burrowSpawn")
-			if (cenabled == 1) then
+			if cenabled then
 				SetGameRulesParam("roostCount", SetCount(burrows))
 			else
 				SetGameRulesParam("rroostCount", SetCount(burrows))
@@ -1552,7 +1555,7 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID)
   
   if (unitTeam == chickenTeamID) and chickenDefTypes[unitDefID] then
     local name = UnitDefs[unitDefID].name
-    if (cenabled == 1) and unitDefID ~= burrowDef then name = string.sub(name,1,-2) end
+    if cenabled and unitDefID ~= burrowDef then name = string.sub(name,1,-2) end
     local kills = GetGameRulesParam(name.."Kills")
     SetGameRulesParam(name.."Kills", kills + 1)
     chickenCount = chickenCount - 1
@@ -1636,7 +1639,7 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID)
     end
       
     for burrowID in pairs(burrows) do
-      if (cenabled == 0) then 
+      if not cenabled then 
         if (currentWave >=5 and currentWave <=6) then
 	      if (mRandom(0,1) == 1) then bonusTurret = bonusTurret5a else bonusTurret = bonusTurret5b end
         elseif (currentWave >=7) then
@@ -1656,7 +1659,7 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID)
       end
     end
     
-   if (cenabled == 1) then
+   if cenabled then
     SetGameRulesParam("roostCount", SetCount(burrows))
    else
     SetGameRulesParam("rroostCount", SetCount(burrows))
