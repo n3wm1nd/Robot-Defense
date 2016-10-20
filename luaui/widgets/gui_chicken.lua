@@ -200,10 +200,11 @@ else
   "armmerlCount",
   "corgalaCount",
   "hyperionCount",
-  "armlaspdCount",
+  "armtarantulaCount",
   "armorionCount",
   "armfastCount",
-  "armspidCount",
+  "tllmatamataCount",
+  "tllmatamataKills",
   "armcybrCount",
   "tllcrawlbCount",
   "armzeusCount",
@@ -212,10 +213,8 @@ else
   "corprotCount",
   "corgolCount",
   "armraven1Count",
-  "armaakCount",
   "anvilCount",
   "tllvaliantCount",
-  "tllshamCount",
   "armflashCount",
   "armblzCount",
   "arm_furieCount",
@@ -242,7 +241,7 @@ else
   "armcrabeCount",
   "tllgrimCount",
   "armtigre2Count",
-  "armrectrCount",
+  "shivaCount",
   "aexxecCount",
   "armsnipeCount",
   "corhrkCount",
@@ -250,7 +249,8 @@ else
   "armfboyCount",
   "corcrashCount",
   "gorgCount",
-  "tllprobCount",
+  "tllloggerheadCount",
+  "tllloggerheadKills",
   "corthud1Count",
   "cormistCount",
   "cortotalCount",
@@ -278,10 +278,8 @@ else
   "armmerlKills",
   "corgalaKills",
   "hyperionKills",
-  "armlaspdKills",
   "armorionKills",
   "armfastKills",
-  "armspidKills",
   "armcybrKills",
   "tllcrawlbKills",
   "armzeusKills",
@@ -290,10 +288,9 @@ else
   "corprotKills",
   "corgolKills",
   "armraven1Kills",
-  "armaakKills",
   "anvilKills",
   "tllvaliantKills",
-  "tllshamKills",
+  "shivaKills",
   "armflashKills",
   "armblzKills",
   "arm_furieKills",
@@ -320,7 +317,6 @@ else
   "armcrabeKills",
   "tllgrimKills",
   "armtigre2Kills",
-  "armrectrKills",
   "aexxecKills",
   "armsnipeKills",
   "corhrkKills",
@@ -328,7 +324,6 @@ else
   "armfboyKills",
   "corcrashKills",
   "gorgKills",
-  "tllprobKills",
   "corthud1Kills",
   "cormistKills",
   "cortotalKills",
@@ -341,6 +336,13 @@ else
   "corawacKills",
   "tllblindKills",
   "rroostKills",
+  "armtarantulaKills",
+  "corpreCount",
+  "corpreKills",
+  "armamd1Count",
+  "armamd1Kills", 
+  "cordoomCount",
+  "cordoomKills",
 }
 
 chickenColors = {
@@ -359,10 +361,9 @@ chickenColors = {
   {"armmerl",     "\255\255\150\150"},
   {"corgala",     "\255\184\075\200"},
   {"hyperion",     "\255\184\075\200"},
-  {"armlaspd",     "\255\255\150\150"},
+  {"armtarantula",     "\255\255\150\150"},
   {"armorion",     "\255\184\075\200"},
   {"armfast",     "\255\255\150\150"},
-  {"armspid",      "\255\184\100\255"},
   {"armcybr",     "\255\184\075\200"},
   {"tllcrawlb",     "\255\255\150\150"},
   {"armzeus",     "\255\255\150\150"},
@@ -371,10 +372,8 @@ chickenColors = {
   {"corprot",     "\255\184\075\200"},
   {"corgol",     "\255\255\150\150"},
   {"armraven1",     "\255\255\100\100"},
-  {"armaak",     "\255\255\150\150"},
   {"anvil",     "\255\184\075\200"},
   {"tllvaliant",     "\255\184\075\200"},
-  {"tllsham",      "\255\184\100\255"},
   {"armflash",      "\255\184\100\255"},
   {"armblz",     "\255\255\100\100"},
   {"arm_furie",     "\255\184\075\200"},
@@ -401,15 +400,15 @@ chickenColors = {
   {"armcrabe",     "\255\184\075\200"},
   {"tllgrim",     "\255\184\075\200"},
   {"armtigre2",     "\255\184\075\200"},
-  {"armrectr",     "\255\255\100\100"},
   {"aexxec",     "\255\255\100\100"},
   {"armsnipe",     "\255\255\100\100"},
   {"corhrk",     "\255\255\100\100"},
+  {"shiva",     "\255\255\100\100"},
   {"corkarg1",     "\255\184\075\200"},
   {"armfboy",     "\255\255\150\150"},
   {"corcrash",     "\255\255\100\100"},
   {"gorg",     "\255\184\075\200"},
-  {"tllprob",     "\255\255\100\100"},
+  {"tllmatamata",     "\255\255\100\100"},
   {"corthud1",     "\255\255\100\100"},
   {"cormist",     "\255\255\100\100"},
   {"cortotal",     "\255\255\100\100"},
@@ -421,7 +420,13 @@ chickenColors = {
   {"armstump",      "\255\184\100\255"},
   {"corawac",     "\255\255\100\100"},
   {"tllblind",     "\255\184\075\200"},
+  {"tllloggerhead",     "\255\184\075\200"},
   {"rroost",     "\255\100\100\255"},
+  {"corpre",     "\255\184\075\200"},
+  {"armamd1",     "\255\184\075\200"},
+  {"cordoom",     "\255\184\075\200"},
+
+
 }
 end
 
@@ -453,9 +458,12 @@ end
 local function MakeCountString(type, showbreakdown)
   local t = {}
   local total = 0
-  --if (cenabled == 1) then total = 0 else total = -999 end --ugly fix me (chickenend)
+  if (cenabled == 1) then total = 0 else total = -999 end --ugly fix me (chickenend)
   local showbrackets = false
-  for _, colorInfo in ipairs(chickenColors) do
+  for i, colorInfo in ipairs(chickenColors) do
+    if gameInfo[colorInfo[1]..type] == nil then
+      Spring.Echo("Check def for unit: ",colorInfo[1])
+    end
     local subTotal = gameInfo[colorInfo[1]..type]
     if subTotal > 0 then 
       table.insert(t, colorInfo[2]..subTotal)
@@ -469,7 +477,10 @@ local function MakeCountString(type, showbreakdown)
       total = total + gameInfo["armrl"..type]
       total = total + gameInfo["armflak"..type]
       total = total + gameInfo["arm_big_bertha"..type]
-      total = total + gameInfo["tlldb"..type]
+      total = total + gameInfo["corpre"..type]
+      total = total + gameInfo["armamd1"..type]
+      total = total + gameInfo["cordoom"..type]
+
     end
 
   

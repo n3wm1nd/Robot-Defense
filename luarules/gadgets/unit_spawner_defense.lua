@@ -126,6 +126,7 @@ local heroChicken         = {}
 local defenseMap 		  = {}
 local maxAges = {}
 
+
 local cenabled = (tonumber(Spring.GetModOptions().mo_norobot)==1) or false
 do -- load config file
 local CONFIG_FILE
@@ -524,7 +525,7 @@ local function getRandomMapPos()
 end
 
 -- selects a enemy target
-local function ChooseTarget()
+local function ChooseTargetOld()
 	local humanTeamList = SetToList(humanTeams)
 	if (#humanTeamList == 0) or gameOver then
 		return getRandomMapPos()
@@ -546,6 +547,7 @@ local function ChooseTarget()
 			local slowunit = true
 			if targetCache and tries < 5 then
 				local defID = GetUnitDefID(targetCache)
+				--Spring.Echo(UnitDefs[defID].name,UnitDefs[defID].speed)
 				if UnitDefs[defID] and (UnitDefs[defID].speed > 75) then
 					slowunit = false
 				end
@@ -565,7 +567,7 @@ local function ChooseTarget()
 --		Spring.Echo(targetCache)
 		local x,y,z = GetUnitPosition(targetCache)
 		if not x or not y or not z then
-			Spring.Echo("Invalid pos in GetUnitPosition: " .. tostring(targetCache))
+			--Spring.Echo("Invalid pos in GetUnitPosition: " .. tostring(targetCache))
 			return getRandomMapPos()
 		end
 		local distance = mRandom(50,900)
@@ -573,6 +575,43 @@ local function ChooseTarget()
 		z = math.min(math.max(z - (math.cos(angle) * distance),16),MAPSIZEZ-16)
 		return {x,y,z}
 	else
+		return {GetUnitPosition(targetCache)}
+	end
+end
+
+-- selects a enemy target
+local function ChooseTarget()
+	local humanTeamList = SetToList(humanTeams)
+	if (#humanTeamList == 0) or gameOver then
+		return getRandomMapPos()
+	end
+		local teamID = humanTeamList[mRandom(#humanTeamList)]
+		if (teamID == lastTeamID) then
+			teamID = humanTeamList[mRandom(#humanTeamList)]
+		end
+		lastTeamID = teamID
+		local units = GetTeamUnits(teamID)
+		local EnergyCache = {}
+		local a = 1
+		for i = 1, #units do
+			local defID = GetUnitDefID(units[i])
+			if UnitDefs[defID] and (UnitDefs[defID].energyMake and UnitDefs[defID].energyMake > 500) then
+				energy = UnitDefs[defID].energyMake
+				--Spring.Echo(UnitDefs[defID].name," Added to EnergyCache table", units[i])
+				EnergyCache[a] = units[i]
+				a = a + 1
+			end
+		end
+		--Spring.Echo("energycache length ",#EnergyCache,#units)
+		if EnergyCache[2] then
+				targetCache = EnergyCache[mRandom(1,#EnergyCache)]
+			else
+				targetCache = EnergyCache[1]
+			end
+	if not targetCache or targetCache == 1 then -- no target could be found, use random map pos
+		return ChooseTargetOld()
+	else
+		--Spring.Echo(UnitDefs[GetUnitDefID(targetCache)].name," target")
 		return {GetUnitPosition(targetCache)}
 	end
 end
@@ -993,7 +1032,7 @@ function gadget:UnitIdle(unitID, unitDefID, unitTeam)
 	if AttackNearestEnemy(unitID, unitDefID, unitTeam) then
 		return
 	end
-	local chickenParams = ChooseTarget()
+	local chickenParams = ChooseTargetOld()
 	if targetCache then
 		idleOrderQueue[unitID] = {cmd = CMD.FIGHT, params = chickenParams, opts = {}}
 		if GetUnitNeutral(targetCache) then
@@ -1004,12 +1043,9 @@ function gadget:UnitIdle(unitID, unitDefID, unitTeam)
 end
 
 function gadget:UnitCreated(unitID, unitDefID, unitTeam)
-  if ((unitTeam == chickenTeamID) or (chickenDefTypes[unitDefID])) and cenabled then -- filter out chicken units
-    Spring.Echo(UnitDefs[unitDefID].name," hit")
-	return
-  elseif (unitTeam == chickenTeamID) and not cenabled then
-  	return
-	end
+  if unitTeam == chickenTeamID and chickenDefTypes[unitDefID] then -- filter out chicken units
+ 	return
+  end
   if chickenTargets[unitID] then
     chickenTargets[unitID] = nil
   end
@@ -1226,7 +1262,12 @@ local function SpawnChickens()
 		if (queenID) then
 			idleOrderQueue[unitID] = {cmd = CMD.FIGHT, params = getRandomMapPos(), opts = {}}          
 		else
-			local chickenParams = ChooseTarget()
+			local chickenParams
+			if mRandom(1,100) > 50 then
+				chickenParams = ChooseTargetOld()
+			else
+				chickenParams = ChooseTarget()
+			end
 			if targetCache and (unitID ~= queenID) and (mRandom(1,15) == 5) then
 				idleOrderQueue[unitID] = {cmd = CMD.ATTACK, params = {targetCache}, opts = {}}
 			else
