@@ -247,7 +247,7 @@ newWaveSquad[7] = {"2 armsnipe", "6 armblz"}
 addWave(7,{"5 armblz", "5 armblz"})
 addWave(7,{"2 airwolf3g", "4 tllloggerhead"})
 addWave(7,{"3 corpyro", "2 corpyro", "3 corpyro", "2 corpyro", "2 trem", "3 aexxec"})
-addWave(7,{"5 tllloggerheads", "4 tllloggerhead"})
+addWave(7,{"5 tllloggerhead", "4 tllloggerhead"})
 if (mRandom(0,1) == 1) then addWave(7,{"3 corpyro", "2 corpyro", "3 corpyro", "2 corpyro"}) else addWave(7,{"3 armfast", "2 armfast", "3 armfast", "2 armfast"}) end
 addWave(7,{"3 corpyro", "2 armhdpw", "3 corpyro", "2 armhdpw", "1 tllcrawlb" , "2 tllcrawlb" , "2 tllcrawlb"})
 addWave(7,{"1 tllcrawlb" , "2 tllcrawlb", "2 tllcrawlb", "2 armzeus", "3 armzeus", "1 armzeus", "2 armzeus", "3 aexxec"})
