@@ -343,6 +343,22 @@ else
   "armamd1Kills", 
   "cordoomCount",
   "cordoomKills",
+  "cormddmKills",
+  "tlldemonKills",
+  "tllhailstormKills",
+  "tllcopterKills",
+  "tllaetherKills",
+  "armtemKills", 
+  "coradonKills",
+  "cormddmCount",
+  "tlldemonCount",
+  "tllhailstormCount",
+  "tllcopterCount",
+  "tllaetherCount",
+  "armtemCount", 
+  "coradonCount",   
+  
+   
 }
 
 chickenColors = {
@@ -425,7 +441,13 @@ chickenColors = {
   {"corpre",     "\255\184\075\200"},
   {"armamd1",     "\255\184\075\200"},
   {"cordoom",     "\255\184\075\200"},
-
+  {"cormddm",     "\255\184\075\200"},
+  {"tlldemon",    "\255\184\075\200"},
+  {"tllhailstorm",    "\255\184\075\200"},
+  {"tllcopter",   "\255\184\075\200"},
+  {"tllaether",   "\255\184\075\200"},
+  {"armtem",      "\255\184\075\200"},
+  {"coradon",     "\255\184\075\200"},
 
 }
 end
