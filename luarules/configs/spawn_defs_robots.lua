@@ -263,7 +263,7 @@ addWave(7,{"1 tllcrawlb" , "2 tllcrawlb", "2 tllcrawlb", "2 armzeus", "3 armzeus
 addWave(7,{"2 armraven1", "2 armzeus", "3 armhdpw", "1 armzeus", "2 armzeus", "10 tllcopter"})
 addWave(7,{"1 armshock1", "2 trem", "1 tllcrawlb" , "2 tllcrawlb" , "2 tllcrawlb"})
 if (mRandom(0,1) == 1) then addWave(7,{"1 armraven1", "2 armtem"}) else addWave(7,{"3 cormonsta", "2 coradon"}) end
-addWave(7,{"2 tllloggerhead", "3 tllloggerhead", "3 tllloggerhead", "2 trem", , "10 tllcopter"})
+addWave(7,{"2 tllloggerhead", "3 tllloggerhead", "3 tllloggerhead", "2 trem", "10 tllcopter"})
 addWave(7,{"3 corsumo1", "2 trem", "3 armhdpw"})
 addWave(7,{"1 armsnipe", "2 armmerl", "1 tankanotor", "1 cormddm"})
 addWave(7,{"2 armzeus1", "3 armzeus", "1 armzeus", "2 armzeus1", "1 heavyimpact"})
