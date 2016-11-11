@@ -357,9 +357,11 @@ else
   "tllaetherCount",
   "armtemCount", 
   "coradonCount",   
-  
-   
-}
+  "tllamphibotKills",
+  "coramphKills",
+  "tllamphibotCount",
+  "coramphCount",
+  }
 
 chickenColors = {
   {"armshock1",    "\255\255\100\100"},
@@ -448,6 +450,8 @@ chickenColors = {
   {"tllaether",   "\255\184\075\200"},
   {"armtem",      "\255\184\075\200"},
   {"coradon",     "\255\184\075\200"},
+  {"tllamphibot", "\255\184\075\200"},
+  {"coramph",     "\255\184\075\200"},
 
 }
 end
