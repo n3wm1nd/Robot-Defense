@@ -160,6 +160,9 @@ local chickenTypes = {
   tllaether     = true, -- piece count 10
   armtem        = true, -- piece count 10 --T2.5 Hover
   coradon       = true, -- piece count 10 --T2.5 Hover
+  cortotal      = true, -- piece count 10
+  krogtaar      = true, -- piece count 15
+  akmech        = true, -- piece count 15
   
   --added only for insane king spawn
   abroadside    =  true, 
@@ -217,11 +220,11 @@ if (mRandom(0,1) == 1) then addWave(4,{"1 armbull", "2 armsonic","2 armsonic"}) 
 if (mRandom(0,1) == 1) then addWave(4,{"1 aexxec", "2 aexxec", "1 aexxec"}) else addWave(4,{"2 armflash", "2 corcrash"}) end
 addWave(4,{"3 armtarantula", "3 armtarantula", "3 armtarantula", "3 armtarantula", "3 aexxec", "5 coramph", , "3 tllamphibot"})
 if (mRandom(0,1) == 1) then addWave(4,{"3 armflash1", "3 armflash1", "2 aexxec", "3 armflash1"}) else addWave(4,{"2 aexxec", "2 corcrash"}) end
-if (mRandom(0,1) == 1) then addWave(4,{"1 aexxec", "2 aexxec", "1 aexxec"}) else addWave(4,{"2 armflash", "2 corcrash"}) end
+if (mRandom(0,1) == 1) then addWave(4,{"1 corgol", "2 aexxec", "1 aexxec"}) else addWave(4,{"2 armflash", "2 corcrash"}) end
 
 
 --t1.5/2 --wip beyond
-newWaveSquad[5] = {"2 armsonic", "6 armflash1"}
+newWaveSquad[5] = {"2 armsonic", "6 armflash1", "1 krogtaar"}
 addWave(5,{"3 ahermes", "2 armjanus1", "3 corcrash", "3 aexxec"})
 addWave(5,{"3 armsonic", "3 ahermes", "3 armsonic", "2 corgol", "3 ahermes"})
 addWave(5,{"1 tllmatamata", "3 tllmatamata", "1 tllmatamata", "2 tllmatamata", "2 corgol"})
@@ -230,12 +233,12 @@ addWave(5,{"4 cormort", "4 armfboy", "3 corcrash", "6 coramph"})
 addWave(5,{"6 armblz", "6 armblz", "7 armblz", "3 tllamphibot"})
 addWave(5,{"2 armstump1", "5 armbull"})
 addWave(5,{"5 tllmatamata", "3 armflash1", "3 armflash1", "2 aexxec", "3 corcrash"})
-if (mRandom(0,1) == 1) then addWave(5,{"3 armflash1", "3 armflash1", "3 aexxec"}) else addWave(5,{"2 armsonic","2 armsonic"}) end
+if (mRandom(0,1) == 1) then addWave(5,{"3 armflash1", "3 armflash1", "1 krogtaar"}) else addWave(5,{"2 armsonic","2 armsonic"}) end
 addWave(5,{"5 armbull", "3 corcrash", "2 corgol"})
 addWave(5,{"2 armmart", "2 armmart", "2 armmart", "2 armmart", "6 coramph", "6 tllamphibot"})
 addWave(5,{"5 corthud1", "3 corcrash" , "1 corgol", "1 tllcrawlb"})
 addWave(5,{"4 armstump", "1 armjanus1", "3 aexxec"})
-addWave(5,{"1 tllmatamata", "3 tllmatamata", "1 tllmatamata", "2 tllmatamata"})
+addWave(5,{"1 tllmatamata", "3 tllmatamata", "1 akmech", "2 tllmatamata"})
 
 -- t2 only
 newWaveSquad[6] = {"2 tankanotor", "2 tankanotor", "6 tllmatamata"}
@@ -246,13 +249,13 @@ addWave(6,{"1 corsumo", "4 ahermes", "4 armfboy", "1 tllcrawlb", "10 tllcopter"}
 addWave(6,{"2 aexxec",  "2 aexxec", "2 corgol", "2 aexxec",  "2 aexxec"})
 addWave(6,{"10 corhrk", "5 corhrk", "4 armfboy"})
 addWave(6,{"3 tllmatamata", "3 tllmatamata", "3 tllmatamata", "3 tllmatamata", "5 corspec", "3 armtarantula", "3 armtarantula"})
-addWave(6,{"1 armshock1", "1 armraven1"})
-addWave(6,{"3 armtarantula", "3 armtarantula", "4 ahermes", "3 aexxec", "10 tllcopter"})
-addWave(6,{"3 armtarantula", "3 armtarantula", "1 trem", "2 corgol", "4 armfboy", "5 tllcopter"})
+addWave(6,{"1 armshock1", "1 armraven1", "1 krogtaar"})
+addWave(6,{"3 armtarantula", "3 armtarantula", "4 ahermes", "3 aexxec", "5 tllcopter"})
+addWave(6,{"3 armtarantula", "3 armtarantula", "1 trem", "2 corgol", "4 armfboy", "5 tllcopter", "1 krogtaar"})
 addWave(6,{"5 corhrk", "2 corgol", "1 tllcrawlb" , "2 tllcrawlb" , "2 tllcrawlb"})
 addWave(6,{"6 cormonsta", "4 ahermes", "2 aexxec",  "2 aexxec", "4 armfboy"})
 addWave(6,{"2 airwolf3g", "2 armblz", "5 armblz", "5 armblz", "5 armblz", "5 armblz"})
-addWave(6,{"3 armsnipe", "2 armmerl", "10 tllcopter", "3 tllamphibot"})
+addWave(6,{"3 armsnipe", "2 cortotal", "10 tllcopter", "3 tllamphibot"})
 
 newWaveSquad[7] = {"2 armsnipe", "6 armblz"}
 addWave(7,{"5 armblz", "5 armblz"})
@@ -268,7 +271,7 @@ if (mRandom(0,1) == 1) then addWave(7,{"1 armraven1", "2 armtem"}) else addWave(
 addWave(7,{"2 tllloggerhead", "3 tllloggerhead", "3 tllloggerhead", "2 trem", "10 tllcopter"})
 addWave(7,{"3 corsumo1", "2 trem", "3 armhdpw"})
 addWave(7,{"1 armsnipe", "2 armmerl", "1 tankanotor", "1 cormddm", "5 tllamphibot"})
-addWave(7,{"2 armzeus1", "3 armzeus", "1 armzeus", "2 armzeus1", "1 heavyimpact"})
+addWave(7,{"2 armzeus1", "3 armzeus", "1 krogtaar", "2 armzeus1", "1 heavyimpact"})
 
 newWaveSquad[8] = {"2 armraven", "3 heavyimpact", "6 tllaether", "3 tlldemon"}
 addWave(8,{"2 taipan", "2 taipan", "2 taipan", "2 armsnipe", "2 armsnipe"})
