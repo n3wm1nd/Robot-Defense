@@ -361,6 +361,13 @@ else
   "coramphKills",
   "tllamphibotCount",
   "coramphCount",
+  "akmechCount",
+  "krogtaarCount",
+  "cortotalCount",
+  "akmechKills",
+  "krogtaarKills",
+  "cortotalKills",
+    
   }
 
 chickenColors = {
@@ -452,7 +459,10 @@ chickenColors = {
   {"coradon",     "\255\184\075\200"},
   {"tllamphibot", "\255\184\075\200"},
   {"coramph",     "\255\184\075\200"},
-
+  {"akmech",     "\255\184\075\200"},
+  {"krogtaar",     "\255\184\075\200"},
+  {"cortotal",     "\255\184\075\200"},
+      
 }
 end
 
